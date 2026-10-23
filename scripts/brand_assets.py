@@ -17,7 +17,7 @@ for size in [152,167,180]:
 mask=Image.new('RGB',(512,512),INK);mask.paste(master.resize((512,512)),(0,0),master.resize((512,512)).getchannel('A'));mask.save(D/'icon-maskable-512.png')
 FONT='/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc';REG='/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc'
 def font(s,bold=True):return ImageFont.truetype(FONT if bold else REG,s,index=0)
-def card(path,size=(1200,630),subject='日商簿記 / 全経簿記 / USCPA',headline=('間違いを、','理解に変える。')):
+def card(path,size=(1200,630),subject='日商簿記 / 全経簿記 / USCPA',headline=('間違いは、','理解に変わる。')):
  im=Image.new('RGB',size,PAPER);dr=ImageDraw.Draw(im);w,h=size
  dr.line((64,64,w-64,64),fill='#d8dfea',width=6)
  dr.line((64,64,421,64),fill=INK,width=6)
