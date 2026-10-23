@@ -1,6 +1,6 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert');
 const path=require('path');const dist=path.resolve(__dirname,'../dist')+'/';
-function context(saved){const elements={},storage=saved||{};function el(){return {innerHTML:'',textContent:'',value:'',style:{},dataset:{},classList:{toggle(){},add(){}},querySelector(){return null},querySelectorAll(){return []},scrollIntoView(){},focus(){},showModal(){},close(){},click(){}}}const c={console,Date,JSON,Math,Set,Map,Blob,URL,setTimeout,alert(){},localStorage:{getItem:k=>storage[k],setItem:(k,v)=>storage[k]=v},document:{getElementById:id=>elements[id]??=el(),querySelectorAll:()=>[],querySelector:()=>null,createElement:()=>el()},window:{scrollTo(){}}};vm.createContext(c);for(const f of ['catalog.js','curriculum-data.js','app.js','curriculum-ui.js','study-plan.js'])vm.runInContext(fs.readFileSync(dist+f,'utf8'),c);return {c,elements,storage}}
+function context(saved){const elements={},storage=saved||{};function el(){return {innerHTML:'',textContent:'',value:'',style:{},dataset:{},classList:{toggle(){},add(){}},querySelector(){return null},querySelectorAll(){return []},scrollIntoView(){},focus(){},showModal(){},close(){},click(){}}}const c={console,Date,JSON,Math,Set,Map,Blob,URL,setTimeout,alert(){},localStorage:{getItem:k=>storage[k],setItem:(k,v)=>storage[k]=v},document:{getElementById:id=>elements[id]??=el(),querySelectorAll:()=>[],querySelector:()=>null,createElement:()=>el()},window:{scrollTo(){}}};vm.createContext(c);for(const f of ['catalog.js','curriculum-data.js','app.js','curriculum-ui.js','study-plan.js','exercise-first.js'])vm.runInContext(fs.readFileSync(dist+f,'utf8'),c);return {c,elements,storage}}
 const saved={'bk-v1':JSON.stringify({cards:{1:{step:1,wrong:0,last:true,due:Date.now()+86400000}},log:[{id:1,correct:true,date:'2026-10-22',time:1}]})};const {c,elements,storage}=context(saved);
 vm.runInContext(`
 if(questions.length!==56)throw Error('question migration');
@@ -48,5 +48,18 @@ if(planScope()[0].unit!=='FAR')throw Error('prerequisite order');
 renderStudyPlan();exam='zenkei';curriculumExam=exam;curriculumUnit='advanced';if(referenceHours().min!==null||currentPlan().hours!==null)throw Error('invented Zenkei average');renderStudyPlan();
 `,c);
 console.log('PASS: referenced hour ranges, editable plan calculations, actual time, full-scope small steps, 7-day gate, minimum evidence counts, correct elective selection, no invented Zenkei average.');
+vm.runInContext(`
+if(Object.keys(numericExercises).length<20||Object.keys(journalExercises).length<5)throw Error('written exercise coverage');
+if(parseExerciseNumber('２４，０００円')!==24000||parseExerciseNumber('25万円')!==25||parseExerciseNumber('0')!==0||parseExerciseNumber('')!==null||parseExerciseNumber('abc')!==null)throw Error('numeric parsing');
+const nq=questions.find(q=>q.id===3);if(!gradeWritten(nq,{value:'24,000'}).correct||gradeWritten(nq,{value:'24001'}).correct||gradeWritten(nq,{value:''}).valid)throw Error('numeric grading');
+const jq=questions.find(q=>q.id===1);if(!gradeWritten(jq,{debit:'仕入',credit:'買掛金',debitAmount:'50,000',creditAmount:'50000'}).correct)throw Error('journal grading');
+if(gradeWritten(jq,{debit:'買掛金',credit:'仕入',debitAmount:'50000',creditAmount:'50000'}).correct)throw Error('reversed journal');
+if(gradeWritten(jq,{debit:'仕入',credit:'買掛金',debitAmount:'50000',creditAmount:'40000'}).correct)throw Error('unbalanced journal');
+exam='nissho';curriculumExam=exam;level=3;startExerciseSet(3);if(queue.length>5||queue.some(q=>q.exam!==exam||q.level!==3))throw Error('recommended scope');
+startExerciseSet(3,'topic','減価償却');if(queue.length!==1||queue[0].topic!=='減価償却')throw Error('topic exercise');
+const w=questions.find(q=>q.id===3);state.cards[w.id]={wrong:1,last:false,step:0,due:0};startExerciseSet(3,'wrong');if(!queue.some(q=>q.id===w.id)||queue.some(q=>!state.cards[q.id]?.wrong))throw Error('wrong-only set');
+position=queue.length;renderQuestion();if(!$('questionarea').innerHTML.includes('次の5問'))throw Error('continuation flow');
+`,c);
+console.log('PASS: number and journal input grading, empty answer validation, five-question sessions, topic practice, wrong-only retry and continuation.');
 const data=fs.readFileSync(dist+'index.html','utf8');assert(data.includes('id="curriculum"'));assert(data.indexOf('curriculum-data.js')<data.indexOf('app.js'));assert(data.indexOf('app.js')<data.indexOf('curriculum-ui.js'));
 console.log('PASS: curriculum sources and unit coverage, 56-question migration, all track rendering, source verification flags, search, uncovered filter, isolated practice, self-assessment separation, memo escaping, persistence, 2026 additions.');
