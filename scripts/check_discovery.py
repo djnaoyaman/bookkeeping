@@ -39,7 +39,7 @@ for route in build['pages']:
  for link in p.links:
   if not link or link.startswith(('data:','#','mailto:')):continue
   u=urlparse(link)
-  if u.netloc and u.netloc!=urlparse(BASE).netloc:continue
+  if u.netloc and (u.netloc!=urlparse(BASE).netloc or not (unquote(u.path)==urlparse(BASE).path.rstrip('/') or unquote(u.path).startswith(urlparse(BASE).path.rstrip('/')+'/'))):continue
   local=local_absolute(link) if u.netloc or link.startswith('/') else path.parent/unquote(u.path)
   if local.is_dir():local=local/'index.html'
   assert local.is_file(),(route,link,local)
