@@ -3,8 +3,8 @@ from PIL import Image, ImageDraw, ImageFont
 import subprocess
 ROOT=Path(__file__).resolve().parents[1];D=ROOT/'dist';A=D/'assets';A.mkdir(exist_ok=True)
 PAPER='#fffdf9';INK='#16366b';RED='#bd2637';WHITE='#ffffff';SOFT='#edf2fa';GRAY='#627087'
-# A ledger spread: paired columns, shared spine, and a single red entry.
-svg=f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Book Keeping — ledger mark</title><rect width="512" height="512" rx="104" fill="{INK}"/><path d="M112 134H206Q244 134 256 158Q268 134 306 134H400V364H306Q273 364 256 388Q239 364 206 364H112Z" fill="{PAPER}"/><path d="M256 158V350" stroke="{INK}" stroke-width="16"/><path d="M151 197H212M151 242H212M151 287H212M300 242H361M300 287H361" stroke="{INK}" stroke-width="14"/><path d="M300 190H361V207H300Z" fill="{RED}"/></svg>'''
+# Crossed fork and fountain pen, drawn as bold silhouettes for small sizes.
+svg=f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Book Keeping — pen and fork</title><rect width="512" height="512" rx="104" fill="{INK}"/><g transform="rotate(-34 256 256)" fill="{PAPER}"><path d="M215 116H231V178H248V116H264V178H281V116H297V188Q297 215 272 227V382Q272 398 256 398Q240 398 240 382V227Q215 215 215 188Z"/></g><g transform="rotate(34 256 256)"><path d="M234 160H278V326L256 390L234 326Z" fill="{INK}" stroke="{INK}" stroke-width="16" stroke-linejoin="round"/><path d="M234 160H278V326L256 390L234 326Z" fill="{PAPER}"/><path d="M234 160V132Q234 116 250 116H262Q278 116 278 132V160Z" fill="{RED}"/><path d="M256 345V373" stroke="{INK}" stroke-width="6"/><circle cx="256" cy="340" r="5" fill="{INK}"/></g></svg>'''
 (D/'favicon.svg').write_text(svg);(A/'brand-mark.svg').write_text(svg)
 subprocess.run(['inkscape',str(D/'favicon.svg'),'--export-type=png','--export-width=1024','--export-filename='+str(A/'brand-master.png')],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
 master=Image.open(A/'brand-master.png').convert('RGBA')
@@ -40,4 +40,4 @@ def card(path,size=(1200,630),subject='日商簿記 / 全経簿記 / USCPA',head
 card('og-bookkeeping.png');card('card-bookkeeping.png',(1200,600))
 for key,subject,headline in [('nissho','日商簿記 / 3級・2級・1級',('仕訳を解く。','数字が見える。')),('zenkei','全経簿記 / 基礎簿記会計〜上級',('基礎から、一問。','反復で、理解へ。')),('uscpa','USCPA / FAR・AUD・REG + Discipline',('Think. Solve.','Understand.'))]:card('og-'+key+'.png',subject=subject,headline=headline)
 card('og-author.png',subject='宮崎直哉 / MIYAZAKI Naoya / DJ Naoyaman',headline=('好きになる。','かたちにする。'))
-print('Generated ledger identity, platform icons and editorial social cards.')
+print('Generated pen and fork identity, platform icons and editorial social cards.')
