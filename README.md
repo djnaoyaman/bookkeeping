@@ -1,48 +1,24 @@
 # Book Keeping
 
-日商簿記・全経簿記・USCPAの反復学習サイト。学習項目の全体像と、実際に解いた問題の成績を分けて管理します。
+日商簿記・全経簿記・USCPAの反復演習サイト。
 
-## 演習からはじめる
-
-初期画面は問題演習です。おすすめ5問、間違いの復習、論点別の出題を選べます。数値問題は金額入力、対象の仕訳問題は借方・貸方の科目と金額を入力して採点します。終了後は誤答だけの解き直し、または次の5問へ進めます。カリキュラムと学習計画は補助機能です。
-
-## 機能
-
-- 級・科目・分野別の学習カリキュラムと検索
-- 誤答の記録、解説、間隔をあけた復習
-- 学習チェック・メモ・CSV出力
-- 出典付きの参考時間から作る学習計画
-- 最大5項目の小ステップと、基礎演習・7日後の再確認の記録
-- スマートフォン・タブレット・PC向けレスポンシブレイアウト
-
-## ローカルで開く
-
-ビルドや依存パッケージのインストールは不要です。
+## ローカル表示
 
 ```sh
 python3 -m http.server 8000 --directory dist
 ```
 
-http://localhost:8000 を開いてください。学習記録は利用者のブラウザのlocalStorageに保存されます。端末間の同期はありません。
-
-## 検証
+## コンテンツ・共有情報の再生成
 
 ```sh
-node tests/check.cjs
+python3 scripts/build_discovery.py
+python3 scripts/check_discovery.py
 ```
 
-DOMを模した環境で学習ロジック・記録の移行・カリキュラム・学習計画を確認します。ブラウザ表示を検証するE2Eテストではありません。
+Node.js 20以降、Python 3、画像検証用のPillowが必要です。アイコンや共有画像を変更するときは、InkscapeとNoto CJKフォントがある環境で `python3 scripts/brand_assets.py` を実行してください。
 
-## GitHub Pages
+正規URLは `site.config.json` で管理します。`src/index.template.html` と `dist/assets/site.css` を編集し、生成されたHTMLだけを直接変更しないでください。
 
-`main` へのpushでGitHub Actionsが検証を実行し、`dist/` をGitHub Pagesにデプロイします。Settings → Pages → Build and deployment のSourceは **GitHub Actions** です。
+[検索・共有の実装と残作業](docs/DISCOVERY.md) / [SEM準備](docs/SEM-PLAN.md) / [ブランド](docs/BRAND.md) / [教材の出典と対応状況](content/SOURCE-AUDIT.md)
 
-## 教材の対応状況
-
-収録演習は56問です。学習項目の登録は、全項目の解説・応用演習・総合演習の完成を意味しません。演習がない項目は画面に明示しています。
-
-日商は2026年度適用範囲、USCPAは2026年1月適用Blueprintsを参照しています。全経は公式の能力水準・改定情報を基に構成し、詳細表との級別範囲の最終照合は未完了です。
-
-小ステップの到達状況は本人の記録です。学習時間・自己チェック・収録問題の正答率から、合格を保証・判定する機能はありません。
-
-出典と確認状況は [SOURCE-AUDIT.md](content/SOURCE-AUDIT.md) に記載しています。
+収録演習は56問。全範囲の解説・演習は整備途中で、全経の詳細範囲の最終照合は未完了です。記録はブラウザ内に保存します。サイトにアクセス解析や広告タグは現在接続していません。

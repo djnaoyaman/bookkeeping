@@ -1,0 +1,32 @@
+{
+  "id": "https://book-keeping-practice.mossyelf3.chatgpt.site/",
+  "name": "Book Keeping",
+  "short_name": "Book Keeping",
+  "lang": "ja",
+  "description": "日商簿記・全経簿記・USCPAの反復演習。金額・仕訳を入力し、間違えた問題を解き直して理解を積み重ねる学習サイト。",
+  "start_url": "https://book-keeping-practice.mossyelf3.chatgpt.site/",
+  "scope": "https://book-keeping-practice.mossyelf3.chatgpt.site/",
+  "display": "standalone",
+  "background_color": "#f5f4ee",
+  "theme_color": "#242621",
+  "icons": [
+    {
+      "src": "https://book-keeping-practice.mossyelf3.chatgpt.site/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://book-keeping-practice.mossyelf3.chatgpt.site/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://book-keeping-practice.mossyelf3.chatgpt.site/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

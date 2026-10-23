@@ -17,10 +17,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install validation dependency
+        run: python -m pip install -r requirements.txt
+      - name: Generate static pages and metadata
+        run: python scripts/build_discovery.py
+      - name: Validate discovery metadata
+        run: python scripts/check_discovery.py
       - name: Validate application scripts
         run: |
           for script in dist/*.js; do node --check "$script"; done
           node tests/check.cjs
+          node tests/discovery-client.cjs
   deploy:
     needs: validate
     runs-on: ubuntu-latest
@@ -34,6 +44,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: actions/configure-pages@v5
+      - name: Regenerate public pages
+        run: python3 scripts/build_discovery.py
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
