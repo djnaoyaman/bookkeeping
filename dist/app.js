@@ -59,3 +59,5 @@ function renderExamSwitch(){const host=$('examswitch');if(!host)return;host.inne
 function saveTrack(){try{localStorage.setItem('bk-track',exam)}catch{}}
 try{const preferred=localStorage.getItem('bk-track');if(catalogs[preferred]){exam=preferred;level=catalogs[exam].units[0]}}catch{}
 renderDashboard();
+
+$('creator-learn').onclick=()=>navigate('curriculum');
