@@ -53,5 +53,9 @@ for f in ['apple-touch-icon.png','icon-maskable-512.png']:assert Image.open(D/f)
 assert {(16,16),(32,32),(48,48)}.issubset(Image.open(D/'favicon.ico').ico.sizes())
 manifest=json.loads((D/'site.webmanifest').read_text());assert any(i['purpose']=='maskable' for i in manifest['icons'])
 assert (D/'llms-full.txt').read_text().count('\n問題: ')==56
-css=(D/'assets/site.css').read_text();assert '@import' not in css;assert not re.search(r'G-[A-Z0-9]{6,}',(D/'discovery-config.js').read_text());assert '"analytics": null' in (D/'discovery-config.js').read_text()
-print(f'PASS: {len(canonicals)} unique static pages; titles, canonical, single H1, OGP/X Cards, JSON-LD, question content, all internal assets/links, sitemap, icon dimensions, ICO sizes, opaque Apple/maskable icons, manifest, text summaries and no fake analytics ID.')
+css=(D/'assets/site.css').read_text();assert '@import' not in css;cfg=json.loads((ROOT/'site.config.json').read_text());analytics=cfg.get('analytics');assert json.loads((D/'discovery-config.js').read_text().removeprefix('window.BK_DISCOVERY=').removesuffix(';\n'))['analytics']==analytics
+if analytics:
+ mid=analytics['measurementId']
+ for route in build['pages']:
+  text=(D/(route or 'index.html')).read_text();assert text.count('https://www.googletagmanager.com/gtag/js?id='+mid)==1;assert text.count("gtag('config','"+mid+"'")==1;assert 'send_page_view:false' in text
+print(f'PASS: {len(canonicals)} unique static pages; titles, canonical, single H1, OGP/X Cards, JSON-LD, question content, all internal assets/links, sitemap, icon dimensions, ICO sizes, opaque Apple/maskable icons, manifest, text summaries and configured analytics tags.')

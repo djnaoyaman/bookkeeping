@@ -28,7 +28,7 @@ Production tests must preserve real click IDs/UTM values through landing-page to
 - `mistake_retry_start`: selecting the mistake-review mode.
 - `share`: a successful native share or clipboard copy.
 
-These are currently local event-queue entries only. Configure the selected analytics service and verify data transmission before reporting conversions. Reconcile a practice-completion conversion to the actual question count: a two-question unit must not be reported as a five-question completion.
+These events are forwarded to GA4 G-837HXKXW8Q. Confirm receipt in the property before reporting conversions. Reconcile a practice-completion conversion to the actual question count: a two-question unit must not be reported as a five-question completion.
 
 ## Launch prerequisites
 

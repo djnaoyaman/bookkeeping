@@ -32,14 +32,14 @@ node tests/check.cjs                # in the public-source checkout
 
 ## Events prepared, not connected to a collector
 
-`window.dataLayer` contains fixed-schema events: `practice_start`, `answer_submit`, `practice_complete`, `mistake_retry_start`, `share`. `practice_start` is emitted on the first recorded answer, not on a page impression. No answers, memo text, search strings, personal data or score are included. This build does not load GA4, GTM, Google Ads or third-party tracking libraries and does not transmit these events to an analytics service.
+GA4 `G-837HXKXW8Q` is loaded once on each of the 63 static pages. `gtag` forwards fixed-schema `practice_start`, `answer_submit`, `practice_complete`, `mistake_retry_start`, `share`, `learning_view`, `exam_select` and `learning_export` events. Start means the first recorded answer. Completion means reaching the result screen; question_count reflects actual answers. Initial page_view is sent explicitly with automatic initial config page_view disabled. The page_location and referrer supplied to GA omit query strings/fragments. No answer, correctness, score, memo, internal search, identity or exported file contents are supplied. Google property enhanced measurement may emit additional automatic events and should be reviewed in GA Admin.
 
 ## Remaining account-side work
 
 - Verify domain/property ownership in Google Search Console and Bing Webmaster Tools and submit the sitemap.
 - Use URL Inspection / Rich Results Test and the social platforms' own sharing inspectors against the live URLs.
 - Confirm actual crawler access on the host. Native Sites deployment and access mode can be verified in this environment; an outbound request from the executor is not a substitute for Google/SNS crawler inspection.
-- Select and connect an analytics property, configure consent and retention as appropriate, and then verify real inbound events and advertising conversions.
+- Verify inbound events in GA4 Realtime/DebugView with property access, register event-scoped custom dimensions and configure retention/consent settings as appropriate. Advertising conversions are not configured.
 - Select ad account, countries, target learners, budget and schedule before authorizing a campaign launch. No ad spend or account-side conversion creation has occurred.
 - Keep material coverage truthful: 56 questions, full exercise coverage unfinished, Zenkei final detailed-scope reconciliation pending. Search metadata does not turn this into a complete exam-preparation course.
 
