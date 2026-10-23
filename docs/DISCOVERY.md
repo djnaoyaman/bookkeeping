@@ -25,7 +25,7 @@ node tests/check.cjs                # in the public-source checkout
 - Schema.org WebSite, WebApplication, WebPage, Quiz/Question/Answer, BreadcrumbList and ProfilePage/Person where relevant. No fabricated ratings, reviews, qualifications, publication dates, course accreditation, instructor rosters, or guaranteed Google rich-result eligibility.
 - `robots.txt`, a sitemap of actual canonical HTML URLs, `llms.txt` and `llms-full.txt`. The latter are supplemental reading aids, not requirements for Google AI search or mechanisms to compel citation.
 - SVG favicon, multiresolution ICO, 16/32/48/96px PNGs; opaque Apple 152/167/180px icons; 192/512px app icons and a safe-area maskable icon.
-- New vector BK monogram and original 1200x630 Open Graph cards; a 1200x600 X card for the main brand. Existing Japanese/black/lime visual direction is retained.
+- New vector BK monogram and original 1200x630 Open Graph cards; a 1200x600 X card for the main brand. Japanese content uses a French editorial palette of deep blue, white and red.
 - No external font fetch. Japanese system fonts are used; the sharing images have the intended typography rendered into pixels.
 - Native/copy sharing for a question's canonical URL, without advertising attribution parameters.
 - Whitelisted campaign parameters persist through internal links and client-side URL updates.
