@@ -4,6 +4,11 @@ from urllib.parse import urlparse,unquote
 import json,xml.etree.ElementTree as ET,re
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[1];D=ROOT/'dist';BASE=json.loads((ROOT/'site.config.json').read_text())['url'].rstrip('/');build=json.loads((ROOT/'content/discovery-build.json').read_text());canonicals=set();titles=set()
+def local_absolute(url):
+ path=unquote(urlparse(url).path)
+ prefix=urlparse(BASE).path.rstrip('/')
+ assert path==prefix or path.startswith(prefix+'/'),('outside site base',url)
+ return D/path[len(prefix):].lstrip('/')
 class Page(HTMLParser):
  def __init__(self):super().__init__();self.meta={};self.links=[];self.ids=[];self.h1=0;self.title=False;self.titletext='';self.json=False;self.jsontext='';self.schemas=[];self.alltext=''
  def handle_starttag(self,tag,attrs):
@@ -29,13 +34,13 @@ for route in build['pages']:
  assert p.h1==1,(route,'H1',p.h1);assert len(p.ids)==len(set(p.ids)),(route,'duplicate ID');assert p.meta['description'];assert p.meta['og:url']==expected;assert p.meta['og:title']==p.titletext;assert p.meta['twitter:card']=='summary_large_image';assert p.meta['og:image:alt'];assert p.meta['twitter:image:alt'];assert p.schemas
  assert p.schemas[0]['@context']=='https://schema.org'
  for image_key in ['og:image','twitter:image']:
-  image=D/unquote(urlparse(p.meta[image_key]).path.lstrip('/'));assert image.is_file(),image
+  image=local_absolute(p.meta[image_key]);assert image.is_file(),image
   im=Image.open(image);assert im.width==1200 and im.height in [600,630]
  for link in p.links:
   if not link or link.startswith(('data:','#','mailto:')):continue
   u=urlparse(link)
   if u.netloc and u.netloc!=urlparse(BASE).netloc:continue
-  local=(D/unquote(u.path.lstrip('/'))) if u.netloc or link.startswith('/') else path.parent/unquote(u.path)
+  local=local_absolute(link) if u.netloc or link.startswith('/') else path.parent/unquote(u.path)
   if local.is_dir():local=local/'index.html'
   assert local.is_file(),(route,link,local)
  if route.startswith('practice/'):
