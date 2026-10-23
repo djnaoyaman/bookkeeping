@@ -27,4 +27,4 @@ Node.js 20以降、Python 3、画像検証用のPillowが必要です。アイ�
 
 公開リポジトリ `djnaoyaman/bookkeeping` 向けの構成です。Settings → Pages → Source を **GitHub Actions** にすると、mainへのpush時に `.github/workflows/pages.yml` が検証と公開を実行します。公開先は https://djnaoyaman.github.io/bookkeeping/ です（デプロイ成功後）。
 
-現在のGitHub連携ではリポジトリ作成APIが403を返すため、リモート作成・push・Pages有効化は未完了です。リポジトリ作成と書き込みができる連携権限が必要です。
+リポジトリは公開設定で管理します。Pagesの公開状況はGitHub Actionsの実行結果とSettings → Pagesで確認できます。
