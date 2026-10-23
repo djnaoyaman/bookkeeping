@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://book-keeping-practice.mossyelf3.chatgpt.site/sitemap.xml
+Sitemap: https://djnaoyaman.github.io/bookkeeping/sitemap.xml

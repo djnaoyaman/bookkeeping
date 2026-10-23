@@ -22,3 +22,9 @@ Node.js 20以降、Python 3、画像検証用のPillowが必要です。アイ�
 [検索・共有の実装と残作業](docs/DISCOVERY.md) / [SEM準備](docs/SEM-PLAN.md) / [ブランド](docs/BRAND.md) / [教材の出典と対応状況](content/SOURCE-AUDIT.md)
 
 収録演習は56問。全範囲の解説・演習は整備途中で、全経の詳細範囲の最終照合は未完了です。記録はブラウザ内に保存します。サイトにアクセス解析や広告タグは現在接続していません。
+
+## GitHub Pages
+
+公開リポジトリ `djnaoyaman/bookkeeping` 向けの構成です。Settings → Pages → Source を **GitHub Actions** にすると、mainへのpush時に `.github/workflows/pages.yml` が検証と公開を実行します。公開先は https://djnaoyaman.github.io/bookkeeping/ です（デプロイ成功後）。
+
+現在のGitHub連携ではリポジトリ作成APIが403を返すため、リモート作成・push・Pages有効化は未完了です。リポジトリ作成と書き込みができる連携権限が必要です。

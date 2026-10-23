@@ -3,13 +3,13 @@
 > 日商簿記・全経簿記・USCPAの反復演習サイト。運営者は宮崎直哉（DJ Naoyaman）。
 
 ## サイト
-- [演習](https://book-keeping-practice.mossyelf3.chatgpt.site/): 金額・仕訳入力と選択問題。
-- [日商簿記](https://book-keeping-practice.mossyelf3.chatgpt.site/exams/nissho.html)
-- [全経簿記](https://book-keeping-practice.mossyelf3.chatgpt.site/exams/zenkei.html)
-- [USCPA](https://book-keeping-practice.mossyelf3.chatgpt.site/exams/uscpa.html)
-- [作者](https://book-keeping-practice.mossyelf3.chatgpt.site/author.html)
-- [使い方と対応範囲](https://book-keeping-practice.mossyelf3.chatgpt.site/about.html)
-- [問題と解説のテキスト](https://book-keeping-practice.mossyelf3.chatgpt.site/llms-full.txt)
+- [演習](https://djnaoyaman.github.io/bookkeeping/): 金額・仕訳入力と選択問題。
+- [日商簿記](https://djnaoyaman.github.io/bookkeeping/exams/nissho.html)
+- [全経簿記](https://djnaoyaman.github.io/bookkeeping/exams/zenkei.html)
+- [USCPA](https://djnaoyaman.github.io/bookkeeping/exams/uscpa.html)
+- [作者](https://djnaoyaman.github.io/bookkeeping/author.html)
+- [使い方と対応範囲](https://djnaoyaman.github.io/bookkeeping/about.html)
+- [問題と解説のテキスト](https://djnaoyaman.github.io/bookkeeping/llms-full.txt)
 
 ## 対応状況
 56問を収録。全範囲の教材完成や合格を保証していません。全経の詳細出題表との最終照合は未完了です。USCPAは必須3科目と選択1科目の構成です。学習記録はブラウザ内に保存します。

@@ -1,29 +1,29 @@
 {
-  "id": "https://book-keeping-practice.mossyelf3.chatgpt.site/",
+  "id": "https://djnaoyaman.github.io/bookkeeping/",
   "name": "Book Keeping",
   "short_name": "Book Keeping",
   "lang": "ja",
   "description": "日商簿記・全経簿記・USCPAの反復演習。金額・仕訳を入力し、間違えた問題を解き直して理解を積み重ねる学習サイト。",
-  "start_url": "https://book-keeping-practice.mossyelf3.chatgpt.site/",
-  "scope": "https://book-keeping-practice.mossyelf3.chatgpt.site/",
+  "start_url": "https://djnaoyaman.github.io/bookkeeping/",
+  "scope": "https://djnaoyaman.github.io/bookkeeping/",
   "display": "standalone",
   "background_color": "#fffdf9",
   "theme_color": "#16366b",
   "icons": [
     {
-      "src": "https://book-keeping-practice.mossyelf3.chatgpt.site/icon-192.png?v=pen-fork-45-5",
+      "src": "https://djnaoyaman.github.io/bookkeeping/icon-192.png?v=pen-fork-45-5",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://book-keeping-practice.mossyelf3.chatgpt.site/icon-512.png?v=pen-fork-45-5",
+      "src": "https://djnaoyaman.github.io/bookkeeping/icon-512.png?v=pen-fork-45-5",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://book-keeping-practice.mossyelf3.chatgpt.site/icon-maskable-512.png?v=pen-fork-45-5",
+      "src": "https://djnaoyaman.github.io/bookkeeping/icon-maskable-512.png?v=pen-fork-45-5",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
