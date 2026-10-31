@@ -29,6 +29,9 @@ jobs:
       - name: Validate application scripts
         run: |
           for script in dist/*.js; do node --check "$script"; done
+          node tests/assessment-engine.cjs
+          node tests/assessment-session.cjs
+          node tests/learning-course.cjs
           node tests/check.cjs
           node tests/discovery-client.cjs
   deploy:
