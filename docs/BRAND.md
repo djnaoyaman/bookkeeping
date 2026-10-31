@@ -1,7 +1,14 @@
-# Book Keeping — Pen & Fork
+# IL MASTRO — selected identity 09
 
-Deep blue `#16366b`, cream `#fffdf9` and red `#bd2637` retain the French tricolour identity. The mark pairs a crossed fork and fountain pen: cream silhouettes on blue, with a red pen cap. A separating blue outline keeps the crossing legible at small sizes.
+The selected mark is the decorated medieval bookkeeper (05 artwork) paired with the outlined P052 Italic wordmark (09). The source is generated artwork: no historical portrait or institutional endorsement is implied. The merchant is a raster illustration; the outlined wordmark is vector. The full mark is not claimed to be wholly vector.
 
-`scripts/brand_assets.py` generates the vector source, multi-resolution favicon, opaque Apple Touch Icons, maskable icon and social cards. The social cards retain the serif wordmark and 「間違いは、理解に変わる。」 headline. OGP is 1200×630; the main X card is 1200×600. Asset URLs use `pen-fork-45-5` to refresh caches; social platforms may retain older previews.
+## Palette and UI
+Parchment `#F4EFE4`, ink `#27251F`, leather `#79563D`, burgundy `#6B3038`, warm white `#FFFAF0`. Broad spacing, fine rules and serif headings evoke a working ledger. Layout, interactions and graphics are original; no other company logo or distinctive trade dress is reproduced.
 
-The fork and pen are rotated −45° and +45° around the shared center, forming a precise right-angle crossing.
+The primary logo is `assets/il-mastro-lockup.png`, optimized to 480 × 520. `assets/il-mastro-emblem.png` supports the learning home. `assets/il-mastro-wordmark.svg` is outlined P052 Italic; the URW license is bundled as `assets/LICENSE-URW.txt`.
+
+`scripts/brand_assets.py` generates six topic-specific social cards using the selected supplied artwork, preserving the 1200 × 630 OGP and 1200 × 600 X-card sizes. Asset URLs use `il-mastro-09-1`.
+
+All 63 pages share the same identity and responsive stylesheet. Existing 56 questions, localStorage keys, curriculum, plan, export, source disclaimers, and analytics privacy boundaries remain intact.
+
+Small icons use the selected P052 Italic IM utility mark for legibility, consistently across favicon, Apple and Android sizes; this is a derivative, not a replacement for the merchant primary identity. Apple and maskable assets are opaque.
