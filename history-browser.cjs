@@ -5,7 +5,7 @@ const browser=await chromium.launch(process.env.CHROMIUM_PATH?{executablePath:pr
 fs.mkdirSync('history-shots',{recursive:true});
 for(const width of [320,390,768,1280]){
  const page=await browser.newPage({viewport:{width,height:900},reducedMotion:'reduce'});const errors=[];page.on('pageerror',e=>errors.push(e.message));
- await page.route('**/*',route=>route.request().url().startsWith('http://127.0.0.1:8765/')?route.continue():route.abort());
+ await page.route('**/*',async route=>{const url=route.request().url();if(url.startsWith('http://127.0.0.1:8765/'))return route.continue();if(url.startsWith('https://djnaoyaman.github.io/bookkeeping/'))return route.fulfill({response:await route.fetch({url:url.replace('https://djnaoyaman.github.io/bookkeeping/','http://127.0.0.1:8765/')})});return route.abort();});
  await page.goto('http://127.0.0.1:8765/about.html#history');
  await page.getByRole('heading',{name:'私の入口は、簿記の歴史でした。'}).waitFor();
  await page.getByText('歴史の参考資料',{exact:true}).click();
