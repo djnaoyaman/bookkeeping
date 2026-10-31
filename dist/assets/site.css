@@ -41,3 +41,5 @@ main{margin-left:264px;padding:0 5vw 40px;max-width:1700px}header{border-bottom:
 @media(max-width:359px){main{padding-left:14px;padding-right:14px}.brand-logo{height:132px}.hero{padding:24px 18px}.hero h2{font-size:23px}.metric{padding:15px 6px}.metric strong{font-size:26px}.metric small{font-size:8px}.exercise-active #practice :is(h1,.page-title){font-size:23px}.static-page{padding:16px}.static-page h1{font-size:25px}.panel{padding:20px 15px}}
 @media(max-height:720px) and (min-width:701px){aside{padding-top:15px;padding-bottom:15px}.brand-logo{height:110px}.brand small{display:none}.brand-rule{margin-top:10px}aside nav{margin-top:15px;gap:2px}aside nav button{min-height:40px;padding-top:9px;padding-bottom:9px}.sidebottom{padding-top:16px;font-size:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation:none!important;transition:none!important}}
+/* Keep the adopted two-word name intact in narrow footer rows. */
+.footer>span:first-child{white-space:nowrap;flex-shrink:0}.footer>.textbtn{flex-shrink:0}#main-content:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
