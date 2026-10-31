@@ -1,6 +1,6 @@
 # Book Keeping
 
-> 日商簿記・全経簿記・USCPAの反復演習サイト。運営者は宮崎直哉（DJ Naoyaman）。
+> 日商簿記・全経簿記・USCPAの反復演習サイト。企画・編集は宮崎直哉。
 
 ## サイト
 - [演習](https://djnaoyaman.github.io/bookkeeping/): 金額・仕訳入力と選択問題。
