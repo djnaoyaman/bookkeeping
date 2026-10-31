@@ -15,11 +15,15 @@ jobs:
       - run: pip install pillow
       - run: python scripts/check_discovery.py
       - run: python profile-check.py
+      - run: python history-check.py
       - run: npm install --no-save --ignore-scripts playwright
       - run: npx playwright install --with-deps chromium
       - run: python -m http.server 8765 --directory dist > /tmp/profile-server.log 2>&1 &
       - run: node profile-browser.cjs
+      - run: node history-browser.cjs
       - uses: actions/upload-artifact@v4
         with:
           name: profile-review
-          path: profile-shots
+          path: |
+            profile-shots
+            history-shots

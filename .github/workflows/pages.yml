@@ -1,4 +1,4 @@
-name: Deploy Book Keeping to GitHub Pages
+name: Deploy IL MASTRO to GitHub Pages
 
 on:
   push:
