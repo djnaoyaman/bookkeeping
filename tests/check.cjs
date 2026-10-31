@@ -63,3 +63,9 @@ position=queue.length;renderQuestion();if(!$('questionarea').innerHTML.includes(
 console.log('PASS: number and journal input grading, empty answer validation, five-question sessions, topic practice, wrong-only retry and continuation.');
 const data=fs.readFileSync(dist+'index.html','utf8');assert(data.includes('id="curriculum"'));assert(data.indexOf('curriculum-data.js')<data.indexOf('app.js'));assert(data.indexOf('app.js')<data.indexOf('curriculum-ui.js'));
 console.log('PASS: curriculum sources and unit coverage, 56-question migration, all track rendering, source verification flags, search, uncovered filter, isolated practice, self-assessment separation, memo escaping, persistence, 2026 additions.');
+
+if(fs.existsSync(path.resolve(__dirname,'../content/learning-course.json'))){
+ c.ILMASTRO_COURSE=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../content/learning-course.json'),'utf8'));
+ vm.runInContext(`exam='nissho';curriculumExam=exam;curriculumUnit=3;const cr=curriculum.find(t=>t.id===ILMASTRO_COURSE.lessons[0].requirementIds[0]);if(relatedExerciseCount(cr)<=relatedQuestions(cr).length)throw Error('new exercises missing from curriculum');curriculumFilter='noexercise';if(filteredItems().some(t=>t.id===cr.id))throw Error('covered item filtered as empty');openLesson(cr.id);if(!$('lessonpanel').innerHTML.includes('data-curriculum-course'))throw Error('missing course bridge');`,c);
+ console.log('PASS: new-course counts, uncovered filter and lesson bridge integrate with the existing curriculum without replacing legacy questions.');
+}

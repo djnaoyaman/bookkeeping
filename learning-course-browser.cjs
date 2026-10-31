@@ -1,6 +1,6 @@
 const {chromium}=require('playwright'),fs=require('node:fs'),assert=require('node:assert/strict');
 (async()=>{const browser=await chromium.launch();fs.mkdirSync('learning-shots',{recursive:true});
-for(const [width,height] of [[320,800],[390,844],[768,1024],[1280,900],[844,390]]){
+for(const [width,height] of [[320,800],[390,844],[701,900],[768,1024],[1280,900],[844,390]]){
  const page=await browser.newPage({viewport:{width,height},reducedMotion:'reduce'}),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.route('**/*',r=>r.request().url().startsWith('http://127.0.0.1:8765/')?r.continue():r.abort());await page.goto('http://127.0.0.1:8765/');await page.locator('aside [data-view="learningcourse"]').click();
  const data=await page.evaluate(()=>globalThis.ILMASTRO_COURSE);assert.ok(data.lessons.length&&data.questions.length);
  const shot=async(name)=>{assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,`overflow ${name}/${width}`);await page.screenshot({path:`learning-shots/${width}x${height}-${name}.png`,fullPage:true});};await shot('overview');
@@ -14,4 +14,4 @@ for(const [width,height] of [[320,800],[390,844],[768,1024],[1280,900],[844,390]
  const first=data.questions[0];await page.evaluate(id=>ILMastroCourseUI.question(id),first.id);await page.locator('#coursehint summary').click();await page.locator('#coursehint[open]').waitFor();await page.locator('#courseback').click();await page.evaluate(id=>ILMastroCourseUI.question(id),first.id);await page.reload();await page.locator('aside [data-view="learningcourse"]').click();await page.evaluate(id=>ILMastroCourseUI.question(id),first.id);assert.equal(await page.evaluate(id=>JSON.parse(localStorage.getItem('bk-v1')).courseDraftMeta[id].hinted,first.id),true);
  await page.locator('#courseback').click();await page.locator('#courseback').click();await page.locator('#coursewrong').click();await shot('review');assert.deepEqual(errors,[]);await page.close();
 }
-await browser.close();console.log('PASS: course lessons/structured questions, all authored answers at mobile, five viewports, blank validation, hint persistence, lesson return and review.');})();
+await browser.close();console.log('PASS: course lessons/structured questions, all authored answers at mobile, six viewports including the 701px sidebar breakpoint, blank validation, hint persistence, lesson return and review.');})();
