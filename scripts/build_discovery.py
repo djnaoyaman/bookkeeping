@@ -16,7 +16,10 @@ def meta(path,title,desc,image='og-bookkeeping.png',kind='WebPage',extra=None):
  META[path or 'index.html']=m
  graph=[{'@type':kind,'@id':url+'#page','url':url,'name':title,'description':desc,'inLanguage':'ja','isPartOf':{'@id':BASE+'/#website'},'author':{'@id':BASE+'/#creator'}},{'@type':'WebSite','@id':BASE+'/#website','url':BASE+'/','name':'Book Keeping','inLanguage':'ja'},{'@type':'Person','@id':BASE+'/#creator','name':CFG['author'],'alternateName':'DJ Naoyaman','sameAs':[CFG['github']],'url':BASE+'/author.html'}]
  if path=='':graph.append({'@type':'WebApplication','@id':BASE+'/#application','name':'Book Keeping','url':BASE+'/','applicationCategory':'EducationalApplication','operatingSystem':'Web browser','description':desc,'inLanguage':['ja','en'],'browserRequirements':'JavaScript is required for scoring and local progress storage.'})
- if kind=='ProfilePage':graph[0]['mainEntity']={'@id':BASE+'/#creator'}
+ if kind=='ProfilePage':
+  graph[0]['mainEntity']={'@id':BASE+'/#creator'}
+  graph[0]['dateModified']='2026-10-31'
+  graph[2]={'@type':'Person','@id':BASE+'/#creator','name':CFG['author'],'url':'https://djnaoyaman.github.io/profile.html'}
  if extra:graph.extend(extra)
  if path:
   graph.append({'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Book Keeping','item':BASE+'/'},{'@type':'ListItem','position':2,'name':title.split('｜')[0],'item':url}]})
@@ -42,7 +45,7 @@ def app_page(path,route,q=None):
    start=body.index('<section id="practice"');hpos=body.index('<h1>',start);hend=body.index('</h1>',hpos);body=body[:hpos]+'<h1>'+e(q['topic'])+'の演習</h1>'+body[hend+5:]
  body=body.replace('<body>',f'<body data-discovery-route="{route}"'+(f' data-question="{e(q["id"])}"' if route=='question' else '')+'>',1)
  body=body_prefix(body,path)
- if route=='profile':head=meta(path,'つくった人・宮崎直哉のプロフィールと作品｜Book Keeping','簿記に夢中になり、仕事にもした宮崎直哉。DJ Naoyaman名義の活動、マーケティング・ブランディング、音楽や漢字などのWeb作品とBook Keepingへの思い。','og-author.png','ProfilePage')
+ if route=='profile':head=meta(path,'このサイトをつくる理由｜Book Keeping','簿記は、手を動かすほど面白くなる。その楽しさを、短い問題と繰り返しの中で伝えたくてつくりました。','og-author.png','ProfilePage')
  elif route=='question':
   label=DATA['catalogs'][q['exam']]['name']+' '+q['unitLabel'];title=q['topic']+'の練習問題・解説｜'+label+'｜Book Keeping';desc=q['text'][:100]+' '+q['explain'][:55]
   extra=[{'@type':'Quiz','@id':absolute(path)+'#quiz','name':q['topic']+'の演習','educationalUse':'assessment','learningResourceType':'Practice problem','inLanguage':'en' if q['exam']=='uscpa' else 'ja','hasPart':[{'@type':'Question','name':q['topic'],'text':q['text'],'acceptedAnswer':{'@type':'Answer','text':q['answerText']+'。'+q['explain']}}]}]
@@ -76,10 +79,11 @@ simple('privacy.html','プライバシーと学習データ','Book Keepingの学
 ns='http://www.sitemaps.org/schemas/sitemap/0.9';ET.register_namespace('',ns);tree=ET.Element('{'+ns+'}urlset')
 for p in PAGES:
  node=ET.SubElement(tree,'{'+ns+'}url');ET.SubElement(node,'{'+ns+'}loc').text=absolute(p)
+ if p=='author.html' or p=='' or p.startswith('practice/'):ET.SubElement(node,'{'+ns+'}lastmod').text='2026-10-31'
 ET.ElementTree(tree).write(D/'sitemap.xml',encoding='utf-8',xml_declaration=True)
 (D/'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: '+BASE+'/sitemap.xml\n')
 manifest={'id':BASE+'/','name':'Book Keeping','short_name':'Book Keeping','lang':'ja','description':CFG['description'],'start_url':BASE+'/','scope':BASE+'/','display':'standalone','background_color':'#fffdf9','theme_color':'#16366b','icons':[{'src':BASE+'/icon-192.png?v='+CFG.get('brandVersion','1'),'sizes':'192x192','type':'image/png','purpose':'any'},{'src':BASE+'/icon-512.png?v='+CFG.get('brandVersion','1'),'sizes':'512x512','type':'image/png','purpose':'any'},{'src':BASE+'/icon-maskable-512.png?v='+CFG.get('brandVersion','1'),'sizes':'512x512','type':'image/png','purpose':'maskable'}]};(D/'site.webmanifest').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
-summary=f'''# Book Keeping\n\n> 日商簿記・全経簿記・USCPAの反復演習サイト。運営者は宮崎直哉（DJ Naoyaman）。\n\n## サイト\n- [演習]({BASE}/): 金額・仕訳入力と選択問題。\n- [日商簿記]({BASE}/exams/nissho.html)\n- [全経簿記]({BASE}/exams/zenkei.html)\n- [USCPA]({BASE}/exams/uscpa.html)\n- [作者]({BASE}/author.html)\n- [使い方と対応範囲]({BASE}/about.html)\n- [問題と解説のテキスト]({BASE}/llms-full.txt)\n\n## 対応状況\n56問を収録。全範囲の教材完成や合格を保証していません。全経の詳細出題表との最終照合は未完了です。USCPAは必須3科目と選択1科目の構成です。学習記録はブラウザ内に保存します。\n\nこのファイルはサイト内容を読み取るための補助情報です。検索エンジンの掲載やAIの引用を制御・保証するものではありません。\n''';(D/'llms.txt').write_text(summary)
+summary=f'''# Book Keeping\n\n> 日商簿記・全経簿記・USCPAの反復演習サイト。企画・編集は宮崎直哉。\n\n## サイト\n- [演習]({BASE}/): 金額・仕訳入力と選択問題。\n- [日商簿記]({BASE}/exams/nissho.html)\n- [全経簿記]({BASE}/exams/zenkei.html)\n- [USCPA]({BASE}/exams/uscpa.html)\n- [作者]({BASE}/author.html)\n- [使い方と対応範囲]({BASE}/about.html)\n- [問題と解説のテキスト]({BASE}/llms-full.txt)\n\n## 対応状況\n56問を収録。全範囲の教材完成や合格を保証していません。全経の詳細出題表との最終照合は未完了です。USCPAは必須3科目と選択1科目の構成です。学習記録はブラウザ内に保存します。\n\nこのファイルはサイト内容を読み取るための補助情報です。検索エンジンの掲載やAIの引用を制御・保証するものではありません。\n''';(D/'llms.txt').write_text(summary)
 full=[summary]
 for q in questions:full.append(f'\n## {DATA["catalogs"][q["exam"]]["name"]} {q["unitLabel"]} / {q["topic"]}\n\nURL: {absolute(pathq(q))}\n\n問題: {q["text"]}\n\n解答: {q["answerText"]}\n\n解説: {q["explain"]}\n')
 (D/'llms-full.txt').write_text('\n'.join(full))
