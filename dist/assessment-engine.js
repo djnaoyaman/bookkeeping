@@ -33,6 +33,7 @@
     return { valid: Number.isSafeInteger(debit) && Number.isSafeInteger(credit), totals, debit, credit, duplicates: [...duplicates] };
   }
   function gradeJournal(spec, response) {
+    if (!['learning','cbt'].includes(spec.inputMode ?? 'learning')) throw Error('Unknown assessment input mode');
     const decimals = spec.decimals ?? 0, aliases = spec.aliases || {};
     if (!Array.isArray(spec.lines) || !spec.lines.length) throw Error('Missing journal rubric');
     const expected = journalTotals(spec.lines, decimals, aliases);
@@ -55,6 +56,7 @@
       balanced: submitted.valid && submitted.debit === submitted.credit, extraEntries: extras.length, duplicateAccounts, warnings: duplicateAccounts.length && !duplicateFailure ? ['同じ側の同一勘定を合算して学習用に採点しました。日商のネット試験では同一側の重複科目は不正解になるため、1行にまとめてください。'] : [], reason: !submitted.valid ? 'incomplete-or-invalid' : extras.length ? 'unexpected-journal-entries' : duplicateFailure ? 'duplicate-journal-accounts' : null, components };
   }
   function gradeFields(spec, response) {
+    if (!['learning','cbt'].includes(spec.inputMode ?? 'learning')) throw Error('Unknown assessment input mode');
     if (!Array.isArray(spec.fields) || !spec.fields.length) throw Error('Missing field rubric');
     const seen = new Set();
     const components = spec.fields.map(f => {

@@ -34,3 +34,5 @@ assert.equal(gradeJournal(spec,[]).valid,false);assert.equal(gradeJournal(spec,[
 
 const split=[{side:'debit',account:'仕入',amount:4000},{side:'debit',account:'仕入',amount:6000},...response.slice(1)];
 assert.equal(gradeJournal(spec,split).correct,true);assert.equal(gradeJournal(spec,split).warnings.length,1);const strict=gradeJournal({...spec,inputMode:'cbt'},split);assert.equal(strict.correct,false);assert.equal(strict.earned,0);assert.equal(strict.reason,'duplicate-journal-accounts');assert.equal(gradeJournal({...spec,inputMode:'cbt'},response).correct,true);
+
+assert.throws(()=>gradeJournal({...spec,inputMode:'CBT'},split));assert.throws(()=>gradeFields({...fields,inputMode:'other'},{cash:0,side:'credit'}));
