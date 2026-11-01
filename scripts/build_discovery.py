@@ -7,9 +7,21 @@ COURSE=json.loads(COURSE_PATH.read_text()) if COURSE_PATH.exists() else None
 if COURSE:
  assert COURSE.get('authoringStatus')=='reviewed','Only independently reviewed content belongs in the build input'
  subprocess.run(['node',str(ROOT/'scripts/validate-learning-content.cjs'),str(COURSE_PATH),'--publish'],check=True)
+INDUSTRIAL=json.loads((ROOT/'content/industrial-course.json').read_text())
+subprocess.run(['node',str(ROOT/'scripts/validate-learning-content.cjs'),str(ROOT/'content/industrial-course.json'),'--grade2','--publish'],check=True)
+ALL_COURSE={'lessons':COURSE['lessons']+INDUSTRIAL['lessons'],'questions':COURSE['questions']+INDUSTRIAL['questions']}
+for kind in ['lessons','questions']:
+ assert len({x['id'] for x in ALL_COURSE[kind]})==len(ALL_COURSE[kind]),'Cross-grade ID collision'
+assert not ({q['familyId'] for q in COURSE['questions']} & {q['familyId'] for q in INDUSTRIAL['questions']}),'Cross-grade family ID collision'
+lesson_ids={l['id'] for l in ALL_COURSE['lessons']}
+assert all(p in lesson_ids for l in ALL_COURSE['lessons'] for p in l['prerequisiteIds']),'Missing cross-grade prerequisite'
+INDUSTRIAL_LESSON_IDS={l['id'] for l in INDUSTRIAL['lessons']}
+def course_label(l):return '日商簿記2級・工業簿記' if l['id'] in INDUSTRIAL_LESSON_IDS else '日商簿記3級'
+(D/'industrial-course-data.js').write_text('globalThis.ILMASTRO_INDUSTRIAL='+json.dumps({k:v for k,v in INDUSTRIAL.items() if k!='reviewRecords'},ensure_ascii=False).replace('<','\\u003c')+';\n')
 TEMPLATE=TEMPLATE.replace('<!--LEARNING_COURSE_NAV-->','<a class="mock-entry" href="mock.html">60分の総合練習</a><!--LEARNING_COURSE_NAV-->')
-TEMPLATE=TEMPLATE.replace('<!--LEARNING_COURSE_NAV-->','<button data-view="learningcourse"><span>▤</span>講義と演習</button>' if COURSE else '').replace('<!--LEARNING_COURSE_SECTION-->','<section id="learningcourse" class="view"><div id="learningcoursebody"></div></section>' if COURSE else '').replace('<!--LEARNING_COURSE_SCRIPTS-->','<script src="learning-course-data.js"></script><script src="learning-course.js"></script>' if COURSE else '')
+TEMPLATE=TEMPLATE.replace('<!--LEARNING_COURSE_NAV-->','<button data-view="learningcourse"><span>▤</span>講義と演習</button>' if COURSE else '').replace('<!--LEARNING_COURSE_SECTION-->','<section id="learningcourse" class="view"><div id="learningcoursebody"></div></section>' if COURSE else '').replace('<!--LEARNING_COURSE_SCRIPTS-->','<script src="learning-course-data.js"></script><script src="industrial-course-data.js"></script><script src="learning-course.js"></script>' if COURSE else '')
 COURSE_BLURB=(f'日商3級の講義{len(COURSE["lessons"])}本・構造化演習{len(COURSE["questions"])}問を追加しています。<a href="{BASE}/lessons/index.html">講義一覧</a>から学べます。'+COURSE.get('coverageNote','')) if COURSE else ''
+if COURSE:COURSE_BLURB+=' 日商2級・工業簿記は導入2章・22問を公開しています。2級全範囲の完成を示すものではありません。'
 if COURSE:TEMPLATE=TEMPLATE.replace('収録演習は56問です。','従来の反復演習56問に加え、日商3級の講義と構造化演習を段階的に整備しています。')
 
 def e(s):return html.escape(str(s),quote=True)
@@ -90,15 +102,17 @@ simple('privacy.html','プライバシーと学習データ','IL MASTROの学習
 
 # Original authored lessons remain readable without JavaScript; scoring is in the app.
 if COURSE:
- listing='<p>'+e(COURSE.get('coverageNote','全範囲の教材整備は進行中です。'))+'</p><ul>'+''.join('<li><a href="'+BASE+'/lessons/'+e(l['id'])+'.html">'+e(l['title'])+'</a></li>' for l in COURSE['lessons'])+'</ul>'
- simple('lessons/index.html','日商簿記3級の講義と演習','説明・例題・オリジナル演習で簿記の考え方を学ぶ。2026年度範囲の段階的な教材整備。',listing)
- for l in COURSE['lessons']:
-  body='<p>日商簿記3級 / 2026年度範囲（2027年3月31日まで） / オリジナル教材</p><p><a href="'+BASE+'/lessons/index.html">講義一覧</a></p>'
+ listing=''
+ for label,course in [('日商簿記3級',COURSE),('日商簿記2級・工業簿記',INDUSTRIAL)]:
+  listing+='<h2>'+label+'</h2><p>'+e(course.get('coverageNote',''))+'</p><ul>'+''.join('<li><a href="'+BASE+'/lessons/'+e(l['id'])+'.html">'+e(l['title'])+'</a></li>' for l in course['lessons'])+'</ul>'
+ simple('lessons/index.html','日商簿記の級別講義と演習','3級30講義228問と、2級工業簿記の導入2章22問。2026年度範囲のオリジナル教材。',listing)
+ for l in ALL_COURSE['lessons']:
+  body='<p>'+course_label(l)+' / 2026年度範囲（2027年3月31日まで） / オリジナル教材</p><p><a href="'+BASE+'/lessons/index.html">講義一覧</a></p>'
   for section in l['sections']:body+='<h2>'+e(section['title'])+'</h2>'+''.join('<p>'+e(p)+'</p>' for p in section['paragraphs'])
   body+='<h2>例題</h2>'
   for w in l['workedExamples']:body+='<h3>'+e(w['title'])+'</h3><p>'+e(w['prompt'])+'</p><details><summary>解き方と答え</summary><ol>'+''.join('<li>'+e(p)+'</li>' for p in w['steps'])+'</ol><p>'+e(w['answer'])+'</p></details>'
   body+='<h2>間違えやすいところ</h2><ul>'+''.join('<li>'+e(p)+'</li>' for p in l['pitfalls'])+'</ul><p><a class="primary" href="'+BASE+'/?course='+e(l['id'])+'">この講義の問題を解く →</a></p><p class="scope-note">採点と記録にはJavaScriptを使います。配点はこの教材独自のものです。</p>'
-  simple('lessons/'+l['id']+'.html',l['title']+'の講義・例題',l['title']+'をオリジナル解説・例題・演習で学ぶ。日商簿記3級、2026年度範囲。',body)
+  simple('lessons/'+l['id']+'.html',l['title']+'の講義・例題',l['title']+'をオリジナル解説・例題・演習で学ぶ。'+course_label(l)+'、2026年度範囲。',body)
 # Original timed-practice page; existing course/storage are not replaced.
 subprocess.run(['node',str(ROOT/'scripts/build_mock.cjs')],check=True)
 simple('mock.html','日商簿記3級・60分のオリジナル総合練習','2026年度範囲の第1回。45・20・35点、サイト独自の欄別採点。公式試験の再現や合格予測ではありません。','<div id="mock-app" class="mock-app"><p>時間制練習を準備しています。</p></div><noscript><p>入力・途中保存・採点にはJavaScriptが必要です。通常の講義ページはJavaScriptなしでも読めます。</p></noscript>')
@@ -114,16 +128,17 @@ manifest={'id':BASE+'/','name':'IL MASTRO','short_name':'IL MASTRO','lang':'ja',
 summary=f'''# IL MASTRO｜イル・マストロ\n\n> 日商簿記・全経簿記・USCPAの反復演習サイト。企画・編集は宮崎直哉。\n\n## サイト\n- [演習]({BASE}/): 金額・仕訳入力と選択問題。\n- [60分の総合練習]({BASE}/mock.html): 2026年度範囲・独自配点のオリジナル第1回。公式難易度や合格予測を示しません。\n- [日商簿記]({BASE}/exams/nissho.html)\n- [全経簿記]({BASE}/exams/zenkei.html)\n- [USCPA]({BASE}/exams/uscpa.html)\n- [作者]({BASE}/author.html)\n- [簿記の歴史・使い方と対応範囲]({BASE}/about.html)\n- [問題と解説のテキスト]({BASE}/llms-full.txt)\n\n## 簿記の歴史\n作者の入口は簿記の歴史。古代メソポタミアの記録、中世イタリアでの複式簿記の発達、1494年のパチョーリによる最初の印刷された解説を、参考資料とともに紹介しています。パチョーリを発明者とはしていません。\n\n## 対応状況\n従来の反復演習56問を収録。全範囲の教材完成や合格を保証していません。全経の詳細出題表との最終照合は未完了です。USCPAは必須3科目と選択1科目の構成です。学習記録はブラウザ内に保存します。\n\nこのファイルはサイト内容を読み取るための補助情報です。検索エンジンの掲載やAIの引用を制御・保証するものではありません。\n''';(D/'llms.txt').write_text(summary)
 if COURSE:
  summary+='\n## 日商3級の講義と構造化演習\n'+str(len(COURSE['lessons']))+'講義・'+str(len(COURSE['questions']))+'設問を別途収録。'+COURSE.get('coverageNote','全範囲整備は進行中。')+'\n[講義一覧]('+BASE+'/lessons/index.html)\n'
+ summary+='\n## 日商2級・工業簿記の導入\n2章・22問。'+INDUSTRIAL['coverageNote']+'\n'
  (D/'llms.txt').write_text(summary)
 full=[summary]
 for q in questions:full.append(f'\n## {DATA["catalogs"][q["exam"]]["name"]} {q["unitLabel"]} / {q["topic"]}\n\nURL: {absolute(pathq(q))}\n\n問題: {q["text"]}\n\n解答: {q["answerText"]}\n\n解説: {q["explain"]}\n')
 if COURSE:
- for l in COURSE['lessons']:
+ for l in ALL_COURSE['lessons']:
   full.append('\n## 講義 '+l['title']+'\nURL: '+BASE+'/lessons/'+l['id']+'.html\n'+'\n'.join(s['title']+'\n'+'\n'.join(s['paragraphs']) for s in l['sections']))
   for w in l['workedExamples']:
    full.append('\n例題: '+w['title']+'\n条件: '+w['prompt']+'\n手順: '+' / '.join(w['steps'])+'\n例題の答え: '+w['answer'])
   full.append('間違えやすい点: '+' / '.join(l['pitfalls']))
- for q in COURSE['questions']:
+ for q in ALL_COURSE['questions']:
   lines=['\n### 新教材問題: '+q['title'],'問題ID: '+q['id'],'講義URL: '+BASE+'/lessons/'+q['lessonId']+'.html',q['prompt']]
   for t in q.get('exhibits',[]):
    lines+=['資料: '+t['title'],' | '.join(str(v) for v in t['headers'])]

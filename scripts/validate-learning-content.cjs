@@ -4,9 +4,9 @@ const path=require('node:path');
 const crypto=require('node:crypto');
 const digest=value=>crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const {gradeJournal,gradeFields}=require('../dist/assessment-engine.js');
-function validate(content,requirements,{publish=false,allSourceRowsMapped=false}={}){
- const errors=[],ensure=(ok,message)=>{if(!ok)errors.push(message)},reqs=new Map(requirements.filter(r=>r.exam==='nissho'&&r.unit===3).map(r=>[r.id,r]));
- ensure(content.schemaVersion===1,'schemaVersion must be 1');ensure(content.target==='nissho:3','Unexpected target');ensure(content.scopeVersion==='nissho-2026','Scope version not supported/verified');
+function validate(content,requirements,{publish=false,allSourceRowsMapped=false,target='nissho:3'}={}){
+ const errors=[],ensure=(ok,message)=>{if(!ok)errors.push(message)},reqs=new Map(requirements.filter(r=>r.exam==='nissho'&&r.unit===Number(target.split(':')[1])).map(r=>[r.id,r]));
+ ensure(content.schemaVersion===1,'schemaVersion must be 1');ensure(['nissho:3','nissho:2'].includes(target)&&content.target===target,'Unexpected target');ensure(content.scopeVersion==='nissho-2026','Scope version not supported/verified');
  if(publish){ensure(content.authoringStatus==='reviewed','Draft content cannot be published');ensure(content.sourceVerificationPending===false,'Primary source verification must be complete for the released scope');ensure(Array.isArray(content.reviewRecords)&&content.reviewRecords.some(r=>r.kind==='independent-computation'&&typeof r.reviewedBy==='string'&&r.reviewedBy&&typeof r.reviewedAt==='string'&&Array.isArray(r.questionIds)),'Independent review record required');}
  const lessons=Array.isArray(content.lessons)?content.lessons:[],questions=Array.isArray(content.questions)?content.questions:[];
  ensure(lessons.length>0,'No lessons');ensure(questions.length>0,'No questions');
@@ -27,4 +27,4 @@ function validate(content,requirements,{publish=false,allSourceRowsMapped=false}
  return {validationKind:'schema-and-mapping-only',pedagogicCompleteness:'not-established-by-schema-validation',valid:errors.length===0,errors,lessons:lessons.length,questions:questions.length,families:new Set(questions.map(q=>q.familyId)).size,mappedRequirements:covered.size,totalRequirements:reqs.size};
 }
 module.exports={validate,digest};
-if(require.main===module){const file=process.argv[2];if(!file)throw Error('Usage: node scripts/validate-learning-content.cjs content.json [--publish] [--all-source-rows]');const report=validate(JSON.parse(fs.readFileSync(file,'utf8')),JSON.parse(fs.readFileSync(path.join(__dirname,'../content/curriculum.json'),'utf8')),{publish:process.argv.includes('--publish'),allSourceRowsMapped:process.argv.includes('--all-source-rows')});console.log(JSON.stringify(report,null,2));if(!report.valid)process.exitCode=1;}
+if(require.main===module){const file=process.argv[2];if(!file)throw Error('Usage: node scripts/validate-learning-content.cjs content.json [--publish] [--all-source-rows]');const report=validate(JSON.parse(fs.readFileSync(file,'utf8')),JSON.parse(fs.readFileSync(path.join(__dirname,'../content/curriculum.json'),'utf8')),{target:process.argv.includes('--grade2')?'nissho:2':'nissho:3',publish:process.argv.includes('--publish'),allSourceRowsMapped:process.argv.includes('--all-source-rows')});console.log(JSON.stringify(report,null,2));if(!report.valid)process.exitCode=1;}

@@ -5,7 +5,8 @@ build=json.loads((root/'content/discovery-build.json').read_text());assert build
 course=json.loads((root/'content/learning-course.json').read_text()) if (root/'content/learning-course.json').exists() else None
 mock_pages=1 if (root/'content/mock-2026/student-form.json').exists() else 0
 if mock_pages:assert (d/'mock.html').exists() and 'mock.html' in build['pages']
-assert build['htmlPages']==63+(len(course['lessons'])+1 if course else 0)+mock_pages
+industrial=json.loads((root/'content/industrial-course.json').read_text()) if (root/'content/industrial-course.json').exists() else None
+assert build['htmlPages']==(len(industrial['lessons']) if industrial else 0)+63+(len(course['lessons'])+1 if course else 0)+mock_pages
 for p in d.rglob('*.html'):
  s=p.read_text(); assert 'Book Keeping' not in s and 'BOOK KEEPING' not in s,p
  assert 'IL MASTRO' in s and 'ILMASTRO' not in s,p

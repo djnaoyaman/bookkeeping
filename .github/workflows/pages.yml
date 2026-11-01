@@ -32,6 +32,7 @@ jobs:
           node tests/assessment-engine.cjs
           node tests/assessment-session.cjs
           node tests/learning-course.cjs
+          node tests/industrial-course.cjs
           node tests/check.cjs
           node tests/discovery-client.cjs
   deploy:
