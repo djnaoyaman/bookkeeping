@@ -4,6 +4,7 @@
 
 ## サイト
 - [演習](https://djnaoyaman.github.io/bookkeeping/): 金額・仕訳入力と選択問題。
+- [60分の総合練習](https://djnaoyaman.github.io/bookkeeping/mock.html): 2026年度範囲・独自配点のオリジナル第1回。公式難易度や合格予測を示しません。
 - [日商簿記](https://djnaoyaman.github.io/bookkeeping/exams/nissho.html)
 - [全経簿記](https://djnaoyaman.github.io/bookkeeping/exams/zenkei.html)
 - [USCPA](https://djnaoyaman.github.io/bookkeeping/exams/uscpa.html)

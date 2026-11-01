@@ -66,3 +66,5 @@ print('PASS: scoped course text includes all tables, field answers/options/units
 subprocess.run([sys.executable,str(ROOT/'scripts/test_course_text.py')],check=True)
 
 subprocess.run([sys.executable,str(ROOT/'scripts/check_icon_assets.py')],check=True)
+
+subprocess.run(["node",str(ROOT/"tests/mock-form.cjs")],cwd=ROOT,check=True)

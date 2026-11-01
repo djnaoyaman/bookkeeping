@@ -1,6 +1,6 @@
 {
   "canonicalBase": "https://djnaoyaman.github.io/bookkeeping",
-  "htmlPages": 94,
+  "htmlPages": 95,
   "questionPages": 56,
   "pages": [
     "",
@@ -96,6 +96,7 @@
     "lessons/n3-lesson-20.html",
     "lessons/n3-lesson-21.html",
     "lessons/n3-lesson-26.html",
-    "lessons/n3-lesson-22.html"
+    "lessons/n3-lesson-22.html",
+    "mock.html"
   ]
 }

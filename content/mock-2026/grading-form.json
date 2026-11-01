@@ -1,0 +1,2140 @@
+{
+  "formId": "n3-original-mock-2026-01",
+  "formVersion": "1",
+  "scopeVersion": "nissho-2026",
+  "formatVersion": "nissho3-2026-section-weights-v1",
+  "educationalRubricVersion": "il-mastro-mock-2026-01-rubric-v1",
+  "engineVersion": "assessment-engine-sha256-5bcdda63e164f0d7b2ee0d3626cb350aa09ee29e53ae76c0dcc335ac70fb60a5",
+  "durationMs": 3600000,
+  "passTarget": 70,
+  "scopeApproved": true,
+  "tasks": [
+    {
+      "taskId": "n3-original-mock-2026-01-s1-01",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "95ee5555786633a3776fcb53fc58f23514902e75a17e00e275504c9fdbc81f85",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "仕入",
+          "前払金",
+          "買掛金",
+          "現金",
+          "支払手数料",
+          "発送費"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "仕入",
+            "amount": 49200,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "前払金",
+            "amount": 13000,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "買掛金",
+            "amount": 35000,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "現金",
+            "amount": 1200,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-02",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "e18a24aec3d01777d74a69c3c0fe0345fc16419d904a766cb007b90c33d297a3",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "当座預金",
+          "未収入金",
+          "現金",
+          "売掛金",
+          "備品",
+          "固定資産売却益"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "当座預金",
+            "amount": 27000,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "未収入金",
+            "amount": 27000,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-03",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "8540715c69469af72f69506aada14a772032c926bd1852b32210a4cf459e3d57",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "通信費",
+          "旅費交通費",
+          "小口現金",
+          "当座預金",
+          "現金",
+          "仮払金"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "通信費",
+            "amount": 1240,
+            "points": 1
+          },
+          {
+            "side": "debit",
+            "account": "旅費交通費",
+            "amount": 2760,
+            "points": 1
+          },
+          {
+            "side": "debit",
+            "account": "小口現金",
+            "amount": 5000,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "当座預金",
+            "amount": 9000,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-04",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "e526935b6144ce1dfa97e3ae5454abe770bf6bf5311d90c341f44ae0da1edeba",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "旅費交通費",
+          "立替金",
+          "現金",
+          "仮払金",
+          "給料",
+          "預り金"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "旅費交通費",
+            "amount": 12600,
+            "points": 1
+          },
+          {
+            "side": "debit",
+            "account": "立替金",
+            "amount": 4800,
+            "points": 1
+          },
+          {
+            "side": "debit",
+            "account": "現金",
+            "amount": 6600,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "仮払金",
+            "amount": 24000,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-05",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "c45c0936c8c28eaa9c858ab0582d00deef530f58f4c7d6418c61fe20ac60e201",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "買掛金",
+          "普通預金",
+          "仕入",
+          "仮払消費税",
+          "仮受消費税",
+          "売上"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "買掛金",
+            "amount": 3300,
+            "points": 1
+          },
+          {
+            "side": "debit",
+            "account": "普通預金",
+            "amount": 5500,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "仕入",
+            "amount": 8000,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "仮払消費税",
+            "amount": 800,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-06",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "a94ccfe7084ea43af8707b383599baee8956b0b18727030c5a2c35f3e8ecaf87",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "電子記録債権",
+          "普通預金",
+          "売掛金",
+          "受取手形",
+          "売上",
+          "電子記録債務"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "電子記録債権",
+            "amount": 32000,
+            "points": 1
+          },
+          {
+            "side": "debit",
+            "account": "普通預金",
+            "amount": 24000,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "売掛金",
+            "amount": 56000,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-07",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "1b0130a43fced839df926cd2a81f981bb228ba4fa51f795a0b23e78771282580",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "普通預金",
+          "償却債権取立益",
+          "売掛金",
+          "貸倒引当金",
+          "売上",
+          "受取利息"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "普通預金",
+            "amount": 14600,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "償却債権取立益",
+            "amount": 9200,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "売掛金",
+            "amount": 5400,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-08",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "d57774331626c44ab21e24fcc9829a81b15a8836c8ce04b7faa1f60f564af179",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "普通預金",
+          "支払手数料",
+          "手形貸付金",
+          "未収利息",
+          "受取利息",
+          "手形借入金",
+          "支払利息"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "普通預金",
+            "amount": 96900,
+            "points": 1
+          },
+          {
+            "side": "debit",
+            "account": "支払手数料",
+            "amount": 300,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "手形貸付金",
+            "amount": 96000,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "未収利息",
+            "amount": 400,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "受取利息",
+            "amount": 800,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-09",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "0509b010c0082b56f99da59f4ddcb445a29fbecc58d20286fbb858b39363f1f9",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "備品減価償却累計額",
+          "普通預金",
+          "未収入金",
+          "備品",
+          "固定資産売却益",
+          "固定資産売却損",
+          "売上",
+          "減価償却費"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "備品減価償却累計額",
+            "amount": 126000,
+            "points": 1
+          },
+          {
+            "side": "debit",
+            "account": "普通預金",
+            "amount": 20000,
+            "points": 1
+          },
+          {
+            "side": "debit",
+            "account": "未収入金",
+            "amount": 42000,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "備品",
+            "amount": 180000,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "固定資産売却益",
+            "amount": 8000,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-10",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "e311b6058ce0a17ef92e7f3a7ae5493998d6e3227070a22aa291bcc8e57e7a50",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "繰越利益剰余金",
+          "未払配当金",
+          "利益準備金",
+          "普通預金",
+          "支払利息",
+          "資本金"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "繰越利益剰余金",
+            "amount": 19600,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "未払配当金",
+            "amount": 18400,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "利益準備金",
+            "amount": 1200,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-11",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "6902ac19522cc6613510361cd9895544a2aaeeca5d51994298d88fc24b6c15b9",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "普通預金",
+          "差入保証金",
+          "前払家賃",
+          "受取家賃",
+          "雑益",
+          "支払家賃"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "普通預金",
+            "amount": 56000,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "差入保証金",
+            "amount": 40000,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "前払家賃",
+            "amount": 16000,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-12",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "49c8aff23ae414f50b80e3eac0070625b96b95d89a70bfe8a9d3f4f692566d25",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "買掛金",
+          "当座預金",
+          "支払手形",
+          "仕入",
+          "現金",
+          "受取手形"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "買掛金",
+            "amount": 34000,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "当座預金",
+            "amount": 10000,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "支払手形",
+            "amount": 24000,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-13",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "0ed4536994c601f8bf9fc9af9679713b02c6bd8a5d7546b42017f0ddf634b3ce",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "売掛金",
+          "立替金",
+          "売上",
+          "現金",
+          "発送費",
+          "仕入"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "売掛金",
+            "amount": 70000,
+            "points": 1
+          },
+          {
+            "side": "debit",
+            "account": "立替金",
+            "amount": 1300,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "売上",
+            "amount": 70000,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "現金",
+            "amount": 1300,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-14",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "328f4a3292e4dbb56805312b6e9a8690e0772381a07f56e5ec61e3e4f420990f",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "現金過不足",
+          "受取手数料",
+          "通信費",
+          "現金",
+          "雑益",
+          "雑損"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "現金過不足",
+            "amount": 1500,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "受取手数料",
+            "amount": 900,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "通信費",
+            "amount": 600,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-15",
+      "section": 1,
+      "questionVersion": 1,
+      "questionHash": "bb6ae235878e6047d1c42662b17f7961779cfbf73921e01584ad27012bf09ebd",
+      "spec": {
+        "type": "journal",
+        "unit": "円",
+        "decimals": 0,
+        "accounts": [
+          "普通預金",
+          "支払手数料",
+          "受取商品券",
+          "売上",
+          "仮受金",
+          "現金"
+        ],
+        "maximumRows": 8,
+        "lines": [
+          {
+            "side": "debit",
+            "account": "普通預金",
+            "amount": 17640,
+            "points": 1
+          },
+          {
+            "side": "debit",
+            "account": "支払手数料",
+            "amount": 360,
+            "points": 1
+          },
+          {
+            "side": "credit",
+            "account": "受取商品券",
+            "amount": 18000,
+            "points": 1
+          }
+        ]
+      },
+      "points": 3,
+      "policy": "journal-all-or-nothing"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s2-a",
+      "section": 2,
+      "questionVersion": 1,
+      "questionHash": "0bca8522268bc0bbdf4ee6d1ab219484e25ee0d9c1f1944796339255c7cc71c2",
+      "spec": {
+        "type": "fields",
+        "fields": [
+          {
+            "id": "a1",
+            "label": "A1 の帳簿",
+            "type": "choice",
+            "options": [
+              "a",
+              "b",
+              "c",
+              "d"
+            ],
+            "optionLabels": {
+              "a": "売上帳・売掛金元帳",
+              "b": "現金出納帳・仕入帳・買掛金元帳",
+              "c": "現金出納帳・売上帳・売掛金元帳",
+              "d": "現金出納帳・売上帳"
+            },
+            "answer": "c",
+            "points": 1
+          },
+          {
+            "id": "a2",
+            "label": "A2 の帳簿",
+            "type": "choice",
+            "options": [
+              "a",
+              "b",
+              "c",
+              "d"
+            ],
+            "optionLabels": {
+              "a": "売掛金元帳だけ",
+              "b": "売掛金元帳・受取手形記入帳",
+              "c": "現金出納帳・売掛金元帳",
+              "d": "受取手形記入帳・売上帳"
+            },
+            "answer": "b",
+            "points": 1
+          },
+          {
+            "id": "a3",
+            "label": "A3 の帳簿",
+            "type": "choice",
+            "options": [
+              "a",
+              "b",
+              "c",
+              "d"
+            ],
+            "optionLabels": {
+              "a": "仕入帳・買掛金元帳",
+              "b": "現金出納帳・固定資産台帳",
+              "c": "買掛金元帳・固定資産台帳",
+              "d": "固定資産台帳だけ"
+            },
+            "answer": "d",
+            "points": 1
+          },
+          {
+            "id": "a4",
+            "label": "A4 の帳簿",
+            "type": "choice",
+            "options": [
+              "a",
+              "b",
+              "c",
+              "d"
+            ],
+            "optionLabels": {
+              "a": "仕入帳・買掛金元帳",
+              "b": "仕入帳だけ",
+              "c": "現金出納帳・仕入帳・買掛金元帳",
+              "d": "固定資産台帳・買掛金元帳"
+            },
+            "answer": "a",
+            "points": 1
+          },
+          {
+            "id": "a5",
+            "label": "A5 の帳簿",
+            "type": "choice",
+            "options": [
+              "a",
+              "b",
+              "c",
+              "d"
+            ],
+            "optionLabels": {
+              "a": "現金出納帳・売掛金元帳",
+              "b": "現金出納帳・買掛金元帳",
+              "c": "仕入帳・買掛金元帳",
+              "d": "現金出納帳・仕入帳"
+            },
+            "answer": "b",
+            "points": 1
+          }
+        ]
+      },
+      "groups": [
+        {
+          "id": "s2-a-1",
+          "fieldIds": [
+            "a1"
+          ],
+          "points": 2,
+          "requireAll": true
+        },
+        {
+          "id": "s2-a-2",
+          "fieldIds": [
+            "a2"
+          ],
+          "points": 2,
+          "requireAll": true
+        },
+        {
+          "id": "s2-a-3",
+          "fieldIds": [
+            "a3"
+          ],
+          "points": 2,
+          "requireAll": true
+        },
+        {
+          "id": "s2-a-4",
+          "fieldIds": [
+            "a4"
+          ],
+          "points": 2,
+          "requireAll": true
+        },
+        {
+          "id": "s2-a-5",
+          "fieldIds": [
+            "a5"
+          ],
+          "points": 2,
+          "requireAll": true
+        }
+      ]
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s2-b",
+      "section": 2,
+      "questionVersion": 1,
+      "questionHash": "a1b41f96fd098b0a80373bd9040cb228051e77fde9bc6e350435ecd1b298b517",
+      "spec": {
+        "type": "fields",
+        "fields": [
+          {
+            "id": "invoice-unit",
+            "label": "5月4日の仕入先請求単価 1個当たり",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 1540,
+            "points": 1
+          },
+          {
+            "id": "first-cost",
+            "label": "5月4日の運賃込み受入原価合計",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 19200,
+            "points": 1
+          },
+          {
+            "id": "average-after-second",
+            "label": "5月12日受入れ直後の平均単価",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 1590,
+            "points": 1
+          },
+          {
+            "id": "second-issue",
+            "label": "5月20日の払出原価",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 15900,
+            "points": 1
+          },
+          {
+            "id": "ending-cost",
+            "label": "5月末の商品有高帳残高金額",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 22260,
+            "points": 1
+          }
+        ]
+      },
+      "groups": [
+        {
+          "id": "s2-b-1",
+          "fieldIds": [
+            "invoice-unit"
+          ],
+          "points": 2,
+          "requireAll": true
+        },
+        {
+          "id": "s2-b-2",
+          "fieldIds": [
+            "first-cost"
+          ],
+          "points": 2,
+          "requireAll": true
+        },
+        {
+          "id": "s2-b-3",
+          "fieldIds": [
+            "average-after-second"
+          ],
+          "points": 2,
+          "requireAll": true
+        },
+        {
+          "id": "s2-b-4",
+          "fieldIds": [
+            "second-issue"
+          ],
+          "points": 2,
+          "requireAll": true
+        },
+        {
+          "id": "s2-b-5",
+          "fieldIds": [
+            "ending-cost"
+          ],
+          "points": 2,
+          "requireAll": true
+        }
+      ]
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s3",
+      "section": 3,
+      "questionVersion": 1,
+      "questionHash": "4558c42f43b37cffc869c45273475c57d20ef2cd28e739037d9dbb619fd73476",
+      "spec": {
+        "type": "fields",
+        "fields": [
+          {
+            "id": "r01-class",
+            "label": "支払家賃 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "pl-expense",
+            "points": 1
+          },
+          {
+            "id": "r01-amount",
+            "label": "支払家賃 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 96000,
+            "points": 1
+          },
+          {
+            "id": "r02-class",
+            "label": "前受収益 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-liability",
+            "points": 1
+          },
+          {
+            "id": "r02-amount",
+            "label": "前受収益 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 6000,
+            "points": 1
+          },
+          {
+            "id": "r03-class",
+            "label": "備品 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-asset",
+            "points": 1
+          },
+          {
+            "id": "r03-amount",
+            "label": "備品 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 300000,
+            "points": 1
+          },
+          {
+            "id": "r04-class",
+            "label": "貸倒引当金戻入 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "pl-revenue",
+            "points": 1
+          },
+          {
+            "id": "r04-amount",
+            "label": "貸倒引当金戻入 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 200,
+            "points": 1
+          },
+          {
+            "id": "r05-class",
+            "label": "現金 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-asset",
+            "points": 1
+          },
+          {
+            "id": "r05-amount",
+            "label": "現金 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 32000,
+            "points": 1
+          },
+          {
+            "id": "r06-class",
+            "label": "未払費用 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-liability",
+            "points": 1
+          },
+          {
+            "id": "r06-amount",
+            "label": "未払費用 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 5000,
+            "points": 1
+          },
+          {
+            "id": "r07-class",
+            "label": "売掛金 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-asset",
+            "points": 1
+          },
+          {
+            "id": "r07-amount",
+            "label": "売掛金 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 160000,
+            "points": 1
+          },
+          {
+            "id": "r08-class",
+            "label": "減価償却費 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "pl-expense",
+            "points": 1
+          },
+          {
+            "id": "r08-amount",
+            "label": "減価償却費 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 60000,
+            "points": 1
+          },
+          {
+            "id": "r09-class",
+            "label": "資本金 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-equity",
+            "points": 1
+          },
+          {
+            "id": "r09-amount",
+            "label": "資本金 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 500000,
+            "points": 1
+          },
+          {
+            "id": "r10-class",
+            "label": "貯蔵品 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-asset",
+            "points": 1
+          },
+          {
+            "id": "r10-amount",
+            "label": "貯蔵品 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 2000,
+            "points": 1
+          },
+          {
+            "id": "r11-class",
+            "label": "買掛金 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-liability",
+            "points": 1
+          },
+          {
+            "id": "r11-amount",
+            "label": "買掛金 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 95000,
+            "points": 1
+          },
+          {
+            "id": "r12-class",
+            "label": "受取家賃 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "pl-revenue",
+            "points": 1
+          },
+          {
+            "id": "r12-amount",
+            "label": "受取家賃 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 18000,
+            "points": 1
+          },
+          {
+            "id": "r13-class",
+            "label": "備品減価償却累計額 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-contra-asset",
+            "points": 1
+          },
+          {
+            "id": "r13-amount",
+            "label": "備品減価償却累計額 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 120000,
+            "points": 1
+          },
+          {
+            "id": "r14-class",
+            "label": "保険料 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "pl-expense",
+            "points": 1
+          },
+          {
+            "id": "r14-amount",
+            "label": "保険料 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 18000,
+            "points": 1
+          },
+          {
+            "id": "r15-class",
+            "label": "繰越商品 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-asset",
+            "points": 1
+          },
+          {
+            "id": "r15-amount",
+            "label": "繰越商品 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 85000,
+            "points": 1
+          },
+          {
+            "id": "r16-class",
+            "label": "普通預金 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-asset",
+            "points": 1
+          },
+          {
+            "id": "r16-amount",
+            "label": "普通預金 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 250000,
+            "points": 1
+          },
+          {
+            "id": "r17-class",
+            "label": "繰越利益剰余金 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-equity",
+            "points": 1
+          },
+          {
+            "id": "r17-amount",
+            "label": "繰越利益剰余金 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 20000,
+            "points": 1
+          },
+          {
+            "id": "r18-class",
+            "label": "給料 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "pl-expense",
+            "points": 1
+          },
+          {
+            "id": "r18-amount",
+            "label": "給料 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 185000,
+            "points": 1
+          },
+          {
+            "id": "r19-class",
+            "label": "借入金 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-liability",
+            "points": 1
+          },
+          {
+            "id": "r19-amount",
+            "label": "借入金 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 200000,
+            "points": 1
+          },
+          {
+            "id": "r20-class",
+            "label": "前払費用 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-asset",
+            "points": 1
+          },
+          {
+            "id": "r20-amount",
+            "label": "前払費用 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 6000,
+            "points": 1
+          },
+          {
+            "id": "r21-class",
+            "label": "売上 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "pl-revenue",
+            "points": 1
+          },
+          {
+            "id": "r21-amount",
+            "label": "売上 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 620000,
+            "points": 1
+          },
+          {
+            "id": "r22-class",
+            "label": "通信費 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "pl-expense",
+            "points": 1
+          },
+          {
+            "id": "r22-amount",
+            "label": "通信費 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 10000,
+            "points": 1
+          },
+          {
+            "id": "r23-class",
+            "label": "貸倒引当金 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "bs-contra-asset",
+            "points": 1
+          },
+          {
+            "id": "r23-amount",
+            "label": "貸倒引当金 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 4800,
+            "points": 1
+          },
+          {
+            "id": "r24-class",
+            "label": "仕入 の分類",
+            "type": "choice",
+            "options": [
+              "pl-expense",
+              "pl-revenue",
+              "bs-asset",
+              "bs-contra-asset",
+              "bs-liability",
+              "bs-equity"
+            ],
+            "optionLabels": {
+              "pl-expense": "P/L 左側 費用",
+              "pl-revenue": "P/L 右側 収益",
+              "bs-asset": "B/S 左側 資産",
+              "bs-contra-asset": "B/S 左側の対応資産から控除",
+              "bs-liability": "B/S 右側 負債",
+              "bs-equity": "B/S 右側 純資産"
+            },
+            "answer": "pl-expense",
+            "points": 1
+          },
+          {
+            "id": "r24-amount",
+            "label": "仕入 の整理後残高",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 385000,
+            "points": 1
+          },
+          {
+            "id": "pl-expense-total",
+            "label": "P/L 費用合計",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 754000,
+            "points": 1
+          },
+          {
+            "id": "pl-revenue-total",
+            "label": "P/L 収益合計",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 638200,
+            "points": 1
+          },
+          {
+            "id": "pl-result-kind",
+            "label": "当期純損益の種類",
+            "type": "choice",
+            "options": [
+              "profit",
+              "loss"
+            ],
+            "optionLabels": {
+              "profit": "当期純利益",
+              "loss": "当期純損失"
+            },
+            "answer": "loss",
+            "points": 1
+          },
+          {
+            "id": "pl-result-amount",
+            "label": "当期純損益の金額 大きさ",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 115800,
+            "points": 1
+          },
+          {
+            "id": "pl-result-side",
+            "label": "勘定式P/Lで差額を補記する側",
+            "type": "choice",
+            "options": [
+              "left",
+              "right"
+            ],
+            "optionLabels": {
+              "left": "左側",
+              "right": "右側"
+            },
+            "answer": "right",
+            "points": 1
+          },
+          {
+            "id": "bs-assets",
+            "label": "最終B/S 資産合計 控除後",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 710200,
+            "points": 1
+          },
+          {
+            "id": "bs-liabilities",
+            "label": "最終B/S 負債合計",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 306000,
+            "points": 1
+          },
+          {
+            "id": "bs-retained-sign",
+            "label": "最終B/S 繰越利益剰余金の表示",
+            "type": "choice",
+            "options": [
+              "positive",
+              "negative"
+            ],
+            "optionLabels": {
+              "positive": "正の純資産",
+              "negative": "△の純資産控除"
+            },
+            "answer": "negative",
+            "points": 1
+          },
+          {
+            "id": "bs-retained-amount",
+            "label": "最終B/S 繰越利益剰余金の大きさ",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 95800,
+            "points": 1
+          },
+          {
+            "id": "bs-equity",
+            "label": "最終B/S 純資産合計",
+            "type": "amount",
+            "unit": "円",
+            "decimals": 0,
+            "signPolicy": "nonnegative",
+            "answer": 404200,
+            "points": 1
+          }
+        ]
+      },
+      "groups": [
+        {
+          "id": "s3-row-1",
+          "fieldIds": [
+            "r01-class",
+            "r01-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-2",
+          "fieldIds": [
+            "r02-class",
+            "r02-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-3",
+          "fieldIds": [
+            "r03-class",
+            "r03-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-4",
+          "fieldIds": [
+            "r04-class",
+            "r04-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-5",
+          "fieldIds": [
+            "r05-class",
+            "r05-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-6",
+          "fieldIds": [
+            "r06-class",
+            "r06-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-7",
+          "fieldIds": [
+            "r07-class",
+            "r07-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-8",
+          "fieldIds": [
+            "r08-class",
+            "r08-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-9",
+          "fieldIds": [
+            "r09-class",
+            "r09-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-10",
+          "fieldIds": [
+            "r10-class",
+            "r10-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-11",
+          "fieldIds": [
+            "r11-class",
+            "r11-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-12",
+          "fieldIds": [
+            "r12-class",
+            "r12-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-13",
+          "fieldIds": [
+            "r13-class",
+            "r13-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-14",
+          "fieldIds": [
+            "r14-class",
+            "r14-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-15",
+          "fieldIds": [
+            "r15-class",
+            "r15-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-16",
+          "fieldIds": [
+            "r16-class",
+            "r16-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-17",
+          "fieldIds": [
+            "r17-class",
+            "r17-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-18",
+          "fieldIds": [
+            "r18-class",
+            "r18-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-19",
+          "fieldIds": [
+            "r19-class",
+            "r19-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-20",
+          "fieldIds": [
+            "r20-class",
+            "r20-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-21",
+          "fieldIds": [
+            "r21-class",
+            "r21-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-22",
+          "fieldIds": [
+            "r22-class",
+            "r22-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-23",
+          "fieldIds": [
+            "r23-class",
+            "r23-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-row-24",
+          "fieldIds": [
+            "r24-class",
+            "r24-amount"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-pl-expense",
+          "fieldIds": [
+            "pl-expense-total"
+          ],
+          "points": 2,
+          "requireAll": true
+        },
+        {
+          "id": "s3-pl-revenue",
+          "fieldIds": [
+            "pl-revenue-total"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-pl-result",
+          "fieldIds": [
+            "pl-result-kind",
+            "pl-result-amount",
+            "pl-result-side"
+          ],
+          "points": 2,
+          "requireAll": true
+        },
+        {
+          "id": "s3-bs-assets",
+          "fieldIds": [
+            "bs-assets"
+          ],
+          "points": 2,
+          "requireAll": true
+        },
+        {
+          "id": "s3-bs-liabilities",
+          "fieldIds": [
+            "bs-liabilities"
+          ],
+          "points": 1,
+          "requireAll": true
+        },
+        {
+          "id": "s3-bs-retained",
+          "fieldIds": [
+            "bs-retained-sign",
+            "bs-retained-amount"
+          ],
+          "points": 2,
+          "requireAll": true
+        },
+        {
+          "id": "s3-bs-equity",
+          "fieldIds": [
+            "bs-equity"
+          ],
+          "points": 1,
+          "requireAll": true
+        }
+      ]
+    }
+  ]
+}
