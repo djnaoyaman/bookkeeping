@@ -1,0 +1,371 @@
+{
+  "n3-original-mock-2026-01-s1-01": [
+    {
+      "side": "debit",
+      "account": "仕入",
+      "amount": "49200"
+    },
+    {
+      "side": "credit",
+      "account": "前払金",
+      "amount": "13000"
+    },
+    {
+      "side": "credit",
+      "account": "買掛金",
+      "amount": "35000"
+    },
+    {
+      "side": "credit",
+      "account": "現金",
+      "amount": "1200"
+    }
+  ],
+  "n3-original-mock-2026-01-s1-02": [
+    {
+      "side": "debit",
+      "account": "当座預金",
+      "amount": "27000"
+    },
+    {
+      "side": "credit",
+      "account": "未収入金",
+      "amount": "27000"
+    }
+  ],
+  "n3-original-mock-2026-01-s1-03": [
+    {
+      "side": "debit",
+      "account": "通信費",
+      "amount": "1240"
+    },
+    {
+      "side": "debit",
+      "account": "旅費交通費",
+      "amount": "2760"
+    },
+    {
+      "side": "debit",
+      "account": "小口現金",
+      "amount": "5000"
+    },
+    {
+      "side": "credit",
+      "account": "当座預金",
+      "amount": "9000"
+    }
+  ],
+  "n3-original-mock-2026-01-s1-04": [
+    {
+      "side": "debit",
+      "account": "旅費交通費",
+      "amount": "12600"
+    },
+    {
+      "side": "debit",
+      "account": "立替金",
+      "amount": "4800"
+    },
+    {
+      "side": "debit",
+      "account": "現金",
+      "amount": "6600"
+    },
+    {
+      "side": "credit",
+      "account": "仮払金",
+      "amount": "24000"
+    }
+  ],
+  "n3-original-mock-2026-01-s1-05": [
+    {
+      "side": "debit",
+      "account": "買掛金",
+      "amount": "3300"
+    },
+    {
+      "side": "debit",
+      "account": "普通預金",
+      "amount": "5500"
+    },
+    {
+      "side": "credit",
+      "account": "仕入",
+      "amount": "8000"
+    },
+    {
+      "side": "credit",
+      "account": "仮払消費税",
+      "amount": "800"
+    }
+  ],
+  "n3-original-mock-2026-01-s1-06": [
+    {
+      "side": "debit",
+      "account": "電子記録債権",
+      "amount": "32000"
+    },
+    {
+      "side": "debit",
+      "account": "普通預金",
+      "amount": "24000"
+    },
+    {
+      "side": "credit",
+      "account": "売掛金",
+      "amount": "56000"
+    }
+  ],
+  "n3-original-mock-2026-01-s1-07": [
+    {
+      "side": "debit",
+      "account": "普通預金",
+      "amount": "14600"
+    },
+    {
+      "side": "credit",
+      "account": "償却債権取立益",
+      "amount": "9200"
+    },
+    {
+      "side": "credit",
+      "account": "売掛金",
+      "amount": "5400"
+    }
+  ],
+  "n3-original-mock-2026-01-s1-08": [
+    {
+      "side": "debit",
+      "account": "普通預金",
+      "amount": "96900"
+    },
+    {
+      "side": "debit",
+      "account": "支払手数料",
+      "amount": "300"
+    },
+    {
+      "side": "credit",
+      "account": "手形貸付金",
+      "amount": "96000"
+    },
+    {
+      "side": "credit",
+      "account": "未収利息",
+      "amount": "400"
+    },
+    {
+      "side": "credit",
+      "account": "受取利息",
+      "amount": "800"
+    }
+  ],
+  "n3-original-mock-2026-01-s1-09": [
+    {
+      "side": "debit",
+      "account": "備品減価償却累計額",
+      "amount": "126000"
+    },
+    {
+      "side": "debit",
+      "account": "普通預金",
+      "amount": "20000"
+    },
+    {
+      "side": "debit",
+      "account": "未収入金",
+      "amount": "42000"
+    },
+    {
+      "side": "credit",
+      "account": "備品",
+      "amount": "180000"
+    },
+    {
+      "side": "credit",
+      "account": "固定資産売却益",
+      "amount": "8000"
+    }
+  ],
+  "n3-original-mock-2026-01-s1-10": [
+    {
+      "side": "debit",
+      "account": "繰越利益剰余金",
+      "amount": "19600"
+    },
+    {
+      "side": "credit",
+      "account": "未払配当金",
+      "amount": "18400"
+    },
+    {
+      "side": "credit",
+      "account": "利益準備金",
+      "amount": "1200"
+    }
+  ],
+  "n3-original-mock-2026-01-s1-11": [
+    {
+      "side": "debit",
+      "account": "普通預金",
+      "amount": "56000"
+    },
+    {
+      "side": "credit",
+      "account": "差入保証金",
+      "amount": "40000"
+    },
+    {
+      "side": "credit",
+      "account": "前払家賃",
+      "amount": "16000"
+    }
+  ],
+  "n3-original-mock-2026-01-s1-12": [
+    {
+      "side": "debit",
+      "account": "買掛金",
+      "amount": "34000"
+    },
+    {
+      "side": "credit",
+      "account": "当座預金",
+      "amount": "10000"
+    },
+    {
+      "side": "credit",
+      "account": "支払手形",
+      "amount": "24000"
+    }
+  ],
+  "n3-original-mock-2026-01-s1-13": [
+    {
+      "side": "debit",
+      "account": "売掛金",
+      "amount": "70000"
+    },
+    {
+      "side": "debit",
+      "account": "立替金",
+      "amount": "1300"
+    },
+    {
+      "side": "credit",
+      "account": "売上",
+      "amount": "70000"
+    },
+    {
+      "side": "credit",
+      "account": "現金",
+      "amount": "1300"
+    }
+  ],
+  "n3-original-mock-2026-01-s1-14": [
+    {
+      "side": "debit",
+      "account": "現金過不足",
+      "amount": "1500"
+    },
+    {
+      "side": "credit",
+      "account": "受取手数料",
+      "amount": "900"
+    },
+    {
+      "side": "credit",
+      "account": "通信費",
+      "amount": "600"
+    }
+  ],
+  "n3-original-mock-2026-01-s1-15": [
+    {
+      "side": "debit",
+      "account": "普通預金",
+      "amount": "17640"
+    },
+    {
+      "side": "debit",
+      "account": "支払手数料",
+      "amount": "360"
+    },
+    {
+      "side": "credit",
+      "account": "受取商品券",
+      "amount": "18000"
+    }
+  ],
+  "n3-original-mock-2026-01-s2-a": {
+    "a1": "c",
+    "a2": "b",
+    "a3": "d",
+    "a4": "a",
+    "a5": "b"
+  },
+  "n3-original-mock-2026-01-s2-b": {
+    "invoice-unit": "1540",
+    "first-cost": "19200",
+    "average-after-second": "1590",
+    "second-issue": "15900",
+    "ending-cost": "22260"
+  },
+  "n3-original-mock-2026-01-s3": {
+    "r01-class": "pl-expense",
+    "r01-amount": "96000",
+    "r02-class": "bs-liability",
+    "r02-amount": "6000",
+    "r03-class": "bs-asset",
+    "r03-amount": "300000",
+    "r04-class": "pl-revenue",
+    "r04-amount": "200",
+    "r05-class": "bs-asset",
+    "r05-amount": "32000",
+    "r06-class": "bs-liability",
+    "r06-amount": "5000",
+    "r07-class": "bs-asset",
+    "r07-amount": "160000",
+    "r08-class": "pl-expense",
+    "r08-amount": "60000",
+    "r09-class": "bs-equity",
+    "r09-amount": "500000",
+    "r10-class": "bs-asset",
+    "r10-amount": "2000",
+    "r11-class": "bs-liability",
+    "r11-amount": "95000",
+    "r12-class": "pl-revenue",
+    "r12-amount": "18000",
+    "r13-class": "bs-contra-asset",
+    "r13-amount": "120000",
+    "r14-class": "pl-expense",
+    "r14-amount": "18000",
+    "r15-class": "bs-asset",
+    "r15-amount": "85000",
+    "r16-class": "bs-asset",
+    "r16-amount": "250000",
+    "r17-class": "bs-equity",
+    "r17-amount": "20000",
+    "r18-class": "pl-expense",
+    "r18-amount": "185000",
+    "r19-class": "bs-liability",
+    "r19-amount": "200000",
+    "r20-class": "bs-asset",
+    "r20-amount": "6000",
+    "r21-class": "pl-revenue",
+    "r21-amount": "620000",
+    "r22-class": "pl-expense",
+    "r22-amount": "10000",
+    "r23-class": "bs-contra-asset",
+    "r23-amount": "4800",
+    "r24-class": "pl-expense",
+    "r24-amount": "385000",
+    "pl-expense-total": "754000",
+    "pl-revenue-total": "638200",
+    "pl-result-kind": "loss",
+    "pl-result-amount": "115800",
+    "pl-result-side": "right",
+    "bs-assets": "710200",
+    "bs-liabilities": "306000",
+    "bs-retained-sign": "negative",
+    "bs-retained-amount": "95800",
+    "bs-equity": "404200"
+  }
+}

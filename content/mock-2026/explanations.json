@@ -1,0 +1,572 @@
+{
+  "schemaVersion": 1,
+  "formId": "n3-original-mock-2026-01",
+  "tasks": [
+    {
+      "taskId": "n3-original-mock-2026-01-s1-01",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "仕入",
+          "amount": 49200
+        },
+        {
+          "side": "credit",
+          "account": "前払金",
+          "amount": 13000
+        },
+        {
+          "side": "credit",
+          "account": "買掛金",
+          "amount": 35000
+        },
+        {
+          "side": "credit",
+          "account": "現金",
+          "amount": 1200
+        }
+      ],
+      "steps": [
+        "取得に必要な引取運賃は仕入へ含め、48,000＋1,200＝49,200。",
+        "商品代金は前払い13,000と未払35,000に分かれる。運賃の現金支出を掛代金へ混ぜない。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-02",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "当座預金",
+          "amount": 27000
+        },
+        {
+          "side": "credit",
+          "account": "未収入金",
+          "amount": 27000
+        }
+      ],
+      "steps": [
+        "自社振出小切手が戻ったので、以前減らした当座預金を増やす。",
+        "回収対象は商品の売掛金ではなく、記帳済み備品売却代金の未収入金。売却益を再計上しない。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-03",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "通信費",
+          "amount": 1240
+        },
+        {
+          "side": "debit",
+          "account": "旅費交通費",
+          "amount": 2760
+        },
+        {
+          "side": "debit",
+          "account": "小口現金",
+          "amount": 5000
+        },
+        {
+          "side": "credit",
+          "account": "当座預金",
+          "amount": 9000
+        }
+      ],
+      "steps": [
+        "報告と同額補給の4,000は費用／当座預金となる。",
+        "定額増額5,000だけは小口現金の純増として残る。補給9,000全額を費用にしない。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-04",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "旅費交通費",
+          "amount": 12600
+        },
+        {
+          "side": "debit",
+          "account": "立替金",
+          "amount": 4800
+        },
+        {
+          "side": "debit",
+          "account": "現金",
+          "amount": 6600
+        },
+        {
+          "side": "credit",
+          "account": "仮払金",
+          "amount": 24000
+        }
+      ],
+      "steps": [
+        "確定した会社費用、本人への債権、実際の返金を分ける。",
+        "12,600＋4,800＋6,600＝24,000なので仮払金は全額消えるが、私用4,800を旅費へ混ぜない。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-05",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "買掛金",
+          "amount": 3300
+        },
+        {
+          "side": "debit",
+          "account": "普通預金",
+          "amount": 5500
+        },
+        {
+          "side": "credit",
+          "account": "仕入",
+          "amount": 8000
+        },
+        {
+          "side": "credit",
+          "account": "仮払消費税",
+          "amount": 800
+        }
+      ],
+      "steps": [
+        "税込8,800は本体8,000と税800。",
+        "返品による受取額8,800を未払債務の消去3,300と現実の返金5,500へ分ける。消費税率は与件であり税法判断ではない。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-06",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "電子記録債権",
+          "amount": 32000
+        },
+        {
+          "side": "debit",
+          "account": "普通預金",
+          "amount": 24000
+        },
+        {
+          "side": "credit",
+          "account": "売掛金",
+          "amount": 56000
+        }
+      ],
+      "steps": [
+        "既存売掛金が二つの決済経路へ分かれる。",
+        "電子債権の発生記録と現金回収を区別し、新たな売上は計上しない。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-07",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "普通預金",
+          "amount": 14600
+        },
+        {
+          "side": "credit",
+          "account": "償却債権取立益",
+          "amount": 9200
+        },
+        {
+          "side": "credit",
+          "account": "売掛金",
+          "amount": 5400
+        }
+      ],
+      "steps": [
+        "帳簿から除去済みの前期債権は償却債権取立益。",
+        "現在ある売掛金の回収はその資産を減らす。全入金を利益や全額売掛金回収にしない。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-08",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "普通預金",
+          "amount": 96900
+        },
+        {
+          "side": "debit",
+          "account": "支払手数料",
+          "amount": 300
+        },
+        {
+          "side": "credit",
+          "account": "手形貸付金",
+          "amount": 96000
+        },
+        {
+          "side": "credit",
+          "account": "未収利息",
+          "amount": 400
+        },
+        {
+          "side": "credit",
+          "account": "受取利息",
+          "amount": 800
+        }
+      ],
+      "steps": [
+        "未収利息400は再振替されず資産に残っているため、回収で消す。",
+        "当期収益は800だけ。元本96,000＋利息1,200＝入金96,900＋手数料300。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-09",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "備品減価償却累計額",
+          "amount": 126000
+        },
+        {
+          "side": "debit",
+          "account": "普通預金",
+          "amount": 20000
+        },
+        {
+          "side": "debit",
+          "account": "未収入金",
+          "amount": 42000
+        },
+        {
+          "side": "credit",
+          "account": "備品",
+          "amount": 180000
+        },
+        {
+          "side": "credit",
+          "account": "固定資産売却益",
+          "amount": 8000
+        }
+      ],
+      "steps": [
+        "帳簿価額は180,000−126,000＝54,000。売価62,000との差8,000は売却益。",
+        "回収20,000だけを売価とせず、未収42,000も対価に含める。償却は記帳済みなので重ねない。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-10",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "繰越利益剰余金",
+          "amount": 19600
+        },
+        {
+          "side": "credit",
+          "account": "未払配当金",
+          "amount": 18400
+        },
+        {
+          "side": "credit",
+          "account": "利益準備金",
+          "amount": 1200
+        }
+      ],
+      "steps": [
+        "今回減らす繰越利益は18,400＋1,200＝19,600。指定準備金は配当の10%ではない。",
+        "既存未払6,000は今回の仕訳金額へ足さない。仕訳後の未払総額は24,400だが、今回の貸方記入は18,400。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-11",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "普通預金",
+          "amount": 56000
+        },
+        {
+          "side": "credit",
+          "account": "差入保証金",
+          "amount": 40000
+        },
+        {
+          "side": "credit",
+          "account": "前払家賃",
+          "amount": 16000
+        }
+      ],
+      "steps": [
+        "既存の二つの資産を回収するので、収益は生じない。",
+        "保証金は全額返還の簡易な条件。前払家賃も未使用部分の既存資産で、当期費用の戻入れではない。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-12",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "買掛金",
+          "amount": 34000
+        },
+        {
+          "side": "credit",
+          "account": "当座預金",
+          "amount": 10000
+        },
+        {
+          "side": "credit",
+          "account": "支払手形",
+          "amount": 24000
+        }
+      ],
+      "steps": [
+        "既存買掛金を全額消す。自社小切手は当座預金の減少、約束手形は支払手形の増加。",
+        "商品を再取得したわけではないため仕入を再計上しない。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-13",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "売掛金",
+          "amount": 70000
+        },
+        {
+          "side": "debit",
+          "account": "立替金",
+          "amount": 1300
+        },
+        {
+          "side": "credit",
+          "account": "売上",
+          "amount": 70000
+        },
+        {
+          "side": "credit",
+          "account": "現金",
+          "amount": 1300
+        }
+      ],
+      "steps": [
+        "商品代金の債権は売掛金、契約で相手負担の別途回収額は指定どおり立替金。",
+        "運賃を当社負担の発送費と誤認しない。立替金を売上に含めない。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-14",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "現金過不足",
+          "amount": 1500
+        },
+        {
+          "side": "credit",
+          "account": "受取手数料",
+          "amount": 900
+        },
+        {
+          "side": "credit",
+          "account": "通信費",
+          "amount": 600
+        }
+      ],
+      "steps": [
+        "収益漏れ900を計上し、二重計上の費用600を取り消す。",
+        "現金は差額発見時に実際有高へ修正済みなので、今回もう一度動かさない。未判明200は現金過不足の貸方に残す。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s1-15",
+      "correctJournal": [
+        {
+          "side": "debit",
+          "account": "普通預金",
+          "amount": 17640
+        },
+        {
+          "side": "debit",
+          "account": "支払手数料",
+          "amount": 360
+        },
+        {
+          "side": "credit",
+          "account": "受取商品券",
+          "amount": 18000
+        }
+      ],
+      "steps": [
+        "換金したA社分18,000だけ資産を減らし、B社分12,000は残す。",
+        "入金17,640と明示の手数料360を分ける。既に計上済みの受取商品券という資産の回収であり、今回新たな売上は計上しない。"
+      ],
+      "scoringNote": "各行の部分一致は診断用です。仕訳全体一致で3点、それ以外0点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s2-a",
+      "answers": {
+        "a1": "c",
+        "a2": "b",
+        "a3": "d",
+        "a4": "a",
+        "a5": "b"
+      },
+      "steps": [
+        "A1は現金収入・売上取引・得意先債権の三つを記録する。",
+        "A2は既存売掛金の減少と受取手形の発生。現金収入でも新たな売上でもない。",
+        "A3は商品仕入れでなく備品取得であり、指定7帳簿では固定資産台帳だけ。",
+        "A4は商品仕入れと仕入先債務。A5は現金支出と既存仕入先債務の減少であり、新しい仕入れではない。"
+      ],
+      "scoringNote": "各グループ内の必要欄がすべて一致した場合だけ、そのグループの点を加算する独自配点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s2-b",
+      "answers": {
+        "invoice-unit": 1540,
+        "first-cost": 19200,
+        "average-after-second": 1590,
+        "second-issue": 15900,
+        "ending-cost": 22260
+      },
+      "steps": [
+        "5月8日の単価は7,200÷5＝1,440。直前20個の総原価は28,800。期首9,600を引くと5月4日受入原価19,200。",
+        "仕入先の請求額は19,200−運賃720＝18,480、12個で割って請求単価1,540。取得単価1,600と混同しない。",
+        "5月8日後の残高は15個・21,600。5月12日受入原価9×1,800＋360＝16,560。24個・38,160となり平均1,590。",
+        "5月20日払出し10×1,590＝15,900、月末14個×1,590＝22,260。"
+      ],
+      "scoringNote": "各グループ内の必要欄がすべて一致した場合だけ、そのグループの点を加算する独自配点。"
+    },
+    {
+      "taskId": "n3-original-mock-2026-01-s3",
+      "answers": {
+        "r01-class": "pl-expense",
+        "r01-amount": 96000,
+        "r02-class": "bs-liability",
+        "r02-amount": 6000,
+        "r03-class": "bs-asset",
+        "r03-amount": 300000,
+        "r04-class": "pl-revenue",
+        "r04-amount": 200,
+        "r05-class": "bs-asset",
+        "r05-amount": 32000,
+        "r06-class": "bs-liability",
+        "r06-amount": 5000,
+        "r07-class": "bs-asset",
+        "r07-amount": 160000,
+        "r08-class": "pl-expense",
+        "r08-amount": 60000,
+        "r09-class": "bs-equity",
+        "r09-amount": 500000,
+        "r10-class": "bs-asset",
+        "r10-amount": 2000,
+        "r11-class": "bs-liability",
+        "r11-amount": 95000,
+        "r12-class": "pl-revenue",
+        "r12-amount": 18000,
+        "r13-class": "bs-contra-asset",
+        "r13-amount": 120000,
+        "r14-class": "pl-expense",
+        "r14-amount": 18000,
+        "r15-class": "bs-asset",
+        "r15-amount": 85000,
+        "r16-class": "bs-asset",
+        "r16-amount": 250000,
+        "r17-class": "bs-equity",
+        "r17-amount": 20000,
+        "r18-class": "pl-expense",
+        "r18-amount": 185000,
+        "r19-class": "bs-liability",
+        "r19-amount": 200000,
+        "r20-class": "bs-asset",
+        "r20-amount": 6000,
+        "r21-class": "pl-revenue",
+        "r21-amount": 620000,
+        "r22-class": "pl-expense",
+        "r22-amount": 10000,
+        "r23-class": "bs-contra-asset",
+        "r23-amount": 4800,
+        "r24-class": "pl-expense",
+        "r24-amount": 385000,
+        "pl-expense-total": 754000,
+        "pl-revenue-total": 638200,
+        "pl-result-kind": "loss",
+        "pl-result-amount": 115800,
+        "pl-result-side": "right",
+        "bs-assets": 710200,
+        "bs-liabilities": 306000,
+        "bs-retained-sign": "negative",
+        "bs-retained-amount": 95800,
+        "bs-equity": 404200
+      },
+      "steps": [
+        "棚卸：仕入70,000／繰越商品70,000、繰越商品85,000／仕入85,000。仕入残高は385,000。",
+        "引当金必要額4,800に対し既存5,000なので、貸倒引当金200／貸倒引当金戻入200。繰入費用を追加しない。",
+        "減価償却費は300,000÷5＝60,000、累計額は120,000。取得原価の備品300,000はそのまま。",
+        "翌期3か月の保険料6,000を前払費用へ、翌期3か月の受取家賃6,000を前受収益へ振り替える。",
+        "給料5,000／未払費用5,000、貯蔵品2,000／通信費2,000。",
+        "整理後収益は620,000＋18,000＋200＝638,200。費用は385,000＋185,000＋96,000＋18,000＋10,000＋60,000＝754,000。純損失115,800を勘定式P/L右側へ補記する。",
+        "損失を反映した繰越利益剰余金は20,000−115,800＝△95,800。これは純資産の控除で、当期費用でも新しい資産でもない。",
+        "資産合計は32,000＋250,000＋(160,000−4,800)＋85,000＋(300,000−120,000)＋6,000＋2,000＝710,200。負債306,000、純資産500,000−95,800＝404,200、貸借は710,200で一致する。"
+      ],
+      "scoringNote": "各グループ内の必要欄がすべて一致した場合だけ、そのグループの点を加算する独自配点。"
+    }
+  ],
+  "section3CompletedStatements": {
+    "incomeStatement": {
+      "leftExpenses": {
+        "売上原価": 385000,
+        "給料": 185000,
+        "支払家賃": 96000,
+        "保険料": 18000,
+        "通信費": 10000,
+        "減価償却費": 60000
+      },
+      "rightRevenues": {
+        "売上": 620000,
+        "受取家賃": 18000,
+        "貸倒引当金戻入": 200
+      },
+      "rightBalancingNetLoss": 115800,
+      "eachSideTotal": 754000
+    },
+    "balanceSheet": {
+      "leftAssets": {
+        "現金": 32000,
+        "普通預金": 250000,
+        "売掛金": 160000,
+        "貸倒引当金控除": -4800,
+        "商品": 85000,
+        "備品": 300000,
+        "備品減価償却累計額控除": -120000,
+        "前払費用": 6000,
+        "貯蔵品": 2000
+      },
+      "rightLiabilities": {
+        "買掛金": 95000,
+        "借入金": 200000,
+        "前受収益": 6000,
+        "未払費用": 5000
+      },
+      "rightEquity": {
+        "資本金": 500000,
+        "繰越利益剰余金": -95800
+      },
+      "eachSideTotal": 710200
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "formatVersions": [
+    {
+      "sectionWeights": [
+        {
+          "points": 45
+        },
+        {
+          "points": 20
+        },
+        {
+          "points": 35
+        }
+      ],
+      "durationMinutes": 60,
+      "officialDetailedAnswerFieldRubric": null
+    },
+    {
+      "sectionWeights": [
+        {
+          "points": 45
+        },
+        {
+          "points": 25
+        },
+        {
+          "points": 30
+        }
+      ]
+    }
+  ],
+  "referenceUrls": [
+    "https://www.takacci.or.jp/news/news-18515/",
+    "https://www.kentei.ne.jp/51504",
+    "https://www.kentei.ne.jp/bookkeeping/class3/exam"
+  ],
+  "note": "Official section totals only. Field/group allocation is independently authored."
+}
