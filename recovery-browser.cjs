@@ -36,6 +36,16 @@ const server = http.createServer((req, res) => {
       await page.keyboard.press('Tab');
       assert.equal(await page.locator(':focus').getAttribute('href'),'/bookkeeping/');
       assert.notEqual(await page.locator(':focus').evaluate(a=>getComputedStyle(a).outlineStyle),'none');
+      // A nav anchor's more-specific color must not erase the primary label.
+      const contrast = await page.locator('a.primary').evaluate(a => {
+        const style = getComputedStyle(a);
+        const luminance = color => color.match(/[\d.]+/g).slice(0,3).map(Number)
+          .map(v => {v /= 255; return v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4;})
+          .reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);
+        const fg = luminance(style.color), bg = luminance(style.backgroundColor);
+        return (Math.max(fg,bg)+.05)/(Math.min(fg,bg)+.05);
+      });
+      assert(contrast >= 4.5, `Primary label contrast: ${contrast}`);
       await page.screenshot({path:`recovery-shots/${width}.png`,fullPage:true});
       for (const href of ['/bookkeeping/','/bookkeeping/lessons/index.html','/bookkeeping/about.html']) {
         const r = await page.goto(origin+href);
