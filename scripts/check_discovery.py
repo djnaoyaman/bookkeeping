@@ -1,7 +1,7 @@
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlparse,unquote
-import json,xml.etree.ElementTree as ET,re
+import json,xml.etree.ElementTree as ET,re,subprocess,sys
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[1];D=ROOT/'dist';BASE=json.loads((ROOT/'site.config.json').read_text())['url'].rstrip('/');build=json.loads((ROOT/'content/discovery-build.json').read_text());canonicals=set();titles=set()
 def local_absolute(url):
@@ -59,3 +59,8 @@ if analytics:
  for route in build['pages']:
   text=(D/(route or 'index.html')).read_text();assert text.count('https://www.googletagmanager.com/gtag/js?id='+mid)==1;assert text.count("gtag('config','"+mid+"'")==1;assert 'send_page_view:false' in text
 print(f'PASS: {len(canonicals)} unique static pages; titles, canonical, single H1, OGP/X Cards, JSON-LD, question content, all internal assets/links, sitemap, icon dimensions, ICO sizes, opaque Apple/maskable icons, manifest, text summaries and configured analytics tags.')
+
+from check_course_text import validate_course_text
+validate_course_text(json.loads((ROOT/'content/learning-course.json').read_text()),(D/'llms-full.txt').read_text(),BASE)
+print('PASS: scoped course text includes all tables, field answers/options/units, explanations and worked examples.')
+subprocess.run([sys.executable,str(ROOT/'scripts/test_course_text.py')],check=True)

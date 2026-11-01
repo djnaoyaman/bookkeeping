@@ -114,8 +114,30 @@ for q in questions:full.append(f'\n## {DATA["catalogs"][q["exam"]]["name"]} {q["
 if COURSE:
  for l in COURSE['lessons']:
   full.append('\n## 講義 '+l['title']+'\nURL: '+BASE+'/lessons/'+l['id']+'.html\n'+'\n'.join(s['title']+'\n'+'\n'.join(s['paragraphs']) for s in l['sections']))
+  for w in l['workedExamples']:
+   full.append('\n例題: '+w['title']+'\n条件: '+w['prompt']+'\n手順: '+' / '.join(w['steps'])+'\n例題の答え: '+w['answer'])
+  full.append('間違えやすい点: '+' / '.join(l['pitfalls']))
  for q in COURSE['questions']:
-  full.append('\n### 新教材問題: '+q['title']+'\n'+q['prompt']+'\n解説: '+' / '.join(q['explanation']['steps']))
+  lines=['\n### 新教材問題: '+q['title'],'問題ID: '+q['id'],'講義URL: '+BASE+'/lessons/'+q['lessonId']+'.html',q['prompt']]
+  for t in q.get('exhibits',[]):
+   lines+=['資料: '+t['title'],' | '.join(str(v) for v in t['headers'])]
+   lines+=[' | '.join(str(v) for v in row) for row in t['rows']]
+  lines.append('解答欄と正答（配点は教材独自）:')
+  if q['type']=='journal':
+   lines+=['単位: '+q['unit'],'選択できる勘定科目: '+' / '.join(q['accounts'])]
+   for i,line in enumerate(q['lines'],1):
+    lines.append(str(i)+'行目: '+('借方' if line['side']=='debit' else '貸方')+' / '+line['account']+' / '+str(line['amount'])+' '+q['unit']+' / '+str(line['points'])+'点')
+  else:
+   for f in q['fields']:
+    lines.append('欄: '+f['id']+' / '+f['label'])
+    if f['type']=='choice':
+     lines.append('選択肢: '+' / '.join(o+'='+f['optionLabels'][o] for o in f['options']))
+     lines.append('正答: '+f['answer']+'='+f['optionLabels'][f['answer']])
+    else:
+     lines+=['単位: '+f['unit']+' / 小数桁数: '+str(f.get('decimals',0)),'正答: '+str(f['answer'])+' '+f['unit']]
+    lines+=['配点: '+str(f['points'])+'点','欄の解説: '+f['explanation']]
+  lines+=['解説: '+' / '.join(q['explanation']['steps']),'照合: '+q['explanation']['check'],'間違えやすい点: '+' / '.join(q['explanation']['pitfalls']),'出典（学習範囲）: '+' / '.join(q['provenance']['referenceUrls'])]
+  full.append('\n'.join(lines))
 (D/'llms-full.txt').write_text('\n'.join(full))
 qmap={str(q['id']):dict(path=pathq(q),exam=q['exam'],unit=q['level']) for q in questions}
 (D/'discovery-config.js').write_text('window.BK_DISCOVERY='+jsjson({'base':BASE,'pages':META,'questions':qmap,'analytics':CFG.get('analytics')})+';\n')
