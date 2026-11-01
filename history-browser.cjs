@@ -23,6 +23,8 @@ for(const width of [320,390,768,1280]){
  if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1))throw Error('app overflow '+width);
  await page.screenshot({path:`history-shots/home-${width}.png`,fullPage:true});
  await page.getByRole('link',{name:'使い方・簿記の歴史',exact:true}).click();await page.goBack();await page.locator('#practice.show').waitFor();await page.goForward();await page.locator('#history').waitFor();
+ // Drain in-flight route.fetch handlers before disposing their request context.
+ await page.unrouteAll({behavior:'wait'});
  if(errors.length)throw Error(errors.join('\n')); await page.close();
 }
 const page=await browser.newPage({javaScriptEnabled:false});await page.goto('http://127.0.0.1:8765/about.html');await page.locator('#history').waitFor();await page.close();
