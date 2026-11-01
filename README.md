@@ -21,7 +21,7 @@ Node.js 20以降、Python 3、画像検証用のPillowが必要です。アイ�
 
 [検索・共有の実装と残作業](docs/DISCOVERY.md) / [SEM準備](docs/SEM-PLAN.md) / [ブランド](docs/BRAND.md) / [教材の出典と対応状況](content/SOURCE-AUDIT.md)
 
-従来の反復演習56問に加え、日商3級の基礎原理5講義・35設問（32管理用問題群）を整備しています。新講義は説明・例題・構造化解答・部分点・誤答復習に対応。全範囲の解説・演習は整備途中で、全経の詳細範囲の最終照合は未完了です。記録はブラウザ内に保存します。GA4（G-837HXKXW8Q）で閲覧・演習イベントを計測します。広告タグは設置していません。
+従来の反復演習56問に加え、日商3級の基幹26講義＋補強4講義・228設問（146管理用問題群）を整備しています。新講義は説明・例題・構造化解答・部分点・誤答復習に対応。公式62項目に対応していますが、項目対応は全技能の修得を意味しません。全欄を自力で埋める精算表・未見の総合問題・時間制限模試は整備途中で、全経の詳細範囲の最終照合は未完了です。記録はブラウザ内に保存します。GA4（G-837HXKXW8Q）で閲覧・演習イベントを計測します。広告タグは設置していません。
 
 ## GitHub Pages
 
@@ -35,3 +35,5 @@ Node.js 20以降、Python 3、画像検証用のPillowが必要です。アイ�
 `content/learning-course.json` が新教材の単一入力です。原稿は独立解答レビュー・公開範囲の一次資料照合を終えてから採用します。`node scripts/validate-learning-content.cjs content/learning-course.json --publish` は原稿・講義のreview hash、型、リンク、採点自己整合を検査します（教育的充足を自動保証するものではありません）。`--all-source-rows` は62の出典行のmapping確認のみです。
 
 `node tests/assessment-engine.cjs` / `node tests/assessment-session.cjs` / `node tests/learning-course.cjs` で構造化採点・期限と版・入力と復習を検査します。学習モードの同科目合算は警告付き、CBTモードは同一側の同一科目重複を不正解にします。本試験型模試の教材と画面はまだ未提供です。
+
+ブラウザ統合検査は `node course-integration-browser.cjs`（既存review workflow）で実データを読みます。320/390/768/1280幅、全30講義・37表、390幅で全228問と補強12問の保存復元、8行仕訳、誤答復習、キーボード操作を対象にしています。実行結果が得られるまで未検証です。

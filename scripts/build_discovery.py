@@ -67,7 +67,7 @@ def simple(path,title,desc,content,image='og-bookkeeping.png',extra=None):
  nav=f'<a href="{BASE}/">演習する</a><a href="{BASE}/exams/nissho.html">日商簿記</a><a href="{BASE}/exams/zenkei.html">全経簿記</a><a href="{BASE}/exams/uscpa.html">USCPA</a><a href="{BASE}/author.html">つくった人</a>'
  text=f'<!doctype html><html lang="ja" prefix="og: https://ogp.me/ns#"><head>{head}</head><body class="static-page"><a class="skip-link" href="#main-content">本文へ移動</a><header><a class="static-brand" href="{BASE}/" aria-label="IL MASTRO ホーム"><img src="{prefix}assets/il-mastro-lockup.png?v=il-mastro-09-1" width="360" height="390" alt="IL MASTRO"></a><nav class="discovery-nav" aria-label="ページナビ">{nav}</nav></header><main id="main-content" tabindex="-1"><h1>{e(title)}</h1><p>{e(desc)}</p>{content}</main><footer><nav class="discovery-nav"><a href="{BASE}/about.html">使い方・簿記の歴史</a><a href="{BASE}/privacy.html">プライバシー</a><a href="{BASE}/llms.txt">サイト情報（テキスト）</a></nav></footer><script src="{prefix}discovery-config.js"></script><script src="{prefix}discovery.js"></script></body></html>'
  write(path,text)
-if COURSE:(D/'learning-course-data.js').write_text('globalThis.ILMASTRO_COURSE='+jsjson(COURSE)+';\n')
+if COURSE:(D/'learning-course-data.js').write_text('globalThis.ILMASTRO_COURSE='+jsjson({k:v for k,v in COURSE.items() if k!='reviewRecords'})+';\n')
 questions=DATA['questions'];app_page('','app',questions[0]);app_page('author.html','profile')
 for q in questions:app_page(pathq(q),'question',q)
 introductions={
@@ -91,7 +91,7 @@ if COURSE:
  listing='<p>'+e(COURSE.get('coverageNote','全範囲の教材整備は進行中です。'))+'</p><ul>'+''.join('<li><a href="'+BASE+'/lessons/'+e(l['id'])+'.html">'+e(l['title'])+'</a></li>' for l in COURSE['lessons'])+'</ul>'
  simple('lessons/index.html','日商簿記3級の講義と演習','説明・例題・オリジナル演習で簿記の考え方を学ぶ。2026年度範囲の段階的な教材整備。',listing)
  for l in COURSE['lessons']:
-  body='<p>日商簿記3級 / 2026年度範囲 / オリジナル教材</p><p><a href="'+BASE+'/lessons/index.html">講義一覧</a></p>'
+  body='<p>日商簿記3級 / 2026年度範囲（2027年3月31日まで） / オリジナル教材</p><p><a href="'+BASE+'/lessons/index.html">講義一覧</a></p>'
   for section in l['sections']:body+='<h2>'+e(section['title'])+'</h2>'+''.join('<p>'+e(p)+'</p>' for p in section['paragraphs'])
   body+='<h2>例題</h2>'
   for w in l['workedExamples']:body+='<h3>'+e(w['title'])+'</h3><p>'+e(w['prompt'])+'</p><details><summary>解き方と答え</summary><ol>'+''.join('<li>'+e(p)+'</li>' for p in w['steps'])+'</ol><p>'+e(w['answer'])+'</p></details>'
@@ -114,8 +114,30 @@ for q in questions:full.append(f'\n## {DATA["catalogs"][q["exam"]]["name"]} {q["
 if COURSE:
  for l in COURSE['lessons']:
   full.append('\n## 講義 '+l['title']+'\nURL: '+BASE+'/lessons/'+l['id']+'.html\n'+'\n'.join(s['title']+'\n'+'\n'.join(s['paragraphs']) for s in l['sections']))
+  for w in l['workedExamples']:
+   full.append('\n例題: '+w['title']+'\n条件: '+w['prompt']+'\n手順: '+' / '.join(w['steps'])+'\n例題の答え: '+w['answer'])
+  full.append('間違えやすい点: '+' / '.join(l['pitfalls']))
  for q in COURSE['questions']:
-  full.append('\n### 新教材問題: '+q['title']+'\n'+q['prompt']+'\n解説: '+' / '.join(q['explanation']['steps']))
+  lines=['\n### 新教材問題: '+q['title'],'問題ID: '+q['id'],'講義URL: '+BASE+'/lessons/'+q['lessonId']+'.html',q['prompt']]
+  for t in q.get('exhibits',[]):
+   lines+=['資料: '+t['title'],' | '.join(str(v) for v in t['headers'])]
+   lines+=[' | '.join(str(v) for v in row) for row in t['rows']]
+  lines.append('解答欄と正答（配点は教材独自）:')
+  if q['type']=='journal':
+   lines+=['単位: '+q['unit'],'選択できる勘定科目: '+' / '.join(q['accounts'])]
+   for i,line in enumerate(q['lines'],1):
+    lines.append(str(i)+'行目: '+('借方' if line['side']=='debit' else '貸方')+' / '+line['account']+' / '+str(line['amount'])+' '+q['unit']+' / '+str(line['points'])+'点')
+  else:
+   for f in q['fields']:
+    lines.append('欄: '+f['id']+' / '+f['label'])
+    if f['type']=='choice':
+     lines.append('選択肢: '+' / '.join(o+'='+f['optionLabels'][o] for o in f['options']))
+     lines.append('正答: '+f['answer']+'='+f['optionLabels'][f['answer']])
+    else:
+     lines+=['単位: '+f['unit']+' / 小数桁数: '+str(f.get('decimals',0)),'正答: '+str(f['answer'])+' '+f['unit']]
+    lines+=['配点: '+str(f['points'])+'点','欄の解説: '+f['explanation']]
+  lines+=['解説: '+' / '.join(q['explanation']['steps']),'照合: '+q['explanation']['check'],'間違えやすい点: '+' / '.join(q['explanation']['pitfalls']),'出典（学習範囲）: '+' / '.join(q['provenance']['referenceUrls'])]
+  full.append('\n'.join(lines))
 (D/'llms-full.txt').write_text('\n'.join(full))
 qmap={str(q['id']):dict(path=pathq(q),exam=q['exam'],unit=q['level']) for q in questions}
 (D/'discovery-config.js').write_text('window.BK_DISCOVERY='+jsjson({'base':BASE,'pages':META,'questions':qmap,'analytics':CFG.get('analytics')})+';\n')
