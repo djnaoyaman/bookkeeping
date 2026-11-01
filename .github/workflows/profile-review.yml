@@ -28,6 +28,7 @@ jobs:
       - run: node history-browser.cjs
       - run: node redesign-browser.cjs
       - run: node course-integration-browser.cjs
+      - run: node icon-browser.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -36,6 +37,7 @@ jobs:
             profile-shots
             history-shots
             redesign-shots
+            icon-shots
 
 
       - uses: actions/upload-artifact@v4
