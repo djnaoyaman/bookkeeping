@@ -78,7 +78,7 @@ def app_page(path,route,q=None):
 def simple(path,title,desc,content,image='og-bookkeeping.png',extra=None):
  prefix='../' if '/' in path else ''
  head=meta(path,title+'｜IL MASTRO',desc,image,extra=extra)
- nav=f'<a href="{BASE}/">演習する</a><a href="{BASE}/exams/nissho.html">日商簿記</a><a href="{BASE}/exams/zenkei.html">全経簿記</a><a href="{BASE}/exams/uscpa.html">USCPA</a><a href="{BASE}/author.html">つくった人</a>'
+ nav=f'<a href="{BASE}/">演習する</a><a href="{BASE}/exams/nissho.html">日商簿記</a><a href="{BASE}/exams/zenkei.html">全経簿記</a><a href="{BASE}/exams/uscpa.html">USCPA</a><a href="{BASE}/author.html">作者</a>'
  text=f'<!doctype html><html lang="ja" prefix="og: https://ogp.me/ns#"><head>{head}</head><body class="static-page"><a class="skip-link" href="#main-content">本文へ移動</a><header><a class="static-brand" href="{BASE}/" aria-label="IL MASTRO ホーム"><img src="{prefix}assets/il-mastro-lockup.png?v=il-mastro-09-1" width="360" height="390" alt="IL MASTRO"></a><nav class="discovery-nav" aria-label="ページナビ">{nav}</nav></header><main id="main-content" tabindex="-1"><h1>{e(title)}</h1><p>{e(desc)}</p>{content}</main><footer><nav class="discovery-nav"><a href="{BASE}/about.html">使い方・簿記の歴史</a><a href="{BASE}/privacy.html">プライバシー</a><a href="{BASE}/llms.txt">サイト情報（テキスト）</a></nav></footer><script src="{prefix}discovery-config.js"></script><script src="{prefix}discovery.js"></script></body></html>'
  write(path,text)
 if COURSE:(D/'learning-course-data.js').write_text('globalThis.ILMASTRO_COURSE='+jsjson({k:v for k,v in COURSE.items() if k!='reviewRecords'})+';\n')
