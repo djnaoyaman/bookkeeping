@@ -1281,7 +1281,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 1,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "差入保証金"
   },
   {
     "id": "nissho-8254a697c8d5",
@@ -3276,7 +3278,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 3,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "法人税・住民税・事業税"
   },
   {
     "id": "nissho-0cbae840fe08",
@@ -3525,7 +3529,9 @@
     "sourceId": "nissho2026",
     "questions": [
       4
-    ]
+    ],
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "月次決算による場合の処理"
   },
   {
     "id": "nissho-58660bea1d25",
@@ -4240,8 +4246,8 @@
     "exam": "nissho",
     "unit": 3,
     "area": "商業簿記・会計学 / 第四株式会社会計",
-    "title": "利益剰余金 / その他利益剰余金繰越利益剰余金",
-    "details": "イ.その他利益剰余金繰越利益剰余金",
+    "title": "利益剰余金 / その他利益剰余金（繰越利益剰余金）",
+    "details": "イ.その他利益剰余金（繰越利益剰余金）",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 4,
     "scope": "verified",
@@ -4317,7 +4323,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 4,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "剰余金の配当"
   },
   {
     "id": "nissho-ff6bf03d73e7",

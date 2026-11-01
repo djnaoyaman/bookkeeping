@@ -1,6 +1,6 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert');
 const path=require('path');const dist=path.resolve(__dirname,'../dist')+'/';
-function context(saved){const elements={},storage=saved||{};function el(){return {innerHTML:'',textContent:'',value:'',style:{},dataset:{},classList:{toggle(){},add(){}},querySelector(){return null},querySelectorAll(){return []},scrollIntoView(){},focus(){},showModal(){},close(){},click(){}}}const c={console,Date,JSON,Math,Set,Map,Blob,URL,setTimeout,alert(){},localStorage:{getItem:k=>storage[k],setItem:(k,v)=>storage[k]=v},document:{getElementById:id=>elements[id]??=el(),querySelectorAll:()=>[],querySelector:()=>null,createElement:()=>el()},window:{scrollTo(){}}};vm.createContext(c);for(const f of ['catalog.js','curriculum-data.js','app.js','curriculum-ui.js','study-plan.js','exercise-first.js'])vm.runInContext(fs.readFileSync(dist+f,'utf8'),c);return {c,elements,storage}}
+function context(saved){const elements={},storage=saved||{};function el(){return {innerHTML:'',textContent:'',value:'',style:{},dataset:{},classList:{toggle(){},add(){}},querySelector(){return null},querySelectorAll(){return []},scrollIntoView(){},focus(){},showModal(){},close(){},click(){}}}const c={console,Date,JSON,Math,Set,Map,Blob,URL,setTimeout,alert(){},localStorage:{getItem:k=>storage[k],setItem:(k,v)=>storage[k]=v},document:{getElementById:id=>elements[id]??=el(),querySelectorAll:()=>[],querySelector:()=>null,createElement:()=>el()},window:{scrollTo(){}}};vm.createContext(c);for(const f of ['assessment-engine.js','catalog.js','curriculum-data.js','app.js','curriculum-ui.js','study-plan.js','exercise-first.js'])vm.runInContext(fs.readFileSync(dist+f,'utf8'),c);return {c,elements,storage}}
 const saved={'bk-v1':JSON.stringify({cards:{1:{step:1,wrong:0,last:true,due:Date.now()+86400000}},log:[{id:1,correct:true,date:'2026-10-22',time:1}]})};const {c,elements,storage}=context(saved);
 vm.runInContext(`
 if(questions.length!==56)throw Error('question migration');
@@ -50,8 +50,8 @@ renderStudyPlan();exam='zenkei';curriculumExam=exam;curriculumUnit='advanced';if
 console.log('PASS: referenced hour ranges, editable plan calculations, actual time, full-scope small steps, 7-day gate, minimum evidence counts, correct elective selection, no invented Zenkei average.');
 vm.runInContext(`
 if(Object.keys(numericExercises).length<20||Object.keys(journalExercises).length<5)throw Error('written exercise coverage');
-if(parseExerciseNumber('２４，０００円')!==24000||parseExerciseNumber('25万円')!==25||parseExerciseNumber('0')!==0||parseExerciseNumber('')!==null||parseExerciseNumber('abc')!==null)throw Error('numeric parsing');
-const nq=questions.find(q=>q.id===3);if(!gradeWritten(nq,{value:'24,000'}).correct||gradeWritten(nq,{value:'24001'}).correct||gradeWritten(nq,{value:''}).valid)throw Error('numeric grading');
+if(parseExerciseNumber('２４，０００')!==24000||parseExerciseNumber('25万円')!==null||parseExerciseNumber('0')!==0||parseExerciseNumber('')!==null||parseExerciseNumber('abc')!==null)throw Error('numeric parsing');
+const nq=questions.find(q=>q.id===3);for(const v of ['24,000万円','2,4,000','24000.000000001'])if(gradeWritten(nq,{value:v}).valid)throw Error('invalid numeric notation accepted');if(gradeWritten(questions.find(q=>q.id===18),{value:'25円'}).valid)throw Error('wrong denomination accepted');if(!gradeWritten(nq,{value:'24,000'}).correct||gradeWritten(nq,{value:'24001'}).correct||gradeWritten(nq,{value:''}).valid)throw Error('numeric grading');
 const jq=questions.find(q=>q.id===1);if(!gradeWritten(jq,{debit:'仕入',credit:'買掛金',debitAmount:'50,000',creditAmount:'50000'}).correct)throw Error('journal grading');
 if(gradeWritten(jq,{debit:'買掛金',credit:'仕入',debitAmount:'50000',creditAmount:'50000'}).correct)throw Error('reversed journal');
 if(gradeWritten(jq,{debit:'仕入',credit:'買掛金',debitAmount:'50000',creditAmount:'40000'}).correct)throw Error('unbalanced journal');
@@ -63,3 +63,9 @@ position=queue.length;renderQuestion();if(!$('questionarea').innerHTML.includes(
 console.log('PASS: number and journal input grading, empty answer validation, five-question sessions, topic practice, wrong-only retry and continuation.');
 const data=fs.readFileSync(dist+'index.html','utf8');assert(data.includes('id="curriculum"'));assert(data.indexOf('curriculum-data.js')<data.indexOf('app.js'));assert(data.indexOf('app.js')<data.indexOf('curriculum-ui.js'));
 console.log('PASS: curriculum sources and unit coverage, 56-question migration, all track rendering, source verification flags, search, uncovered filter, isolated practice, self-assessment separation, memo escaping, persistence, 2026 additions.');
+
+if(fs.existsSync(path.resolve(__dirname,'../content/learning-course.json'))){
+ c.ILMASTRO_COURSE=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../content/learning-course.json'),'utf8'));
+ vm.runInContext(`exam='nissho';curriculumExam=exam;curriculumUnit=3;const cr=curriculum.find(t=>t.id===ILMASTRO_COURSE.lessons[0].requirementIds[0]);if(relatedExerciseCount(cr)<=relatedQuestions(cr).length)throw Error('new exercises missing from curriculum');curriculumFilter='noexercise';if(filteredItems().some(t=>t.id===cr.id))throw Error('covered item filtered as empty');openLesson(cr.id);if(!$('lessonpanel').innerHTML.includes('data-curriculum-course'))throw Error('missing course bridge');`,c);
+ console.log('PASS: new-course counts, uncovered filter and lesson bridge integrate with the existing curriculum without replacing legacy questions.');
+}

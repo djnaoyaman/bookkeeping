@@ -1,6 +1,6 @@
 {
   "canonicalBase": "https://djnaoyaman.github.io/bookkeeping",
-  "htmlPages": 63,
+  "htmlPages": 69,
   "questionPages": 56,
   "pages": [
     "",
@@ -65,6 +65,12 @@
     "exams/zenkei.html",
     "exams/uscpa.html",
     "about.html",
-    "privacy.html"
+    "privacy.html",
+    "lessons/index.html",
+    "lessons/n3-lesson-01.html",
+    "lessons/n3-lesson-02.html",
+    "lessons/n3-lesson-03.html",
+    "lessons/n3-lesson-04.html",
+    "lessons/n3-lesson-05.html"
   ]
 }

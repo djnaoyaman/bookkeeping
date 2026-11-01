@@ -14,6 +14,11 @@ jobs:
           node-version: '22'
       - run: pip install pillow
       - run: python scripts/check_discovery.py
+      - run: node tests/assessment-engine.cjs
+      - run: node tests/assessment-session.cjs
+      - run: node tests/learning-course.cjs
+      - run: node tests/check.cjs
+      - run: node tests/discovery-client.cjs
       - run: python profile-check.py
       - run: python history-check.py
       - run: npm install --no-save --ignore-scripts playwright
@@ -22,6 +27,7 @@ jobs:
       - run: node profile-browser.cjs
       - run: node history-browser.cjs
       - run: node redesign-browser.cjs
+      - run: node learning-course-browser.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -30,3 +36,10 @@ jobs:
             profile-shots
             history-shots
             redesign-shots
+
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: learning-review
+          path: learning-shots
