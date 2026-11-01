@@ -43,3 +43,12 @@ jobs:
         with:
           name: learning-review
           path: learning-shots
+
+      - name: Inspect 216-question review candidate (no deployment)
+        run: node review-candidate-browser.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: candidate-review
+          path: candidate-shots
+
