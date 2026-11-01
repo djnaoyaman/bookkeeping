@@ -1137,7 +1137,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 1,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "契約資産、契約負債"
   },
   {
     "id": "nissho-80279330a821",
@@ -1355,7 +1357,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 1,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "営業外支払(受取)手形"
   },
   {
     "id": "nissho-7368ea55653a",
@@ -1607,7 +1611,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "その他の債権譲渡"
   },
   {
     "id": "nissho-05258a1e2cbd",
@@ -1682,7 +1688,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "個別評価"
   },
   {
     "id": "nissho-396e0b6141ef",
@@ -1745,7 +1753,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "退職給付引当金"
   },
   {
     "id": "nissho-167251559701",
@@ -1802,18 +1812,6 @@
     "area": "商業簿記・会計学 / 第二諸取引の処理",
     "title": "引当金 / 賞与引当金",
     "details": "オ.賞与引当金",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 2,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
-    "id": "nissho-48a97c0ad896",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "引当金 / その他の引当金",
-    "details": "カ.その他の引当金",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
@@ -1947,8 +1945,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "商品の売買 / 総記法仕入割戻",
-    "details": "ウ.総記法仕入割戻",
+    "title": "商品の売買 / 仕入割戻",
+    "details": "仕入割戻",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
@@ -2007,8 +2005,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "商品の売買 / 仕入割引・売上割引 (総平均法)",
-    "details": "オ.仕入割引・売上割引 (総平均法)",
+    "title": "商品の売買 / 商品有高帳(総平均法)",
+    "details": "(総平均法)",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
@@ -2192,7 +2190,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "検収基準・出荷基準・着荷基準"
   },
   {
     "id": "nissho-ca5c7a5bfaf8",
@@ -2216,7 +2216,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "役務収益・役務原価"
   },
   {
     "id": "nissho-44f9655dd5f7",
@@ -2231,36 +2233,12 @@
     "sourceId": "nissho2026"
   },
   {
-    "id": "nissho-e853974e2742",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "様々な財又はサービスの顧客への移転 / 割賦販売(取戻品の処理を含む)",
-    "details": "エ.割賦販売(取戻品の処理を含む)",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 2,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
     "id": "nissho-4d2eb759c759",
     "exam": "nissho",
     "unit": 1,
     "area": "商業簿記・会計学 / 第二諸取引の処理",
     "title": "様々な財又はサービスの顧客への移転 / 割賦販売(取戻品の処理を含む)",
     "details": "エ.割賦販売(取戻品の処理を含む)",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 2,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
-    "id": "nissho-db12016babee",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "様々な財又はサービスの顧客への移転 / 工事契約",
-    "details": "オ.工事契約",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
@@ -2288,7 +2266,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "複数の履行義務を含む顧客との契約"
   },
   {
     "id": "nissho-3ec503d32d3c",
@@ -2312,7 +2292,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "変動対価"
   },
   {
     "id": "nissho-dfcd7eb140be",
@@ -2321,18 +2303,6 @@
     "area": "商業簿記・会計学 / 第二諸取引の処理",
     "title": "様々な財又はサービスの顧客への移転 / 変動対価",
     "details": "キ.変動対価",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 2,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
-    "id": "nissho-e03cbdc0f40f",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "様々な財又はサービスの顧客への移転 / 重要な金融要素",
-    "details": "ク.重要な金融要素",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
@@ -2351,18 +2321,6 @@
     "sourceId": "nissho2026"
   },
   {
-    "id": "nissho-51fd58f2031e",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "様々な財又はサービスの顧客への移転 / 契約変更",
-    "details": "ケ.契約変更",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 2,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
     "id": "nissho-d369939c1393",
     "exam": "nissho",
     "unit": 1,
@@ -2375,36 +2333,12 @@
     "sourceId": "nissho2026"
   },
   {
-    "id": "nissho-40ea0a7ba935",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "様々な財又はサービスの顧客への移転 / 本人と代理人の区分",
-    "details": "コ.本人と代理人の区分",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 2,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
     "id": "nissho-6c8db3e6bb84",
     "exam": "nissho",
     "unit": 1,
     "area": "商業簿記・会計学 / 第二諸取引の処理",
     "title": "様々な財又はサービスの顧客への移転 / 本人と代理人の区分",
     "details": "コ.本人と代理人の区分",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 2,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
-    "id": "nissho-f80bdd55e967",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "様々な財又はサービスの顧客への移転 / その他の様々な財又はサービスの顧客",
-    "details": "サ.その他の様々な財又はサービスの顧客",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
@@ -2487,12 +2421,14 @@
     "exam": "nissho",
     "unit": 2,
     "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "有形固定資産 / (a) 有形固定資産の割賦購入(利息部分を区分する場合には定額法に限る) (利息部分を利息法で区分する方法) (b) 圧縮記帳 (2級では国庫補助金・工事負担金を直接控除方式により記帳する場合に限る)",
-    "details": "(a) 有形固定資産の割賦購入(利息部分を区分する場合には定額法に限る) (利息部分を利息法で区分する方法) (b) 圧縮記帳 (2級では国庫補助金・工事負担金を直接控除方式により記帳する場合に限る)",
+    "title": "有形固定資産 / (a) 有形固定資産の割賦購入(利息部分を区分する場合には定額法に限る) (b) 圧縮記帳 (2級では国庫補助金・工事負担金を直接控除方式により記帳する場合に限る)",
+    "details": "(a) 有形固定資産の割賦購入(利息部分を区分する場合には定額法に限る) (b) 圧縮記帳 (2級では国庫補助金・工事負担金を直接控除方式により記帳する場合に限る)",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "圧縮記帳"
   },
   {
     "id": "nissho-1afdbb3c1e88",
@@ -2586,8 +2522,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "有形固定資産 / 建設仮勘定 (直接法) (定率法、生産高比例法) (級数法など)",
-    "details": "エ.建設仮勘定 (直接法) (定率法、生産高比例法) (級数法など)",
+    "title": "有形固定資産 / 建設仮勘定",
+    "details": "エ.建設仮勘定",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
@@ -2625,8 +2561,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "有形固定資産 / 減価償却(間接法) (定額法)",
-    "details": "オ.減価償却(間接法) (定額法)",
+    "title": "有形固定資産 / 減価償却(間接法、直接法) (定額法、定率法、生産高比例法)",
+    "details": "減価償却(間接法、直接法) (定額法、定率法、生産高比例法)",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
@@ -2651,18 +2587,6 @@
     "area": "商業簿記・会計学 / 第二諸取引の処理",
     "title": "有形固定資産 / 総合償却",
     "details": "カ.総合償却",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 2,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
-    "id": "nissho-23f9de51d3bf",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "有形固定資産 / 取替法",
-    "details": "キ.取替法",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
@@ -2753,7 +2677,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "ソフトウェア、ソフトウェア仮勘定"
   },
   {
     "id": "nissho-721e8f366920",
@@ -2852,18 +2778,6 @@
     "sourceId": "nissho2026"
   },
   {
-    "id": "nissho-ac7bfd6d168e",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "固定資産の減損",
-    "details": "固定資産の減損",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 2,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
     "id": "nissho-d689711192b2",
     "exam": "nissho",
     "unit": 1,
@@ -2883,8 +2797,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "投資その他の資産 / 満期保有目的債券(償却原価法(定額法)) (利息法)",
-    "details": "ア.満期保有目的債券(償却原価法(定額法)) (利息法)",
+    "title": "投資その他の資産 / 満期保有目的債券(償却原価法(定額法))",
+    "details": "ア.満期保有目的債券(償却原価法(定額法))",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
@@ -2912,7 +2826,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "子会社株式、関連会社株式"
   },
   {
     "id": "nissho-62d5cead6116",
@@ -2931,12 +2847,14 @@
     "exam": "nissho",
     "unit": 2,
     "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "投資その他の資産 / その他有価証券 (保有目的の変更)",
-    "details": "ウ.その他有価証券 (保有目的の変更)",
+    "title": "投資その他の資産 / その他有価証券",
+    "details": "ウ.その他有価証券",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 2,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "その他有価証券"
   },
   {
     "id": "nissho-50b874bbc7b6",
@@ -2987,18 +2905,6 @@
     "sourceId": "nissho2026"
   },
   {
-    "id": "nissho-3566596de011",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "繰延資産",
-    "details": "繰延資産",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 2,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
     "id": "nissho-d4c5e1408c2c",
     "exam": "nissho",
     "unit": 1,
@@ -3020,7 +2926,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 3,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "リース取引（ファイナンス・リース取引の借手側の処理）"
   },
   {
     "id": "nissho-088063e34d34",
@@ -3080,7 +2988,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 3,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "リース取引（オペレーティング・リース取引の借手側の処理）"
   },
   {
     "id": "nissho-0883679aefc4",
@@ -3107,7 +3017,9 @@
     "sourceId": "nissho2026",
     "questions": [
       11
-    ]
+    ],
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "外貨建取引（外貨建の営業取引）"
   },
   {
     "id": "nissho-8e3b17a45cbc",
@@ -3140,18 +3052,6 @@
     "area": "商業簿記・会計学 / 第二諸取引の処理",
     "title": "外貨建取引 / 外貨建の財務活動(資金の調達・運用) に係る取引",
     "details": "イ.外貨建の財務活動(資金の調達・運用) に係る取引",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 3,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
-    "id": "nissho-3ac1ada48f33",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "資産除去債務",
-    "details": "資産除去債務",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 3,
     "scope": "verified",
@@ -3382,7 +3282,9 @@
     "sourceId": "nissho2026",
     "questions": [
       13
-    ]
+    ],
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "税効果会計"
   },
   {
     "id": "nissho-df36aeea68f1",
@@ -3415,18 +3317,6 @@
     "area": "商業簿記・会計学 / 第二諸取引の処理",
     "title": "未決算",
     "details": "未決算",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 3,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
-    "id": "nissho-5a4be87ed54b",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第二諸取引の処理",
-    "title": "会計上の変更および誤謬の訂正",
-    "details": "会計上の変更および誤謬の訂正",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 3,
     "scope": "verified",
@@ -3711,7 +3601,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 3,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "その他有価証券評価差額金"
   },
   {
     "id": "nissho-1b5adc167305",
@@ -3855,7 +3747,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 3,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "損益計算書と貸借対照表の作成（報告式）"
   },
   {
     "id": "nissho-159b6785bc0f",
@@ -3903,7 +3797,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 3,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "株主資本等変動計算書"
   },
   {
     "id": "nissho-d3cc564b7a4d",
@@ -3930,36 +3826,12 @@
     "sourceId": "nissho2026"
   },
   {
-    "id": "nissho-dac393060b40",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第三決算",
-    "title": "財務諸表の注記・注記表",
-    "details": "財務諸表の注記・注記表",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 3,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
     "id": "nissho-5725bafc4d51",
     "exam": "nissho",
     "unit": 1,
     "area": "商業簿記・会計学 / 第三決算",
     "title": "財務諸表の注記・注記表",
     "details": "財務諸表の注記・注記表",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 3,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
-    "id": "nissho-08766bf42730",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第三決算",
-    "title": "附属明細表(附属明細書)",
-    "details": "附属明細表(附属明細書)",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 3,
     "scope": "verified",
@@ -3978,36 +3850,12 @@
     "sourceId": "nissho2026"
   },
   {
-    "id": "nissho-a4179dbc9e13",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第三決算",
-    "title": "キャッシュ・フロー計算書",
-    "details": "キャッシュ・フロー計算書",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 3,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
     "id": "nissho-7ff46c8c5f04",
     "exam": "nissho",
     "unit": 1,
     "area": "商業簿記・会計学 / 第三決算",
     "title": "キャッシュ・フロー計算書",
     "details": "キャッシュ・フロー計算書",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 3,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
-    "id": "nissho-376beab0be30",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第三決算",
-    "title": "中間財務諸表(四半期・半期)、臨時決算",
-    "details": "中間財務諸表(四半期・半期)、臨時決算",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 3,
     "scope": "verified",
@@ -4191,7 +4039,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 4,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "その他資本剰余金"
   },
   {
     "id": "nissho-a2e95b64b7d2",
@@ -4258,8 +4108,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "商業簿記・会計学 / 第四株式会社会計",
-    "title": "利益剰余金 / その他利益剰余金繰越利益剰余金",
-    "details": "イ.その他利益剰余金繰越利益剰余金",
+    "title": "利益剰余金 / その他利益剰余金(繰越利益剰余金)",
+    "details": "イ.その他利益剰余金 / 繰越利益剰余金",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 4,
     "scope": "verified",
@@ -4397,7 +4247,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 4,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "剰余金の処分"
   },
   {
     "id": "nissho-caf428513a6a",
@@ -4421,7 +4273,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 4,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "株主資本の計数の変動"
   },
   {
     "id": "nissho-e76b42888a40",
@@ -4457,7 +4311,9 @@
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 4,
     "scope": "verified",
-    "sourceId": "nissho2026"
+    "sourceId": "nissho2026",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "会社の合併"
   },
   {
     "id": "nissho-0e7bbde9c951",
@@ -4544,18 +4400,6 @@
     "sourceId": "nissho2026"
   },
   {
-    "id": "nissho-0429bc9d28a4",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第四株式会社会計",
-    "title": "新株予約権、ストック・オプション",
-    "details": "新株予約権、ストック・オプション",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 4,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
     "id": "nissho-43ca15b3c7e4",
     "exam": "nissho",
     "unit": 1,
@@ -4632,8 +4476,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "商業簿記・会計学 / 第五本支店会計",
-    "title": "本支店会計における決算手続(財務諸表の / 合併など)",
-    "details": "合併など)",
+    "title": "本支店会計における決算手続(財務諸表の合併など)",
+    "details": "4.本支店会計における決算手続(財務諸表の合併など)",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 4,
     "scope": "verified",
@@ -4752,8 +4596,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "商業簿記・会計学 / 第六連結会計",
-    "title": "未実現損益の消去(2級では棚卸資産および / 土地に係るものに限る)",
-    "details": "土地に係るものに限る)",
+    "title": "未実現損益の消去(2級では棚卸資産および土地に係るものに限る)",
+    "details": "5.未実現損益の消去(2級では棚卸資産および土地に係るものに限る)",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 4,
     "scope": "verified",
@@ -4779,7 +4623,7 @@
     "exam": "nissho",
     "unit": 2,
     "area": "商業簿記・会計学 / 第六連結会計",
-    "title": "未実現損益の消去(2級では棚卸資産および / ダウンストリームの場合",
+    "title": "未実現損益の消去(2級では棚卸資産および土地に係るものに限る) / ダウンストリームの場合",
     "details": "ア.ダウンストリームの場合",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 4,
@@ -4803,7 +4647,7 @@
     "exam": "nissho",
     "unit": 2,
     "area": "商業簿記・会計学 / 第六連結会計",
-    "title": "未実現損益の消去(2級では棚卸資産および / アップストリームの場合",
+    "title": "未実現損益の消去(2級では棚卸資産および土地に係るものに限る) / アップストリームの場合",
     "details": "イ.アップストリームの場合",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 4,
@@ -4871,18 +4715,6 @@
     "sourceId": "nissho2026"
   },
   {
-    "id": "nissho-c27ba7de878f",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第六連結会計",
-    "title": "包括利益、その他の包括利益",
-    "details": "包括利益、その他の包括利益",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 4,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
     "id": "nissho-9f7956d45a60",
     "exam": "nissho",
     "unit": 1,
@@ -4901,18 +4733,6 @@
     "area": "商業簿記・会計学 / 第六連結会計",
     "title": "連結精算表、連結財務諸表の作成 / 連結キャッシュ・フロー計算書、中間連結財務諸表の作成(四半期・半期)",
     "details": "連結キャッシュ・フロー計算書、中間連結財務諸表の作成(四半期・半期)",
-    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
-    "page": 4,
-    "scope": "verified",
-    "sourceId": "nissho2026"
-  },
-  {
-    "id": "nissho-67cf9e673391",
-    "exam": "nissho",
-    "unit": 2,
-    "area": "商業簿記・会計学 / 第六連結会計",
-    "title": "セグメント情報など",
-    "details": "セグメント情報など",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
     "page": 4,
     "scope": "verified",
@@ -4999,7 +4819,7 @@
     "unit": 2,
     "area": "工業簿記・原価計算 / 第一工業簿記の本質",
     "title": "工業経営における責任センター",
-    "details": "ター",
+    "details": "工業経営における責任センター",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
     "scope": "verified",
@@ -5814,8 +5634,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第五材料費計算",
-    "title": "材料関係の証ひょうおよび / 帳簿",
-    "details": "帳簿",
+    "title": "材料関係の証ひょうおよび帳簿",
+    "details": "材料関係の証ひょうおよび帳簿",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
     "scope": "verified",
@@ -5838,8 +5658,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第五材料費計算",
-    "title": "購入価額(副費の予定計算 / を含む)",
-    "details": "を含む)",
+    "title": "購入価額(副費の予定計算を含む)",
+    "details": "購入価額(副費の予定計算を含む)",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
     "scope": "verified",
@@ -5886,8 +5706,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第五材料費計算",
-    "title": "消費単価の計算(予定価格 / による計算を含む)",
-    "details": "による計算を含む)",
+    "title": "消費単価の計算(予定価格による計算を含む)",
+    "details": "消費単価の計算(予定価格による計算を含む)",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
     "scope": "verified",
@@ -5946,8 +5766,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第六労務費計算",
-    "title": "賃金関係の証ひょうおよび / 帳簿",
-    "details": "帳簿",
+    "title": "賃金関係の証ひょうおよび帳簿",
+    "details": "賃金関係の証ひょうおよび帳簿",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
     "scope": "verified",
@@ -5970,8 +5790,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第六労務費計算",
-    "title": "作業時間および作業量の計 / 算",
-    "details": "算",
+    "title": "作業時間および作業量の計算",
+    "details": "作業時間および作業量の計算",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
     "scope": "verified",
@@ -5994,8 +5814,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第六労務費計算",
-    "title": "消費賃金の計算(予定賃率 / による計算を含む)",
-    "details": "による計算を含む)",
+    "title": "消費賃金の計算(予定賃率による計算を含む)",
+    "details": "消費賃金の計算(予定賃率による計算を含む)",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
     "scope": "verified",
@@ -6066,8 +5886,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第七経費計算",
-    "title": "経費関係の証ひょうおよび / 帳簿",
-    "details": "帳簿",
+    "title": "経費関係の証ひょうおよび帳簿",
+    "details": "経費関係の証ひょうおよび帳簿",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
     "scope": "verified",
@@ -6126,8 +5946,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第八製造間接費計算",
-    "title": "製造間接費関係の証ひょう / および帳簿",
-    "details": "および帳簿",
+    "title": "製造間接費関係の証ひょうおよび帳簿",
+    "details": "製造間接費関係の証ひょうおよび帳簿",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
     "scope": "verified",
@@ -6174,8 +5994,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第八製造間接費計算",
-    "title": "製造間接費の製品への配賦 / (予定配賦を含む)",
-    "details": "(予定配賦を含む)",
+    "title": "製造間接費の製品への配賦(予定配賦を含む)",
+    "details": "製造間接費の製品への配賦(予定配賦を含む)",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
     "scope": "verified",
@@ -6381,8 +6201,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第九部門費計算",
-    "title": "補助部門費の製造部門への / 配賦",
-    "details": "配賦",
+    "title": "補助部門費の製造部門への配賦",
+    "details": "補助部門費の製造部門への配賦",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
     "scope": "verified",
@@ -6405,7 +6225,7 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第九部門費計算",
-    "title": "補助部門費の製造部門への / 直接配賦法",
+    "title": "補助部門費の製造部門への配賦 / 直接配賦法",
     "details": "ア.直接配賦法",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
@@ -6429,7 +6249,7 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第九部門費計算",
-    "title": "補助部門費の製造部門への / 相互配賦法",
+    "title": "補助部門費の製造部門への配賦 / 相互配賦法",
     "details": "イ.相互配賦法",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
@@ -6489,7 +6309,7 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第九部門費計算",
-    "title": "補助部門費の製造部門への / 実際配賦と予定配賦",
+    "title": "補助部門費の製造部門への配賦 / 実際配賦と予定配賦",
     "details": "オ.実際配賦と予定配賦",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
@@ -6729,8 +6549,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第十一総合原価計算",
-    "title": "単純総合原価計算の方法と / 記帳",
-    "details": "記帳",
+    "title": "単純総合原価計算の方法と記帳",
+    "details": "単純総合原価計算の方法と記帳",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
     "scope": "verified",
@@ -6753,8 +6573,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第十一総合原価計算",
-    "title": "等級別総合原価計算の方法 / と記帳",
-    "details": "と記帳",
+    "title": "等級別総合原価計算の方法と記帳",
+    "details": "等級別総合原価計算の方法と記帳",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 1,
     "scope": "verified",
@@ -6777,8 +6597,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第十一総合原価計算",
-    "title": "組別総合原価計算の方法と / 記帳",
-    "details": "記帳",
+    "title": "組別総合原価計算の方法と記帳",
+    "details": "組別総合原価計算の方法と記帳",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 2,
     "scope": "verified",
@@ -6801,8 +6621,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第十一総合原価計算",
-    "title": "総合原価計算における完成 / 品総合原価と期末仕掛品原価の計算",
-    "details": "品総合原価と期末仕掛品原価の計算",
+    "title": "総合原価計算における完成品総合原価と期末仕掛品原価の計算",
+    "details": "総合原価計算における完成品総合原価と期末仕掛品原価の計算",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 2,
     "scope": "verified",
@@ -6825,7 +6645,7 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第十一総合原価計算",
-    "title": "総合原価計算における完成 / 平均法",
+    "title": "総合原価計算における完成品総合原価と期末仕掛品原価の計算 / 平均法",
     "details": "ア.平均法",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 2,
@@ -6849,7 +6669,7 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第十一総合原価計算",
-    "title": "総合原価計算における完成 / (修正)先入先出法",
+    "title": "総合原価計算における完成品総合原価と期末仕掛品原価の計算 / (修正)先入先出法",
     "details": "イ.(修正)先入先出法",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 2,
@@ -6960,8 +6780,8 @@
     "exam": "nissho",
     "unit": 2,
     "area": "工業簿記・原価計算 / 第十一総合原価計算",
-    "title": "正常仕損費と正常減損費の / 処理 (度外視法)",
-    "details": "処理 (度外視法)",
+    "title": "正常仕損費と正常減損費の処理(度外視法)",
+    "details": "正常仕損費と正常減損費の処理(度外視法)",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
     "page": 2,
     "scope": "verified",
@@ -7238,7 +7058,7 @@
     "id": "nissho-56bfa517cfcb",
     "exam": "nissho",
     "unit": 2,
-    "area": "工業簿記・原価計算 / 第十三原価・営業量・利益関係",
+    "area": "工業簿記・原価計算 / 第十三原価・営業量・利益関係の分析",
     "title": "損益分岐図表",
     "details": "損益分岐図表",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
@@ -7262,7 +7082,7 @@
     "id": "nissho-c9eaf983a9d4",
     "exam": "nissho",
     "unit": 2,
-    "area": "工業簿記・原価計算 / 第十三原価・営業量・利益関係",
+    "area": "工業簿記・原価計算 / 第十三原価・営業量・利益関係の分析",
     "title": "損益分岐分析の計算方法",
     "details": "損益分岐分析の計算方法",
     "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
@@ -13706,5 +13526,67 @@
     "page": null,
     "scope": "verified",
     "sourceId": "nissho2026"
+  },
+  {
+    "id": "nissho-b7e87bf7e87f",
+    "exam": "nissho",
+    "unit": 2,
+    "area": "商業簿記・会計学 / 第六連結会計",
+    "title": "資本連結",
+    "details": "1.資本連結",
+    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
+    "page": 4,
+    "scope": "verified",
+    "sourceId": "nissho2026"
+  },
+  {
+    "id": "nissho-4cc367bf9841",
+    "exam": "nissho",
+    "unit": 2,
+    "area": "商業簿記・会計学 / 第六連結会計",
+    "title": "連結精算表、連結財務諸表の作成",
+    "details": "11.連結精算表、連結財務諸表の作成",
+    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
+    "page": 4,
+    "scope": "verified",
+    "sourceId": "nissho2026"
+  },
+  {
+    "id": "nissho-9b4d435557e3",
+    "exam": "nissho",
+    "unit": 2,
+    "area": "工業簿記・原価計算 / 第五材料費計算",
+    "title": "期末棚卸高の計算",
+    "details": "期末棚卸高の計算",
+    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+    "page": 1,
+    "sourceId": "nissho2026",
+    "scope": "verified"
+  },
+  {
+    "id": "nissho-b3030633885c",
+    "exam": "nissho",
+    "unit": 2,
+    "area": "工業簿記・原価計算 / 第七経費計算",
+    "title": "経費の計算",
+    "details": "経費の計算",
+    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+    "page": 1,
+    "sourceId": "nissho2026",
+    "scope": "verified"
+  },
+  {
+    "id": "nissho-7983c6a8da29",
+    "exam": "nissho",
+    "unit": 2,
+    "area": "工業簿記・原価計算 / 第十八工場会計の独立※",
+    "title": "工場会計の独立※",
+    "details": "工場会計の独立※",
+    "source": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+    "page": 2,
+    "sourceId": "nissho2026",
+    "scope": "verified",
+    "scopeLimit": "当該級では簡易な内容を出題する旨の※注記あり",
+    "scopeLimitAppliesTo": "工場会計の独立"
   }
 ]

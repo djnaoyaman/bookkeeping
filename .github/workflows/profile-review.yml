@@ -20,6 +20,7 @@ jobs:
       - run: node tests/assessment-engine.cjs
       - run: node tests/assessment-session.cjs
       - run: node tests/learning-course.cjs
+      - run: node tests/nissho2-scope.cjs
       - run: node tests/check.cjs
       - run: node tests/discovery-client.cjs
       - run: python profile-check.py
@@ -33,6 +34,7 @@ jobs:
       - run: node course-integration-browser.cjs
       - run: node icon-browser.cjs
       - run: node mock-browser.cjs
+      - run: node nissho2-scope-browser.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -55,3 +57,9 @@ jobs:
         with:
           name: mock-review
           path: mock-shots
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nissho2-scope-review
+          path: scope-shots

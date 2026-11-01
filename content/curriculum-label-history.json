@@ -1,0 +1,871 @@
+[
+  {
+    "id": "nissho-b697def29fb6",
+    "oldTitle": "その他の債権と債務等 / 契約資産、契約負債",
+    "newTitle": "その他の債権と債務等 / 契約資産、契約負債",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "契約資産、契約負債"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-3b4478c6d89c",
+    "oldTitle": "手形 / 営業外支払(受取)手形",
+    "newTitle": "手形 / 営業外支払(受取)手形",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "営業外支払(受取)手形"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-1bbd2dae833e",
+    "oldTitle": "債権の譲渡 / その他の債権譲渡",
+    "newTitle": "債権の譲渡 / その他の債権譲渡",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "その他の債権譲渡"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-580f94d59824",
+    "oldTitle": "引当金 / (個別評価と一括評価、営業債権および営業外債権に対する貸倒引当金繰入額の損益計算書における区分)",
+    "newTitle": "引当金 / (個別評価と一括評価、営業債権および営業外債権に対する貸倒引当金繰入額の損益計算書における区分)",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "個別評価"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-640dc2e34d59",
+    "oldTitle": "引当金 / 退職給付引当金",
+    "newTitle": "引当金 / 退職給付引当金",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "退職給付引当金"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-44751577514a",
+    "oldTitle": "商品の売買 / 総記法仕入割戻",
+    "newTitle": "商品の売買 / 仕入割戻",
+    "changedFields": {
+      "title": {
+        "old": "商品の売買 / 総記法仕入割戻",
+        "new": "商品の売買 / 仕入割戻"
+      },
+      "details": {
+        "old": "ウ.総記法仕入割戻",
+        "new": "仕入割戻"
+      }
+    }
+  },
+  {
+    "id": "nissho-0629b195f171",
+    "oldTitle": "商品の売買 / 仕入割引・売上割引 (総平均法)",
+    "newTitle": "商品の売買 / 商品有高帳(総平均法)",
+    "changedFields": {
+      "title": {
+        "old": "商品の売買 / 仕入割引・売上割引 (総平均法)",
+        "new": "商品の売買 / 商品有高帳(総平均法)"
+      },
+      "details": {
+        "old": "オ.仕入割引・売上割引 (総平均法)",
+        "new": "(総平均法)"
+      }
+    }
+  },
+  {
+    "id": "nissho-6e4c8b335f9c",
+    "oldTitle": "様々な財又はサービスの顧客への移転 / 検収基準・出荷基準・着荷基準",
+    "newTitle": "様々な財又はサービスの顧客への移転 / 検収基準・出荷基準・着荷基準",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "検収基準・出荷基準・着荷基準"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-68c32da687b8",
+    "oldTitle": "様々な財又はサービスの顧客への移転 / 役務収益・役務原価",
+    "newTitle": "様々な財又はサービスの顧客への移転 / 役務収益・役務原価",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "役務収益・役務原価"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-0d7c4d1f7fd0",
+    "oldTitle": "様々な財又はサービスの顧客への移転 / 複数の履行義務を含む顧客との契約",
+    "newTitle": "様々な財又はサービスの顧客への移転 / 複数の履行義務を含む顧客との契約",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "複数の履行義務を含む顧客との契約"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-863b0c5800a9",
+    "oldTitle": "様々な財又はサービスの顧客への移転 / 変動対価",
+    "newTitle": "様々な財又はサービスの顧客への移転 / 変動対価",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "変動対価"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-83f1bb688a92",
+    "oldTitle": "有形固定資産 / (a) 有形固定資産の割賦購入(利息部分を区分する場合には定額法に限る) (利息部分を利息法で区分する方法) (b) 圧縮記帳 (2級では国庫補助金・工事負担金を直接控除方式により記帳する場合に限る)",
+    "newTitle": "有形固定資産 / (a) 有形固定資産の割賦購入(利息部分を区分する場合には定額法に限る) (b) 圧縮記帳 (2級では国庫補助金・工事負担金を直接控除方式により記帳する場合に限る)",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "圧縮記帳"
+      },
+      "title": {
+        "old": "有形固定資産 / (a) 有形固定資産の割賦購入(利息部分を区分する場合には定額法に限る) (利息部分を利息法で区分する方法) (b) 圧縮記帳 (2級では国庫補助金・工事負担金を直接控除方式により記帳する場合に限る)",
+        "new": "有形固定資産 / (a) 有形固定資産の割賦購入(利息部分を区分する場合には定額法に限る) (b) 圧縮記帳 (2級では国庫補助金・工事負担金を直接控除方式により記帳する場合に限る)"
+      },
+      "details": {
+        "old": "(a) 有形固定資産の割賦購入(利息部分を区分する場合には定額法に限る) (利息部分を利息法で区分する方法) (b) 圧縮記帳 (2級では国庫補助金・工事負担金を直接控除方式により記帳する場合に限る)",
+        "new": "(a) 有形固定資産の割賦購入(利息部分を区分する場合には定額法に限る) (b) 圧縮記帳 (2級では国庫補助金・工事負担金を直接控除方式により記帳する場合に限る)"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-08ef452b7dc3",
+    "oldTitle": "有形固定資産 / 建設仮勘定 (直接法) (定率法、生産高比例法) (級数法など)",
+    "newTitle": "有形固定資産 / 建設仮勘定",
+    "changedFields": {
+      "title": {
+        "old": "有形固定資産 / 建設仮勘定 (直接法) (定率法、生産高比例法) (級数法など)",
+        "new": "有形固定資産 / 建設仮勘定"
+      },
+      "details": {
+        "old": "エ.建設仮勘定 (直接法) (定率法、生産高比例法) (級数法など)",
+        "new": "エ.建設仮勘定"
+      }
+    }
+  },
+  {
+    "id": "nissho-38f8f82b0b50",
+    "oldTitle": "有形固定資産 / 減価償却(間接法) (定額法)",
+    "newTitle": "有形固定資産 / 減価償却(間接法、直接法) (定額法、定率法、生産高比例法)",
+    "changedFields": {
+      "title": {
+        "old": "有形固定資産 / 減価償却(間接法) (定額法)",
+        "new": "有形固定資産 / 減価償却(間接法、直接法) (定額法、定率法、生産高比例法)"
+      },
+      "details": {
+        "old": "オ.減価償却(間接法) (定額法)",
+        "new": "減価償却(間接法、直接法) (定額法、定率法、生産高比例法)"
+      }
+    }
+  },
+  {
+    "id": "nissho-387eeb12f5d5",
+    "oldTitle": "無形固定資産 / ソフトウェア、ソフトウェア仮勘定 (2級では自社利用の場合に限る)",
+    "newTitle": "無形固定資産 / ソフトウェア、ソフトウェア仮勘定 (2級では自社利用の場合に限る)",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "ソフトウェア、ソフトウェア仮勘定"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-bcf88ab83c1a",
+    "oldTitle": "投資その他の資産 / 満期保有目的債券(償却原価法(定額法)) (利息法)",
+    "newTitle": "投資その他の資産 / 満期保有目的債券(償却原価法(定額法))",
+    "changedFields": {
+      "title": {
+        "old": "投資その他の資産 / 満期保有目的債券(償却原価法(定額法)) (利息法)",
+        "new": "投資その他の資産 / 満期保有目的債券(償却原価法(定額法))"
+      },
+      "details": {
+        "old": "ア.満期保有目的債券(償却原価法(定額法)) (利息法)",
+        "new": "ア.満期保有目的債券(償却原価法(定額法))"
+      }
+    }
+  },
+  {
+    "id": "nissho-712864574afc",
+    "oldTitle": "投資その他の資産 / 子会社株式、関連会社株式",
+    "newTitle": "投資その他の資産 / 子会社株式、関連会社株式",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "子会社株式、関連会社株式"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-c899a567d1ab",
+    "oldTitle": "投資その他の資産 / その他有価証券 (保有目的の変更)",
+    "newTitle": "投資その他の資産 / その他有価証券",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "その他有価証券"
+      },
+      "title": {
+        "old": "投資その他の資産 / その他有価証券 (保有目的の変更)",
+        "new": "投資その他の資産 / その他有価証券"
+      },
+      "details": {
+        "old": "ウ.その他有価証券 (保有目的の変更)",
+        "new": "ウ.その他有価証券"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-24002ef83374",
+    "oldTitle": "リース取引 / ファイナンス・リース取引の借手側の処理 (利子込み法、利子抜き法(定額法))",
+    "newTitle": "リース取引 / ファイナンス・リース取引の借手側の処理 (利子込み法、利子抜き法(定額法))",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "リース取引（ファイナンス・リース取引の借手側の処理）"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-4d3eb5f68fb7",
+    "oldTitle": "リース取引 / オペレーティング・リース取引の借手側の処理",
+    "newTitle": "リース取引 / オペレーティング・リース取引の借手側の処理",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "リース取引（オペレーティング・リース取引の借手側の処理）"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-d9cd4aff33e5",
+    "oldTitle": "外貨建取引 / 外貨建の営業取引 (為替予約の振当処理を含むものの、2級では為替予約差額は期間配分をしない)",
+    "newTitle": "外貨建取引 / 外貨建の営業取引 (為替予約の振当処理を含むものの、2級では為替予約差額は期間配分をしない)",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "外貨建取引（外貨建の営業取引）"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-303c1eea67e3",
+    "oldTitle": "税効果会計 / (2級では引当金、減価償却およびその他有価証券に係る一時差異に限るとともに、繰延税金資産の回収可能性の検討を除外)",
+    "newTitle": "税効果会計 / (2級では引当金、減価償却およびその他有価証券に係る一時差異に限るとともに、繰延税金資産の回収可能性の検討を除外)",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "税効果会計"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-1781d7519cb3",
+    "oldTitle": "その他有価証券評価差額金 / (全部純資産直入法)",
+    "newTitle": "その他有価証券評価差額金 / (全部純資産直入法)",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "その他有価証券評価差額金"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-d6fa7c429b83",
+    "oldTitle": "損益計算書と貸借対照表の作成 / (報告式)",
+    "newTitle": "損益計算書と貸借対照表の作成 / (報告式)",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "損益計算書と貸借対照表の作成（報告式）"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-671ce7870614",
+    "oldTitle": "株主資本等変動計算書 / (2級では株主資本およびその他有価証券評価差額金に係る増減事由に限定)",
+    "newTitle": "株主資本等変動計算書 / (2級では株主資本およびその他有価証券評価差額金に係る増減事由に限定)",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "株主資本等変動計算書"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-b8f2bef87ae0",
+    "oldTitle": "資本剰余金 / その他資本剰余金",
+    "newTitle": "資本剰余金 / その他資本剰余金",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "その他資本剰余金"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-ab7e3f3f8ceb",
+    "oldTitle": "利益剰余金 / その他利益剰余金繰越利益剰余金",
+    "newTitle": "利益剰余金 / その他利益剰余金(繰越利益剰余金)",
+    "changedFields": {
+      "title": {
+        "old": "利益剰余金 / その他利益剰余金繰越利益剰余金",
+        "new": "利益剰余金 / その他利益剰余金(繰越利益剰余金)"
+      },
+      "details": {
+        "old": "イ.その他利益剰余金繰越利益剰余金",
+        "new": "イ.その他利益剰余金 / 繰越利益剰余金"
+      }
+    }
+  },
+  {
+    "id": "nissho-22402a716d3f",
+    "oldTitle": "剰余金の配当など / 剰余金の処分",
+    "newTitle": "剰余金の配当など / 剰余金の処分",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "剰余金の処分"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-cee0659f9538",
+    "oldTitle": "剰余金の配当など / 株主資本の計数の変動",
+    "newTitle": "剰余金の配当など / 株主資本の計数の変動",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "株主資本の計数の変動"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-49c762185fe2",
+    "oldTitle": "会社の合併",
+    "newTitle": "会社の合併",
+    "changedFields": {
+      "scopeLimitAppliesTo": {
+        "old": null,
+        "new": "会社の合併"
+      },
+      "scopeLimit": {
+        "old": null,
+        "new": "当該級では簡易な内容を出題する旨の※注記あり"
+      }
+    }
+  },
+  {
+    "id": "nissho-e75527d85edd",
+    "oldTitle": "本支店会計における決算手続(財務諸表の / 合併など)",
+    "newTitle": "本支店会計における決算手続(財務諸表の合併など)",
+    "changedFields": {
+      "title": {
+        "old": "本支店会計における決算手続(財務諸表の / 合併など)",
+        "new": "本支店会計における決算手続(財務諸表の合併など)"
+      },
+      "details": {
+        "old": "合併など)",
+        "new": "4.本支店会計における決算手続(財務諸表の合併など)"
+      }
+    }
+  },
+  {
+    "id": "nissho-a81b31d44fcc",
+    "oldTitle": "未実現損益の消去(2級では棚卸資産および / 土地に係るものに限る)",
+    "newTitle": "未実現損益の消去(2級では棚卸資産および土地に係るものに限る)",
+    "changedFields": {
+      "title": {
+        "old": "未実現損益の消去(2級では棚卸資産および / 土地に係るものに限る)",
+        "new": "未実現損益の消去(2級では棚卸資産および土地に係るものに限る)"
+      },
+      "details": {
+        "old": "土地に係るものに限る)",
+        "new": "5.未実現損益の消去(2級では棚卸資産および土地に係るものに限る)"
+      }
+    }
+  },
+  {
+    "id": "nissho-a07c24f50fd2",
+    "oldTitle": "未実現損益の消去(2級では棚卸資産および / ダウンストリームの場合",
+    "newTitle": "未実現損益の消去(2級では棚卸資産および土地に係るものに限る) / ダウンストリームの場合",
+    "changedFields": {
+      "title": {
+        "old": "未実現損益の消去(2級では棚卸資産および / ダウンストリームの場合",
+        "new": "未実現損益の消去(2級では棚卸資産および土地に係るものに限る) / ダウンストリームの場合"
+      }
+    }
+  },
+  {
+    "id": "nissho-7771c8a59293",
+    "oldTitle": "未実現損益の消去(2級では棚卸資産および / アップストリームの場合",
+    "newTitle": "未実現損益の消去(2級では棚卸資産および土地に係るものに限る) / アップストリームの場合",
+    "changedFields": {
+      "title": {
+        "old": "未実現損益の消去(2級では棚卸資産および / アップストリームの場合",
+        "new": "未実現損益の消去(2級では棚卸資産および土地に係るものに限る) / アップストリームの場合"
+      }
+    }
+  },
+  {
+    "id": "nissho-aac29dd7fa3b",
+    "oldTitle": "工業経営における責任センター",
+    "newTitle": "工業経営における責任センター",
+    "changedFields": [
+      {
+        "field": "details",
+        "old": "ター",
+        "corrected": "工業経営における責任センター"
+      }
+    ]
+  },
+  {
+    "id": "nissho-19831d24696c",
+    "oldTitle": "材料関係の証ひょうおよび / 帳簿",
+    "newTitle": "材料関係の証ひょうおよび帳簿",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "材料関係の証ひょうおよび / 帳簿",
+        "corrected": "材料関係の証ひょうおよび帳簿"
+      },
+      {
+        "field": "details",
+        "old": "帳簿",
+        "corrected": "材料関係の証ひょうおよび帳簿"
+      }
+    ]
+  },
+  {
+    "id": "nissho-e83b25167425",
+    "oldTitle": "購入価額(副費の予定計算 / を含む)",
+    "newTitle": "購入価額(副費の予定計算を含む)",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "購入価額(副費の予定計算 / を含む)",
+        "corrected": "購入価額(副費の予定計算を含む)"
+      },
+      {
+        "field": "details",
+        "old": "を含む)",
+        "corrected": "購入価額(副費の予定計算を含む)"
+      }
+    ]
+  },
+  {
+    "id": "nissho-5add8b2afe82",
+    "oldTitle": "消費単価の計算(予定価格 / による計算を含む)",
+    "newTitle": "消費単価の計算(予定価格による計算を含む)",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "消費単価の計算(予定価格 / による計算を含む)",
+        "corrected": "消費単価の計算(予定価格による計算を含む)"
+      },
+      {
+        "field": "details",
+        "old": "による計算を含む)",
+        "corrected": "消費単価の計算(予定価格による計算を含む)"
+      }
+    ]
+  },
+  {
+    "id": "nissho-febd4c05a824",
+    "oldTitle": "賃金関係の証ひょうおよび / 帳簿",
+    "newTitle": "賃金関係の証ひょうおよび帳簿",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "賃金関係の証ひょうおよび / 帳簿",
+        "corrected": "賃金関係の証ひょうおよび帳簿"
+      },
+      {
+        "field": "details",
+        "old": "帳簿",
+        "corrected": "賃金関係の証ひょうおよび帳簿"
+      }
+    ]
+  },
+  {
+    "id": "nissho-7ddb64955440",
+    "oldTitle": "作業時間および作業量の計 / 算",
+    "newTitle": "作業時間および作業量の計算",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "作業時間および作業量の計 / 算",
+        "corrected": "作業時間および作業量の計算"
+      },
+      {
+        "field": "details",
+        "old": "算",
+        "corrected": "作業時間および作業量の計算"
+      }
+    ]
+  },
+  {
+    "id": "nissho-e6e77306efee",
+    "oldTitle": "消費賃金の計算(予定賃率 / による計算を含む)",
+    "newTitle": "消費賃金の計算(予定賃率による計算を含む)",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "消費賃金の計算(予定賃率 / による計算を含む)",
+        "corrected": "消費賃金の計算(予定賃率による計算を含む)"
+      },
+      {
+        "field": "details",
+        "old": "による計算を含む)",
+        "corrected": "消費賃金の計算(予定賃率による計算を含む)"
+      }
+    ]
+  },
+  {
+    "id": "nissho-d010c3fb55a4",
+    "oldTitle": "経費関係の証ひょうおよび / 帳簿",
+    "newTitle": "経費関係の証ひょうおよび帳簿",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "経費関係の証ひょうおよび / 帳簿",
+        "corrected": "経費関係の証ひょうおよび帳簿"
+      },
+      {
+        "field": "details",
+        "old": "帳簿",
+        "corrected": "経費関係の証ひょうおよび帳簿"
+      }
+    ]
+  },
+  {
+    "id": "nissho-d470e1613758",
+    "oldTitle": "製造間接費関係の証ひょう / および帳簿",
+    "newTitle": "製造間接費関係の証ひょうおよび帳簿",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "製造間接費関係の証ひょう / および帳簿",
+        "corrected": "製造間接費関係の証ひょうおよび帳簿"
+      },
+      {
+        "field": "details",
+        "old": "および帳簿",
+        "corrected": "製造間接費関係の証ひょうおよび帳簿"
+      }
+    ]
+  },
+  {
+    "id": "nissho-d4fd45dcfab9",
+    "oldTitle": "製造間接費の製品への配賦 / (予定配賦を含む)",
+    "newTitle": "製造間接費の製品への配賦(予定配賦を含む)",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "製造間接費の製品への配賦 / (予定配賦を含む)",
+        "corrected": "製造間接費の製品への配賦(予定配賦を含む)"
+      },
+      {
+        "field": "details",
+        "old": "(予定配賦を含む)",
+        "corrected": "製造間接費の製品への配賦(予定配賦を含む)"
+      }
+    ]
+  },
+  {
+    "id": "nissho-9666e00964fb",
+    "oldTitle": "補助部門費の製造部門への / 配賦",
+    "newTitle": "補助部門費の製造部門への配賦",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "補助部門費の製造部門への / 配賦",
+        "corrected": "補助部門費の製造部門への配賦"
+      },
+      {
+        "field": "details",
+        "old": "配賦",
+        "corrected": "補助部門費の製造部門への配賦"
+      }
+    ]
+  },
+  {
+    "id": "nissho-0a7bf54167b3",
+    "oldTitle": "補助部門費の製造部門への / 直接配賦法",
+    "newTitle": "補助部門費の製造部門への配賦 / 直接配賦法",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "補助部門費の製造部門への / 直接配賦法",
+        "corrected": "補助部門費の製造部門への配賦 / 直接配賦法"
+      }
+    ]
+  },
+  {
+    "id": "nissho-f1d8ec93c3ea",
+    "oldTitle": "補助部門費の製造部門への / 相互配賦法",
+    "newTitle": "補助部門費の製造部門への配賦 / 相互配賦法",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "補助部門費の製造部門への / 相互配賦法",
+        "corrected": "補助部門費の製造部門への配賦 / 相互配賦法"
+      }
+    ]
+  },
+  {
+    "id": "nissho-432731a540b9",
+    "oldTitle": "補助部門費の製造部門への / 実際配賦と予定配賦",
+    "newTitle": "補助部門費の製造部門への配賦 / 実際配賦と予定配賦",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "補助部門費の製造部門への / 実際配賦と予定配賦",
+        "corrected": "補助部門費の製造部門への配賦 / 実際配賦と予定配賦"
+      }
+    ]
+  },
+  {
+    "id": "nissho-edb0e12d4162",
+    "oldTitle": "単純総合原価計算の方法と / 記帳",
+    "newTitle": "単純総合原価計算の方法と記帳",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "単純総合原価計算の方法と / 記帳",
+        "corrected": "単純総合原価計算の方法と記帳"
+      },
+      {
+        "field": "details",
+        "old": "記帳",
+        "corrected": "単純総合原価計算の方法と記帳"
+      }
+    ]
+  },
+  {
+    "id": "nissho-884852fd0c7c",
+    "oldTitle": "等級別総合原価計算の方法 / と記帳",
+    "newTitle": "等級別総合原価計算の方法と記帳",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "等級別総合原価計算の方法 / と記帳",
+        "corrected": "等級別総合原価計算の方法と記帳"
+      },
+      {
+        "field": "details",
+        "old": "と記帳",
+        "corrected": "等級別総合原価計算の方法と記帳"
+      }
+    ]
+  },
+  {
+    "id": "nissho-bfe14b2e8c70",
+    "oldTitle": "組別総合原価計算の方法と / 記帳",
+    "newTitle": "組別総合原価計算の方法と記帳",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "組別総合原価計算の方法と / 記帳",
+        "corrected": "組別総合原価計算の方法と記帳"
+      },
+      {
+        "field": "details",
+        "old": "記帳",
+        "corrected": "組別総合原価計算の方法と記帳"
+      }
+    ]
+  },
+  {
+    "id": "nissho-bbe75426d772",
+    "oldTitle": "総合原価計算における完成 / 品総合原価と期末仕掛品原価の計算",
+    "newTitle": "総合原価計算における完成品総合原価と期末仕掛品原価の計算",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "総合原価計算における完成 / 品総合原価と期末仕掛品原価の計算",
+        "corrected": "総合原価計算における完成品総合原価と期末仕掛品原価の計算"
+      },
+      {
+        "field": "details",
+        "old": "品総合原価と期末仕掛品原価の計算",
+        "corrected": "総合原価計算における完成品総合原価と期末仕掛品原価の計算"
+      }
+    ]
+  },
+  {
+    "id": "nissho-c5750d58af74",
+    "oldTitle": "総合原価計算における完成 / 平均法",
+    "newTitle": "総合原価計算における完成品総合原価と期末仕掛品原価の計算 / 平均法",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "総合原価計算における完成 / 平均法",
+        "corrected": "総合原価計算における完成品総合原価と期末仕掛品原価の計算 / 平均法"
+      }
+    ]
+  },
+  {
+    "id": "nissho-65ea4a3dac67",
+    "oldTitle": "総合原価計算における完成 / (修正)先入先出法",
+    "newTitle": "総合原価計算における完成品総合原価と期末仕掛品原価の計算 / (修正)先入先出法",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "総合原価計算における完成 / (修正)先入先出法",
+        "corrected": "総合原価計算における完成品総合原価と期末仕掛品原価の計算 / (修正)先入先出法"
+      }
+    ]
+  },
+  {
+    "id": "nissho-d8db1d7f2652",
+    "oldTitle": "正常仕損費と正常減損費の / 処理 (度外視法)",
+    "newTitle": "正常仕損費と正常減損費の処理(度外視法)",
+    "changedFields": [
+      {
+        "field": "title",
+        "old": "正常仕損費と正常減損費の / 処理 (度外視法)",
+        "corrected": "正常仕損費と正常減損費の処理(度外視法)"
+      },
+      {
+        "field": "details",
+        "old": "処理 (度外視法)",
+        "corrected": "正常仕損費と正常減損費の処理(度外視法)"
+      }
+    ]
+  },
+  {
+    "id": "nissho-56bfa517cfcb",
+    "oldTitle": "損益分岐図表",
+    "newTitle": "損益分岐図表",
+    "changedFields": [
+      {
+        "field": "area",
+        "old": "工業簿記・原価計算 / 第十三原価・営業量・利益関係",
+        "corrected": "工業簿記・原価計算 / 第十三原価・営業量・利益関係の分析"
+      }
+    ]
+  },
+  {
+    "id": "nissho-c9eaf983a9d4",
+    "oldTitle": "損益分岐分析の計算方法",
+    "newTitle": "損益分岐分析の計算方法",
+    "changedFields": [
+      {
+        "field": "area",
+        "old": "工業簿記・原価計算 / 第十三原価・営業量・利益関係",
+        "corrected": "工業簿記・原価計算 / 第十三原価・営業量・利益関係の分析"
+      }
+    ]
+  }
+]
