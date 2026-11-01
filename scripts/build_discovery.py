@@ -101,7 +101,7 @@ if COURSE:
 # Original timed-practice page; existing course/storage are not replaced.
 subprocess.run(['node',str(ROOT/'scripts/build_mock.cjs')],check=True)
 simple('mock.html','日商簿記3級・60分のオリジナル総合練習','2026年度範囲の第1回。45・20・35点、サイト独自の欄別採点。公式試験の再現や合格予測ではありません。','<div id="mock-app" class="mock-app"><p>時間制練習を準備しています。</p></div><noscript><p>入力・途中保存・採点にはJavaScriptが必要です。通常の講義ページはJavaScriptなしでも読めます。</p></noscript>')
-p=D/'mock.html';mock_html=p.read_text().replace('</head>','<link rel="stylesheet" href="assets/mock.css"></head>').replace('</body>','<script src="assessment-engine.js"></script><script src="mock-model.js"></script><script src="mock-store.js"></script><script src="mock-form-data.js"></script><script src="mock-ui.js"></script></body>');p.write_text(mock_html)
+p=D/'mock.html';mock_html=p.read_text().replace('<h1>日商簿記3級・60分のオリジナル総合練習</h1>','<h1 class="mock-page-title"><span>日商簿記3級・</span><span>60分の</span><span>オリジナル総合練習</span></h1>').replace('</head>','<link rel="stylesheet" href="assets/mock.css"></head>').replace('</body>','<script src="assessment-engine.js"></script><script src="mock-model.js"></script><script src="mock-store.js"></script><script src="mock-form-data.js"></script><script src="mock-ui.js"></script></body>');p.write_text(mock_html)
 # Actual, non-hash URLs only. Do not manufacture publication dates.
 ns='http://www.sitemaps.org/schemas/sitemap/0.9';ET.register_namespace('',ns);tree=ET.Element('{'+ns+'}urlset')
 for p in PAGES:
