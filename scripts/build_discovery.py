@@ -1,5 +1,6 @@
 from pathlib import Path
 import subprocess,json,re,html,xml.etree.ElementTree as ET
+subprocess.run(['python3',str(Path(__file__).resolve().with_name('build_curriculum.py'))],check=True)
 ROOT=Path(__file__).resolve().parents[1];D=ROOT/'dist';CFG=json.loads((ROOT/'site.config.json').read_text());BASE=CFG['url'].rstrip('/');DATA=json.loads(subprocess.check_output(['node',str(ROOT/'scripts/export-learning.cjs')],text=True));TEMPLATE=(ROOT/'src/index.template.html').read_text();META={};PAGES=[]
 COURSE_PATH=ROOT/'content/learning-course.json'
 COURSE=json.loads(COURSE_PATH.read_text()) if COURSE_PATH.exists() else None

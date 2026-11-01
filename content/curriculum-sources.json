@@ -1,0 +1,20 @@
+{
+  "nissho2026": {
+    "title": "日商簿記・2026年度適用",
+    "url": "https://www.kentei.ne.jp/bookkeeping/35697-2/2022-2026",
+    "checked": "2026-10-23",
+    "note": "2022年度版の2026年度適用を公式案内で確認。商業簿記・会計学と工業簿記・原価計算の表を参照。上位級は下位級の項目を含みます。※の簡易論点と級別の程度差は原表も確認してください。2027年度改定を混在させません。"
+  },
+  "zenkei2024": {
+    "title": "全経簿記・令和6年改定を基にした学習設計",
+    "url": "https://zenkei.or.jp/wp-content/uploads/1_boki_suijyun_R6.pdf",
+    "checked": "2026-10-23",
+    "note": "公式の出題基準・能力水準と2024年の改定案内を確認。詳細出題範囲表は取得できなかったため、項目の級別配置・網羅性の最終照合は未完了です。表の最新版を確認するまでは全項目対応済みとは扱いません。"
+  },
+  "aicpa2026": {
+    "title": "USCPA・January 2026 Blueprints",
+    "url": "https://assets.ctfassets.net/rb9cdnjh59cm/71s84dkfo3KEsoLlz4vv6G/f4314469ec5368b5b4dd0d0184f00a71/CPA_Exam_Blueprints_2026.pdf",
+    "checked": "2026-10-23",
+    "note": "2026年1月適用版のArea / Group / Topicを参照。項目一覧は代表タスク本文の転載ではありません。税法の金額・適用日や改正事項は受験日用の資料で別途確認が必要です。必須3科目＋選択1科目を受験対象として管理します。"
+  }
+}

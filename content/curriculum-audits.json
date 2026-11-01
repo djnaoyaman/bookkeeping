@@ -1,0 +1,35 @@
+{
+  "nissho:2": {
+    "exam": "nissho",
+    "unit": 2,
+    "status": "source-column-and-label-audited",
+    "checked": "2026-11-01",
+    "validThrough": "2027-03-31",
+    "note": "2026年度の公式出題区分と項目名・級別範囲を照合しました。226件は範囲表の整理項目（親項目を含む）で、独立した技能数ではありません。教材の充足・習得・合格可能性の判定とは別です。1級・他資格を今回再監査した意味ではありません。",
+    "counts": {
+      "commercial": 133,
+      "industrial": 93,
+      "archived": 19
+    },
+    "sources": [
+      {
+        "url": "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
+        "sha256": "c94da1cda8479fc74668810077fb8ad2941269cb2bba41494978d048119322f7",
+        "pages": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "url": "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+        "sha256": "9074a06ea173686dabb18669b88d508cba222c39e6192ff6e91035ca1e47b629",
+        "pages": [
+          1,
+          2
+        ]
+      }
+    ]
+  }
+}
