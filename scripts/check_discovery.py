@@ -62,6 +62,7 @@ print(f'PASS: {len(canonicals)} unique static pages; titles, canonical, single H
 
 from check_course_text import validate_course_text
 validate_course_text(json.loads((ROOT/'content/learning-course.json').read_text()),(D/'llms-full.txt').read_text(),BASE)
+validate_course_text(json.loads((ROOT/'content/industrial-course.json').read_text()),(D/'llms-full.txt').read_text(),BASE)
 print('PASS: scoped course text includes all tables, field answers/options/units, explanations and worked examples.')
 subprocess.run([sys.executable,str(ROOT/'scripts/test_course_text.py')],check=True)
 
