@@ -1,0 +1,4946 @@
+{
+  "schemaVersion": 1,
+  "target": "nissho:3",
+  "scopeVersion": "nissho-2026",
+  "authoringStatus": "reviewed",
+  "sourceVerificationPending": false,
+  "authoringDateUTC": "2026-10-31",
+  "assessmentNote": "配点はIL MASTRO独自の教育用ルーブリックであり、公式採点基準を表すものではない。35問を32の管理用familyに整理。類似問題はfamilyを共有する。family数は独立構造数・未見評価数ではない。",
+  "lessons": [
+    {
+      "id": "n3-lesson-01",
+      "title": "基礎概念 — 残高と利益を分けて考える",
+      "requirementIds": [
+        "nissho-8cd210929167",
+        "nissho-e204e6c1658b",
+        "nissho-90c97954325e"
+      ],
+      "prerequisiteIds": [],
+      "sections": [
+        {
+          "title": "会社のお金を、経営者のお金と分ける",
+          "paragraphs": [
+            "簿記は、会社の経済活動を一定の規則で記録し、その時点の財産の状態と、ある期間の経営成績を説明する仕組みです。会社の通帳へ入ったお金でも、すべてがもうけとは限りません。借入金なら返す義務があり、株主の払込みなら出資です。",
+            "この講義では株式会社を想定します。「会社が何を持つか」「会社が何を返すか」「差額は誰の持分か」の順に整理します。個人の財布と会社の財布を混ぜず、会社の側から判断してください。"
+          ]
+        },
+        {
+          "title": "資産・負債・純資産の関係",
+          "paragraphs": [
+            "資産は現金、普通預金、売掛金、備品など、会社が保有する財産や権利です。売掛金は、通常の商品販売などで代金を後日受け取る権利です。現金でなくても資産になります。負債は買掛金、借入金など、後日支払ったり返済したりする義務です。",
+            "純資産は資産から負債を引いた差額で、資本金や利益の蓄積などが含まれます。基本式は「資産＝負債＋純資産」。たとえば現金80,000円と備品40,000円を持ち、借入金50,000円があれば、純資産は70,000円です。純資産が現金として別に置かれているわけではありません。"
+          ]
+        },
+        {
+          "title": "収益・費用と、入金・出金は別のもの",
+          "paragraphs": [
+            "収益は売上や受取手数料など、純資産を増やす原因となる営業活動等の成果です。費用は給料、支払家賃、通信費など、収益を得る活動等で生じる負担です。当期純利益は「収益−費用」、費用の方が大きければ当期純損失です。",
+            "借入れによる入金は資産と負債を同額増やすだけで、収益ではありません。借入元本の返済は資産と負債を同額減らすだけで、費用ではありません。一方、その借入れに対する利息は費用です。備品の購入も、購入時には現金という資産を備品という資産に変えるので、代金の全額を直ちに費用とはしません。減価償却は後の講義で学びます。",
+            "代金の受取りが翌月でも、当期に提供を完了して収益を計上する取引があります。反対に、以前に計上した売掛金の回収は新しい収益を生みません。金銭の動きだけで利益を計算せず、取引の中身と対象期間を確認します。"
+          ]
+        },
+        {
+          "title": "貸借対照表は一時点、損益計算書は一期間",
+          "paragraphs": [
+            "貸借対照表は、決算日など一時点の資産・負債・純資産を示します。損益計算書は、期首から期末までの一期間の収益・費用と利益または損失を示します。残高を写す写真と、期間中の成果を集計する記録の違いです。",
+            "ほかの純資産変動がなければ「期末純資産＝期首純資産＋当期純利益」です。ただし、追加出資や配当は利益とは別に純資産を動かします。これらがある問題では「期首純資産＋追加出資＋利益−配当＝期末純資産」とつなぎます。純損失なら利益を加える代わりに損失を差し引きます。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "title": "借入れで現金が増えても、利益は増えない",
+          "prompt": "会社には現金90,000円、借入金30,000円がある。追加で銀行から40,000円を借り入れ、全額を現金で受け取った。他の資産・負債はない。借入れ後の資産、負債、純資産と、この取引による利益への影響を求める。単位は円。",
+          "steps": [
+            "借入れ前の純資産は90,000−30,000＝60,000。",
+            "現金は40,000増え、資産は130,000になる。同時に返済義務も40,000増え、負債は70,000になる。",
+            "借入れ後の純資産は130,000−70,000＝60,000で変わらない。収益も費用も発生しない。"
+          ],
+          "answer": "資産130,000円、負債70,000円、純資産60,000円。利益への影響は0円。",
+          "objectiveIds": [
+            "n3-foundation-skill-five-groups",
+            "n3-foundation-skill-cash-vs-profit",
+            "n3-foundation-skill-accounting-equation"
+          ]
+        },
+        {
+          "title": "利益が現金増加額と一致しない理由",
+          "prompt": "期首の現金と資本金はともに100,000円。他の残高はない。当期にサービスを完了して受取手数料60,000円を計上し、40,000円を現金で受け取った。残り20,000円は後日受取る権利として残っている。支払家賃15,000円を現金で支払った。ほかの取引・決算整理・税金はない。",
+          "steps": [
+            "収益は当期に提供を完了した60,000。まだ受け取っていない20,000も収益に含まれる。",
+            "利益は60,000−15,000＝45,000。現金は100,000＋40,000−15,000＝125,000。",
+            "資産は現金125,000と未収の代金20,000の合計145,000。負債はないので純資産も145,000。",
+            "期首純資産100,000＋利益45,000＝期末純資産145,000で、両表がつながる。"
+          ],
+          "answer": "当期純利益45,000円、現金増加25,000円。差額20,000円は未収の代金。",
+          "objectiveIds": [
+            "n3-foundation-skill-cash-vs-profit",
+            "n3-foundation-skill-accounting-equation",
+            "n3-foundation-skill-period-profit",
+            "n3-foundation-skill-statement-bridge"
+          ]
+        }
+      ],
+      "pitfalls": [
+        "入金をすべて収益、出金をすべて費用にしない。借入れ・回収・元本返済・資産購入を別に考える。",
+        "純資産を「会社の現金」と読み替えない。資産全体から負債全体を引いた差額である。",
+        "貸借対照表の残高と損益計算書の期間合計を混ぜない。期首・期末と対象期間を先に確認する。"
+      ],
+      "questionIds": [
+        "n3-foundation-classify-five-elements-01",
+        "n3-foundation-cash-is-not-profit-01",
+        "n3-foundation-balance-equation-01",
+        "n3-foundation-statements-period-point-01",
+        "n3-foundation-period-profit-01",
+        "n3-foundation-equity-bridge-01",
+        "n3-foundation-mini-business-statements-01"
+      ],
+      "objectives": [
+        {
+          "id": "n3-foundation-skill-five-groups",
+          "requirementIds": [
+            "nissho-8cd210929167",
+            "nissho-e204e6c1658b"
+          ],
+          "description": "勘定科目を、資産・負債・純資産・収益・費用へ、その意味に基づいて分類できる。"
+        },
+        {
+          "id": "n3-foundation-skill-cash-vs-profit",
+          "requirementIds": [
+            "nissho-8cd210929167",
+            "nissho-e204e6c1658b"
+          ],
+          "description": "借入れ・債権回収・利息・未回収収益を区別し、現金増減と利益増減が一致しない理由を説明できる。"
+        },
+        {
+          "id": "n3-foundation-skill-accounting-equation",
+          "requirementIds": [
+            "nissho-8cd210929167"
+          ],
+          "description": "複数の資産・負債の残高を集計し、資産＝負債＋純資産で不足額を求められる。"
+        },
+        {
+          "id": "n3-foundation-skill-period-profit",
+          "requirementIds": [
+            "nissho-e204e6c1658b"
+          ],
+          "description": "当期に計上すべき収益と費用を分け、資金調達を除いて期間損益を計算できる。"
+        },
+        {
+          "id": "n3-foundation-skill-statement-bridge",
+          "requirementIds": [
+            "nissho-90c97954325e"
+          ],
+          "description": "貸借対照表の一時点と損益計算書の一期間を区別し、利益と出資・配当を別にして期首・期末純資産をつなげられる。"
+        }
+      ]
+    },
+    {
+      "id": "n3-lesson-02",
+      "title": "取引 — 変わったものを二つの面から捉える",
+      "requirementIds": [
+        "nissho-709c2a16e904",
+        "nissho-28b7f12e249b"
+      ],
+      "prerequisiteIds": [
+        "n3-lesson-01"
+      ],
+      "sections": [
+        {
+          "title": "日常の「取引」と簿記上の取引",
+          "paragraphs": [
+            "簿記上の取引は、資産・負債・純資産の増減を生じ、金額で記録できる出来事です。契約を結んだだけで商品の引渡しも代金の授受もない場合は、その時点でこれらが変わらなければ記録しません。広告の打合せをしただけ、といった出来事も同様です。",
+            "一方、火災で保有現金を失う出来事は商売の売買ではありませんが、資産が減るため簿記上の取引です。「相手と商談したか」ではなく「記録する財産等に変化が起きたか」で判断します。前払いが伴う契約など、実際に資産・負債が変わった場合は別です。"
+          ]
+        },
+        {
+          "title": "取引の8要素",
+          "paragraphs": [
+            "基本となる変化は、資産の増加と減少、負債の増加と減少、純資産の増加と減少、費用の発生、収益の発生の8つです。費用・収益は利益計算のため、純資産の変動原因として別に記録します。資本金の増加と売上の発生は、同じ純資産を増やす側の変化でも区別します。",
+            "借方側に並ぶのは「資産の増加・負債の減少・純資産の減少・費用の発生」。貸方側に並ぶのは「資産の減少・負債の増加・純資産の増加・収益の発生」です。借方は左、貸方は右を意味し、良い・悪い、貸す・借りるという日常語の意味で判断しません。"
+          ]
+        },
+        {
+          "title": "一つの出来事を、つながる変化へ分解する",
+          "paragraphs": [
+            "現金で借入元本を返すなら、借入金という負債が減り、現金という資産も減ります。現金で家賃を払うなら費用が発生し、資産が減ります。借入元本と利息をまとめて払うなら、負債の減少・費用の発生・資産の減少の三つが組み合わさります。",
+            "変化は必ず二つだけとは限りません。ただし借方に記録する金額の合計と貸方に記録する金額の合計は同じです。取引文の中の目的、未払・未収、元本と利息などを読み分けてから記録に進みます。"
+          ]
+        },
+        {
+          "title": "交換取引・損益取引・混合取引",
+          "paragraphs": [
+            "この講義では、収益も費用も含まない取引を交換取引、収益または費用の発生を中心とする取引を損益取引、交換取引と損益取引が一緒になった取引を混合取引として区別します。現金を普通預金へ預け入れるのは交換取引、当月家賃を払うのは損益取引、借入元本と当月利息の一括支払いは混合取引です。",
+            "名称を暗記するだけでなく、どの金額が利益を動かすかを説明できることが大切です。同じ出金でも、元本部分は利益に影響せず、利息部分だけが利益を減らします。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "title": "発注と引渡しを区別する",
+          "prompt": "4月2日、備品35,000円を注文した。代金の授受はなく、4月8日に備品を受け取り、代金は翌月払いとなった。この講義では注文だけでは資産・負債は計上しない。",
+          "steps": [
+            "4月2日は注文段階で、備品も支払義務もまだ帳簿に計上しない条件なので記録しない。",
+            "4月8日は備品を取得し、35,000円を後日支払う義務が生じる。",
+            "備品という資産が35,000増え、未払金という負債が35,000増える。"
+          ],
+          "answer": "4月2日は記録なし。4月8日は資産増加35,000円と負債増加35,000円。",
+          "objectiveIds": [
+            "n3-foundation-skill-recognition",
+            "n3-foundation-skill-equation-changes"
+          ]
+        },
+        {
+          "title": "元本と利息を分ける",
+          "prompt": "借入元本20,000円と当月分の利息400円を現金で一括返済した。単位は円。",
+          "steps": [
+            "20,000は既にある返済義務を消す部分なので負債の減少。",
+            "400は資金を借りたことに対する当月の負担なので費用の発生。",
+            "現金支払いは合計20,400で資産の減少。借方側20,000＋400と貸方側20,400が等しい。"
+          ],
+          "answer": "負債減少20,000円＋費用発生400円と、資産減少20,400円。利益は400円だけ減る混合取引。",
+          "objectiveIds": [
+            "n3-foundation-skill-eight-sides",
+            "n3-foundation-skill-decompose-effects",
+            "n3-foundation-skill-transaction-types",
+            "n3-foundation-skill-equation-changes"
+          ]
+        }
+      ],
+      "pitfalls": [
+        "日常語の「取引をした」と簿記の記録対象を同一視しない。注文だけか、資産等が実際に変わったかを読む。",
+        "すべての出金を費用としない。返済元本と利息を分解する。",
+        "「借方＝増える、貸方＝減る」は資産にしか通用しない。負債・純資産は逆。"
+      ],
+      "questionIds": [
+        "n3-foundation-recognition-events-01",
+        "n3-foundation-eight-element-directions-01",
+        "n3-foundation-transaction-types-01",
+        "n3-foundation-coupled-elements-01",
+        "n3-foundation-noncash-loss-01",
+        "n3-foundation-transaction-equation-chain-01"
+      ],
+      "objectives": [
+        {
+          "id": "n3-foundation-skill-recognition",
+          "requirementIds": [
+            "nissho-709c2a16e904"
+          ],
+          "description": "注文だけの段階と資産等が変動した段階を区別し、非売買の損失も簿記上の取引として判断できる。"
+        },
+        {
+          "id": "n3-foundation-skill-eight-sides",
+          "requirementIds": [
+            "nissho-28b7f12e249b"
+          ],
+          "description": "取引8要素を借方側4要素と貸方側4要素へ正しく分類できる。"
+        },
+        {
+          "id": "n3-foundation-skill-decompose-effects",
+          "requirementIds": [
+            "nissho-28b7f12e249b"
+          ],
+          "description": "元本と利息などを分解し、三つ以上の変化を借貸が等しくなる組合せとして捉えられる。"
+        },
+        {
+          "id": "n3-foundation-skill-transaction-types",
+          "requirementIds": [
+            "nissho-709c2a16e904",
+            "nissho-28b7f12e249b"
+          ],
+          "description": "収益・費用の有無と交換部分の有無から、交換・損益・混合取引を区別できる。"
+        },
+        {
+          "id": "n3-foundation-skill-equation-changes",
+          "requirementIds": [
+            "nissho-709c2a16e904",
+            "nissho-28b7f12e249b"
+          ],
+          "description": "現金を伴わない取得や損失を含む取引の資産・負債・純資産への影響を追える。"
+        }
+      ]
+    },
+    {
+      "id": "n3-lesson-03",
+      "title": "勘定と仕訳 — 原因を読み、左右を決める",
+      "requirementIds": [
+        "nissho-d0c0f7bd5eb4",
+        "nissho-781fc555ef83",
+        "nissho-ef5429a88eae",
+        "nissho-06b087617cdc"
+      ],
+      "prerequisiteIds": [
+        "n3-lesson-01",
+        "n3-lesson-02"
+      ],
+      "sections": [
+        {
+          "title": "勘定は、同じ種類の増減を集める箱",
+          "paragraphs": [
+            "現金、売掛金、借入金、売上、給料など、同じ性質の増減をまとめて記録する単位が勘定です。勘定科目はその箱の名前です。資産・負債・純資産・収益・費用のどのグループかが分かれば、基本的な記入側を判断できます。",
+            "勘定の左側を借方、右側を貸方と呼びます。資産の通常の残高は借方、負債・純資産は貸方です。費用の発生は借方、収益の発生は貸方に記録します。反対の変化や取消しでは、元の記録の反対側へ記入します。",
+            "繰越利益剰余金は、これまでに生じた利益のうち会社に残している部分などを表す純資産の勘定です。今期の収益そのものではありません。資本金が株主の出資に対応するのに対し、利益の蓄積は繰越利益剰余金などで区別します。利益をこの勘定へ振り替える決算手続は後の講義で学びます。"
+          ]
+        },
+        {
+          "title": "仕訳を作る四つの手順",
+          "paragraphs": [
+            "まず取引文から変わったものを挙げます。次に、それぞれを指定された勘定科目で表します。第三に各科目の区分と増減から借方か貸方かを決めます。最後に金額を入れ、借方合計と貸方合計が等しいことを確認します。",
+            "たとえば借入れの入金なら、現金（資産）が増え、借入金（負債）が増えます。したがって借方が現金、貸方が借入金です。「借りたから借方」と日常語から決めると逆になります。"
+          ]
+        },
+        {
+          "title": "単純な仕訳と、複数行の仕訳",
+          "paragraphs": [
+            "借方1科目・貸方1科目に限りません。備品50,000円を取得し、現金20,000円を支払い、残りを翌月払いとするなら、借方は備品50,000、貸方は現金20,000と未払金30,000です。借方の行数と貸方の行数が違っても、金額合計が合えば問題ありません。",
+            "営業上の商品仕入れの後払いは買掛金を使いますが、備品など商品以外の購入の後払いには通常、未払金を使います。設問の指定科目を確認し、「後払いはすべて買掛金」と一括りにしないでください。"
+          ]
+        },
+        {
+          "title": "貸借平均は、必要な検算であって完全な保証ではない",
+          "paragraphs": [
+            "すべての仕訳で借方合計と貸方合計が等しくなるのが貸借平均の原理です。各仕訳を正しく転記すると、全勘定の借方記入額合計と貸方記入額合計も等しくなります。",
+            "ただし、借入金を売上と書くなど科目を間違えても、左右に同じ金額を書けば合計は一致します。取引を丸ごと記録し忘れた場合も一致します。金額一致の後に、科目、増減の向き、対象となる取引の漏れを確かめる必要があります。"
+          ]
+        },
+        {
+          "title": "売買で使う三分法の入口",
+          "paragraphs": [
+            "三分法は商品の売買を主に仕入・売上・繰越商品の三つの勘定で扱う方法です。商品を買ったときは仕入、販売したときは売上を用い、期首・期末に残っている商品の原価は繰越商品という資産の勘定で区別します。",
+            "三分法の販売時の仕訳では、商品の原価を別途振り替える処理はしません。仕入勘定の金額がそのまま当期の売上原価になるとは限らず、期末に売れ残った商品等の原価を調整する決算手続は後の講義で学びます。本講義の伝票問題は、指定された売買時の仕訳と集計を扱います。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "title": "取引文から借方・貸方へ",
+          "prompt": "銀行から70,000円を借り入れ、普通預金口座に入金された。指定科目は普通預金、借入金、売上。税金・手数料はない。",
+          "steps": [
+            "増えたものは普通預金という資産と、借入金という負債。",
+            "資産の増加は借方、負債の増加は貸方。",
+            "収益ではないので、選択肢にあっても売上は使わない。"
+          ],
+          "answer": "借方：普通預金70,000円／貸方：借入金70,000円。",
+          "objectiveIds": [
+            "n3-foundation-skill-account-groups",
+            "n3-foundation-skill-entry-directions",
+            "n3-foundation-skill-derive-journal",
+            "n3-foundation-skill-balance-limits"
+          ]
+        },
+        {
+          "title": "備品代金を一部だけ支払う",
+          "prompt": "業務用の机48,000円を購入し、現金18,000円を支払った。残額は翌月支払う。指定科目は備品、現金、未払金、買掛金。税金は考慮しない。",
+          "steps": [
+            "受け取った備品は全額48,000を資産として増やす。",
+            "現金は実際に支払った18,000だけ減少。",
+            "残額48,000−18,000＝30,000は商品以外の購入代金なので未払金。",
+            "借方48,000と貸方18,000＋30,000が一致する。",
+            "もし未払金30,000を売上30,000と誤記しても貸借は一致する。しかし返済義務を落とし、収益を過大にするので誤り。貸借一致の後に科目の意味も確かめる。"
+          ],
+          "answer": "借方：備品48,000円／貸方：現金18,000円、未払金30,000円。",
+          "objectiveIds": [
+            "n3-foundation-skill-account-groups",
+            "n3-foundation-skill-entry-directions",
+            "n3-foundation-skill-derive-journal",
+            "n3-foundation-skill-compound-journal",
+            "n3-foundation-skill-balance-limits"
+          ]
+        }
+      ],
+      "pitfalls": [
+        "借方と貸方を「貸した・借りた」という取引文の語感で決めない。",
+        "商品以外の後払いに買掛金を機械的に使わない。取引内容と指定科目を読む。",
+        "貸借一致だけで正解と決めない。科目誤りや全部の記録漏れは一致したまま残る。"
+      ],
+      "questionIds": [
+        "n3-foundation-accounts-and-groups-01",
+        "n3-foundation-account-entry-directions-01",
+        "n3-foundation-loan-bank-journal-01",
+        "n3-foundation-equipment-part-payment-01",
+        "n3-foundation-receivable-split-collection-01",
+        "n3-foundation-balanced-but-wrong-01",
+        "n3-foundation-journal-total-and-omission-01"
+      ],
+      "objectives": [
+        {
+          "id": "n3-foundation-skill-account-groups",
+          "requirementIds": [
+            "nissho-d0c0f7bd5eb4"
+          ],
+          "description": "権利・義務・持分・収益・費用の内容から、指定された勘定科目を分類できる。"
+        },
+        {
+          "id": "n3-foundation-skill-entry-directions",
+          "requirementIds": [
+            "nissho-781fc555ef83"
+          ],
+          "description": "勘定の区分と増減から記入側を決め、収益の取消しでは反対側になると判断できる。"
+        },
+        {
+          "id": "n3-foundation-skill-derive-journal",
+          "requirementIds": [
+            "nissho-ef5429a88eae"
+          ],
+          "description": "取引文から変化と指定科目を抽出し、金額を付して仕訳に表せる。"
+        },
+        {
+          "id": "n3-foundation-skill-compound-journal",
+          "requirementIds": [
+            "nissho-781fc555ef83",
+            "nissho-ef5429a88eae",
+            "nissho-06b087617cdc"
+          ],
+          "description": "一部支払い・複数手段の回収を複数行へ分け、左右の合計が等しい仕訳を作れる。"
+        },
+        {
+          "id": "n3-foundation-skill-balance-limits",
+          "requirementIds": [
+            "nissho-06b087617cdc"
+          ],
+          "description": "貸借一致を検算に使いながら、一致しても科目誤りや取引全体の漏れが残ると判断できる。"
+        }
+      ]
+    },
+    {
+      "id": "n3-lesson-04",
+      "title": "帳簿 — 日付順の記録を、勘定別の残高へ",
+      "requirementIds": [
+        "nissho-1474bc3e0d48",
+        "nissho-cff564a07175"
+      ],
+      "prerequisiteIds": [
+        "n3-lesson-03"
+      ],
+      "sections": [
+        {
+          "title": "仕訳帳と総勘定元帳の役割",
+          "paragraphs": [
+            "仕訳帳は取引を日付順に記録する主要簿です。総勘定元帳はその仕訳を勘定科目ごとに整理する主要簿です。同じ取引を別々に発生させるのではなく、日付順の一覧を科目別の一覧に移し替えます。したがって、転記によって売上がもう一度発生するわけではありません。",
+            "仕訳帳では「その日に何があったか」を追えます。総勘定元帳では「現金がいくら残っているか」「借入金がどのように増減したか」を追えます。両方を往復できるように、日付、金額、参照情報を対応させます。"
+          ]
+        },
+        {
+          "title": "転記では借方・貸方の側を変えない",
+          "paragraphs": [
+            "仕訳の借方にある科目は、その科目の元帳でも借方へ転記します。貸方も同様です。たとえば「借方 現金5,000／貸方 売掛金5,000」は、現金元帳の借方へ5,000、売掛金元帳の貸方へ5,000を記録します。",
+            "単純な仕訳では元帳の摘要に相手科目を記すと、現金元帳から「売掛金の回収だった」と読み戻せます。複数の相手科目がある仕訳の摘要は、問題の指定様式に従います。本講義では複合仕訳の摘要は採点対象にせず、借貸と金額を中心に確かめます。"
+          ]
+        },
+        {
+          "title": "期首残高と当期の記入を区別する",
+          "paragraphs": [
+            "資産勘定なら通常「期首借方残高＋当期借方記入額−当期貸方記入額」で期末借方残高を求めます。負債勘定なら通常「期首貸方残高＋当期貸方記入額−当期借方記入額」です。借方・貸方の記入額の合計と、両者の差である残高は違います。",
+            "たとえば現金の期首残高10,000、当期受取額8,000、支払額3,000なら、期末残高は15,000です。当期借方記入額は8,000であり、18,000ではありません。「当期の記入額」なのか「期首残高を含む借方総額」なのか、見出しを確かめてください。"
+          ]
+        },
+        {
+          "title": "補助簿は総額の内訳を説明する",
+          "paragraphs": [
+            "主要簿だけでは、売掛金の合計が分かっても誰にいくら残っているかを追いにくくなります。得意先元帳（売掛金元帳）で取引先別の売掛金を、仕入先元帳（買掛金元帳）で仕入先別の買掛金を管理します。各先の残高合計は総勘定元帳の売掛金・買掛金残高と一致するはずです。",
+            "現金出納帳は現金の収支、当座預金出納帳は当座預金の出入り、売上帳・仕入帳は売買の明細、商品有高帳は商品種類別の数量・単価・金額を記録する補助簿です。一つの取引を複数の補助簿へ記録することもあります。帳簿の数だけ取引金額を加算してはいけません。"
+          ]
+        },
+        {
+          "title": "集計の検算と、内容の照合を組み合わせる",
+          "paragraphs": [
+            "すべて正しく転記すれば、全勘定の借方記入額合計と貸方記入額合計は一致します。一方の転記漏れや左右の誤りは差額として表れることがあります。反対側に転記した誤りでは、本来側の不足と誤った側の過大が同時に生じるため、差額が元の金額の2倍になることがあります。",
+            "一致していても、科目誤りや両側の記録漏れは残りえます。仕訳帳との照合、証ひょうとの照合、補助元帳の各先合計との照合を組み合わせて調べます。差額だけから原因を決めつけず、根拠の記録へ戻りましょう。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "title": "回収仕訳を二つの元帳へ",
+          "prompt": "6月5日、売掛金9,000円を現金で回収した。直前の現金借方残高は21,000円、売掛金借方残高は14,000円である。税金・手数料はない。",
+          "steps": [
+            "仕訳は借方現金9,000、貸方売掛金9,000。",
+            "現金元帳の借方に9,000を転記し、摘要を売掛金とする。残高は21,000＋9,000＝30,000。",
+            "売掛金元帳の貸方に9,000を転記し、摘要を現金とする。残高は14,000−9,000＝5,000。",
+            "売掛金を誤って借方へ転記すると残高は23,000となり、正しい5,000との差は18,000。反対側への誤記は不足と過大の両方を生む。"
+          ],
+          "answer": "現金元帳は借方9,000円、残高30,000円。売掛金元帳は貸方9,000円、残高5,000円。",
+          "objectiveIds": [
+            "n3-foundation-skill-major-book-roles",
+            "n3-foundation-skill-post-and-balance",
+            "n3-foundation-skill-posting-diagnosis"
+          ]
+        },
+        {
+          "title": "得意先別残高から総額を検算する",
+          "prompt": "期首の売掛金は青空商店18,000円、川辺商店12,000円。期中に青空へ掛売上7,000円、青空から回収20,000円、川辺から回収5,000円があった。その他の売掛金取引はない。",
+          "steps": [
+            "青空の残高は18,000＋7,000−20,000＝5,000。",
+            "川辺の残高は12,000−5,000＝7,000。",
+            "各先の合計は12,000。総勘定元帳の売掛金も期首30,000＋掛売上7,000−回収25,000＝12,000となる。"
+          ],
+          "answer": "青空5,000円、川辺7,000円。補助元帳合計と総勘定元帳の残高はともに12,000円。",
+          "objectiveIds": [
+            "n3-foundation-skill-subsidiary-purpose",
+            "n3-foundation-skill-subsidiary-reconcile"
+          ]
+        }
+      ],
+      "pitfalls": [
+        "仕訳帳から元帳への転記で左右を反転させない。相手科目を見ることと、記入する側を逆にすることは別。",
+        "当期記入額に期首残高を含めるかは表の見出しに従う。残高と記入合計を混同しない。",
+        "総勘定元帳と補助元帳の金額を足さない。同じ売掛金の総額と内訳である。"
+      ],
+      "questionIds": [
+        "n3-foundation-book-roles-01",
+        "n3-foundation-cash-ledger-posting-01",
+        "n3-foundation-subsidiary-books-01",
+        "n3-foundation-customer-ledger-reconcile-01",
+        "n3-foundation-wrong-side-posting-01",
+        "n3-foundation-ledger-linked-balances-01"
+      ],
+      "objectives": [
+        {
+          "id": "n3-foundation-skill-major-book-roles",
+          "requirementIds": [
+            "nissho-1474bc3e0d48"
+          ],
+          "description": "日付順の仕訳帳と勘定別の総勘定元帳の目的を区別できる。"
+        },
+        {
+          "id": "n3-foundation-skill-post-and-balance",
+          "requirementIds": [
+            "nissho-1474bc3e0d48"
+          ],
+          "description": "仕訳の借貸を保って転記し、相手科目・当期記入額・期首を含む残高を区別して求められる。"
+        },
+        {
+          "id": "n3-foundation-skill-subsidiary-purpose",
+          "requirementIds": [
+            "nissho-cff564a07175"
+          ],
+          "description": "知りたい内訳が取引先・現金収支・売買明細・商品数量のどれかを読み、対応する補助簿を選べる。"
+        },
+        {
+          "id": "n3-foundation-skill-subsidiary-reconcile",
+          "requirementIds": [
+            "nissho-1474bc3e0d48",
+            "nissho-cff564a07175"
+          ],
+          "description": "得意先ごとの増減を集計し、内訳残高合計を総勘定元帳の残高と照合できる。"
+        },
+        {
+          "id": "n3-foundation-skill-posting-diagnosis",
+          "requirementIds": [
+            "nissho-1474bc3e0d48"
+          ],
+          "description": "反対側への転記が両側の集計へ与える影響を計算し、元資料の仕訳へ戻して訂正箇所を特定できる。"
+        }
+      ]
+    },
+    {
+      "id": "n3-lesson-05",
+      "title": "証ひょうと伝票 — 証拠から起こし、漏れなく集める",
+      "requirementIds": [
+        "nissho-a063dba24fd3",
+        "nissho-ba5192e0d2c7",
+        "nissho-c2ac4c8ca5c4"
+      ],
+      "prerequisiteIds": [
+        "n3-lesson-03",
+        "n3-lesson-04"
+      ],
+      "sections": [
+        {
+          "title": "証ひょうから、誰の取引かを読む",
+          "paragraphs": [
+            "請求書、納品書、領収書など、取引を裏づける資料を証ひょうと呼びます。金額だけでなく、発行者、宛先、取引日、内容、支払条件、支払済みかどうかを読みます。相手の請求書に「売上」と書かれていても、自社が購入側なら自社の仕入れ等として記録します。",
+            "請求書が届いたことと、現金を支払ったことは同じではありません。領収書や入出金記録と合わせて、既に記帳した取引の証拠なのか、まだ未記帳の取引なのかを確認します。一つの購入について納品書と請求書が両方あっても、仕入れを2回計上しません。"
+          ]
+        },
+        {
+          "title": "3伝票制では、現金が動く側に注目する",
+          "paragraphs": [
+            "入金伝票は現金を受け取る取引です。借方の現金は決まっているため、伝票の勘定科目欄には貸方の相手科目を記します。売掛金を回収した入金伝票なら、その欄は売掛金です。出金伝票は現金を支払う取引で、貸方の現金に対する借方の相手科目を記します。",
+            "振替伝票は現金の入出金を伴わない取引に使い、借方・貸方の両方を記します。この講義でいう入金・出金は、銀行口座の増減一般ではなく、帳簿上の現金の受払いです。売掛金が普通預金へ振り込まれた場合は、借方普通預金・貸方売掛金の振替伝票になります。",
+            "現金を普通預金へ預け入れる場合は現金が減るので出金伝票で、相手科目は普通預金。普通預金から現金を引き出す場合は入金伝票で、相手科目は普通預金です。お金が動いたという日常感覚ではなく、現金勘定を含むかで判断します。"
+          ]
+        },
+        {
+          "title": "一部現金取引には、二つの起票方法がある",
+          "paragraphs": [
+            "商品20,000円を売り、現金6,000円を受け取り、残り14,000円を掛けとする場面を考えます。取引を分割する方法なら、入金伝票は相手科目売上6,000、振替伝票は借方売掛金14,000・貸方売上14,000です。二つを合計して本来の取引になります。",
+            "一度すべて掛けとみなす方法なら、振替伝票を借方売掛金20,000・貸方売上20,000とし、入金伝票を相手科目売掛金6,000とします。合計では売掛金が20,000増えて6,000減り、14,000残るので同じ結果です。どちらの方法で起票するかを問題の指示や既存の伝票から読み、混在させないことが重要です。",
+            "一部現金で仕入れたときも考え方は同じです。全額掛けとみなす方法では、まず仕入全額と買掛金全額を振替伝票で計上し、現金支払部分を買掛金の支払いとして出金伝票にします。これらは同じ取引を二重に計上する方法ではなく、正味の増減が一致するように分解する方法です。"
+          ]
+        },
+        {
+          "title": "伝票を集計して、各勘定へ転記する",
+          "paragraphs": [
+            "伝票は入金・出金・振替の種類別、さらに科目別に整理します。仕訳日計表を作るなら、各伝票を元の仕訳に戻して借方・貸方を科目別に集計すると、暗黙になっている現金も漏れません。入金伝票の合計は現金の借方、出金伝票の合計は現金の貸方に入ります。",
+            "一部現金取引を全額掛けとみなす方法では、売掛金などに同日の借方と貸方の両方が生じます。仕訳日計表の借方記入額・貸方記入額を求める問題では、最初から差額だけにしないでそれぞれ集計します。残高を求めるときには、その後に差し引きます。"
+          ]
+        },
+        {
+          "title": "管理では、重複と欠落の両方を防ぐ",
+          "paragraphs": [
+            "証ひょう番号、伝票番号、日付、取引先、金額を対応させ、記帳済みかを管理します。連番に欠番があれば、取り消した番号なのか未回収の伝票なのかを確認します。欠番だけで取引額をゼロと決めつけたり、根拠なく追加起票したりしません。",
+            "伝票集計の貸借一致、現金の実際有高との照合、補助元帳との照合は別々の点検です。同じ伝票を二度入れると貸借は合ってしまうため、貸借平均だけでは重複を防げません。資料へ戻れる参照関係が、訂正や確認を可能にします。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "title": "請求書は支払いの証明とは限らない",
+          "prompt": "当社宛ての請求書に、商品5個、1個5,000円、合計25,000円、納品日7月10日、支払期限8月末とある。商品は7月10日に受領済みで、代金は未払い、取引は未記帳である。三分法を用い、税金は考慮しない。",
+          "steps": [
+            "自社は購入側である。商品を受け取ったので、仕入25,000を計上する。",
+            "未払いの通常の商品仕入代金なので、相手科目は買掛金25,000。",
+            "現金の受払いを伴わないため、振替伝票を用いる。",
+            "同じ納品について別の証ひょうが届いても、直ちに仕入れを再計上しない。既存の伝票と日付・取引先・金額を照合し、同じ取引の証拠として関連づける。"
+          ],
+          "answer": "振替伝票：借方 仕入25,000円／貸方 買掛金25,000円。",
+          "objectiveIds": [
+            "n3-foundation-skill-read-evidence",
+            "n3-foundation-skill-voucher-route",
+            "n3-foundation-skill-evidence-control"
+          ]
+        },
+        {
+          "title": "全額掛けの伝票があるときの入金伝票",
+          "prompt": "商品30,000円を販売し、現金10,000円を受け取り、残りは掛けとした。既に振替伝票「借方 売掛金30,000／貸方 売上30,000」が起票されている。この取引の入金伝票に記す相手科目と金額を求める。三分法を用い、税金は考慮しない。",
+          "steps": [
+            "振替伝票が売上全額を計上しているため、全額掛けとみなす方法である。",
+            "入金部分は売掛金を10,000回収したとみなして、借方現金10,000・貸方売掛金10,000にする。",
+            "二つを合わせると、現金10,000増、売掛金20,000増、売上30,000となる。",
+            "この二枚だけの仕訳日計表なら、借方は現金10,000と売掛金30,000、貸方は売上30,000と売掛金10,000で、ともに40,000。日計の記入額では売掛金を差額20,000に相殺しない。"
+          ],
+          "answer": "入金伝票の相手科目は売掛金、金額10,000円。",
+          "objectiveIds": [
+            "n3-foundation-skill-voucher-counteraccount",
+            "n3-foundation-skill-partial-cash-method",
+            "n3-foundation-skill-daily-summary"
+          ]
+        }
+      ],
+      "pitfalls": [
+        "普通預金への振込みを、現金の入金伝票と取り違えない。",
+        "入金伝票の科目欄へ必ず現金を書くのではない。現金の相手科目を記す。",
+        "全額掛けの振替伝票に、売上を相手科目とする入金伝票を重ねない。売上が二重に増える。",
+        "日計表の記入額を問われているとき、借方と貸方を先に相殺して残高だけにしない。"
+      ],
+      "questionIds": [
+        "n3-foundation-invoice-reading-01",
+        "n3-foundation-voucher-routing-01",
+        "n3-foundation-voucher-counteraccounts-01",
+        "n3-foundation-three-voucher-totals-01",
+        "n3-foundation-split-sale-vouchers-01",
+        "n3-foundation-whole-credit-sale-vouchers-01",
+        "n3-foundation-whole-credit-purchase-vouchers-01",
+        "n3-foundation-voucher-controls-01",
+        "n3-foundation-daily-voucher-summary-01"
+      ],
+      "objectives": [
+        {
+          "id": "n3-foundation-skill-read-evidence",
+          "requirementIds": [
+            "nissho-a063dba24fd3"
+          ],
+          "description": "証ひょうの当事者・受領日・未払い条件・数量単価から、自社が記録すべき取引を判断できる。"
+        },
+        {
+          "id": "n3-foundation-skill-voucher-route",
+          "requirementIds": [
+            "nissho-ba5192e0d2c7"
+          ],
+          "description": "現金勘定の有無と借貸から入金・出金・振替を選び、現金と銀行預金を区別できる。"
+        },
+        {
+          "id": "n3-foundation-skill-voucher-counteraccount",
+          "requirementIds": [
+            "nissho-ba5192e0d2c7"
+          ],
+          "description": "省略された現金側を補い、入金・出金伝票の相手科目から元の仕訳を復元できる。"
+        },
+        {
+          "id": "n3-foundation-skill-partial-cash-method",
+          "requirementIds": [
+            "nissho-ba5192e0d2c7"
+          ],
+          "description": "分割法と全額掛けとみなす方法を、指定や既存伝票から判定して重複のない一部現金取引を起票できる。"
+        },
+        {
+          "id": "n3-foundation-skill-daily-summary",
+          "requirementIds": [
+            "nissho-c2ac4c8ca5c4"
+          ],
+          "description": "複数伝票を科目別・借貸別に相殺せず集計し、日計と現金残高の検算ができる。"
+        },
+        {
+          "id": "n3-foundation-skill-evidence-control",
+          "requirementIds": [
+            "nissho-a063dba24fd3",
+            "nissho-c2ac4c8ca5c4"
+          ],
+          "description": "証ひょうと伝票の対応から重複・欠番を調べ、貸借一致だけでは検出できない誤りを判断できる。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "n3-foundation-classify-five-elements-01",
+      "familyId": "n3-foundation-account-classification",
+      "version": 1,
+      "lessonId": "n3-lesson-01",
+      "requirementIds": [
+        "nissho-8cd210929167",
+        "nissho-e204e6c1658b"
+      ],
+      "stage": "basic",
+      "title": "5つのグループに分ける",
+      "prompt": "次の勘定科目を資産・負債・純資産・収益・費用のいずれかに分類してください。株式会社の帳簿であり、売掛金は通常の商品販売の未回収代金です。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "科目の文字だけでなく、権利・義務・持分・成果・負担のどれかを判定する。"
+        ],
+        "pitfalls": [
+          "売掛金はまだ現金になっていないが、受取る権利として資産に含まれる。"
+        ],
+        "check": "5項目が五つの区分に1項目ずつ対応する。"
+      },
+      "errorTags": [
+        "classification"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "ar",
+          "label": "売掛金",
+          "type": "choice",
+          "options": [
+            "asset",
+            "liability",
+            "equity",
+            "revenue",
+            "expense"
+          ],
+          "optionLabels": {
+            "asset": "資産",
+            "liability": "負債",
+            "equity": "純資産",
+            "revenue": "収益",
+            "expense": "費用"
+          },
+          "answer": "asset",
+          "points": 1,
+          "explanation": "後日受け取る権利なので資産。"
+        },
+        {
+          "id": "loan",
+          "label": "借入金",
+          "type": "choice",
+          "options": [
+            "asset",
+            "liability",
+            "equity",
+            "revenue",
+            "expense"
+          ],
+          "optionLabels": {
+            "asset": "資産",
+            "liability": "負債",
+            "equity": "純資産",
+            "revenue": "収益",
+            "expense": "費用"
+          },
+          "answer": "liability",
+          "points": 1,
+          "explanation": "返す義務なので負債。"
+        },
+        {
+          "id": "capital",
+          "label": "資本金",
+          "type": "choice",
+          "options": [
+            "asset",
+            "liability",
+            "equity",
+            "revenue",
+            "expense"
+          ],
+          "optionLabels": {
+            "asset": "資産",
+            "liability": "負債",
+            "equity": "純資産",
+            "revenue": "収益",
+            "expense": "費用"
+          },
+          "answer": "equity",
+          "points": 1,
+          "explanation": "株主からの出資に対応する純資産の科目。"
+        },
+        {
+          "id": "commission",
+          "label": "受取手数料",
+          "type": "choice",
+          "options": [
+            "asset",
+            "liability",
+            "equity",
+            "revenue",
+            "expense"
+          ],
+          "optionLabels": {
+            "asset": "資産",
+            "liability": "負債",
+            "equity": "純資産",
+            "revenue": "収益",
+            "expense": "費用"
+          },
+          "answer": "revenue",
+          "points": 1,
+          "explanation": "サービス提供等による収益。"
+        },
+        {
+          "id": "salary",
+          "label": "給料",
+          "type": "choice",
+          "options": [
+            "asset",
+            "liability",
+            "equity",
+            "revenue",
+            "expense"
+          ],
+          "optionLabels": {
+            "asset": "資産",
+            "liability": "負債",
+            "equity": "純資産",
+            "revenue": "収益",
+            "expense": "費用"
+          },
+          "answer": "expense",
+          "points": 1,
+          "explanation": "従業員の労働に対する負担なので費用。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-five-groups"
+      ]
+    },
+    {
+      "id": "n3-foundation-cash-is-not-profit-01",
+      "familyId": "n3-foundation-cash-is-not-profit",
+      "version": 1,
+      "lessonId": "n3-lesson-01",
+      "requirementIds": [
+        "nissho-8cd210929167",
+        "nissho-e204e6c1658b"
+      ],
+      "stage": "basic",
+      "title": "入金・出金と損益の違い",
+      "prompt": "各取引単独で当期利益へどの影響があるか選んでください。税金や手数料はありません。商品売買ではなく、記載された取引だけを判断してください。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "最初に収益か費用が発生したかを確認する。",
+          "現金の増減と利益の増減を別に追う。"
+        ],
+        "pitfalls": [
+          "売掛金回収のたびに収益を計上すると、同じ売上を二重計上する。"
+        ],
+        "check": "利益の変動は順に0円、0円、−600円、＋9,000円。"
+      },
+      "errorTags": [
+        "classification",
+        "double-count"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "borrow",
+          "label": "銀行から30,000円借り、現金を受け取る",
+          "type": "choice",
+          "options": [
+            "up",
+            "down",
+            "unchanged"
+          ],
+          "optionLabels": {
+            "up": "利益が増える",
+            "down": "利益が減る",
+            "unchanged": "利益は変わらない"
+          },
+          "answer": "unchanged",
+          "points": 1,
+          "explanation": "現金と借入金が同額増える。"
+        },
+        {
+          "id": "collect",
+          "label": "前月に収益計上済みの売掛金18,000円を現金で回収する",
+          "type": "choice",
+          "options": [
+            "up",
+            "down",
+            "unchanged"
+          ],
+          "optionLabels": {
+            "up": "利益が増える",
+            "down": "利益が減る",
+            "unchanged": "利益は変わらない"
+          },
+          "answer": "unchanged",
+          "points": 1,
+          "explanation": "現金増加と売掛金減少という資産内の振替。"
+        },
+        {
+          "id": "interest",
+          "label": "当月分の借入利息600円を現金で支払う",
+          "type": "choice",
+          "options": [
+            "up",
+            "down",
+            "unchanged"
+          ],
+          "optionLabels": {
+            "up": "利益が増える",
+            "down": "利益が減る",
+            "unchanged": "利益は変わらない"
+          },
+          "answer": "down",
+          "points": 1,
+          "explanation": "利息は費用なので利益が600円減る。"
+        },
+        {
+          "id": "earned",
+          "label": "当月に完了した仲介業務の手数料9,000円を収益計上する。代金は翌月受取る",
+          "type": "choice",
+          "options": [
+            "up",
+            "down",
+            "unchanged"
+          ],
+          "optionLabels": {
+            "up": "利益が増える",
+            "down": "利益が減る",
+            "unchanged": "利益は変わらない"
+          },
+          "answer": "up",
+          "points": 1,
+          "explanation": "入金前でも当月の収益9,000円が発生している。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-cash-vs-profit"
+      ]
+    },
+    {
+      "id": "n3-foundation-balance-equation-01",
+      "familyId": "n3-foundation-balance-equation",
+      "version": 1,
+      "lessonId": "n3-lesson-01",
+      "requirementIds": [
+        "nissho-8cd210929167"
+      ],
+      "stage": "basic",
+      "title": "貸借対照表の不足額を埋める",
+      "prompt": "決算日の残高は資料のとおりです。他の資産・負債はありません。資産合計、負債合計、純資産を求めてください。単位は円。",
+      "exhibits": [
+        {
+          "title": "決算日残高",
+          "headers": [
+            "科目",
+            "残高（円）"
+          ],
+          "rows": [
+            [
+              "現金",
+              "45,000"
+            ],
+            [
+              "普通預金",
+              "120,000"
+            ],
+            [
+              "備品",
+              "70,000"
+            ],
+            [
+              "買掛金",
+              "25,000"
+            ],
+            [
+              "借入金",
+              "80,000"
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "資産と負債を別々に集計する。",
+          "純資産は残差として資産合計から負債合計を引く。"
+        ],
+        "pitfalls": [
+          "借入金を現金の一部だとして資産に加えない。資産と負債は別々に示す。"
+        ],
+        "check": "235,000＝105,000＋130,000。"
+      },
+      "errorTags": [
+        "classification",
+        "arithmetic"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "assets",
+          "label": "資産合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 235000,
+          "points": 1,
+          "explanation": "現金45,000＋普通預金120,000＋備品70,000。"
+        },
+        {
+          "id": "liabilities",
+          "label": "負債合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 105000,
+          "points": 1,
+          "explanation": "買掛金25,000＋借入金80,000。"
+        },
+        {
+          "id": "equity",
+          "label": "純資産",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 130000,
+          "points": 1,
+          "explanation": "資産235,000−負債105,000。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-accounting-equation"
+      ]
+    },
+    {
+      "id": "n3-foundation-statements-period-point-01",
+      "familyId": "n3-foundation-statements-period-point",
+      "version": 1,
+      "lessonId": "n3-lesson-01",
+      "requirementIds": [
+        "nissho-e204e6c1658b",
+        "nissho-90c97954325e"
+      ],
+      "stage": "basic",
+      "title": "一時点の残高と一期間の損益",
+      "prompt": "4月1日の純資産は180,000円です。4月中の収益は42,000円、費用は17,000円でした。出資・配当その他の純資産変動はありません。各書類の役割と4月30日の純資産を答えてください。単位は円。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "一時点の残高と一期間の集計を区別する。",
+          "当期利益を計算し、他の純資産変動がないことを確かめて期首純資産へ加える。"
+        ],
+        "pitfalls": [
+          "期末純資産205,000円を4月の利益と答えない。期首から持っていた180,000円を含む。"
+        ],
+        "check": "期末純資産205,000−期首純資産180,000＝収益42,000−費用17,000＝25,000。"
+      },
+      "errorTags": [
+        "statement-link",
+        "period-vs-point"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "bs",
+          "label": "4月30日の貸借対照表が表すもの",
+          "type": "choice",
+          "options": [
+            "point",
+            "period"
+          ],
+          "optionLabels": {
+            "point": "4月30日という一時点の資産・負債・純資産",
+            "period": "4月1日から30日までの収益・費用"
+          },
+          "answer": "point",
+          "points": 1,
+          "explanation": "貸借対照表は時点の残高。"
+        },
+        {
+          "id": "pl",
+          "label": "4月の損益計算書が表すもの",
+          "type": "choice",
+          "options": [
+            "point",
+            "period"
+          ],
+          "optionLabels": {
+            "point": "4月30日という一時点の資産・負債・純資産",
+            "period": "4月1日から30日までの収益・費用"
+          },
+          "answer": "period",
+          "points": 1,
+          "explanation": "損益計算書は期間中の成果と負担。"
+        },
+        {
+          "id": "profit",
+          "label": "4月の純利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 25000,
+          "points": 1,
+          "explanation": "収益42,000−費用17,000。"
+        },
+        {
+          "id": "equity",
+          "label": "4月30日の純資産",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 205000,
+          "points": 1,
+          "explanation": "期首180,000＋純利益25,000。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-period-profit",
+        "n3-foundation-skill-statement-bridge"
+      ]
+    },
+    {
+      "id": "n3-foundation-period-profit-01",
+      "familyId": "n3-foundation-period-profit",
+      "version": 1,
+      "lessonId": "n3-lesson-01",
+      "requirementIds": [
+        "nissho-e204e6c1658b"
+      ],
+      "stage": "application",
+      "title": "未回収の収益がある期間損益",
+      "prompt": "当月に完了したサービスの手数料は86,000円で、このうち70,000円を当月に受け取り、16,000円は翌月受け取ります。当月の給料24,000円、支払家賃18,000円を当月に支払いました。また、銀行から50,000円を借り入れて受け取りました。他の取引・決算整理・税金はありません。当月の収益、費用、当期純利益を求めてください。単位は円。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "売上代金の回収時期ではなく、当月に計上される収益を集める。",
+          "返済義務のある借入金は収益に入れない。"
+        ],
+        "pitfalls": [
+          "70,000円だけを収益にすると未回収の16,000円が抜ける。",
+          "借入れの50,000円を加えると資金調達と収益を混同する。"
+        ],
+        "check": "現金増加は70,000＋50,000−42,000＝78,000円で、利益44,000円とは一致しない。差額34,000円＝借入れ50,000円−未回収16,000円。"
+      },
+      "errorTags": [
+        "cutoff",
+        "classification"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "revenue",
+          "label": "当月の収益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 86000,
+          "points": 1,
+          "explanation": "完了したサービス全体が当月の収益。"
+        },
+        {
+          "id": "expenses",
+          "label": "当月の費用",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 42000,
+          "points": 1,
+          "explanation": "給料24,000＋支払家賃18,000。"
+        },
+        {
+          "id": "profit",
+          "label": "当月の純利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 44000,
+          "points": 1,
+          "explanation": "86,000−42,000。借入金の受取りは収益から除く。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-cash-vs-profit",
+        "n3-foundation-skill-period-profit"
+      ]
+    },
+    {
+      "id": "n3-foundation-equity-bridge-01",
+      "familyId": "n3-foundation-equity-bridge",
+      "version": 1,
+      "lessonId": "n3-lesson-01",
+      "requirementIds": [
+        "nissho-8cd210929167",
+        "nissho-e204e6c1658b",
+        "nissho-90c97954325e"
+      ],
+      "stage": "application",
+      "title": "利益以外の純資産の動き",
+      "prompt": "期首の純資産は300,000円。期中に株主から追加出資50,000円を受け、当期純利益35,000円を計上しました。また、配当10,000円を実施しました。この問題では配当は費用ではなく純資産の減少として扱います。他の純資産変動はありません。期末純資産と、もし利益ではなく純損失35,000円だった場合の期末純資産を求めてください。単位は円。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "期首残高に、利益とそれ以外の変動を区別して加減する。",
+          "純損失は純資産を減らすので引く。"
+        ],
+        "pitfalls": [
+          "配当を利益計算の費用に再度入れると二重に減らしてしまう。",
+          "追加出資を収益として当期純利益に混ぜない。"
+        ],
+        "check": "2ケースの期末差額は70,000円。利益＋35,000と損失−35,000の差に一致する。"
+      },
+      "errorTags": [
+        "statement-link",
+        "classification",
+        "sign"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "profit_case",
+          "label": "当期純利益35,000円の場合",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 375000,
+          "points": 1,
+          "explanation": "300,000＋50,000＋35,000−10,000。"
+        },
+        {
+          "id": "loss_case",
+          "label": "当期純損失35,000円の場合",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 305000,
+          "points": 1,
+          "explanation": "300,000＋50,000−35,000−10,000。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-statement-bridge"
+      ]
+    },
+    {
+      "id": "n3-foundation-mini-business-statements-01",
+      "familyId": "n3-foundation-mini-business-statements",
+      "version": 1,
+      "lessonId": "n3-lesson-01",
+      "requirementIds": [
+        "nissho-8cd210929167",
+        "nissho-e204e6c1658b",
+        "nissho-90c97954325e"
+      ],
+      "stage": "integrated",
+      "title": "小さな会社の損益と財産をつなぐ",
+      "prompt": "期首は現金200,000円、資本金200,000円のみです。当期の取引は資料の4件だけです。サービス収益は当期に全額計上し、未回収額は資産に含めます。備品は取得額で計上し、この問題では減価償却等の決算整理・税金を考慮しません。各合計を求めてください。単位は円。",
+      "exhibits": [
+        {
+          "title": "当期の取引",
+          "headers": [
+            "取引",
+            "内容"
+          ],
+          "rows": [
+            [
+              "サービス提供",
+              "120,000円のサービスを完了。80,000円受取り、残りは後日受取り。"
+            ],
+            [
+              "家賃支払い",
+              "当期分30,000円を現金で支払う。"
+            ],
+            [
+              "借入れ",
+              "銀行から50,000円借り、現金で受け取る。"
+            ],
+            [
+              "備品購入",
+              "60,000円の備品を現金で購入。"
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "まず現金だけの受払いを集計する。",
+          "入金前の代金と備品も資産に加え、返済義務を負債に置く。",
+          "収益・費用だけで利益を出し、期首純資産から期末純資産へつなぐ。"
+        ],
+        "pitfalls": [
+          "サービス代金を資産へ120,000円丸ごと残すと、受取済現金80,000円と二重になる。",
+          "備品購入60,000円の全額をこの問題の費用にしない。"
+        ],
+        "check": "資産340,000＝負債50,000＋純資産290,000。純資産290,000＝期首200,000＋利益90,000。"
+      },
+      "errorTags": [
+        "classification",
+        "statement-link",
+        "double-count"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "cash",
+          "label": "期末現金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 240000,
+          "points": 1,
+          "explanation": "200,000＋80,000−30,000＋50,000−60,000。"
+        },
+        {
+          "id": "uncollected",
+          "label": "期末の未回収代金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 40000,
+          "points": 1,
+          "explanation": "サービス代金120,000−受取済80,000。"
+        },
+        {
+          "id": "assets",
+          "label": "期末資産合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 340000,
+          "points": 1,
+          "explanation": "現金240,000＋未回収40,000＋備品60,000。"
+        },
+        {
+          "id": "liability",
+          "label": "期末負債合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 50000,
+          "points": 1,
+          "explanation": "借入金50,000のみ。"
+        },
+        {
+          "id": "profit",
+          "label": "当期純利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 90000,
+          "points": 1,
+          "explanation": "収益120,000−当期家賃30,000。"
+        },
+        {
+          "id": "equity",
+          "label": "期末純資産",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 290000,
+          "points": 1,
+          "explanation": "期首200,000＋利益90,000。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-cash-vs-profit",
+        "n3-foundation-skill-accounting-equation",
+        "n3-foundation-skill-period-profit",
+        "n3-foundation-skill-statement-bridge"
+      ]
+    },
+    {
+      "id": "n3-foundation-recognition-events-01",
+      "familyId": "n3-foundation-recognition-events",
+      "version": 1,
+      "lessonId": "n3-lesson-02",
+      "requirementIds": [
+        "nissho-709c2a16e904"
+      ],
+      "stage": "basic",
+      "title": "記録する出来事を見分ける",
+      "prompt": "次の出来事について、この時点で簿記上の取引として記録するかを選んでください。注文・内定だけの項目は、引渡し・支払い・勤務がなく、資産や負債等を計上する条件もまだ満たしていないものとします。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "資産・負債・純資産や損益の計上につながる変化がこの時点で起きたかを確認する。"
+        ],
+        "pitfalls": [
+          "火災は商取引でなくても簿記上の取引になる。"
+        ],
+        "check": "記録対象は火災による現金の焼失と、備品の受取りの2件。"
+      },
+      "errorTags": [
+        "recognition"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "order",
+          "label": "来月納品の備品を注文しただけである",
+          "type": "choice",
+          "options": [
+            "yes",
+            "no"
+          ],
+          "optionLabels": {
+            "yes": "簿記上の取引として記録する",
+            "no": "この時点では簿記上の取引として記録しない"
+          },
+          "answer": "no",
+          "points": 1,
+          "explanation": "注文だけでは資産等が変わっていない。"
+        },
+        {
+          "id": "burn",
+          "label": "金庫の現金5,000円が火災で焼失した",
+          "type": "choice",
+          "options": [
+            "yes",
+            "no"
+          ],
+          "optionLabels": {
+            "yes": "簿記上の取引として記録する",
+            "no": "この時点では簿記上の取引として記録しない"
+          },
+          "answer": "yes",
+          "points": 1,
+          "explanation": "現金という資産が減り、損失が生じた。"
+        },
+        {
+          "id": "hire",
+          "label": "翌月から勤務する人の採用を内定しただけである",
+          "type": "choice",
+          "options": [
+            "yes",
+            "no"
+          ],
+          "optionLabels": {
+            "yes": "簿記上の取引として記録する",
+            "no": "この時点では簿記上の取引として記録しない"
+          },
+          "answer": "no",
+          "points": 1,
+          "explanation": "まだ勤務や支払い等がなく、給与に係る負債も発生していない条件。"
+        },
+        {
+          "id": "delivery",
+          "label": "備品を受け取り、代金は翌月払いとした",
+          "type": "choice",
+          "options": [
+            "yes",
+            "no"
+          ],
+          "optionLabels": {
+            "yes": "簿記上の取引として記録する",
+            "no": "この時点では簿記上の取引として記録しない"
+          },
+          "answer": "yes",
+          "points": 1,
+          "explanation": "備品と後日支払う義務が増える。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-recognition"
+      ]
+    },
+    {
+      "id": "n3-foundation-eight-element-directions-01",
+      "familyId": "n3-foundation-eight-element-directions",
+      "version": 1,
+      "lessonId": "n3-lesson-02",
+      "requirementIds": [
+        "nissho-28b7f12e249b"
+      ],
+      "stage": "basic",
+      "title": "8要素と借方・貸方",
+      "prompt": "次の8要素が通常どちら側に記録されるか、借方・貸方から選んでください。「発生」は収益または費用を新たに計上する場面を指します。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "資産＝負債＋純資産という位置関係を出発点にする。",
+          "費用は純資産を減らす側、収益は純資産を増やす側に並べる。"
+        ],
+        "pitfalls": [
+          "借方を一律に増加と決めない。負債と純資産の減少は借方。"
+        ],
+        "check": "借方側・貸方側ともに4要素ずつになる。"
+      },
+      "errorTags": [
+        "side",
+        "classification"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "e1",
+          "label": "資産の増加",
+          "type": "choice",
+          "options": [
+            "debit",
+            "credit"
+          ],
+          "optionLabels": {
+            "debit": "借方（左）",
+            "credit": "貸方（右）"
+          },
+          "answer": "debit",
+          "points": 1,
+          "explanation": "基本式に対応する記入側。資産と費用は増加・発生が借方、負債・純資産・収益は増加・発生が貸方。"
+        },
+        {
+          "id": "e2",
+          "label": "資産の減少",
+          "type": "choice",
+          "options": [
+            "debit",
+            "credit"
+          ],
+          "optionLabels": {
+            "debit": "借方（左）",
+            "credit": "貸方（右）"
+          },
+          "answer": "credit",
+          "points": 1,
+          "explanation": "基本式に対応する記入側。資産と費用は増加・発生が借方、負債・純資産・収益は増加・発生が貸方。"
+        },
+        {
+          "id": "e3",
+          "label": "負債の増加",
+          "type": "choice",
+          "options": [
+            "debit",
+            "credit"
+          ],
+          "optionLabels": {
+            "debit": "借方（左）",
+            "credit": "貸方（右）"
+          },
+          "answer": "credit",
+          "points": 1,
+          "explanation": "基本式に対応する記入側。資産と費用は増加・発生が借方、負債・純資産・収益は増加・発生が貸方。"
+        },
+        {
+          "id": "e4",
+          "label": "負債の減少",
+          "type": "choice",
+          "options": [
+            "debit",
+            "credit"
+          ],
+          "optionLabels": {
+            "debit": "借方（左）",
+            "credit": "貸方（右）"
+          },
+          "answer": "debit",
+          "points": 1,
+          "explanation": "基本式に対応する記入側。資産と費用は増加・発生が借方、負債・純資産・収益は増加・発生が貸方。"
+        },
+        {
+          "id": "e5",
+          "label": "純資産の増加",
+          "type": "choice",
+          "options": [
+            "debit",
+            "credit"
+          ],
+          "optionLabels": {
+            "debit": "借方（左）",
+            "credit": "貸方（右）"
+          },
+          "answer": "credit",
+          "points": 1,
+          "explanation": "基本式に対応する記入側。資産と費用は増加・発生が借方、負債・純資産・収益は増加・発生が貸方。"
+        },
+        {
+          "id": "e6",
+          "label": "純資産の減少",
+          "type": "choice",
+          "options": [
+            "debit",
+            "credit"
+          ],
+          "optionLabels": {
+            "debit": "借方（左）",
+            "credit": "貸方（右）"
+          },
+          "answer": "debit",
+          "points": 1,
+          "explanation": "基本式に対応する記入側。資産と費用は増加・発生が借方、負債・純資産・収益は増加・発生が貸方。"
+        },
+        {
+          "id": "e7",
+          "label": "費用の発生",
+          "type": "choice",
+          "options": [
+            "debit",
+            "credit"
+          ],
+          "optionLabels": {
+            "debit": "借方（左）",
+            "credit": "貸方（右）"
+          },
+          "answer": "debit",
+          "points": 1,
+          "explanation": "基本式に対応する記入側。資産と費用は増加・発生が借方、負債・純資産・収益は増加・発生が貸方。"
+        },
+        {
+          "id": "e8",
+          "label": "収益の発生",
+          "type": "choice",
+          "options": [
+            "debit",
+            "credit"
+          ],
+          "optionLabels": {
+            "debit": "借方（左）",
+            "credit": "貸方（右）"
+          },
+          "answer": "credit",
+          "points": 1,
+          "explanation": "基本式に対応する記入側。資産と費用は増加・発生が借方、負債・純資産・収益は増加・発生が貸方。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-eight-sides"
+      ]
+    },
+    {
+      "id": "n3-foundation-transaction-types-01",
+      "familyId": "n3-foundation-transaction-types",
+      "version": 1,
+      "lessonId": "n3-lesson-02",
+      "requirementIds": [
+        "nissho-709c2a16e904",
+        "nissho-28b7f12e249b"
+      ],
+      "stage": "basic",
+      "title": "取引の種類と利益への影響",
+      "prompt": "本講義の区分に従い、次の取引を交換取引・損益取引・混合取引に分類してください。交換取引は収益・費用を含まず、混合取引は交換取引と損益取引が組み合わさるものとします。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "まず収益・費用の有無を確認する。",
+          "含まれていれば、元本返済等の損益を動かさない部分も一緒になっているかを確認する。"
+        ],
+        "pitfalls": [
+          "純資産が増えたからといって収益とは限らない。出資は収益に含めない。"
+        ],
+        "check": "利益を変えるのは家賃8,000円と利息300円だけ。"
+      },
+      "errorTags": [
+        "classification"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "deposit",
+          "label": "手元の現金12,000円を普通預金へ預け入れた",
+          "type": "choice",
+          "options": [
+            "exchange",
+            "profit",
+            "mixed"
+          ],
+          "optionLabels": {
+            "exchange": "交換取引",
+            "profit": "損益取引",
+            "mixed": "混合取引"
+          },
+          "answer": "exchange",
+          "points": 1,
+          "explanation": "現金減少と普通預金増加で、資産内の振替。"
+        },
+        {
+          "id": "rent",
+          "label": "当月家賃8,000円を現金で支払った",
+          "type": "choice",
+          "options": [
+            "exchange",
+            "profit",
+            "mixed"
+          ],
+          "optionLabels": {
+            "exchange": "交換取引",
+            "profit": "損益取引",
+            "mixed": "混合取引"
+          },
+          "answer": "profit",
+          "points": 1,
+          "explanation": "費用発生と資産減少。"
+        },
+        {
+          "id": "capital",
+          "label": "株主からの出資60,000円を現金で受け入れ、全額資本金とした",
+          "type": "choice",
+          "options": [
+            "exchange",
+            "profit",
+            "mixed"
+          ],
+          "optionLabels": {
+            "exchange": "交換取引",
+            "profit": "損益取引",
+            "mixed": "混合取引"
+          },
+          "answer": "exchange",
+          "points": 1,
+          "explanation": "資産と純資産が増えるが収益ではない。"
+        },
+        {
+          "id": "repay",
+          "label": "借入元本15,000円と当月利息300円を現金で一括返済した",
+          "type": "choice",
+          "options": [
+            "exchange",
+            "profit",
+            "mixed"
+          ],
+          "optionLabels": {
+            "exchange": "交換取引",
+            "profit": "損益取引",
+            "mixed": "混合取引"
+          },
+          "answer": "mixed",
+          "points": 1,
+          "explanation": "元本返済という交換部分に利息費用の部分が加わる。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-transaction-types"
+      ]
+    },
+    {
+      "id": "n3-foundation-coupled-elements-01",
+      "familyId": "n3-foundation-coupled-elements",
+      "version": 1,
+      "lessonId": "n3-lesson-02",
+      "requirementIds": [
+        "nissho-28b7f12e249b"
+      ],
+      "stage": "application",
+      "title": "二面性を金額付きで読む",
+      "prompt": "借入元本45,000円と当月利息900円を現金で一括返済しました。次の三つの部分に対応する取引要素を選び、現金減少額を求めてください。税金・手数料はありません。単位は円。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "合計支払額を最初から全額費用にせず、元本と利息に分ける。",
+          "二つの借方要素が一つの貸方要素に結びつく。"
+        ],
+        "pitfalls": [
+          "元本を費用にすると利益を45,000円過小にする。"
+        ],
+        "check": "借方側45,000＋900＝貸方側45,900。"
+      },
+      "errorTags": [
+        "classification",
+        "side"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "principal",
+          "label": "借入元本45,000円の部分",
+          "type": "choice",
+          "options": [
+            "asset-up",
+            "asset-down",
+            "liability-up",
+            "liability-down",
+            "equity-up",
+            "equity-down",
+            "expense",
+            "revenue"
+          ],
+          "optionLabels": {
+            "asset-up": "資産の増加",
+            "asset-down": "資産の減少",
+            "liability-up": "負債の増加",
+            "liability-down": "負債の減少",
+            "equity-up": "純資産の増加",
+            "equity-down": "純資産の減少",
+            "expense": "費用の発生",
+            "revenue": "収益の発生"
+          },
+          "answer": "liability-down",
+          "points": 1,
+          "explanation": "返済義務が減る。"
+        },
+        {
+          "id": "interest",
+          "label": "当月利息900円の部分",
+          "type": "choice",
+          "options": [
+            "asset-up",
+            "asset-down",
+            "liability-up",
+            "liability-down",
+            "equity-up",
+            "equity-down",
+            "expense",
+            "revenue"
+          ],
+          "optionLabels": {
+            "asset-up": "資産の増加",
+            "asset-down": "資産の減少",
+            "liability-up": "負債の増加",
+            "liability-down": "負債の減少",
+            "equity-up": "純資産の増加",
+            "equity-down": "純資産の減少",
+            "expense": "費用の発生",
+            "revenue": "収益の発生"
+          },
+          "answer": "expense",
+          "points": 1,
+          "explanation": "当月の利息費用が発生する。"
+        },
+        {
+          "id": "cash-element",
+          "label": "現金を支払った部分",
+          "type": "choice",
+          "options": [
+            "asset-up",
+            "asset-down",
+            "liability-up",
+            "liability-down",
+            "equity-up",
+            "equity-down",
+            "expense",
+            "revenue"
+          ],
+          "optionLabels": {
+            "asset-up": "資産の増加",
+            "asset-down": "資産の減少",
+            "liability-up": "負債の増加",
+            "liability-down": "負債の減少",
+            "equity-up": "純資産の増加",
+            "equity-down": "純資産の減少",
+            "expense": "費用の発生",
+            "revenue": "収益の発生"
+          },
+          "answer": "asset-down",
+          "points": 1,
+          "explanation": "会社の現金という資産が減る。"
+        },
+        {
+          "id": "cash-out",
+          "label": "現金減少額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 45900,
+          "points": 1,
+          "explanation": "45,000＋900。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-decompose-effects"
+      ]
+    },
+    {
+      "id": "n3-foundation-noncash-loss-01",
+      "familyId": "n3-foundation-noncash-loss",
+      "version": 1,
+      "lessonId": "n3-lesson-02",
+      "requirementIds": [
+        "nissho-709c2a16e904",
+        "nissho-28b7f12e249b"
+      ],
+      "stage": "application",
+      "title": "現金の受払いがなくても取引になる",
+      "prompt": "帳簿価額12,000円の備品が火災で全損し、処分価値も保険金もありません。この問題では減価償却累計額がなく、12,000円全額を火災損失として記録します。資産・負債・純資産がどのように変化するか選んでください。税金は考慮しません。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "会社の備品がなくなったという資産の変化を捉える。",
+          "損失を費用側に計上することで純資産減少の理由を示す。"
+        ],
+        "pitfalls": [
+          "現金が動かないので記録しない、とはしない。",
+          "失った備品の取得時の金額ではなく、指定された帳簿価額を使う。"
+        ],
+        "check": "資産−12,000＝負債0＋純資産−12,000で基本式が保たれる。"
+      },
+      "errorTags": [
+        "recognition",
+        "classification"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "assets",
+          "label": "資産",
+          "type": "choice",
+          "options": [
+            "up",
+            "down",
+            "unchanged"
+          ],
+          "optionLabels": {
+            "up": "増える",
+            "down": "減る",
+            "unchanged": "変わらない"
+          },
+          "answer": "down",
+          "points": 1,
+          "explanation": "備品を失うので資産が12,000円減る。"
+        },
+        {
+          "id": "liabilities",
+          "label": "負債",
+          "type": "choice",
+          "options": [
+            "up",
+            "down",
+            "unchanged"
+          ],
+          "optionLabels": {
+            "up": "増える",
+            "down": "減る",
+            "unchanged": "変わらない"
+          },
+          "answer": "unchanged",
+          "points": 1,
+          "explanation": "この条件では新たな支払義務はない。"
+        },
+        {
+          "id": "equity",
+          "label": "純資産",
+          "type": "choice",
+          "options": [
+            "up",
+            "down",
+            "unchanged"
+          ],
+          "optionLabels": {
+            "up": "増える",
+            "down": "減る",
+            "unchanged": "変わらない"
+          },
+          "answer": "down",
+          "points": 1,
+          "explanation": "損失によって純資産が12,000円減る。"
+        },
+        {
+          "id": "record",
+          "label": "簿記上の取引か",
+          "type": "choice",
+          "options": [
+            "yes",
+            "no"
+          ],
+          "optionLabels": {
+            "yes": "簿記上の取引として記録する",
+            "no": "この時点では簿記上の取引として記録しない"
+          },
+          "answer": "yes",
+          "points": 1,
+          "explanation": "金銭の授受がなくても資産が減っている。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-recognition",
+        "n3-foundation-skill-equation-changes"
+      ]
+    },
+    {
+      "id": "n3-foundation-transaction-equation-chain-01",
+      "familyId": "n3-foundation-transaction-equation-chain",
+      "version": 1,
+      "lessonId": "n3-lesson-02",
+      "requirementIds": [
+        "nissho-709c2a16e904",
+        "nissho-28b7f12e249b"
+      ],
+      "stage": "integrated",
+      "title": "取引を重ねても基本式は崩れない",
+      "prompt": "取引前は資産180,000円、負債60,000円、純資産120,000円です。その後、資料の順に3件の取引を行いました。他の取引・税金・決算整理はありません。すべて終了した時点の資産・負債・純資産と、3件による費用合計を求めてください。単位は円。",
+      "exhibits": [
+        {
+          "title": "取引",
+          "headers": [
+            "順番",
+            "内容"
+          ],
+          "rows": [
+            [
+              "1",
+              "借入元本20,000円と当月利息500円を現金で返済。"
+            ],
+            [
+              "2",
+              "当月の給料8,000円を現金で支払い。"
+            ],
+            [
+              "3",
+              "備品40,000円を購入。代金は翌月払いの未払金とした。"
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "第1取引は資産20,500減少、負債20,000減少、純資産500減少。",
+          "第2取引は資産と純資産が8,000ずつ減少。",
+          "第3取引は資産と負債が40,000ずつ増加。"
+        ],
+        "pitfalls": [
+          "備品を後払いで取得したことを、現金が動いていないからと飛ばさない。",
+          "返済総額20,500円の全額を純資産から引かない。"
+        ],
+        "check": "191,500＝80,000＋111,500。純資産減少8,500円は費用合計と一致。"
+      },
+      "errorTags": [
+        "classification",
+        "omission",
+        "arithmetic"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "assets",
+          "label": "取引後の資産",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 191500,
+          "points": 1,
+          "explanation": "180,000−20,500−8,000＋40,000。"
+        },
+        {
+          "id": "liabilities",
+          "label": "取引後の負債",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 80000,
+          "points": 1,
+          "explanation": "60,000−20,000＋40,000。"
+        },
+        {
+          "id": "equity",
+          "label": "取引後の純資産",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 111500,
+          "points": 1,
+          "explanation": "120,000−500−8,000。"
+        },
+        {
+          "id": "expenses",
+          "label": "3件による費用合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 8500,
+          "points": 1,
+          "explanation": "利息500＋給料8,000。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-decompose-effects",
+        "n3-foundation-skill-equation-changes"
+      ]
+    },
+    {
+      "id": "n3-foundation-accounts-and-groups-01",
+      "familyId": "n3-foundation-account-classification",
+      "version": 1,
+      "lessonId": "n3-lesson-03",
+      "requirementIds": [
+        "nissho-d0c0f7bd5eb4"
+      ],
+      "stage": "basic",
+      "title": "勘定科目と記入ルールの出発点",
+      "prompt": "次の勘定科目が属するグループを選んでください。前払金は商品の注文時に先に支払った代金、未払金は購入した業務用備品の未払代金です。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "資産・負債を現金の有無ではなく権利・義務で見分ける。",
+          "純資産に属する科目と、期間中の収益・費用の科目を分ける。"
+        ],
+        "pitfalls": [
+          "前払金には「支払った」とあるが、まだ受けていない給付に対応するため、ここでは費用ではない。"
+        ],
+        "check": "5科目は順に資産、負債、純資産、収益、費用。"
+      },
+      "errorTags": [
+        "account",
+        "classification"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "advance",
+          "label": "前払金",
+          "type": "choice",
+          "options": [
+            "asset",
+            "liability",
+            "equity",
+            "revenue",
+            "expense"
+          ],
+          "optionLabels": {
+            "asset": "資産",
+            "liability": "負債",
+            "equity": "純資産",
+            "revenue": "収益",
+            "expense": "費用"
+          },
+          "answer": "asset",
+          "points": 1,
+          "explanation": "商品を受け取る等の権利として資産。"
+        },
+        {
+          "id": "payable",
+          "label": "未払金",
+          "type": "choice",
+          "options": [
+            "asset",
+            "liability",
+            "equity",
+            "revenue",
+            "expense"
+          ],
+          "optionLabels": {
+            "asset": "資産",
+            "liability": "負債",
+            "equity": "純資産",
+            "revenue": "収益",
+            "expense": "費用"
+          },
+          "answer": "liability",
+          "points": 1,
+          "explanation": "後日支払う義務として負債。"
+        },
+        {
+          "id": "retained",
+          "label": "繰越利益剰余金",
+          "type": "choice",
+          "options": [
+            "asset",
+            "liability",
+            "equity",
+            "revenue",
+            "expense"
+          ],
+          "optionLabels": {
+            "asset": "資産",
+            "liability": "負債",
+            "equity": "純資産",
+            "revenue": "収益",
+            "expense": "費用"
+          },
+          "answer": "equity",
+          "points": 1,
+          "explanation": "利益の蓄積に対応する純資産。"
+        },
+        {
+          "id": "sales",
+          "label": "売上",
+          "type": "choice",
+          "options": [
+            "asset",
+            "liability",
+            "equity",
+            "revenue",
+            "expense"
+          ],
+          "optionLabels": {
+            "asset": "資産",
+            "liability": "負債",
+            "equity": "純資産",
+            "revenue": "収益",
+            "expense": "費用"
+          },
+          "answer": "revenue",
+          "points": 1,
+          "explanation": "商品販売の収益。"
+        },
+        {
+          "id": "rent",
+          "label": "支払家賃",
+          "type": "choice",
+          "options": [
+            "asset",
+            "liability",
+            "equity",
+            "revenue",
+            "expense"
+          ],
+          "optionLabels": {
+            "asset": "資産",
+            "liability": "負債",
+            "equity": "純資産",
+            "revenue": "収益",
+            "expense": "費用"
+          },
+          "answer": "expense",
+          "points": 1,
+          "explanation": "当期分の家賃負担として費用。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-account-groups"
+      ]
+    },
+    {
+      "id": "n3-foundation-account-entry-directions-01",
+      "familyId": "n3-foundation-account-entry-directions",
+      "version": 1,
+      "lessonId": "n3-lesson-03",
+      "requirementIds": [
+        "nissho-d0c0f7bd5eb4",
+        "nissho-781fc555ef83"
+      ],
+      "stage": "basic",
+      "title": "増加・減少・取消しの記入側",
+      "prompt": "次の指定された勘定の変化を、借方・貸方のどちらに記入するか選んでください。最後の項目は当月の収益を取り消す場面で、相手勘定ではなく売上勘定の側だけを答えます。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "科目の区分を決め、次に増加・減少・取消しを判断する。"
+        ],
+        "pitfalls": [
+          "売上はいつでも貸方ではない。取消しは借方になる。"
+        ],
+        "check": "現金減少と借入金減少は、同じ「減少」でも記入側が反対。"
+      },
+      "errorTags": [
+        "side",
+        "reversal"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "cash-down",
+          "label": "現金が減少",
+          "type": "choice",
+          "options": [
+            "debit",
+            "credit"
+          ],
+          "optionLabels": {
+            "debit": "借方（左）",
+            "credit": "貸方（右）"
+          },
+          "answer": "credit",
+          "points": 1,
+          "explanation": "資産の減少は貸方。"
+        },
+        {
+          "id": "loan-down",
+          "label": "借入金が減少",
+          "type": "choice",
+          "options": [
+            "debit",
+            "credit"
+          ],
+          "optionLabels": {
+            "debit": "借方（左）",
+            "credit": "貸方（右）"
+          },
+          "answer": "debit",
+          "points": 1,
+          "explanation": "負債の減少は借方。"
+        },
+        {
+          "id": "capital-up",
+          "label": "資本金が増加",
+          "type": "choice",
+          "options": [
+            "debit",
+            "credit"
+          ],
+          "optionLabels": {
+            "debit": "借方（左）",
+            "credit": "貸方（右）"
+          },
+          "answer": "credit",
+          "points": 1,
+          "explanation": "純資産の増加は貸方。"
+        },
+        {
+          "id": "salary-up",
+          "label": "給料が発生",
+          "type": "choice",
+          "options": [
+            "debit",
+            "credit"
+          ],
+          "optionLabels": {
+            "debit": "借方（左）",
+            "credit": "貸方（右）"
+          },
+          "answer": "debit",
+          "points": 1,
+          "explanation": "費用の発生は借方。"
+        },
+        {
+          "id": "sales-cancel",
+          "label": "計上済みの売上の一部を取消し",
+          "type": "choice",
+          "options": [
+            "debit",
+            "credit"
+          ],
+          "optionLabels": {
+            "debit": "借方（左）",
+            "credit": "貸方（右）"
+          },
+          "answer": "debit",
+          "points": 1,
+          "explanation": "収益発生時の貸方とは反対の借方で取り消す。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-entry-directions"
+      ]
+    },
+    {
+      "id": "n3-foundation-loan-bank-journal-01",
+      "familyId": "n3-foundation-loan-bank-journal",
+      "version": 1,
+      "lessonId": "n3-lesson-03",
+      "requirementIds": [
+        "nissho-d0c0f7bd5eb4",
+        "nissho-781fc555ef83",
+        "nissho-ef5429a88eae",
+        "nissho-06b087617cdc"
+      ],
+      "stage": "basic",
+      "title": "借入元本の返済は費用ではない",
+      "prompt": "以前に借り入れた銀行借入金の元本90,000円を、普通預金から支払って返済しました。今回の支払いに利息・手数料・税金は含まれていません。指定科目から必要なものを使い、この取引1件の仕訳をしてください。単位は円。",
+      "exhibits": [],
+      "type": "journal",
+      "explanation": {
+        "steps": [
+          "借入金という負債が減るので借方に記入する。",
+          "普通預金という資産が減るので貸方に記入する。"
+        ],
+        "pitfalls": [
+          "元本を返済しただけなので支払利息という費用は発生しない。",
+          "借入れの時と返済の時では、同じ二つの勘定でも借方・貸方が逆になる。"
+        ],
+        "check": "借方90,000＝貸方90,000。資産と負債が同額減るので純資産と利益は変わらない。"
+      },
+      "errorTags": [
+        "account",
+        "side",
+        "classification"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "lines": [
+        {
+          "side": "debit",
+          "account": "借入金",
+          "amount": 90000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "普通預金",
+          "amount": 90000,
+          "points": 1
+        }
+      ],
+      "accounts": [
+        "普通預金",
+        "借入金",
+        "支払利息",
+        "現金"
+      ],
+      "decimals": 0,
+      "unit": "円",
+      "objectiveIds": [
+        "n3-foundation-skill-entry-directions",
+        "n3-foundation-skill-derive-journal"
+      ]
+    },
+    {
+      "id": "n3-foundation-equipment-part-payment-01",
+      "familyId": "n3-foundation-equipment-part-payment",
+      "version": 1,
+      "lessonId": "n3-lesson-03",
+      "requirementIds": [
+        "nissho-d0c0f7bd5eb4",
+        "nissho-781fc555ef83",
+        "nissho-ef5429a88eae",
+        "nissho-06b087617cdc"
+      ],
+      "stage": "application",
+      "title": "一部支払いを複数行で仕訳する",
+      "prompt": "業務用備品75,000円を購入し、普通預金から25,000円を支払いました。残額50,000円は翌月支払います。税金・手数料はありません。指定科目を使い、この取引1件の仕訳をしてください。単位は円。",
+      "exhibits": [],
+      "type": "journal",
+      "explanation": {
+        "steps": [
+          "備品は支払い済みかどうかにかかわらず受け取った全額75,000を借方へ。",
+          "普通預金の減少25,000と、未払金の増加50,000を貸方へ。"
+        ],
+        "pitfalls": [
+          "備品を支払済25,000円だけで計上しない。",
+          "商品仕入れではないため、買掛金ではなく指定された未払金を使う。"
+        ],
+        "check": "75,000＝25,000＋50,000。純資産に影響せず、資産純増50,000と負債増50,000が一致。"
+      },
+      "errorTags": [
+        "account",
+        "omission",
+        "side"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "lines": [
+        {
+          "side": "debit",
+          "account": "備品",
+          "amount": 75000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "普通預金",
+          "amount": 25000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "未払金",
+          "amount": 50000,
+          "points": 1
+        }
+      ],
+      "accounts": [
+        "備品",
+        "普通預金",
+        "未払金",
+        "買掛金",
+        "消耗品費"
+      ],
+      "decimals": 0,
+      "unit": "円",
+      "objectiveIds": [
+        "n3-foundation-skill-derive-journal",
+        "n3-foundation-skill-compound-journal"
+      ]
+    },
+    {
+      "id": "n3-foundation-receivable-split-collection-01",
+      "familyId": "n3-foundation-receivable-split-collection",
+      "version": 1,
+      "lessonId": "n3-lesson-03",
+      "requirementIds": [
+        "nissho-d0c0f7bd5eb4",
+        "nissho-781fc555ef83",
+        "nissho-ef5429a88eae",
+        "nissho-06b087617cdc"
+      ],
+      "stage": "application",
+      "title": "一つの債権を二つの方法で回収",
+      "prompt": "取引先に対する売掛金64,000円を、現金14,000円と普通預金への振込み50,000円で全額回収しました。手数料・値引きはなく、収益は売掛金発生時に計上済みです。指定科目を使い、この取引1件の仕訳をしてください。単位は円。",
+      "exhibits": [],
+      "type": "journal",
+      "explanation": {
+        "steps": [
+          "増えた資産は現金14,000と普通預金50,000。",
+          "既存の受取権である売掛金64,000を減らすので貸方へ。"
+        ],
+        "pitfalls": [
+          "回収時に売上を再計上すると収益が二重になる。",
+          "借方をどちらか一方の科目にまとめると資産全体は合っても内訳が誤る。"
+        ],
+        "check": "借方14,000＋50,000＝貸方64,000。資産合計と利益は変わらない。"
+      },
+      "errorTags": [
+        "account",
+        "double-count",
+        "omission"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "lines": [
+        {
+          "side": "debit",
+          "account": "現金",
+          "amount": 14000,
+          "points": 1
+        },
+        {
+          "side": "debit",
+          "account": "普通預金",
+          "amount": 50000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "売掛金",
+          "amount": 64000,
+          "points": 1
+        }
+      ],
+      "accounts": [
+        "現金",
+        "普通預金",
+        "売掛金",
+        "売上"
+      ],
+      "decimals": 0,
+      "unit": "円",
+      "objectiveIds": [
+        "n3-foundation-skill-derive-journal",
+        "n3-foundation-skill-compound-journal"
+      ]
+    },
+    {
+      "id": "n3-foundation-balanced-but-wrong-01",
+      "familyId": "n3-foundation-balanced-but-wrong",
+      "version": 1,
+      "lessonId": "n3-lesson-03",
+      "requirementIds": [
+        "nissho-d0c0f7bd5eb4",
+        "nissho-781fc555ef83",
+        "nissho-ef5429a88eae",
+        "nissho-06b087617cdc"
+      ],
+      "stage": "application",
+      "title": "貸借が合っても正しくない",
+      "prompt": "当月の家賃12,000円を現金で支払ったところ、担当者は「借方 借入金12,000／貸方 現金12,000」と記録しました。正しくは支払家賃を使う取引です。記録の状態と影響を答えてください。ほかの記録は正しく、税金は考慮しません。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "左右の金額を比べる検算と、科目内容の点検を分ける。",
+          "誤った借入金の減少と、欠けた支払家賃の発生をそれぞれ追う。"
+        ],
+        "pitfalls": [
+          "貸借一致を正しい仕訳の十分条件にしない。",
+          "費用の計上漏れは利益を減らすのではなく過大にする。"
+        ],
+        "check": "現金の減少は正しい。負債の過小12,000と純資産の過大12,000が相殺され、貸借対照表の基本式は一致したまま。"
+      },
+      "errorTags": [
+        "account",
+        "classification",
+        "diagnostic"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "balanced",
+          "label": "誤記録の借方合計と貸方合計",
+          "type": "choice",
+          "options": [
+            "equal",
+            "different"
+          ],
+          "optionLabels": {
+            "equal": "一致する",
+            "different": "一致しない"
+          },
+          "answer": "equal",
+          "points": 1,
+          "explanation": "両側とも12,000なので一致。"
+        },
+        {
+          "id": "valid",
+          "label": "この記録は正しいか",
+          "type": "choice",
+          "options": [
+            "correct",
+            "wrong-account",
+            "wrong-amount"
+          ],
+          "optionLabels": {
+            "correct": "正しい",
+            "wrong-account": "科目が誤っている",
+            "wrong-amount": "金額だけが誤っている"
+          },
+          "answer": "wrong-account",
+          "points": 1,
+          "explanation": "負債の返済ではなく家賃費用の発生。"
+        },
+        {
+          "id": "profit-over",
+          "label": "正しい利益と比べた利益の過大額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 12000,
+          "points": 1,
+          "explanation": "費用12,000を記録していないので利益は12,000過大。"
+        },
+        {
+          "id": "liability-under",
+          "label": "正しい負債と比べた負債の過小額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 12000,
+          "points": 1,
+          "explanation": "本来減らない借入金を12,000減らしたため負債は12,000過小。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-balance-limits"
+      ]
+    },
+    {
+      "id": "n3-foundation-journal-total-and-omission-01",
+      "familyId": "n3-foundation-journal-total-and-omission",
+      "version": 1,
+      "lessonId": "n3-lesson-03",
+      "requirementIds": [
+        "nissho-ef5429a88eae",
+        "nissho-06b087617cdc"
+      ],
+      "stage": "integrated",
+      "title": "貸借平均で分かること・分からないこと",
+      "prompt": "仕訳帳の当月借方記入額合計は148,000円です。貸方には借入金60,000円、売上55,000円、現金33,000円が記録されています。この時点で金額集計は正しいものとします。その後、現金による当月通信費4,000円の支払い1件が、借方も貸方も丸ごと未記録だったと判明しました。税金はありません。各問いに答えてください。単位は円。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "まず現存する貸方合計を計算する。",
+          "未記録取引は借方通信費4,000、貸方現金4,000なので、両側へ同額追加する。"
+        ],
+        "pitfalls": [
+          "貸借平均では両側に等しく生じる誤りをすべて発見できるわけではない。"
+        ],
+        "check": "追加前148,000＝148,000、追加後152,000＝152,000。証ひょうとの照合が漏れ発見に必要。"
+      },
+      "errorTags": [
+        "omission",
+        "arithmetic",
+        "diagnostic"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "before-credit",
+          "label": "漏れ判明前の貸方合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 148000,
+          "points": 1,
+          "explanation": "60,000＋55,000＋33,000。"
+        },
+        {
+          "id": "can-detect",
+          "label": "最初の貸借合計の比較だけで、この丸ごとの記録漏れを検出できるか",
+          "type": "choice",
+          "options": [
+            "yes",
+            "no"
+          ],
+          "optionLabels": {
+            "yes": "できる",
+            "no": "できない"
+          },
+          "answer": "no",
+          "points": 1,
+          "explanation": "両側とも4,000ずつ未記録のため一致は崩れない。"
+        },
+        {
+          "id": "after-debit",
+          "label": "通信費支払いを追加した後の借方合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 152000,
+          "points": 1,
+          "explanation": "148,000＋通信費4,000。"
+        },
+        {
+          "id": "after-credit",
+          "label": "通信費支払いを追加した後の貸方合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 152000,
+          "points": 1,
+          "explanation": "148,000＋現金4,000。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-balance-limits"
+      ]
+    },
+    {
+      "id": "n3-foundation-book-roles-01",
+      "familyId": "n3-foundation-book-purpose",
+      "version": 1,
+      "lessonId": "n3-lesson-04",
+      "requirementIds": [
+        "nissho-1474bc3e0d48",
+        "nissho-cff564a07175"
+      ],
+      "stage": "basic",
+      "title": "どの帳簿を見ればよいか",
+      "prompt": "次の目的に最も直接対応する帳簿を選んでください。仕訳帳と総勘定元帳が主要簿、その他の選択肢が補助簿です。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "時間順、勘定別、取引先別、商品別という整理の軸を区別する。"
+        ],
+        "pitfalls": [
+          "得意先元帳は売掛金の内訳であり、仕訳帳の代わりとなる主要簿ではない。"
+        ],
+        "check": "目的の軸に対応して、仕訳帳・総勘定元帳・得意先元帳・商品有高帳となる。"
+      },
+      "errorTags": [
+        "book-selection"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "date",
+          "label": "日付順に取引の借方・貸方を確かめる",
+          "type": "choice",
+          "options": [
+            "journal",
+            "ledger",
+            "customer",
+            "inventory"
+          ],
+          "optionLabels": {
+            "journal": "仕訳帳",
+            "ledger": "総勘定元帳",
+            "customer": "得意先元帳（売掛金元帳）",
+            "inventory": "商品有高帳"
+          },
+          "answer": "journal",
+          "points": 1,
+          "explanation": "仕訳帳は日付順の主要簿。"
+        },
+        {
+          "id": "account",
+          "label": "借入金の増減と残高を勘定科目別に確かめる",
+          "type": "choice",
+          "options": [
+            "journal",
+            "ledger",
+            "customer",
+            "inventory"
+          ],
+          "optionLabels": {
+            "journal": "仕訳帳",
+            "ledger": "総勘定元帳",
+            "customer": "得意先元帳（売掛金元帳）",
+            "inventory": "商品有高帳"
+          },
+          "answer": "ledger",
+          "points": 1,
+          "explanation": "借入金勘定をまとめて見るには総勘定元帳。"
+        },
+        {
+          "id": "customer",
+          "label": "各得意先から未回収の金額を確かめる",
+          "type": "choice",
+          "options": [
+            "journal",
+            "ledger",
+            "customer",
+            "inventory"
+          ],
+          "optionLabels": {
+            "journal": "仕訳帳",
+            "ledger": "総勘定元帳",
+            "customer": "得意先元帳（売掛金元帳）",
+            "inventory": "商品有高帳"
+          },
+          "answer": "customer",
+          "points": 1,
+          "explanation": "売掛金の取引先別内訳を記録する。"
+        },
+        {
+          "id": "stock",
+          "label": "商品種類別の残数量と単価を確かめる",
+          "type": "choice",
+          "options": [
+            "journal",
+            "ledger",
+            "customer",
+            "inventory"
+          ],
+          "optionLabels": {
+            "journal": "仕訳帳",
+            "ledger": "総勘定元帳",
+            "customer": "得意先元帳（売掛金元帳）",
+            "inventory": "商品有高帳"
+          },
+          "answer": "inventory",
+          "points": 1,
+          "explanation": "商品有高帳は数量・単価・金額の明細を扱う。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-major-book-roles",
+        "n3-foundation-skill-subsidiary-purpose"
+      ]
+    },
+    {
+      "id": "n3-foundation-cash-ledger-posting-01",
+      "familyId": "n3-foundation-cash-ledger-posting",
+      "version": 1,
+      "lessonId": "n3-lesson-04",
+      "requirementIds": [
+        "nissho-781fc555ef83",
+        "nissho-ef5429a88eae",
+        "nissho-1474bc3e0d48"
+      ],
+      "stage": "basic",
+      "title": "現金元帳へ転記する",
+      "prompt": "期首の現金借方残高は10,000円です。当期の仕訳は資料の4件だけです。現金元帳について、取引2の記入側、取引3の摘要に記す相手科目、当期借方記入額、当期貸方記入額、期末残高を答えてください。当期記入額に期首残高は含めません。単位は円。",
+      "exhibits": [
+        {
+          "title": "当期の仕訳",
+          "headers": [
+            "取引",
+            "借方",
+            "貸方"
+          ],
+          "rows": [
+            [
+              "1",
+              "現金 8,000",
+              "売上 8,000"
+            ],
+            [
+              "2",
+              "普通預金 6,000",
+              "現金 6,000"
+            ],
+            [
+              "3",
+              "現金 4,000",
+              "売掛金 4,000"
+            ],
+            [
+              "4",
+              "給料 5,000",
+              "現金 5,000"
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "各仕訳の現金がどちら側かをそのまま元帳へ移す。",
+          "当期の増加合計と減少合計を出してから、期首残高に加減する。"
+        ],
+        "pitfalls": [
+          "借方に転記するときに、相手科目が貸方だからという理由で現金元帳の貸方へ書かない。",
+          "当期借方記入額は期首を含めた22,000円ではなく12,000円。"
+        ],
+        "check": "期首10,000＋入金12,000＝支払い11,000＋期末11,000。"
+      },
+      "errorTags": [
+        "posting",
+        "side",
+        "opening-balance"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "side2",
+          "label": "取引2を現金元帳に記入する側",
+          "type": "choice",
+          "options": [
+            "debit",
+            "credit"
+          ],
+          "optionLabels": {
+            "debit": "借方（左）",
+            "credit": "貸方（右）"
+          },
+          "answer": "credit",
+          "points": 1,
+          "explanation": "現金が貸方にある仕訳なので現金元帳も貸方。"
+        },
+        {
+          "id": "counter3",
+          "label": "取引3の現金元帳の相手科目",
+          "type": "choice",
+          "options": [
+            "売掛金",
+            "現金",
+            "売上",
+            "給料"
+          ],
+          "optionLabels": {
+            "売掛金": "売掛金",
+            "現金": "現金",
+            "売上": "売上",
+            "給料": "給料"
+          },
+          "answer": "売掛金",
+          "points": 1,
+          "explanation": "現金の借方記入に対応する貸方科目は売掛金。"
+        },
+        {
+          "id": "debit",
+          "label": "当期借方記入額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 12000,
+          "points": 1,
+          "explanation": "取引1の8,000＋取引3の4,000。"
+        },
+        {
+          "id": "credit",
+          "label": "当期貸方記入額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 11000,
+          "points": 1,
+          "explanation": "取引2の6,000＋取引4の5,000。"
+        },
+        {
+          "id": "balance",
+          "label": "期末現金借方残高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 11000,
+          "points": 1,
+          "explanation": "期首10,000＋当期借方12,000−当期貸方11,000。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-post-and-balance"
+      ]
+    },
+    {
+      "id": "n3-foundation-subsidiary-books-01",
+      "familyId": "n3-foundation-book-purpose",
+      "version": 1,
+      "lessonId": "n3-lesson-04",
+      "requirementIds": [
+        "nissho-cff564a07175"
+      ],
+      "stage": "basic",
+      "title": "同じ取引でも記録する目的が違う",
+      "prompt": "以下の調査目的に最も直接対応する補助簿を選んでください。一つの取引が複数の帳簿へ記録される場合でも、ここでは指定された調査目的に答えます。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "取引の名前ではなく、知りたい情報の軸から帳簿を選ぶ。"
+        ],
+        "pitfalls": [
+          "掛仕入れは仕入帳と仕入先元帳の両方に関係する。目的を限定しない「どちらか一方しか記帳しない」という理解は誤り。"
+        ],
+        "check": "現金収支・仕入明細・債務先別残高・売上明細をそれぞれ別の帳簿が説明する。"
+      },
+      "errorTags": [
+        "book-selection"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "cash",
+          "label": "金庫の現金について、日ごとの入金・出金を調べる",
+          "type": "choice",
+          "options": [
+            "cash",
+            "purchase",
+            "supplier",
+            "sales"
+          ],
+          "optionLabels": {
+            "cash": "現金出納帳",
+            "purchase": "仕入帳",
+            "supplier": "仕入先元帳（買掛金元帳）",
+            "sales": "売上帳"
+          },
+          "answer": "cash",
+          "points": 1,
+          "explanation": "現金の出入りを管理する。"
+        },
+        {
+          "id": "purchase",
+          "label": "どの商品をいくら仕入れたか、仕入れの明細を調べる",
+          "type": "choice",
+          "options": [
+            "cash",
+            "purchase",
+            "supplier",
+            "sales"
+          ],
+          "optionLabels": {
+            "cash": "現金出納帳",
+            "purchase": "仕入帳",
+            "supplier": "仕入先元帳（買掛金元帳）",
+            "sales": "売上帳"
+          },
+          "answer": "purchase",
+          "points": 1,
+          "explanation": "仕入帳は商品の仕入明細を管理する。"
+        },
+        {
+          "id": "supplier",
+          "label": "北風商事に対する未払の仕入代金残高を調べる",
+          "type": "choice",
+          "options": [
+            "cash",
+            "purchase",
+            "supplier",
+            "sales"
+          ],
+          "optionLabels": {
+            "cash": "現金出納帳",
+            "purchase": "仕入帳",
+            "supplier": "仕入先元帳（買掛金元帳）",
+            "sales": "売上帳"
+          },
+          "answer": "supplier",
+          "points": 1,
+          "explanation": "仕入先別の買掛金を管理する。"
+        },
+        {
+          "id": "sales",
+          "label": "当月の商品売上と売上返品の明細を調べる",
+          "type": "choice",
+          "options": [
+            "cash",
+            "purchase",
+            "supplier",
+            "sales"
+          ],
+          "optionLabels": {
+            "cash": "現金出納帳",
+            "purchase": "仕入帳",
+            "supplier": "仕入先元帳（買掛金元帳）",
+            "sales": "売上帳"
+          },
+          "answer": "sales",
+          "points": 1,
+          "explanation": "売上帳は商品の売上とその取消し等の明細を管理する。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-subsidiary-purpose"
+      ]
+    },
+    {
+      "id": "n3-foundation-customer-ledger-reconcile-01",
+      "familyId": "n3-foundation-customer-ledger-reconcile",
+      "version": 1,
+      "lessonId": "n3-lesson-04",
+      "requirementIds": [
+        "nissho-1474bc3e0d48",
+        "nissho-cff564a07175"
+      ],
+      "stage": "application",
+      "title": "得意先別の内訳と総勘定元帳",
+      "prompt": "期首の売掛金はあかね商店20,000円、みなと商店15,000円です。当期の増減は資料だけです。売上返品は該当得意先の売掛金を減らします。各得意先の期末残高と、総勘定元帳へ照合すべき売掛金合計を求めてください。単位は円。",
+      "exhibits": [
+        {
+          "title": "当期の増減",
+          "headers": [
+            "得意先",
+            "掛売上（円）",
+            "回収（円）",
+            "売上返品による減少（円）"
+          ],
+          "rows": [
+            [
+              "あかね商店",
+              "12,000",
+              "25,000",
+              "0"
+            ],
+            [
+              "みなと商店",
+              "8,000",
+              "10,000",
+              "2,000"
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "得意先ごとに期首＋掛売上−回収−返品を計算する。",
+          "内訳を足し、総勘定元帳の売掛金残高と照合する。"
+        ],
+        "pitfalls": [
+          "返品2,000円を回収と別に足し戻さない。どちらも売掛金の減少。",
+          "総勘定元帳の残高へさらに各先残高を足すと二重計上になる。"
+        ],
+        "check": "総額でも期首35,000＋掛売上20,000−回収35,000−返品2,000＝18,000。"
+      },
+      "errorTags": [
+        "subsidiary-ledger",
+        "reconciliation",
+        "sign"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "akane",
+          "label": "あかね商店の期末売掛金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 7000,
+          "points": 1,
+          "explanation": "20,000＋12,000−25,000。"
+        },
+        {
+          "id": "minato",
+          "label": "みなと商店の期末売掛金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 11000,
+          "points": 1,
+          "explanation": "15,000＋8,000−10,000−2,000。"
+        },
+        {
+          "id": "control",
+          "label": "総勘定元帳へ照合する売掛金合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 18000,
+          "points": 1,
+          "explanation": "各先7,000＋11,000。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-subsidiary-reconcile"
+      ]
+    },
+    {
+      "id": "n3-foundation-wrong-side-posting-01",
+      "familyId": "n3-foundation-wrong-side-posting",
+      "version": 1,
+      "lessonId": "n3-lesson-04",
+      "requirementIds": [
+        "nissho-781fc555ef83",
+        "nissho-06b087617cdc",
+        "nissho-1474bc3e0d48"
+      ],
+      "stage": "application",
+      "title": "転記の左右を間違えると差額はどうなるか",
+      "prompt": "本来「借方 売掛金20,000／貸方 売上20,000」の仕訳を転記するところ、売掛金の借方は正しく転記しましたが、売上20,000円も誤って売上元帳の借方へ記入しました。全勘定の当期記入額を集計すると、借方合計180,000円、貸方合計140,000円でした。この誤り以外はありません。正しい側へ転記し直した後の合計を答えてください。期首残高はこの集計に含めません。単位は円。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "誤った借方記入を取り除く操作と、正しい貸方へ加える操作を分ける。",
+          "片方から20,000減り、他方へ20,000増えるので、左右の差は40,000縮まる。"
+        ],
+        "pitfalls": [
+          "誤りの元の金額20,000円と、貸借差額40,000円を同一視しない。",
+          "ここでは訂正仕訳の記入総額ではなく、誤転記を正しい転記に置き換えた集計を問う。"
+        ],
+        "check": "訂正後は160,000＝160,000。差額40,000円は反対側転記20,000円の2倍。"
+      },
+      "errorTags": [
+        "posting",
+        "side",
+        "diagnostic"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "difference",
+          "label": "訂正前の借方超過額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 40000,
+          "points": 1,
+          "explanation": "180,000−140,000。"
+        },
+        {
+          "id": "debit",
+          "label": "正しい転記後の借方合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 160000,
+          "points": 1,
+          "explanation": "誤った借方売上20,000を除く。180,000−20,000。"
+        },
+        {
+          "id": "credit",
+          "label": "正しい転記後の貸方合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 160000,
+          "points": 1,
+          "explanation": "本来の貸方売上20,000を加える。140,000＋20,000。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-posting-diagnosis"
+      ]
+    },
+    {
+      "id": "n3-foundation-ledger-linked-balances-01",
+      "familyId": "n3-foundation-ledger-linked-balances",
+      "version": 1,
+      "lessonId": "n3-lesson-04",
+      "requirementIds": [
+        "nissho-781fc555ef83",
+        "nissho-06b087617cdc",
+        "nissho-1474bc3e0d48"
+      ],
+      "stage": "integrated",
+      "title": "複数勘定の期末残高をつなぐ",
+      "prompt": "期首残高は現金50,000円、普通預金100,000円、資本金150,000円だけです。当期の仕訳は資料の5件だけです。決算整理・税金は考慮しません。各勘定の期末残高と当期の利益を求めてください。備品は取得額で残します。単位は円。",
+      "exhibits": [
+        {
+          "title": "当期の仕訳",
+          "headers": [
+            "取引",
+            "借方",
+            "貸方"
+          ],
+          "rows": [
+            [
+              "1",
+              "備品 40,000",
+              "現金 10,000、未払金 30,000"
+            ],
+            [
+              "2",
+              "普通預金 50,000",
+              "借入金 50,000"
+            ],
+            [
+              "3",
+              "現金 25,000",
+              "受取手数料 25,000"
+            ],
+            [
+              "4",
+              "支払家賃 8,000",
+              "現金 8,000"
+            ],
+            [
+              "5",
+              "未払金 12,000",
+              "普通預金 12,000"
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "科目ごとに期首残高と各仕訳の同科目を集める。",
+          "資産は借方増・貸方減、負債は貸方増・借方減として残高を算出する。",
+          "収益と費用は残高の集計と区別して期間損益を計算する。"
+        ],
+        "pitfalls": [
+          "未払金の支払い12,000円を、新たな費用として利益から引かない。",
+          "備品の取得額40,000円を実際の現金支払額10,000円へ縮めない。"
+        ],
+        "check": "資産57,000＋138,000＋40,000＝235,000。負債18,000＋50,000＝68,000。235,000−68,000＝資本金150,000＋利益17,000。"
+      },
+      "errorTags": [
+        "posting",
+        "reconciliation",
+        "classification"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "cash",
+          "label": "現金の借方残高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 57000,
+          "points": 1,
+          "explanation": "50,000−10,000＋25,000−8,000。"
+        },
+        {
+          "id": "bank",
+          "label": "普通預金の借方残高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 138000,
+          "points": 1,
+          "explanation": "100,000＋50,000−12,000。"
+        },
+        {
+          "id": "equipment",
+          "label": "備品の借方残高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 40000,
+          "points": 1,
+          "explanation": "取得した備品40,000。"
+        },
+        {
+          "id": "payable",
+          "label": "未払金の貸方残高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 18000,
+          "points": 1,
+          "explanation": "発生30,000−支払い12,000。"
+        },
+        {
+          "id": "loan",
+          "label": "借入金の貸方残高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 50000,
+          "points": 1,
+          "explanation": "借入れ50,000のみ。"
+        },
+        {
+          "id": "profit",
+          "label": "当期の利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 17000,
+          "points": 1,
+          "explanation": "受取手数料25,000−支払家賃8,000。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-post-and-balance"
+      ]
+    },
+    {
+      "id": "n3-foundation-invoice-reading-01",
+      "familyId": "n3-foundation-invoice-reading",
+      "version": 1,
+      "lessonId": "n3-lesson-05",
+      "requirementIds": [
+        "nissho-a063dba24fd3",
+        "nissho-ba5192e0d2c7"
+      ],
+      "stage": "basic",
+      "title": "購入側の証ひょうを読む",
+      "prompt": "当社は資料の請求書に記載された商品を10月20日に受領しました。代金は未払いで、この取引はまだ記帳していません。三分法で処理し、仕入時の引取運賃は仕入原価に含めます。税金は考慮しません。計上額、貸方科目、伝票を選んでください。単位は円。",
+      "exhibits": [
+        {
+          "title": "請求書の記載内容",
+          "headers": [
+            "項目",
+            "記載"
+          ],
+          "rows": [
+            [
+              "発行者",
+              "東丘商会（仕入先）"
+            ],
+            [
+              "宛先",
+              "当社"
+            ],
+            [
+              "納品日",
+              "10月20日"
+            ],
+            [
+              "商品",
+              "5個、1個3,000円"
+            ],
+            [
+              "当社負担の引取運賃",
+              "500円。商品代とまとめて仕入先へ支払う。"
+            ],
+            [
+              "支払期限",
+              "11月30日"
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "発行者ではなく当社の立場で、購入であることを確認する。",
+          "数量・単価・引取運賃から仕入額を計算する。",
+          "未払いなので現金ではなく買掛金を使う。"
+        ],
+        "pitfalls": [
+          "請求書を受け取っただけで現金を支払ったとみなさない。",
+          "商品代15,000円だけを計上すると、明示された引取運賃500円が抜ける。"
+        ],
+        "check": "借方仕入15,500＝貸方買掛金15,500。証ひょうの合計とも一致する。"
+      },
+      "errorTags": [
+        "evidence-reading",
+        "account",
+        "arithmetic"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "purchase",
+          "label": "仕入に計上する額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 15500,
+          "points": 1,
+          "explanation": "商品5個×3,000＋当社負担の引取運賃500。"
+        },
+        {
+          "id": "credit",
+          "label": "貸方科目",
+          "type": "choice",
+          "options": [
+            "買掛金",
+            "現金",
+            "売上",
+            "売掛金"
+          ],
+          "optionLabels": {
+            "買掛金": "買掛金",
+            "現金": "現金",
+            "売上": "売上",
+            "売掛金": "売掛金"
+          },
+          "answer": "買掛金",
+          "points": 1,
+          "explanation": "購入側の未払い商品代金なので買掛金。"
+        },
+        {
+          "id": "voucher",
+          "label": "使用する伝票",
+          "type": "choice",
+          "options": [
+            "receipt",
+            "payment",
+            "transfer"
+          ],
+          "optionLabels": {
+            "receipt": "入金伝票",
+            "payment": "出金伝票",
+            "transfer": "振替伝票"
+          },
+          "answer": "transfer",
+          "points": 1,
+          "explanation": "現金の授受を伴わない掛仕入れ。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-read-evidence",
+        "n3-foundation-skill-voucher-route"
+      ]
+    },
+    {
+      "id": "n3-foundation-voucher-routing-01",
+      "familyId": "n3-foundation-voucher-routing",
+      "version": 1,
+      "lessonId": "n3-lesson-05",
+      "requirementIds": [
+        "nissho-ba5192e0d2c7"
+      ],
+      "stage": "basic",
+      "title": "銀行の入出金と現金の入出金を区別する",
+      "prompt": "3伝票制で次の各取引に使う伝票を選んでください。この問題の入金・出金伝票は、帳簿上の現金の受払いを対象とします。すべて単純な取引で、手数料はありません。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "元の仕訳を考え、現金が借方なら入金、貸方なら出金、現金なしなら振替と判定する。"
+        ],
+        "pitfalls": [
+          "銀行口座に入金があっても、普通預金だけが増えるなら入金伝票とは限らない。"
+        ],
+        "check": "4取引の現金増減は順に0、−8,000、＋6,000、0。"
+      },
+      "errorTags": [
+        "voucher-type",
+        "account"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "ar-bank",
+          "label": "売掛金10,000円が普通預金に振り込まれた",
+          "type": "choice",
+          "options": [
+            "receipt",
+            "payment",
+            "transfer"
+          ],
+          "optionLabels": {
+            "receipt": "入金伝票",
+            "payment": "出金伝票",
+            "transfer": "振替伝票"
+          },
+          "answer": "transfer",
+          "points": 1,
+          "explanation": "普通預金と売掛金の振替で、現金は動かない。"
+        },
+        {
+          "id": "deposit",
+          "label": "現金8,000円を普通預金に預け入れた",
+          "type": "choice",
+          "options": [
+            "receipt",
+            "payment",
+            "transfer"
+          ],
+          "optionLabels": {
+            "receipt": "入金伝票",
+            "payment": "出金伝票",
+            "transfer": "振替伝票"
+          },
+          "answer": "payment",
+          "points": 1,
+          "explanation": "現金が減少するので出金伝票。"
+        },
+        {
+          "id": "withdraw",
+          "label": "普通預金から現金6,000円を引き出した",
+          "type": "choice",
+          "options": [
+            "receipt",
+            "payment",
+            "transfer"
+          ],
+          "optionLabels": {
+            "receipt": "入金伝票",
+            "payment": "出金伝票",
+            "transfer": "振替伝票"
+          },
+          "answer": "receipt",
+          "points": 1,
+          "explanation": "現金が増加するので入金伝票。"
+        },
+        {
+          "id": "buy-credit",
+          "label": "商品12,000円を掛けで仕入れた",
+          "type": "choice",
+          "options": [
+            "receipt",
+            "payment",
+            "transfer"
+          ],
+          "optionLabels": {
+            "receipt": "入金伝票",
+            "payment": "出金伝票",
+            "transfer": "振替伝票"
+          },
+          "answer": "transfer",
+          "points": 1,
+          "explanation": "仕入と買掛金で、現金を含まない。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-voucher-route"
+      ]
+    },
+    {
+      "id": "n3-foundation-voucher-counteraccounts-01",
+      "familyId": "n3-foundation-voucher-counteraccounts",
+      "version": 1,
+      "lessonId": "n3-lesson-05",
+      "requirementIds": [
+        "nissho-ba5192e0d2c7"
+      ],
+      "stage": "basic",
+      "title": "伝票に記すのは現金の相手科目",
+      "prompt": "3伝票制で、各伝票の「勘定科目」欄へ記す相手科目を選んでください。入金伝票は借方現金が、出金伝票は貸方現金が省略された形式です。いずれも取引全額を現金で受払いし、税金・手数料はありません。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "省略されている現金を補って、元の仕訳を復元する。",
+          "残った相手科目を伝票欄に記す。"
+        ],
+        "pitfalls": [
+          "現金支払いだから仕入、と決めない。既存の買掛金の決済なら費用は新たに発生しない。"
+        ],
+        "check": "それぞれの伝票を復元すると、借方・貸方の一方に現金、もう一方に選んだ科目が入る。"
+      },
+      "errorTags": [
+        "voucher-account",
+        "double-count"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "receipt-ar",
+          "label": "売掛金7,000円を回収した入金伝票",
+          "type": "choice",
+          "options": [
+            "売掛金",
+            "売上",
+            "現金",
+            "買掛金"
+          ],
+          "optionLabels": {
+            "売掛金": "売掛金",
+            "売上": "売上",
+            "現金": "現金",
+            "買掛金": "買掛金"
+          },
+          "answer": "売掛金",
+          "points": 1,
+          "explanation": "借方現金・貸方売掛金なので相手科目は売掛金。"
+        },
+        {
+          "id": "payment-ap",
+          "label": "買掛金9,000円を支払った出金伝票",
+          "type": "choice",
+          "options": [
+            "買掛金",
+            "仕入",
+            "現金",
+            "売掛金"
+          ],
+          "optionLabels": {
+            "買掛金": "買掛金",
+            "仕入": "仕入",
+            "現金": "現金",
+            "売掛金": "売掛金"
+          },
+          "answer": "買掛金",
+          "points": 1,
+          "explanation": "借方買掛金・貸方現金なので相手科目は買掛金。"
+        },
+        {
+          "id": "payment-rent",
+          "label": "当月家賃11,000円を支払った出金伝票",
+          "type": "choice",
+          "options": [
+            "支払家賃",
+            "現金",
+            "未払金",
+            "受取家賃"
+          ],
+          "optionLabels": {
+            "支払家賃": "支払家賃",
+            "現金": "現金",
+            "未払金": "未払金",
+            "受取家賃": "受取家賃"
+          },
+          "answer": "支払家賃",
+          "points": 1,
+          "explanation": "当月の費用が発生したので借方支払家賃。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-voucher-counteraccount"
+      ]
+    },
+    {
+      "id": "n3-foundation-three-voucher-totals-01",
+      "familyId": "n3-foundation-voucher-day-summary",
+      "version": 1,
+      "lessonId": "n3-lesson-05",
+      "requirementIds": [
+        "nissho-ba5192e0d2c7",
+        "nissho-c2ac4c8ca5c4"
+      ],
+      "stage": "basic",
+      "title": "三つの伝票を元の仕訳に戻して集める",
+      "prompt": "当日の伝票は、入金伝票（相手科目：売掛金）12,000円、出金伝票（相手科目：通信費）2,000円、振替伝票（借方：仕入／貸方：買掛金）7,000円の3枚だけです。期首残高や前日の残高は考慮せず、当日の記入額を集計してください。単位は円。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "入金伝票に借方現金、出金伝票に貸方現金を補う。",
+          "3枚の借方を集計し、次に貸方を集計する。"
+        ],
+        "pitfalls": [
+          "伝票の科目欄に現金と印刷されていなくても、現金側の記録は存在する。",
+          "現金の増減差額10,000円と、借方記入額12,000円は別。"
+        ],
+        "check": "借方21,000＝貸方21,000。伝票の金額合計12,000＋2,000＋7,000も21,000となる。"
+      },
+      "errorTags": [
+        "voucher-summary",
+        "posting"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "cash-debit",
+          "label": "現金の当日借方記入額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 12000,
+          "points": 1,
+          "explanation": "入金伝票12,000が現金借方。"
+        },
+        {
+          "id": "cash-credit",
+          "label": "現金の当日貸方記入額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 2000,
+          "points": 1,
+          "explanation": "出金伝票2,000が現金貸方。"
+        },
+        {
+          "id": "all-debit",
+          "label": "全勘定の当日借方記入額合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 21000,
+          "points": 1,
+          "explanation": "現金12,000＋通信費2,000＋仕入7,000。"
+        },
+        {
+          "id": "all-credit",
+          "label": "全勘定の当日貸方記入額合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 21000,
+          "points": 1,
+          "explanation": "売掛金12,000＋現金2,000＋買掛金7,000。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-voucher-counteraccount",
+        "n3-foundation-skill-daily-summary"
+      ]
+    },
+    {
+      "id": "n3-foundation-split-sale-vouchers-01",
+      "familyId": "n3-foundation-split-sale-vouchers",
+      "version": 1,
+      "lessonId": "n3-lesson-05",
+      "requirementIds": [
+        "nissho-ba5192e0d2c7"
+      ],
+      "stage": "application",
+      "title": "一部現金販売を分割して起票",
+      "prompt": "商品18,000円を販売し、現金6,000円を受け取り、残額12,000円を掛けとしました。「現金取引と掛取引に分割する方法」を指定します。三分法を用い、税金は考慮しません。入金伝票と振替伝票の必要事項を答えてください。単位は円。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "現金6,000の部分と掛12,000の部分に分ける。",
+          "入金伝票で現金売上を、振替伝票で掛売上を記録する。"
+        ],
+        "pitfalls": [
+          "振替伝票を全額18,000円にすると、入金伝票の売上6,000円と重なり売上が24,000円になる。"
+        ],
+        "check": "合計は借方現金6,000＋売掛金12,000＝貸方売上18,000。"
+      },
+      "errorTags": [
+        "voucher-method",
+        "double-count"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "receipt-account",
+          "label": "入金伝票の相手科目",
+          "type": "choice",
+          "options": [
+            "売上",
+            "売掛金",
+            "現金"
+          ],
+          "optionLabels": {
+            "売上": "売上",
+            "売掛金": "売掛金",
+            "現金": "現金"
+          },
+          "answer": "売上",
+          "points": 1,
+          "explanation": "分割法では現金売上部分を直接売上に対応させる。"
+        },
+        {
+          "id": "receipt-amount",
+          "label": "入金伝票の金額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 6000,
+          "points": 1,
+          "explanation": "現金受取額6,000。"
+        },
+        {
+          "id": "transfer-ar",
+          "label": "振替伝票の借方売掛金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 12000,
+          "points": 1,
+          "explanation": "掛部分だけの12,000。"
+        },
+        {
+          "id": "transfer-sales",
+          "label": "振替伝票の貸方売上",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 12000,
+          "points": 1,
+          "explanation": "掛部分の売上12,000。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-partial-cash-method"
+      ]
+    },
+    {
+      "id": "n3-foundation-whole-credit-sale-vouchers-01",
+      "familyId": "n3-foundation-whole-credit-sale-vouchers",
+      "version": 1,
+      "lessonId": "n3-lesson-05",
+      "requirementIds": [
+        "nissho-ba5192e0d2c7"
+      ],
+      "stage": "application",
+      "title": "既存の伝票から起票方法を読み取る",
+      "prompt": "商品26,000円を販売し、現金9,000円を受け取り、残額を掛けとしました。既に振替伝票「借方 売掛金26,000／貸方 売上26,000」が起票されています。この伝票を変更せず、不足する入金伝票を起票します。三分法を用い、税金は考慮しません。単位は円。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "振替伝票が全額掛けの形であることを読み取る。",
+          "入金伝票を売掛金の回収とすれば、未回収分だけが残る。"
+        ],
+        "pitfalls": [
+          "相手科目を売上にすると、売上が26,000＋9,000＝35,000円となり過大。"
+        ],
+        "check": "現金増9,000＋売掛金純増17,000＝売上26,000。"
+      },
+      "errorTags": [
+        "voucher-method",
+        "evidence-reading",
+        "double-count"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "receipt-account",
+          "label": "入金伝票の相手科目",
+          "type": "choice",
+          "options": [
+            "売掛金",
+            "売上",
+            "現金"
+          ],
+          "optionLabels": {
+            "売掛金": "売掛金",
+            "売上": "売上",
+            "現金": "現金"
+          },
+          "answer": "売掛金",
+          "points": 1,
+          "explanation": "売上は全額記録済みで、入金は売掛金回収として処理する。"
+        },
+        {
+          "id": "receipt-amount",
+          "label": "入金伝票の金額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 9000,
+          "points": 1,
+          "explanation": "実際に受け取った現金9,000。"
+        },
+        {
+          "id": "net-ar",
+          "label": "2枚を合わせた売掛金の正味増加",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 17000,
+          "points": 1,
+          "explanation": "振替の借方26,000−入金伝票の貸方9,000。"
+        },
+        {
+          "id": "sales-total",
+          "label": "2枚を合わせた売上計上額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 26000,
+          "points": 1,
+          "explanation": "売上は振替伝票26,000だけ。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-partial-cash-method"
+      ]
+    },
+    {
+      "id": "n3-foundation-whole-credit-purchase-vouchers-01",
+      "familyId": "n3-foundation-whole-credit-purchase-vouchers",
+      "version": 1,
+      "lessonId": "n3-lesson-05",
+      "requirementIds": [
+        "nissho-ba5192e0d2c7"
+      ],
+      "stage": "application",
+      "title": "全額掛けで起票した仕入れの一部支払い",
+      "prompt": "商品32,000円を仕入れ、現金11,000円を支払い、残額を掛けとしました。先に全額掛けとみなす振替伝票を起票し、その後に現金支払部分の出金伝票を起票します。三分法を用い、税金は考慮しません。各金額と相手科目を答えてください。単位は円。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "全額掛仕入れの仕訳を先に作る。",
+          "現金部分は買掛金の減少として出金伝票へ記録する。"
+        ],
+        "pitfalls": [
+          "出金伝票の相手科目も仕入にすると、仕入が43,000円へ二重計上される。",
+          "通常の商品仕入れなので、ここでは未払金ではなく買掛金。"
+        ],
+        "check": "借方仕入32,000＝貸方現金11,000＋買掛金の正味増加21,000。"
+      },
+      "errorTags": [
+        "voucher-method",
+        "account",
+        "double-count"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "transfer-purchase",
+          "label": "振替伝票の借方仕入",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 32000,
+          "points": 1,
+          "explanation": "全額掛けとみなすので全額32,000。"
+        },
+        {
+          "id": "transfer-ap",
+          "label": "振替伝票の貸方買掛金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 32000,
+          "points": 1,
+          "explanation": "全額の支払義務をいったん計上する。"
+        },
+        {
+          "id": "payment-account",
+          "label": "出金伝票の相手科目",
+          "type": "choice",
+          "options": [
+            "買掛金",
+            "仕入",
+            "現金",
+            "未払金"
+          ],
+          "optionLabels": {
+            "買掛金": "買掛金",
+            "仕入": "仕入",
+            "現金": "現金",
+            "未払金": "未払金"
+          },
+          "answer": "買掛金",
+          "points": 1,
+          "explanation": "既に計上した買掛金の一部を支払う形。"
+        },
+        {
+          "id": "payment-amount",
+          "label": "出金伝票の金額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 11000,
+          "points": 1,
+          "explanation": "実際の現金支払額11,000。"
+        },
+        {
+          "id": "net-ap",
+          "label": "2枚を合わせた買掛金の正味増加",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 21000,
+          "points": 1,
+          "explanation": "32,000−11,000。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-partial-cash-method"
+      ]
+    },
+    {
+      "id": "n3-foundation-voucher-controls-01",
+      "familyId": "n3-foundation-voucher-controls",
+      "version": 1,
+      "lessonId": "n3-lesson-05",
+      "requirementIds": [
+        "nissho-a063dba24fd3",
+        "nissho-c2ac4c8ca5c4"
+      ],
+      "stage": "application",
+      "title": "貸借一致で見つからない重複・欠落を調べる",
+      "prompt": "伝票を集計する担当者として、各状況に対する最も適切な対応を選んでください。根拠のない金額推測や、未確認の伝票削除は行いません。",
+      "exhibits": [],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "伝票を証ひょうと対応させ、一つの取引が一度だけ含まれるかを調べる。",
+          "金額の貸借検算と、資料の重複・欠落検査を別の点検として行う。"
+        ],
+        "pitfalls": [
+          "貸借一致は重複・全部の記録漏れがない保証にはならない。",
+          "欠番を見つけたら直ちに新しい取引を作るのではなく、根拠を確認する。"
+        ],
+        "check": "重複は参照関係、欠番は管理記録、金額は貸借集計という異なる検算を組み合わせる。"
+      },
+      "errorTags": [
+        "evidence-reading",
+        "duplicate",
+        "omission",
+        "control"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "duplicate",
+          "label": "同じ取引の納品書と請求書が届いた",
+          "type": "choice",
+          "options": [
+            "twice",
+            "link",
+            "ignore"
+          ],
+          "optionLabels": {
+            "twice": "それぞれ別の仕入れとして2回起票する",
+            "link": "取引日・相手先・金額・参照番号を照合し、同じ取引なら既存伝票に関連づける",
+            "ignore": "請求書は常に捨てる"
+          },
+          "answer": "link",
+          "points": 1,
+          "explanation": "複数の証ひょうが同じ取引を裏づける場合、取引は重ねて計上しない。"
+        },
+        {
+          "id": "missing",
+          "label": "連番の伝票に1枚分の欠番がある",
+          "type": "choice",
+          "options": [
+            "zero",
+            "guess",
+            "investigate"
+          ],
+          "optionLabels": {
+            "zero": "欠番の取引額を0円とみなす",
+            "guess": "隣の番号と同額を補う",
+            "investigate": "取消し・未回収などの理由を、原資料や管理記録で確認する"
+          },
+          "answer": "investigate",
+          "points": 1,
+          "explanation": "欠番だけから取引の有無・金額は決められない。"
+        },
+        {
+          "id": "balanced",
+          "label": "全く同じ入金伝票を誤って2回集計したとき、貸借一致だけで発見できるか",
+          "type": "choice",
+          "options": [
+            "can",
+            "cannot"
+          ],
+          "optionLabels": {
+            "can": "必ず発見できる",
+            "cannot": "一致したままなので、それだけでは発見できない"
+          },
+          "answer": "cannot",
+          "points": 1,
+          "explanation": "同じ仕訳が借方・貸方の両方へ二重に入るため、貸借一致は維持される。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-read-evidence",
+        "n3-foundation-skill-evidence-control"
+      ]
+    },
+    {
+      "id": "n3-foundation-daily-voucher-summary-01",
+      "familyId": "n3-foundation-voucher-day-summary",
+      "version": 1,
+      "lessonId": "n3-lesson-05",
+      "requirementIds": [
+        "nissho-ba5192e0d2c7",
+        "nissho-c2ac4c8ca5c4"
+      ],
+      "stage": "integrated",
+      "title": "7枚の伝票から仕訳日計表へ",
+      "prompt": "10月15日の伝票は資料の7枚すべてで、重複・欠落はありません。入金伝票は借方現金が、出金伝票は貸方現金が省略されています。期首ではなく、この日の開始時の現金残高は25,000円です。借方・貸方の記入額は相殺せず、日計額として集計してください。単位は円。",
+      "exhibits": [
+        {
+          "title": "当日の伝票",
+          "headers": [
+            "番号",
+            "種類",
+            "記載科目・金額"
+          ],
+          "rows": [
+            [
+              "I1",
+              "入金",
+              "売上 18,000"
+            ],
+            [
+              "I2",
+              "入金",
+              "売掛金 12,000"
+            ],
+            [
+              "O1",
+              "出金",
+              "仕入 7,000"
+            ],
+            [
+              "O2",
+              "出金",
+              "買掛金 9,000"
+            ],
+            [
+              "O3",
+              "出金",
+              "通信費 2,000"
+            ],
+            [
+              "T1",
+              "振替",
+              "借方 仕入16,000／貸方 買掛金16,000"
+            ],
+            [
+              "T2",
+              "振替",
+              "借方 売掛金24,000／貸方 売上24,000"
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "explanation": {
+        "steps": [
+          "入金伝票は借方現金、出金伝票は貸方現金を補って元の仕訳に戻す。",
+          "科目別かつ借貸別に合計する。売掛金の借方24,000と貸方12,000は別の欄に残す。",
+          "開始時の現金残高へ現金の当日増減を加えて終了残高を求める。"
+        ],
+        "pitfalls": [
+          "売掛金の正味増加12,000円を、日計表の借方記入額として答えない。",
+          "現金開始残高25,000円は当日借方記入額30,000円へ加えない。"
+        ],
+        "check": "貸方も現金18,000＋売上42,000＋売掛金12,000＋買掛金16,000＝88,000。現金は25,000＋30,000−18,000＝37,000。"
+      },
+      "errorTags": [
+        "voucher-summary",
+        "posting",
+        "opening-balance"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf"
+        ],
+        "note": "IL MASTRO独自の場面・数値・設問・解説。参考URLは論点の対応確認用であり、問題文の転載・翻案ではない。2026年度の適用範囲は別担当による一次資料の再照合待ち。"
+      },
+      "fields": [
+        {
+          "id": "cash-debit",
+          "label": "現金の当日借方記入額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 30000,
+          "points": 1,
+          "explanation": "入金18,000＋12,000。"
+        },
+        {
+          "id": "cash-credit",
+          "label": "現金の当日貸方記入額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 18000,
+          "points": 1,
+          "explanation": "出金7,000＋9,000＋2,000。"
+        },
+        {
+          "id": "purchase-debit",
+          "label": "仕入の当日借方記入額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 23000,
+          "points": 1,
+          "explanation": "出金伝票7,000＋振替伝票16,000。"
+        },
+        {
+          "id": "ar-debit",
+          "label": "売掛金の当日借方記入額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 24000,
+          "points": 1,
+          "explanation": "振替伝票T2の24,000。"
+        },
+        {
+          "id": "ar-credit",
+          "label": "売掛金の当日貸方記入額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 12000,
+          "points": 1,
+          "explanation": "入金伝票I2の相手科目12,000。"
+        },
+        {
+          "id": "sales-credit",
+          "label": "売上の当日貸方記入額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 42000,
+          "points": 1,
+          "explanation": "入金伝票18,000＋振替伝票24,000。"
+        },
+        {
+          "id": "all-debit",
+          "label": "全勘定の当日借方記入額合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 88000,
+          "points": 1,
+          "explanation": "現金30,000＋仕入23,000＋買掛金9,000＋通信費2,000＋売掛金24,000。"
+        },
+        {
+          "id": "closing-cash",
+          "label": "この日の終了時の現金残高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 37000,
+          "points": 1,
+          "explanation": "開始時25,000＋入金30,000−出金18,000。"
+        }
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-daily-summary"
+      ]
+    }
+  ],
+  "coverageMapping": [
+    {
+      "requirementId": "nissho-8cd210929167",
+      "title": "基礎概念 / 資産、負債、および資本",
+      "lessonIds": [
+        "n3-lesson-01"
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-five-groups",
+        "n3-foundation-skill-cash-vs-profit",
+        "n3-foundation-skill-accounting-equation"
+      ],
+      "questionIds": [
+        "n3-foundation-classify-five-elements-01",
+        "n3-foundation-cash-is-not-profit-01",
+        "n3-foundation-balance-equation-01",
+        "n3-foundation-equity-bridge-01",
+        "n3-foundation-mini-business-statements-01"
+      ],
+      "stages": [
+        "application",
+        "basic",
+        "integrated"
+      ],
+      "status": "authored-draft-not-mastery"
+    },
+    {
+      "requirementId": "nissho-e204e6c1658b",
+      "title": "基礎概念 / 収益、費用",
+      "lessonIds": [
+        "n3-lesson-01"
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-five-groups",
+        "n3-foundation-skill-cash-vs-profit",
+        "n3-foundation-skill-period-profit"
+      ],
+      "questionIds": [
+        "n3-foundation-classify-five-elements-01",
+        "n3-foundation-cash-is-not-profit-01",
+        "n3-foundation-statements-period-point-01",
+        "n3-foundation-period-profit-01",
+        "n3-foundation-equity-bridge-01",
+        "n3-foundation-mini-business-statements-01"
+      ],
+      "stages": [
+        "application",
+        "basic",
+        "integrated"
+      ],
+      "status": "authored-draft-not-mastery"
+    },
+    {
+      "requirementId": "nissho-90c97954325e",
+      "title": "基礎概念 / 損益計算書と貸借対照表との関係",
+      "lessonIds": [
+        "n3-lesson-01"
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-statement-bridge"
+      ],
+      "questionIds": [
+        "n3-foundation-statements-period-point-01",
+        "n3-foundation-equity-bridge-01",
+        "n3-foundation-mini-business-statements-01"
+      ],
+      "stages": [
+        "application",
+        "basic",
+        "integrated"
+      ],
+      "status": "authored-draft-not-mastery"
+    },
+    {
+      "requirementId": "nissho-709c2a16e904",
+      "title": "取引 / 取引の意義と種類",
+      "lessonIds": [
+        "n3-lesson-02"
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-recognition",
+        "n3-foundation-skill-transaction-types",
+        "n3-foundation-skill-equation-changes"
+      ],
+      "questionIds": [
+        "n3-foundation-recognition-events-01",
+        "n3-foundation-transaction-types-01",
+        "n3-foundation-noncash-loss-01",
+        "n3-foundation-transaction-equation-chain-01"
+      ],
+      "stages": [
+        "application",
+        "basic",
+        "integrated"
+      ],
+      "status": "authored-draft-not-mastery"
+    },
+    {
+      "requirementId": "nissho-28b7f12e249b",
+      "title": "取引 / 取引の8要素と結合関係",
+      "lessonIds": [
+        "n3-lesson-02"
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-eight-sides",
+        "n3-foundation-skill-decompose-effects",
+        "n3-foundation-skill-transaction-types",
+        "n3-foundation-skill-equation-changes"
+      ],
+      "questionIds": [
+        "n3-foundation-eight-element-directions-01",
+        "n3-foundation-transaction-types-01",
+        "n3-foundation-coupled-elements-01",
+        "n3-foundation-noncash-loss-01",
+        "n3-foundation-transaction-equation-chain-01"
+      ],
+      "stages": [
+        "application",
+        "basic",
+        "integrated"
+      ],
+      "status": "authored-draft-not-mastery"
+    },
+    {
+      "requirementId": "nissho-d0c0f7bd5eb4",
+      "title": "勘定 / 勘定の意義と分類",
+      "lessonIds": [
+        "n3-lesson-03"
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-account-groups"
+      ],
+      "questionIds": [
+        "n3-foundation-accounts-and-groups-01",
+        "n3-foundation-account-entry-directions-01",
+        "n3-foundation-loan-bank-journal-01",
+        "n3-foundation-equipment-part-payment-01",
+        "n3-foundation-receivable-split-collection-01",
+        "n3-foundation-balanced-but-wrong-01"
+      ],
+      "stages": [
+        "application",
+        "basic"
+      ],
+      "status": "authored-draft-not-mastery"
+    },
+    {
+      "requirementId": "nissho-781fc555ef83",
+      "title": "勘定 / 勘定記入法則",
+      "lessonIds": [
+        "n3-lesson-03"
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-entry-directions",
+        "n3-foundation-skill-compound-journal"
+      ],
+      "questionIds": [
+        "n3-foundation-account-entry-directions-01",
+        "n3-foundation-loan-bank-journal-01",
+        "n3-foundation-equipment-part-payment-01",
+        "n3-foundation-receivable-split-collection-01",
+        "n3-foundation-balanced-but-wrong-01",
+        "n3-foundation-cash-ledger-posting-01",
+        "n3-foundation-wrong-side-posting-01",
+        "n3-foundation-ledger-linked-balances-01"
+      ],
+      "stages": [
+        "application",
+        "basic",
+        "integrated"
+      ],
+      "status": "authored-draft-not-mastery"
+    },
+    {
+      "requirementId": "nissho-ef5429a88eae",
+      "title": "勘定 / 仕訳の意義",
+      "lessonIds": [
+        "n3-lesson-03"
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-derive-journal",
+        "n3-foundation-skill-compound-journal"
+      ],
+      "questionIds": [
+        "n3-foundation-loan-bank-journal-01",
+        "n3-foundation-equipment-part-payment-01",
+        "n3-foundation-receivable-split-collection-01",
+        "n3-foundation-balanced-but-wrong-01",
+        "n3-foundation-journal-total-and-omission-01",
+        "n3-foundation-cash-ledger-posting-01"
+      ],
+      "stages": [
+        "application",
+        "basic",
+        "integrated"
+      ],
+      "status": "authored-draft-not-mastery"
+    },
+    {
+      "requirementId": "nissho-06b087617cdc",
+      "title": "勘定 / 貸借平均の原理",
+      "lessonIds": [
+        "n3-lesson-03"
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-compound-journal",
+        "n3-foundation-skill-balance-limits"
+      ],
+      "questionIds": [
+        "n3-foundation-loan-bank-journal-01",
+        "n3-foundation-equipment-part-payment-01",
+        "n3-foundation-receivable-split-collection-01",
+        "n3-foundation-balanced-but-wrong-01",
+        "n3-foundation-journal-total-and-omission-01",
+        "n3-foundation-wrong-side-posting-01",
+        "n3-foundation-ledger-linked-balances-01"
+      ],
+      "stages": [
+        "application",
+        "basic",
+        "integrated"
+      ],
+      "status": "authored-draft-not-mastery"
+    },
+    {
+      "requirementId": "nissho-1474bc3e0d48",
+      "title": "帳簿 / 主要簿(仕訳帳と総勘定元帳)",
+      "lessonIds": [
+        "n3-lesson-04"
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-major-book-roles",
+        "n3-foundation-skill-post-and-balance",
+        "n3-foundation-skill-subsidiary-reconcile",
+        "n3-foundation-skill-posting-diagnosis"
+      ],
+      "questionIds": [
+        "n3-foundation-book-roles-01",
+        "n3-foundation-cash-ledger-posting-01",
+        "n3-foundation-customer-ledger-reconcile-01",
+        "n3-foundation-wrong-side-posting-01",
+        "n3-foundation-ledger-linked-balances-01"
+      ],
+      "stages": [
+        "application",
+        "basic",
+        "integrated"
+      ],
+      "status": "authored-draft-not-mastery"
+    },
+    {
+      "requirementId": "nissho-cff564a07175",
+      "title": "帳簿 / 補助簿",
+      "lessonIds": [
+        "n3-lesson-04"
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-subsidiary-purpose",
+        "n3-foundation-skill-subsidiary-reconcile"
+      ],
+      "questionIds": [
+        "n3-foundation-book-roles-01",
+        "n3-foundation-subsidiary-books-01",
+        "n3-foundation-customer-ledger-reconcile-01"
+      ],
+      "stages": [
+        "application",
+        "basic"
+      ],
+      "status": "authored-draft-not-mastery"
+    },
+    {
+      "requirementId": "nissho-a063dba24fd3",
+      "title": "証ひょうと伝票 / 証ひょう",
+      "lessonIds": [
+        "n3-lesson-05"
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-read-evidence",
+        "n3-foundation-skill-evidence-control"
+      ],
+      "questionIds": [
+        "n3-foundation-invoice-reading-01",
+        "n3-foundation-voucher-controls-01"
+      ],
+      "stages": [
+        "application",
+        "basic"
+      ],
+      "status": "authored-draft-not-mastery"
+    },
+    {
+      "requirementId": "nissho-ba5192e0d2c7",
+      "title": "証ひょうと伝票 / 伝票(入金、出金、振替の各伝票)",
+      "lessonIds": [
+        "n3-lesson-05"
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-voucher-route",
+        "n3-foundation-skill-voucher-counteraccount",
+        "n3-foundation-skill-partial-cash-method"
+      ],
+      "questionIds": [
+        "n3-foundation-invoice-reading-01",
+        "n3-foundation-voucher-routing-01",
+        "n3-foundation-voucher-counteraccounts-01",
+        "n3-foundation-three-voucher-totals-01",
+        "n3-foundation-split-sale-vouchers-01",
+        "n3-foundation-whole-credit-sale-vouchers-01",
+        "n3-foundation-whole-credit-purchase-vouchers-01",
+        "n3-foundation-daily-voucher-summary-01"
+      ],
+      "stages": [
+        "application",
+        "basic",
+        "integrated"
+      ],
+      "status": "authored-draft-not-mastery"
+    },
+    {
+      "requirementId": "nissho-c2ac4c8ca5c4",
+      "title": "証ひょうと伝票 / 伝票の集計・管理",
+      "lessonIds": [
+        "n3-lesson-05"
+      ],
+      "objectiveIds": [
+        "n3-foundation-skill-daily-summary",
+        "n3-foundation-skill-evidence-control"
+      ],
+      "questionIds": [
+        "n3-foundation-three-voucher-totals-01",
+        "n3-foundation-voucher-controls-01",
+        "n3-foundation-daily-voucher-summary-01"
+      ],
+      "stages": [
+        "application",
+        "basic",
+        "integrated"
+      ],
+      "status": "authored-draft-not-mastery"
+    }
+  ],
+  "limitations": [
+    "14件は既存の公式範囲表のsource行への対応であり、14個の独立技能や習得済み項目を意味しない。各章のobjectivesは26件の具体的な学習目標へ分解している。",
+    "各source行に解説・例題・基礎または応用の練習を対応づけたが、択一や少数の正答だけで到達を断定しない。特に8要素の方向識別から、自力の仕訳・条件変更へ移る追加評価が必要。",
+    "この原稿は基本原理の教材であり、日商3級全範囲の完成、公式試験の再現、合格可能性の算定、合格保証ではない。",
+    "当期記入額の集計は含むが、本格的な試算表・決算整理・精算表・財務諸表作成の独立範囲は後続章が必要。商品有高帳の評価計算や仕入帳・売上帳の完全な様式記入も後続章へ委ねる。",
+    "未見の留保評価・総合模試はこの原稿から切り分けて別途必要。ここにある例題と練習をそのまま模試として再利用しても未見評価にはならない。",
+    "自由記述による説明能力や、複数日付の仕訳を日付別に採点する機能は本契約のamount/choice/journal採点だけでは測れない。",
+    "35問のうち、五分類・帳簿目的・日計集計の類似問題は各同一familyとして扱う。32familyという管理上の数も、32の独立構造や未見能力を保証する数ではない。例題・反復・ヒント使用履歴を別に追う必要がある。",
+    "source URLは既存mappingから継承しており、2026年度の一次資料の再照合結果は別担当待ち。2027年度の適用範囲・試験形式には言及していない。"
+  ],
+  "reviewRecords": [
+    {
+      "kind": "independent-computation",
+      "reviewedBy": "Independent learning-content QA agent",
+      "reviewedAt": "2026-10-31T18:13:58Z",
+      "reviewedManuscriptSha256": "b701348063695f84015813d8f47fdb021ffaafbe28b8b930ce94f47dc129220f",
+      "note": "All 35 prompts independently solved; 144 scoring components, 64 numeric fields, choices, 3 journals, 5 lessons and 10 worked examples checked. Not an official endorsement or pass guarantee.",
+      "questionIds": [
+        "n3-foundation-classify-five-elements-01",
+        "n3-foundation-cash-is-not-profit-01",
+        "n3-foundation-balance-equation-01",
+        "n3-foundation-statements-period-point-01",
+        "n3-foundation-period-profit-01",
+        "n3-foundation-equity-bridge-01",
+        "n3-foundation-mini-business-statements-01",
+        "n3-foundation-recognition-events-01",
+        "n3-foundation-eight-element-directions-01",
+        "n3-foundation-transaction-types-01",
+        "n3-foundation-coupled-elements-01",
+        "n3-foundation-noncash-loss-01",
+        "n3-foundation-transaction-equation-chain-01",
+        "n3-foundation-accounts-and-groups-01",
+        "n3-foundation-account-entry-directions-01",
+        "n3-foundation-loan-bank-journal-01",
+        "n3-foundation-equipment-part-payment-01",
+        "n3-foundation-receivable-split-collection-01",
+        "n3-foundation-balanced-but-wrong-01",
+        "n3-foundation-journal-total-and-omission-01",
+        "n3-foundation-book-roles-01",
+        "n3-foundation-cash-ledger-posting-01",
+        "n3-foundation-subsidiary-books-01",
+        "n3-foundation-customer-ledger-reconcile-01",
+        "n3-foundation-wrong-side-posting-01",
+        "n3-foundation-ledger-linked-balances-01",
+        "n3-foundation-invoice-reading-01",
+        "n3-foundation-voucher-routing-01",
+        "n3-foundation-voucher-counteraccounts-01",
+        "n3-foundation-three-voucher-totals-01",
+        "n3-foundation-split-sale-vouchers-01",
+        "n3-foundation-whole-credit-sale-vouchers-01",
+        "n3-foundation-whole-credit-purchase-vouchers-01",
+        "n3-foundation-voucher-controls-01",
+        "n3-foundation-daily-voucher-summary-01"
+      ],
+      "questionHashes": {
+        "n3-foundation-classify-five-elements-01": "34b38011390a684bb25797beb12b268e01d6106c2a39b9a6256e0f21c3b53068",
+        "n3-foundation-cash-is-not-profit-01": "f66fa4744241e87e59c595f3b431eb9d35f168d51f593aa586026d87e8216378",
+        "n3-foundation-balance-equation-01": "834246c16aeb13f0259ba5ff452470b02660c891d63dc8acbb1c318c132599ab",
+        "n3-foundation-statements-period-point-01": "d97fca913dae1fa5100251e31854293a2a0a51aa8e0273ccc8bceaa4feb234a2",
+        "n3-foundation-period-profit-01": "6a35335fb03730bcb4e6379fff5a2c5119eaaec3f8c1d07b67f6a69241c5b08b",
+        "n3-foundation-equity-bridge-01": "4b8d7aad7e5bf0c090b72afe7df7adf4a380a2daa4adbeb93fbbf7fe37f252b8",
+        "n3-foundation-mini-business-statements-01": "73bf4ba923bd888c4a1f03602b2ba4076084495d43c3f5c7051b4894410c0edb",
+        "n3-foundation-recognition-events-01": "49e51f289958589c644b22f3c24804b80f573ad7599c8ac029bb3eb5054af4de",
+        "n3-foundation-eight-element-directions-01": "acc83eeb5019539edd580224295d470567e997ffc9dfc3816113eb965319d2ed",
+        "n3-foundation-transaction-types-01": "a7d75ba18d5a873dc7b4583586d2511951dab267817ed4d7d7a77d35a5d4ce7c",
+        "n3-foundation-coupled-elements-01": "e34e1571acf0ba8b0a4a4ac3876436d49e3b001315230d3e951df6a404521c71",
+        "n3-foundation-noncash-loss-01": "133842cf12687a97ac89a5d061f5a40c07033d83b15d32cccafbac89182a77ee",
+        "n3-foundation-transaction-equation-chain-01": "a8a06a4ead6697d6a69e421701a92e3c629997f2e9885455d46dd905920341f3",
+        "n3-foundation-accounts-and-groups-01": "69ddcfbcfda592fef7336eaa1a875c14ea44012c6a6a609fc6dcd9db9a3fe55f",
+        "n3-foundation-account-entry-directions-01": "576ed8ef7a023f268b3d38b6eef8f205f227a4f8b4f2fa91ceaa68b67247781f",
+        "n3-foundation-loan-bank-journal-01": "107481e88e1c78359016ad72efc171a9531b65ea51875375e23497d68ac781eb",
+        "n3-foundation-equipment-part-payment-01": "2d976d4c54abdb817286a08a2355f43b6a49888c6508438768ab7067fe1a51d7",
+        "n3-foundation-receivable-split-collection-01": "64c7362781df3ca81f193bf252f511641432a7049808b7a142d82befed5dcb49",
+        "n3-foundation-balanced-but-wrong-01": "864137b63ebd7acde8d2ab8e57643f9a00569b9e9c9124af0c09c6a45bad2815",
+        "n3-foundation-journal-total-and-omission-01": "43a1e804353701afd1728499bf1b46928ea1b2dc54b08740479e62357ea6db69",
+        "n3-foundation-book-roles-01": "9039a77b19049ee04841f4ac5a4cff50bb0005b20742e8e9b82b726897433d7e",
+        "n3-foundation-cash-ledger-posting-01": "96a6ca46fdcbc28ef991c80ebe308f371ea5c1dabe2ea1d6313dd49910474ecf",
+        "n3-foundation-subsidiary-books-01": "c0227ebe1572bdaaddc4449e8332d29e32af33cd4388e5f2e234a5c619881f86",
+        "n3-foundation-customer-ledger-reconcile-01": "41430d56c5032f1998b42603fb029588dae38aeb0b18db09d79dc815e617af9c",
+        "n3-foundation-wrong-side-posting-01": "2d9449f1aa38698f4bdb1661a45d454d19d26a4dafa5613717b8250e2be18863",
+        "n3-foundation-ledger-linked-balances-01": "d1e98078e2620bbf4b1ea01fdb3caa23868cab1d62cd63f3d4f28e7c78f3864c",
+        "n3-foundation-invoice-reading-01": "7db1c5951d59d015dded285610b5fc1cee3c01d2c47256ee31629b135edc3008",
+        "n3-foundation-voucher-routing-01": "eb03ba39ee74f46b2a2a9de1eb3a54875280ec76a30a1e09877837c2f3706ca0",
+        "n3-foundation-voucher-counteraccounts-01": "27471371ff97b882695312ed91e7217deb0d3a5d6ff67b879d42a63993ce173b",
+        "n3-foundation-three-voucher-totals-01": "390646f9b4fb5dfbae62a3f747970ec163cc3b48994dc72b521d959797aee402",
+        "n3-foundation-split-sale-vouchers-01": "dd56e9ec402a37ac7a9d586440ac1b920c6c9c85127edf5a5618ab2421969dda",
+        "n3-foundation-whole-credit-sale-vouchers-01": "62029eb84d40bca9843108a8ef7c179e6bd0d26c9c8fe21c206eb346804788e8",
+        "n3-foundation-whole-credit-purchase-vouchers-01": "979d72f32ae0f0a7f559b62f65c4f588abc7ebbac99304c6e3620da47c730d8c",
+        "n3-foundation-voucher-controls-01": "dcba2344bc35073270012354c23684403ddafc4342f6210ba5b71bb66e6ccfad",
+        "n3-foundation-daily-voucher-summary-01": "43caa816021e2666de7bdaa3272f199d5e5192d0af1346309e11e56658c992a1"
+      },
+      "lessonHashes": {
+        "n3-lesson-01": "0471e0432b20e2758ce48ee5f52de529a1254dd9bf9a639a108c3070c764e194",
+        "n3-lesson-02": "854288411062b1187038e21efe15eb66a6b99fbbcf462768b555341888b758aa",
+        "n3-lesson-03": "1f0bbb80e9da079fafa19b80c41a200115ca21a5e85fc5cb23dfe89892cc5534",
+        "n3-lesson-04": "91c6f77b531d2c8786166c3873fb50e3faf32126c0b4281ebade1e38f6b4c1a6",
+        "n3-lesson-05": "57518d01428f1e84aa2fe435791b5372bf9cf2142928493996621db85e1b1418"
+      }
+    }
+  ],
+  "coverageNote": "基礎原理の5講義を整備しました。取引・決算の講義、全範囲の総合問題・本試験型模試は制作中です。",
+  "sourceAudit": {
+    "method": "official-text-crosscheck",
+    "checked": "2026-11-01",
+    "verifiedRequirementIds": [
+      "nissho-8cd210929167",
+      "nissho-e204e6c1658b",
+      "nissho-90c97954325e",
+      "nissho-709c2a16e904",
+      "nissho-28b7f12e249b",
+      "nissho-d0c0f7bd5eb4",
+      "nissho-781fc555ef83",
+      "nissho-ef5429a88eae",
+      "nissho-06b087617cdc",
+      "nissho-1474bc3e0d48",
+      "nissho-cff564a07175",
+      "nissho-a063dba24fd3",
+      "nissho-ba5192e0d2c7",
+      "nissho-c2ac4c8ca5c4"
+    ],
+    "visualColumnAuditPending": true,
+    "completeGradeCoverageVerified": false,
+    "note": "原稿の出典備考にある再照合待ちは執筆時の記録。この14項目のみ、2022原版の列保持テキスト・現行区分表本文・2026年度適用告知を照合。全62項目の列画像精査を意味しません。",
+    "urls": [
+      "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_shokai1-3.pdf",
+      "https://www.kentei.ne.jp/wp/wp-content/uploads/2024/12/shogyouboki_kubun.pdf",
+      "https://www.kentei.ne.jp/bookkeeping/35697-2/2022-2026"
+    ]
+  }
+}
