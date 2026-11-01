@@ -29,6 +29,7 @@ jobs:
       - run: npm install --no-save --ignore-scripts playwright
       - run: npx playwright install --with-deps chromium
       - run: python -m http.server 8765 --directory dist > /tmp/profile-server.log 2>&1 &
+      - run: node recovery-browser.cjs
       - run: node profile-browser.cjs
       - run: node history-browser.cjs
       - run: node redesign-browser.cjs
@@ -42,6 +43,7 @@ jobs:
         with:
           name: profile-review
           path: |
+            recovery-shots
             profile-shots
             history-shots
             redesign-shots
