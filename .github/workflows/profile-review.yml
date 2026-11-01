@@ -27,7 +27,7 @@ jobs:
       - run: node profile-browser.cjs
       - run: node history-browser.cjs
       - run: node redesign-browser.cjs
-      - run: node learning-course-browser.cjs
+      - run: node course-integration-browser.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -41,5 +41,5 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: learning-review
-          path: learning-shots
+          name: course-integration-review
+          path: course-integration-shots

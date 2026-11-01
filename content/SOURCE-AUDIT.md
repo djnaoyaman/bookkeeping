@@ -31,7 +31,7 @@ There are 56 legacy original exercises. Explicit topic links identify related pr
 The execution check covers nonempty curriculum for all offered units, unique requirement IDs, per-item source metadata, question migration and track separation, related exercise scope, search, missing-exercise filtering, self-assessment separation, memo escaping, persistence, and the 2026 addition. Browser rendering has not been verified in this environment.
 
 
-## 2026-11-01 learning expansion checkpoint
+## 2026-11-01 initial foundation checkpoint (historical)
 
 Five foundational Nissho grade 3 lessons, 10 worked examples and 35 newly authored questions (32 author-managed families) have independent mathematical/accounting review. This is a foundational tranche, not completion of grade 3 or any other qualification. The source's 14 basic-principle rows map to 26 declared atomic objectives; tags are not proof of learning or a pass prediction.
 
@@ -45,3 +45,11 @@ The first 14 rows only were cross-checked against the official 2022 original's t
 - 2027 marking change: https://www.kentei.ne.jp/51504 (all grade 3 exam modes from 2027-04-01: 45/25/30, total100, pass70). Keep this distinct from 2026 scope/marking; no complete mock is currently released.
 
 Four simplified-scope annotations were restored for grade 3: security deposits, corporate/resident/business tax, monthly-closing portion of adjustments, and dividends. The lesson/data provenance and review hashes are preserved in `content/learning-course.json`.
+
+## 2026-11-01 expanded course review
+
+The current input contains 26 core lessons and 4 targeted supplements, 228 original questions in 146 managed families. All 62 grade-3 source rows were subsequently checked against the actual grade-3 column of the official commercial-accounting PDF and its 2026 applicability notice; the initial visual-column pending note above is historical, not the current gate. Exact original manuscripts A–H also received separate scope-applicability and independent accounting/answer reviews. Four simplified-scope annotations remain in force.
+
+Public provenance notes are normalized to an original-content/source explanation. No problem conditions, answers, scores, objective IDs or official URLs change in that transformation. Lesson19 additionally requires lesson25 according to the reviewed dependency guide. Minimal review hashes support the build gate; private review working records are not client data.
+
+Source-row coverage does not establish complete skill coverage or mastery. Targeted supplements address selected suspense, lender collection, reversal settlement and purchase-return cases, but no full unseen mastery is inferred. Complete independent worksheet classification/all-cell transfer, fresh integrated forms and a timed mock remain incomplete. 2027 formats are not silently substituted for the 2026 course.

@@ -67,7 +67,7 @@ def simple(path,title,desc,content,image='og-bookkeeping.png',extra=None):
  nav=f'<a href="{BASE}/">演習する</a><a href="{BASE}/exams/nissho.html">日商簿記</a><a href="{BASE}/exams/zenkei.html">全経簿記</a><a href="{BASE}/exams/uscpa.html">USCPA</a><a href="{BASE}/author.html">つくった人</a>'
  text=f'<!doctype html><html lang="ja" prefix="og: https://ogp.me/ns#"><head>{head}</head><body class="static-page"><a class="skip-link" href="#main-content">本文へ移動</a><header><a class="static-brand" href="{BASE}/" aria-label="IL MASTRO ホーム"><img src="{prefix}assets/il-mastro-lockup.png?v=il-mastro-09-1" width="360" height="390" alt="IL MASTRO"></a><nav class="discovery-nav" aria-label="ページナビ">{nav}</nav></header><main id="main-content" tabindex="-1"><h1>{e(title)}</h1><p>{e(desc)}</p>{content}</main><footer><nav class="discovery-nav"><a href="{BASE}/about.html">使い方・簿記の歴史</a><a href="{BASE}/privacy.html">プライバシー</a><a href="{BASE}/llms.txt">サイト情報（テキスト）</a></nav></footer><script src="{prefix}discovery-config.js"></script><script src="{prefix}discovery.js"></script></body></html>'
  write(path,text)
-if COURSE:(D/'learning-course-data.js').write_text('globalThis.ILMASTRO_COURSE='+jsjson(COURSE)+';\n')
+if COURSE:(D/'learning-course-data.js').write_text('globalThis.ILMASTRO_COURSE='+jsjson({k:v for k,v in COURSE.items() if k!='reviewRecords'})+';\n')
 questions=DATA['questions'];app_page('','app',questions[0]);app_page('author.html','profile')
 for q in questions:app_page(pathq(q),'question',q)
 introductions={
@@ -91,7 +91,7 @@ if COURSE:
  listing='<p>'+e(COURSE.get('coverageNote','全範囲の教材整備は進行中です。'))+'</p><ul>'+''.join('<li><a href="'+BASE+'/lessons/'+e(l['id'])+'.html">'+e(l['title'])+'</a></li>' for l in COURSE['lessons'])+'</ul>'
  simple('lessons/index.html','日商簿記3級の講義と演習','説明・例題・オリジナル演習で簿記の考え方を学ぶ。2026年度範囲の段階的な教材整備。',listing)
  for l in COURSE['lessons']:
-  body='<p>日商簿記3級 / 2026年度範囲 / オリジナル教材</p><p><a href="'+BASE+'/lessons/index.html">講義一覧</a></p>'
+  body='<p>日商簿記3級 / 2026年度範囲（2027年3月31日まで） / オリジナル教材</p><p><a href="'+BASE+'/lessons/index.html">講義一覧</a></p>'
   for section in l['sections']:body+='<h2>'+e(section['title'])+'</h2>'+''.join('<p>'+e(p)+'</p>' for p in section['paragraphs'])
   body+='<h2>例題</h2>'
   for w in l['workedExamples']:body+='<h3>'+e(w['title'])+'</h3><p>'+e(w['prompt'])+'</p><details><summary>解き方と答え</summary><ol>'+''.join('<li>'+e(p)+'</li>' for p in w['steps'])+'</ol><p>'+e(w['answer'])+'</p></details>'
