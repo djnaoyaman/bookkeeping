@@ -165,3 +165,5 @@ qmap={str(q['id']):dict(path=pathq(q),exam=q['exam'],unit=q['level']) for q in q
 (ROOT/'content/discovery-build.json').write_text(json.dumps({'canonicalBase':BASE,'htmlPages':len(PAGES),'questionPages':len(questions),'pages':PAGES},ensure_ascii=False,indent=2))
 print('Generated',len(PAGES),'HTML pages with static content, metadata, structured data, sitemap, icons manifest and text summaries.')
 
+# Recovery pages are deliberately excluded from discovery metadata and sitemap.
+(D/'404.html').write_text((ROOT/'src/404.html').read_text())
