@@ -28,6 +28,11 @@ class Page(HTMLParser):
  def handle_endtag(self,tag):
   if tag=='title':self.title=False
   if tag=='script' and self.json:self.schemas.append(json.loads(self.jsontext));self.json=False
+for course_file in ['learning-course.json','industrial-course.json']:
+ course=json.loads((ROOT/'content'/course_file).read_text())
+ for lesson in course['lessons']:
+  assert 'lessons/'+lesson['id']+'.html' in build['pages'],('missing generated lesson route',lesson['id'])
+
 for route in build['pages']:
  path=D/(route or 'index.html');p=Page();p.feed(path.read_text());expected=BASE+'/'+route if route else BASE+'/'
  assert p.canonical==expected,(route,'canonical');assert p.canonical not in canonicals;canonicals.add(p.canonical);assert p.titletext and p.titletext not in titles;titles.add(p.titletext)

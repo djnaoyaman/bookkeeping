@@ -23,6 +23,8 @@ jobs:
       - run: node tests/nissho2-scope.cjs
       - run: node tests/industrial-course.cjs
       - run: node tests/industrial-labor.cjs
+      - run: node tests/industrial-expenses.cjs
+      - run: node tests/industrial-expenses-independent.cjs
       - run: node tests/check.cjs
       - run: node tests/discovery-client.cjs
       - run: python profile-check.py
