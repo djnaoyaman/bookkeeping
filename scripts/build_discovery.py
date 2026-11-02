@@ -21,7 +21,7 @@ def course_label(l):return '日商簿記2級・工業簿記' if l['id'] in INDUS
 TEMPLATE=TEMPLATE.replace('<!--LEARNING_COURSE_NAV-->','<a class="mock-entry" href="mock.html">60分の総合練習</a><!--LEARNING_COURSE_NAV-->')
 TEMPLATE=TEMPLATE.replace('<!--LEARNING_COURSE_NAV-->','<button data-view="learningcourse"><span>▤</span>講義と演習</button>' if COURSE else '').replace('<!--LEARNING_COURSE_SECTION-->','<section id="learningcourse" class="view"><div id="learningcoursebody"></div></section>' if COURSE else '').replace('<!--LEARNING_COURSE_SCRIPTS-->','<script src="learning-course-data.js"></script><script src="industrial-course-data.js"></script><script src="learning-course.js"></script>' if COURSE else '')
 COURSE_BLURB=(f'日商3級の講義{len(COURSE["lessons"])}本・構造化演習{len(COURSE["questions"])}問を追加しています。<a href="{BASE}/lessons/index.html">講義一覧</a>から学べます。'+COURSE.get('coverageNote','')) if COURSE else ''
-if COURSE:COURSE_BLURB+=' 日商2級・工業簿記は導入2章・22問を公開しています。2級全範囲の完成を示すものではありません。'
+if COURSE:COURSE_BLURB+=f' 日商2級・工業簿記は導入{len(INDUSTRIAL["lessons"])}章・{len(INDUSTRIAL["questions"])}問を公開しています。2級全範囲の完成を示すものではありません。' 
 if COURSE:TEMPLATE=TEMPLATE.replace('収録演習は56問です。','従来の反復演習56問に加え、日商3級の講義と構造化演習を段階的に整備しています。')
 
 def e(s):return html.escape(str(s),quote=True)
@@ -105,7 +105,7 @@ if COURSE:
  listing=''
  for label,course in [('日商簿記3級',COURSE),('日商簿記2級・工業簿記',INDUSTRIAL)]:
   listing+='<h2>'+label+'</h2><p>'+e(course.get('coverageNote',''))+'</p><ul>'+''.join('<li><a href="'+BASE+'/lessons/'+e(l['id'])+'.html">'+e(l['title'])+'</a></li>' for l in course['lessons'])+'</ul>'
- simple('lessons/index.html','日商簿記の級別講義と演習','3級30講義228問と、2級工業簿記の導入2章22問。2026年度範囲のオリジナル教材。',listing)
+ simple('lessons/index.html','日商簿記の級別講義と演習',f'3級{len(COURSE["lessons"])}講義{len(COURSE["questions"])}問と、2級工業簿記の導入{len(INDUSTRIAL["lessons"])}章{len(INDUSTRIAL["questions"])}問。2026年度範囲のオリジナル教材。' ,listing)
  for l in ALL_COURSE['lessons']:
   body='<p>'+course_label(l)+' / 2026年度範囲（2027年3月31日まで） / オリジナル教材</p><p><a href="'+BASE+'/lessons/index.html">講義一覧</a></p>'
   for section in l['sections']:body+='<h2>'+e(section['title'])+'</h2>'+''.join('<p>'+e(p)+'</p>' for p in section['paragraphs'])
@@ -121,14 +121,14 @@ p=D/'mock.html';mock_html=p.read_text().replace('<h1>日商簿記3級・60分の
 ns='http://www.sitemaps.org/schemas/sitemap/0.9';ET.register_namespace('',ns);tree=ET.Element('{'+ns+'}urlset')
 for p in PAGES:
  node=ET.SubElement(tree,'{'+ns+'}url');ET.SubElement(node,'{'+ns+'}loc').text=absolute(p)
- if p in PAGES:ET.SubElement(node,'{'+ns+'}lastmod').text='2026-11-01'
+ if p in PAGES:ET.SubElement(node,'{'+ns+'}lastmod').text='2026-11-02' if p in ['', 'about.html', 'lessons/index.html', 'lessons/n2-industrial-lesson-03.html'] else '2026-11-01'
 ET.ElementTree(tree).write(D/'sitemap.xml',encoding='utf-8',xml_declaration=True)
 (D/'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: '+BASE+'/sitemap.xml\n')
 manifest={'id':BASE+'/','name':'IL MASTRO','short_name':'IL MASTRO','lang':'ja','description':CFG['description'],'start_url':BASE+'/','scope':BASE+'/','display':'standalone','background_color':'#f4efe4','theme_color':'#27251f','icons':[{'src':BASE+'/icon-192.png?v='+CFG.get('iconVersion',CFG.get('brandVersion','1')),'sizes':'192x192','type':'image/png','purpose':'any'},{'src':BASE+'/icon-512.png?v='+CFG.get('iconVersion',CFG.get('brandVersion','1')),'sizes':'512x512','type':'image/png','purpose':'any'},{'src':BASE+'/icon-maskable-512.png?v='+CFG.get('iconVersion',CFG.get('brandVersion','1')),'sizes':'512x512','type':'image/png','purpose':'maskable'}]};(D/'site.webmanifest').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
 summary=f'''# IL MASTRO｜イル・マストロ\n\n> 日商簿記・全経簿記・USCPAの反復演習サイト。企画・編集は宮崎直哉。\n\n## サイト\n- [演習]({BASE}/): 金額・仕訳入力と選択問題。\n- [60分の総合練習]({BASE}/mock.html): 2026年度範囲・独自配点のオリジナル第1回。公式難易度や合格予測を示しません。\n- [日商簿記]({BASE}/exams/nissho.html)\n- [全経簿記]({BASE}/exams/zenkei.html)\n- [USCPA]({BASE}/exams/uscpa.html)\n- [作者]({BASE}/author.html)\n- [簿記の歴史・使い方と対応範囲]({BASE}/about.html)\n- [問題と解説のテキスト]({BASE}/llms-full.txt)\n\n## 簿記の歴史\n作者の入口は簿記の歴史。古代メソポタミアの記録、中世イタリアでの複式簿記の発達、1494年のパチョーリによる最初の印刷された解説を、参考資料とともに紹介しています。パチョーリを発明者とはしていません。\n\n## 対応状況\n従来の反復演習56問を収録。全範囲の教材完成や合格を保証していません。全経の詳細出題表との最終照合は未完了です。USCPAは必須3科目と選択1科目の構成です。学習記録はブラウザ内に保存します。\n\nこのファイルはサイト内容を読み取るための補助情報です。検索エンジンの掲載やAIの引用を制御・保証するものではありません。\n''';(D/'llms.txt').write_text(summary)
 if COURSE:
  summary+='\n## 日商3級の講義と構造化演習\n'+str(len(COURSE['lessons']))+'講義・'+str(len(COURSE['questions']))+'設問を別途収録。'+COURSE.get('coverageNote','全範囲整備は進行中。')+'\n[講義一覧]('+BASE+'/lessons/index.html)\n'
- summary+='\n## 日商2級・工業簿記の導入\n2章・22問。'+INDUSTRIAL['coverageNote']+'\n'
+ summary+='\n## 日商2級・工業簿記の導入\n'+str(len(INDUSTRIAL['lessons']))+'章・'+str(len(INDUSTRIAL['questions']))+'問。'+INDUSTRIAL['coverageNote']+'\n'
  (D/'llms.txt').write_text(summary)
 full=[summary]
 for q in questions:full.append(f'\n## {DATA["catalogs"][q["exam"]]["name"]} {q["unitLabel"]} / {q["topic"]}\n\nURL: {absolute(pathq(q))}\n\n問題: {q["text"]}\n\n解答: {q["answerText"]}\n\n解説: {q["explain"]}\n')
@@ -167,3 +167,4 @@ print('Generated',len(PAGES),'HTML pages with static content, metadata, structur
 
 # Recovery pages are deliberately excluded from discovery metadata and sitemap.
 (D/'404.html').write_text((ROOT/'src/404.html').read_text())
+
