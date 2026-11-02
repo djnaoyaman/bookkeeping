@@ -1,0 +1,160 @@
+{
+  "reviewer": "Parent /root/advance_remaining_site_backlogs; not chapter08 author",
+  "derivedAt": "2026-11-02T10:09:05.872754+00:00",
+  "input": "reviewer-prompt-packet.json only; full draft and author tests not yet opened",
+  "packetSha256": "380ad76ace74e838e77b0989e4688ff6e752e45226b840215df664f0a9ec3ff4",
+  "questions": {
+    "n2-industrial-08-purpose-01": {
+      "unit": "period",
+      "allocation": "both",
+      "progress": "equivalent"
+    },
+    "n2-industrial-08-physical-flow-01": {
+      "availableUnits": 1100,
+      "endingUnits": 200,
+      "quantityCheck": 0
+    },
+    "n2-industrial-08-equivalent-units-01": {
+      "endingMaterialEU": 200,
+      "endingConversionEU": 80,
+      "totalMaterialEU": 1000,
+      "totalConversionEU": 880
+    },
+    "n2-industrial-08-no-opening-allocation-01": {
+      "materialRate": 50,
+      "conversionRate": 40,
+      "completedCost": 54000,
+      "endingCost": 14000,
+      "costCheck": 0
+    },
+    "n2-industrial-08-opening-material-pool-01": {
+      "materialPool": 72000,
+      "materialEU": 800,
+      "materialRate": 90,
+      "completedMaterial": 54000,
+      "endingMaterial": 18000
+    },
+    "n2-industrial-08-opening-conversion-denominator-01": {
+      "conversionPool": 90000,
+      "conversionEU": 900,
+      "conversionRate": 100,
+      "completedConversion": 80000,
+      "endingConversion": 10000,
+      "openingProgressTreatment": "included"
+    },
+    "n2-industrial-08-weighted-average-integrated-01": {
+      "materialRate": 70,
+      "conversionRate": 100,
+      "completedCost": 127500,
+      "endingCost": 27500,
+      "costCheck": 0,
+      "completedUnitCost": 170
+    },
+    "n2-industrial-08-worksheet-error-01": {
+      "conversionEU": 500,
+      "conversionRate": 48,
+      "correctEndingCost": 14800,
+      "correctCompletedCost": 39200,
+      "endingOverstatement": 3200
+    },
+    "n2-industrial-08-revised-ending-progress-01": {
+      "revisedConversionEU": 900,
+      "revisedConversionRate": 85,
+      "revisedEndingConversion": 8500,
+      "revisedEndingCost": 20500,
+      "endingIncrease": 4000
+    },
+    "n2-industrial-08-reverse-current-conversion-01": {
+      "conversionPool": 86400,
+      "currentConversion": 78400,
+      "completedCost": 135000,
+      "endingCost": 11400,
+      "costCheck": 0
+    },
+    "n2-industrial-08-derived-completion-journal-01": {
+      "debitAccount": "製品",
+      "debitAmount": 55000,
+      "creditAccount": "仕掛品",
+      "creditAmount": 55000
+    },
+    "n2-industrial-08-no-ending-wip-01": {
+      "conversionEU": 1000,
+      "materialRate": 70,
+      "conversionRate": 50,
+      "completedCost": 120000,
+      "endingCost": 0,
+      "costCheck": 0
+    }
+  },
+  "workedExamples": [
+    {
+      "physical": 500,
+      "endingMaterialEU": 100,
+      "endingConversionEU": 30,
+      "materialEU": 500,
+      "conversionEU": 430
+    },
+    {
+      "endingUnits": 200,
+      "materialEU": 1000,
+      "conversionEU": 900,
+      "materialPool": 50000,
+      "conversionPool": 72000,
+      "materialRate": 50,
+      "conversionRate": 80,
+      "completedCost": 104000,
+      "endingCost": 18000,
+      "costCheck": 0
+    },
+    {
+      "endingUnits": 150,
+      "materialEU": 1000,
+      "conversionEU": 940,
+      "materialPool": 60000,
+      "conversionPool": 84600,
+      "materialRate": 60,
+      "conversionRate": 90,
+      "completedCost": 127500,
+      "endingCost": 17100,
+      "costCheck": 0
+    },
+    {
+      "materialPool": 64000,
+      "materialEU": 800,
+      "materialRate": 80,
+      "completedMaterial": 52000,
+      "endingMaterial": 12000
+    },
+    {
+      "endingUnits": 300,
+      "materialEU": 1000,
+      "conversionEU": 820,
+      "materialPool": 40000,
+      "conversionPool": 61500,
+      "materialRate": 40,
+      "conversionRate": 75,
+      "completedCost": 80500,
+      "endingCost": 21000,
+      "costCheck": 0,
+      "currentConversion": 52500
+    },
+    {
+      "endingUnits": 150,
+      "materialEU": 900,
+      "conversionEU": 810,
+      "materialPool": 45000,
+      "conversionPool": 72900,
+      "materialRate": 50,
+      "conversionRate": 90,
+      "completedCost": 105000,
+      "endingCost": 12900,
+      "costCheck": 0,
+      "journal": {
+        "debit": "製品",
+        "credit": "仕掛品",
+        "amount": 105000
+      }
+    }
+  ],
+  "method": "Physical units conserved. Weighted average pools opening plus current costs; complete equivalent units plus ending equivalents; never subtract opening conversion equivalents. Materials at start use full physical units; conversion uses stated ending progress. All exact rational arithmetic and every allocated-cost identity asserted."
+}

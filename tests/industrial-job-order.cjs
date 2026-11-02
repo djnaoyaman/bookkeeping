@@ -4,7 +4,7 @@ const fs=require('node:fs'),path=require('node:path'),A=require('node:assert/str
 const raw=fs.readFileSync(path.join(__dirname,'../content/industrial-course.json')),all=JSON.parse(raw),d={...all,lessons:all.lessons.filter(x=>x.id==='n2-industrial-lesson-07'),questions:all.questions.filter(x=>x.lessonId==='n2-industrial-lesson-07')},base=path.join(__dirname,'..');
 const engine=require(path.join(base,'dist/assessment-engine.js')),curriculum=require(path.join(base,'content/curriculum.json')),{validate}=require(path.join(base,'scripts/validate-learning-content.cjs'));
 const solutions=require('./fixtures/industrial-job-order-author-solutions.json');
-A.equal(all.authoringStatus,'reviewed');A.equal(all.sourceVerificationPending,false);A.equal(all.reviewRecords.length,7);A.equal(d.lessons.length,1);A.equal(d.lessons[0].sections.length,10);A.equal(d.lessons[0].workedExamples.length,6);A.equal(d.questions.length,14);
+A.equal(all.authoringStatus,'reviewed');A.equal(all.sourceVerificationPending,false);A.equal(all.reviewRecords.length,8);A.equal(d.lessons.length,1);A.equal(d.lessons[0].sections.length,10);A.equal(d.lessons[0].workedExamples.length,6);A.equal(d.questions.length,14);
 let positive=0,negative=0,components=0;const details=[];
 const grade=(q,a)=>(q.type==='journal'?engine.gradeJournal:engine.gradeFields)(q,a);
 const reject=(q,a,label)=>{A.equal(grade(q,a).correct,false,q.id+' accepted '+label);negative++;};

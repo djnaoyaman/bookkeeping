@@ -5,7 +5,7 @@
   "scopeVersion": "nissho-2026",
   "authoringStatus": "reviewed",
   "sourceVerificationPending": false,
-  "coverageNote": "工業簿記の導入7章・84問。材料費・労務費・経費は実際原価の基礎、製造間接費は実際・予定配賦と公式変動予算の2差異、部門費は第一次集計・直接配賦・限定した補助部門の実際/予定配賦、個別原価計算は指図書別原価と完成/販売の記帳・補修指図書の当該指図書賦課を扱います。材料の予定価格・予定賃率・複合費・相互配賦法・標準原価計算等は未収録。部門費の親項目への対応は全配賦法の完成を意味しません。税金は正常な製造活動の基礎に限定し、税法判断・確定負担率・異常損失の判定は扱いません。2級全範囲の完成・技能の同等・合格可能性を示しません。既存の56問と記録はそのまま残しています。",
+  "coverageNote": "工業簿記の導入8章・96問。材料費・労務費・経費は実際原価の基礎、製造間接費は実際・予定配賦と公式変動予算の2差異、部門費は第一次集計・直接配賦・限定した補助部門の実際/予定配賦、個別原価計算は指図書別原価と完成/販売の記帳・補修指図書の当該指図書賦課を扱います。単純総合原価計算は1種類・1工程、材料始点投入、加工比例発生、仕損等なしの平均法までです。材料の予定価格・予定賃率・複合費・相互配賦法・(修正)先入先出法・仕損/減損・工程別/標準原価計算等は未収録。部門費の親項目への対応は全配賦法の完成を意味しません。税金は正常な製造活動の基礎に限定し、税法判断・確定負担率・異常損失の判定は扱いません。2級全範囲の完成・技能の同等・合格可能性を示しません。既存の56問と記録はそのまま残しています。",
   "lessons": [
     {
       "id": "n2-industrial-lesson-01",
@@ -1863,6 +1863,281 @@
         "n2-industrial-07-multi-month-order-01",
         "n2-industrial-07-manufacturing-flow-01",
         "n2-industrial-07-completion-vs-sale-choice-01"
+      ]
+    },
+    {
+      "id": "n2-industrial-lesson-08",
+      "title": "単純総合原価計算 — 平均法で完成品と仕掛品を分ける",
+      "requirementIds": [
+        "nissho-7408bea3fd0a",
+        "nissho-edb0e12d4162",
+        "nissho-bbe75426d772",
+        "nissho-c5750d58af74"
+      ],
+      "prerequisiteIds": [
+        "n2-industrial-lesson-07"
+      ],
+      "sections": [
+        {
+          "title": "同種製品の期間原価を、完成・未完成に分ける",
+          "paragraphs": [
+            "総合原価計算は、同種製品を継続して製造するときなどに、一定期間の製造原価を集計し、完成品と期末仕掛品に配分する方法です。本章は同種・同規格の製品1種類を一つの工程で作る単純総合原価計算に限定します。会社名や業種だけから方法を断定せず、問題で示した生産条件を使います。",
+            "第07章は個別の指図書別に原価を追いました。本章では各注文の原価を区別することではなく、同種製品全体の数量と原価を対応させます。未完成品にもすでに投入した資源があるため、完成品だけへ全額を押しつけないことが出発点です。"
+          ]
+        },
+        {
+          "title": "現物数量の流れを先に照合する",
+          "paragraphs": [
+            "仕損・減損・数量増加や他の出入りがない本章では「期首仕掛品数量＋当月投入数量＝当月完成数量＋期末仕掛品数量」です。この式の数量は、進捗度を掛ける前の現物個数です。加工50%の仕掛品200個も、現物は200個あります。",
+            "数量表と原価表の期間・工程・単位が一致しているか確認します。期首100個と当月投入900個が完成800個・期末200個になったなら、合計は両側1,000個です。完成品と期末仕掛品にはすでに期首分が含まれるので、分配側へ期首100個を再加算しません。"
+          ]
+        },
+        {
+          "title": "材料の投入時点と加工の進み方を分ける",
+          "paragraphs": [
+            "本章では材料を工程の始点で全量投入します。そのため、期末仕掛品にも材料は100%投入済みです。一方、加工費は示した加工進捗度に比例して発生する条件です。材料の投入時点と加工進捗度は別の情報であり、加工40%を材料にも機械的に掛けません。",
+            "本章の材料費は始点投入の直接材料費、加工費はそれ以外の製造原価（直接労務費・配賦製造間接費等）をまとめた金額です。両者に重複なく分類済みの数値を使います。加工費に含まれた製造間接費をもう一度足したり、指示のない販売費を混ぜたりしません。"
+          ]
+        },
+        {
+          "title": "完成品換算量は、現物とは違う配分基準",
+          "paragraphs": [
+            "完成品換算量は、未完成品に投入した材料や加工を、完成品何個分に相当するかで表したものです。期末200個・加工40%なら、加工の換算量は80個相当です。材料を始点投入する条件なら、同じ期末仕掛品の材料換算量は200個相当です。",
+            "材料と加工はそれぞれ別の換算量で配分します。完成品はどちらも100%なので、平均法の分母は「完成数量＋期末換算量」です。材料換算量と加工換算量を合算して現物個数としたり、完成数量だけで割ったりしません。"
+          ]
+        },
+        {
+          "title": "平均法は期首原価と当月費用をまとめて平均する",
+          "paragraphs": [
+            "平均法では材料費・加工費ごとに期首仕掛品原価と当月製造費用を足し、その合算額を対応する完成品換算量で割ります。期首・当月の二つの単価を単純に足して2で割る方法ではありません。原価額と対応数量を合わせて平均する点が大切です。",
+            "期首原価が金額で与えられている本章の平均法では、完成数量に含まれる期首仕掛品を区別して、その加工済み換算量を分母から差し引くことはしません。期首の進捗度が書かれていても、当月作業分だけを切り出す別の方法へ混ぜないでください。期首数量は現物照合に、期首原価は費目別原価合算に必要です。"
+          ]
+        },
+        {
+          "title": "材料・加工の単価を出して二つの行き先へ配分する",
+          "paragraphs": [
+            "材料単価＝(期首材料費＋当月材料費)÷(完成数量＋期末数量)。加工単価＝(期首加工費＋当月加工費)÷(完成数量＋期末数量×期末加工進捗度)。これは材料始点投入・加工比例発生・仕損等なし、という本章の条件での式です。条件を変えた問題へ無条件に転用しません。",
+            "完成品総合原価は完成数量×材料単価＋完成数量×加工単価。期末仕掛品原価は期末数量×材料単価＋期末加工換算量×加工単価です。完成品1個当たり原価は、完成品総合原価÷完成数量で求め、同じ条件なら材料単価＋加工単価とも一致します。本章では完成数量と配分の分母が正で、端数処理なしで求まる数値を用います。"
+          ]
+        },
+        {
+          "title": "数量と原価を別々に照合する",
+          "paragraphs": [
+            "原価の照合は「期首仕掛品原価＋当月製造費用＝完成品総合原価＋期末仕掛品原価」です。材料と加工ごとに一致することも確認します。合計原価が一致していても、完成・未完成への割り振りや材料・加工の分母が誤っていることはあるため、照合だけで解法が正しいと決めつけません。",
+            "期末仕掛品が0個なら、期末配分額も0です。ただし完成品がある本章では、換算量の合計まで0になるわけではありません。原価差額や期末残高が0の解答欄には0を明示し、未回答の空欄と区別します。"
+          ]
+        },
+        {
+          "title": "完成振替は、平均法で配分した完成原価だけ",
+          "paragraphs": [
+            "各費用がすでに仕掛品へ集計済みなら、完成した分を借方「製品」・貸方「仕掛品」で振り替えます。期末仕掛品原価は仕掛品に残します。材料費・加工費の発生を再び記帳したり、配分対象の総額を全て製品へ移したりしません。",
+            "完成しても未販売なら、その原価は製品に残ります。完成原価の算定・振替と、販売に伴う売上原価振替は別の段階です。本章の仕訳問題は完成振替だけを求め、売上高・税金や未指示の販売記録は追加しません。"
+          ]
+        },
+        {
+          "title": "資料の訂正や不足欄も、同じ関係式で確認する",
+          "paragraphs": [
+            "期末の加工進捗度が訂正され、原価総額と現物数量が変わらない場合、期末加工換算量だけでなく平均加工単価も計算し直します。旧単価を固定したまま期末数量に新しい進捗度を掛けると、総原価との対応が崩れます。",
+            "平均単価と換算量から原価総額を逆算するときは、単価×換算量で得られるのが期首と当月を合わせた額だと確認します。当月費用を求めるならそこから期首原価を引きます。これは平均法の同じ関係を逆向きに使う計算であり、足りない資料を推測することではありません。"
+          ]
+        },
+        {
+          "title": "本章の平均法と、まだ扱っていない論点",
+          "paragraphs": [
+            "本章は単純総合原価計算の平均法に限定します。材料は始点投入、加工費は明示した進捗度に比例し、数量・原価に仕損・減損・副産物・連産品・他工程からの振替はありません。等級別・組別・工程別・標準原価計算の問題を解いたことにはなりません。",
+            "公式2級範囲には別途(修正)先入先出法や正常仕損・減損の度外視法等もありますが、本章には未実装です。1級側の純粋先入先出法や非度外視法等との区分も混同しません。四つの範囲行との対応はこの限定した教材内容を示すもので、第十一全体や日商簿記2級全範囲の完成、公式採点との同等性、合格保証を意味しません。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "title": "現物500個を材料・加工の換算量へ分ける",
+          "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品0個、当月投入500個、完成400個、期末仕掛品100個（加工30%）。数量と換算量だけを求める。",
+          "steps": [
+            "現物は0＋500＝完成400＋期末100で一致する。",
+            "材料換算量は完成400＋期末100×100%＝500個。",
+            "加工換算量は完成400＋期末100×30%＝430個。現物500個を430個へ書き換えるのではない。"
+          ],
+          "answer": "材料換算量500個、加工換算量430個。",
+          "objectiveIds": [
+            "n2-industrial-08-skill-flow",
+            "n2-industrial-08-skill-equivalent"
+          ],
+          "familyId": "n2-industrial-08-family-example-1"
+        },
+        {
+          "title": "期首原価なしで材料・加工を配分する",
+          "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品0個・0円、当月投入1,000個、完成800個、期末仕掛品200個（加工50%）。当月材料費50,000円、当月加工費72,000円。",
+          "steps": [
+            "材料換算量1,000、加工換算量800＋200×50%＝900。単価は材料50,000÷1,000＝50円、加工72,000÷900＝80円。",
+            "完成品原価800×(50＋80)＝104,000円。期末材料200×50＝10,000円、期末加工100×80＝8,000円。",
+            "期末原価18,000円。104,000＋18,000＝総原価122,000円。"
+          ],
+          "answer": "完成品104,000円、期末仕掛品18,000円。",
+          "objectiveIds": [
+            "n2-industrial-08-skill-equivalent",
+            "n2-industrial-08-skill-rates",
+            "n2-industrial-08-skill-allocation",
+            "n2-industrial-08-skill-reconcile"
+          ],
+          "familyId": "n2-industrial-08-family-example-2"
+        },
+        {
+          "title": "期首原価を含める本来の平均法",
+          "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品100個（加工40%）、当月投入900個、完成850個、期末仕掛品150個（加工60%）。材料費は期首6,000円・当月54,000円、加工費は期首4,000円・当月80,600円。",
+          "steps": [
+            "材料は60,000÷(850＋150)＝60円。加工は84,600÷(850＋150×60%)＝90円。期首加工済み40個相当は分母から引かない。",
+            "完成品850×(60＋90)＝127,500円。期末材料150×60＝9,000円、期末加工90×90＝8,100円。",
+            "完成127,500＋期末17,100＝総原価144,600円。"
+          ],
+          "answer": "完成品127,500円、期末仕掛品17,100円。",
+          "objectiveIds": [
+            "n2-industrial-08-skill-pool",
+            "n2-industrial-08-skill-equivalent",
+            "n2-industrial-08-skill-rates",
+            "n2-industrial-08-skill-allocation",
+            "n2-industrial-08-skill-reconcile"
+          ],
+          "familyId": "n2-industrial-08-family-example-3"
+        },
+        {
+          "title": "期首と当月の単価の単純平均を避ける",
+          "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品200個、当月投入600個、完成650個、期末仕掛品150個（加工40%）。材料費は期首10,000円・当月54,000円で、材料費だけを平均法で配分する。加工費の金額は求めない。",
+          "steps": [
+            "材料費総額10,000＋54,000＝64,000円、材料換算量650＋150＝800個。平均単価80円。",
+            "期首材料単価50円と当月材料単価90円の単純平均70円ではない。それぞれ数量200個と600個に対応している。",
+            "完成材料650×80＝52,000円、期末材料150×80＝12,000円。合計64,000円。"
+          ],
+          "answer": "平均材料単価80円、完成材料52,000円、期末材料12,000円。",
+          "objectiveIds": [
+            "n2-industrial-08-skill-pool",
+            "n2-industrial-08-skill-rates",
+            "n2-industrial-08-skill-allocation"
+          ],
+          "familyId": "n2-industrial-08-family-example-4"
+        },
+        {
+          "title": "平均単価から当月加工費を戻す",
+          "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品200個（加工30%）、当月投入800個、完成700個、期末仕掛品300個（加工40%）。材料費は期首8,000円・当月32,000円。期首加工費9,000円、平均加工単価75円。当月加工費が不明なので逆算し、完成・期末原価も求める。",
+          "steps": [
+            "加工換算量700＋300×40%＝820個。総加工費820×75＝61,500円。期首9,000円を引き、当月加工費52,500円。",
+            "材料単価40,000÷1,000＝40円。完成品700×(40＋75)＝80,500円。",
+            "期末原価300×40＋120×75＝21,000円。80,500＋21,000＝材料40,000＋加工61,500。"
+          ],
+          "answer": "当月加工費52,500円、完成品80,500円、期末仕掛品21,000円。",
+          "objectiveIds": [
+            "n2-industrial-08-skill-pool",
+            "n2-industrial-08-skill-equivalent",
+            "n2-industrial-08-skill-rates",
+            "n2-industrial-08-skill-allocation",
+            "n2-industrial-08-skill-reconcile"
+          ],
+          "familyId": "n2-industrial-08-family-example-5"
+        },
+        {
+          "title": "算定した完成原価だけを振り替える",
+          "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品0個・0円、当月投入900個、完成750個、期末仕掛品150個（加工40%）。材料費45,000円、加工費72,900円は仕掛品に集計済み。完成品は未販売。完成振替を示す。",
+          "steps": [
+            "材料単価45,000÷900＝50円、加工単価72,900÷(750＋150×40%)＝90円。",
+            "完成原価750×(50＋90)＝105,000円。期末原価150×50＋60×90＝12,900円。",
+            "借方 製品105,000 / 貸方 仕掛品105,000。仕掛品には12,900円を残し、売上原価はまだ計上しない。"
+          ],
+          "answer": "完成振替は製品105,000円 / 仕掛品105,000円。",
+          "objectiveIds": [
+            "n2-industrial-08-skill-rates",
+            "n2-industrial-08-skill-allocation",
+            "n2-industrial-08-skill-transfer",
+            "n2-industrial-08-skill-reconcile"
+          ],
+          "familyId": "n2-industrial-08-family-example-6"
+        }
+      ],
+      "pitfalls": [
+        "現物数量と完成品換算量を混同せず、加工進捗度で現物数量を減らさない。",
+        "材料始点投入の条件なら期末材料は100%。加工の進捗度を材料にも掛けない。",
+        "平均法では期首原価を合算し、完成数量から期首加工済み換算量を差し引かない。",
+        "材料・加工に別々の分母を使う。二つの単価を単純平均したり、原価総額を現物だけで一律配分しない。",
+        "進捗度を訂正したら加工単価も再計算する。総額が合うことだけを正解の根拠にしない。",
+        "完成振替は完成品原価だけ。期末仕掛品まで製品や売上原価に移さない。",
+        "本章で未実装のFIFO、仕損・減損、等級別・組別・工程別などへ処理を推測で拡張しない。"
+      ],
+      "objectives": [
+        {
+          "id": "n2-industrial-08-skill-purpose",
+          "requirementIds": [
+            "nissho-7408bea3fd0a"
+          ],
+          "description": "同種製品の期間原価を完成品と期末仕掛品に配分する意味を説明する。"
+        },
+        {
+          "id": "n2-industrial-08-skill-flow",
+          "requirementIds": [
+            "nissho-edb0e12d4162"
+          ],
+          "description": "現物数量の期首・投入・完成・期末を保存関係で整理する。"
+        },
+        {
+          "id": "n2-industrial-08-skill-equivalent",
+          "requirementIds": [
+            "nissho-bbe75426d772",
+            "nissho-c5750d58af74"
+          ],
+          "description": "始点投入材料と明示した加工進捗度を区別し、平均法の換算量を計算する。"
+        },
+        {
+          "id": "n2-industrial-08-skill-pool",
+          "requirementIds": [
+            "nissho-bbe75426d772",
+            "nissho-c5750d58af74"
+          ],
+          "description": "材料・加工ごとに期首原価と当月費用を合算し、必要なら当月費用を逆算する。"
+        },
+        {
+          "id": "n2-industrial-08-skill-rates",
+          "requirementIds": [
+            "nissho-bbe75426d772",
+            "nissho-c5750d58af74"
+          ],
+          "description": "原価額と対応する換算量から平均単価を求め、単価の単純平均と区別する。"
+        },
+        {
+          "id": "n2-industrial-08-skill-allocation",
+          "requirementIds": [
+            "nissho-edb0e12d4162",
+            "nissho-bbe75426d772",
+            "nissho-c5750d58af74"
+          ],
+          "description": "材料費・加工費を完成品と期末仕掛品へ配分し、完成品単位原価を求める。"
+        },
+        {
+          "id": "n2-industrial-08-skill-reconcile",
+          "requirementIds": [
+            "nissho-edb0e12d4162",
+            "nissho-bbe75426d772"
+          ],
+          "description": "現物数量・原価の保存を照合し、配分表の誤りやゼロ残高を判定する。"
+        },
+        {
+          "id": "n2-industrial-08-skill-transfer",
+          "requirementIds": [
+            "nissho-edb0e12d4162"
+          ],
+          "description": "平均法で求めた完成原価のみを製品へ振り替え、期末仕掛品を残す。"
+        }
+      ],
+      "questionIds": [
+        "n2-industrial-08-purpose-01",
+        "n2-industrial-08-physical-flow-01",
+        "n2-industrial-08-equivalent-units-01",
+        "n2-industrial-08-no-opening-allocation-01",
+        "n2-industrial-08-opening-material-pool-01",
+        "n2-industrial-08-opening-conversion-denominator-01",
+        "n2-industrial-08-weighted-average-integrated-01",
+        "n2-industrial-08-worksheet-error-01",
+        "n2-industrial-08-revised-ending-progress-01",
+        "n2-industrial-08-reverse-current-conversion-01",
+        "n2-industrial-08-derived-completion-journal-01",
+        "n2-industrial-08-no-ending-wip-01"
       ]
     }
   ],
@@ -9384,6 +9659,1153 @@
           "explanation": "販売済みの製品原価を売上原価へ振り替える。"
         }
       ]
+    },
+    {
+      "id": "n2-industrial-08-purpose-01",
+      "familyId": "n2-industrial-08-family-purpose",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-08",
+      "title": "同種製品の期間原価を配分する",
+      "prompt": "同種・同規格の製品1種類を、一つの工程で連続的に製造する。ここでは一定期間の製造原価を集計し、完成品と期末仕掛品へ配分する方式を採る。実在企業や業種からの推測ではなく、この条件について判断する。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "basic",
+      "requirementIds": [
+        "nissho-7408bea3fd0a"
+      ],
+      "objectiveIds": [
+        "n2-industrial-08-skill-purpose"
+      ],
+      "explanation": {
+        "steps": [
+          "集計対象が注文別か、同種製品の一定期間かを読む。",
+          "現物数量と資源投入の程度を区別する。"
+        ],
+        "pitfalls": [
+          "総合原価計算を、未完成品の原価を無条件にゼロにする方法としない。"
+        ],
+        "check": "本問は期間原価を完成品・期末仕掛品に配分する条件。"
+      },
+      "errorTags": [
+        "purpose"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題区分を参照し、状況・数値・解法・解説を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "unit",
+          "label": "本問の原価集計の考え方",
+          "type": "choice",
+          "answer": "period",
+          "options": [
+            "period",
+            "order",
+            "sales"
+          ],
+          "optionLabels": {
+            "period": "同種製品の一定期間の製造原価を集める",
+            "order": "必ず顧客ごとの製造指図書だけに分ける",
+            "sales": "売上高だけを製造原価とする"
+          },
+          "points": 1,
+          "explanation": "本問では同種製品を継続製造する一つの工程について期間原価を集める。"
+        },
+        {
+          "id": "allocation",
+          "label": "集めた製造原価の配分先",
+          "type": "choice",
+          "answer": "both",
+          "options": [
+            "both",
+            "finished",
+            "revenue"
+          ],
+          "optionLabels": {
+            "both": "完成品と期末仕掛品",
+            "finished": "完成品だけ。未完成には一切配分しない",
+            "revenue": "売上高と現金だけ"
+          },
+          "points": 1,
+          "explanation": "未完成にも既に材料・加工が投入されているので、条件に応じて原価を配分する。"
+        },
+        {
+          "id": "progress",
+          "label": "未完成品の加工進捗度を用いる理由",
+          "type": "choice",
+          "answer": "equivalent",
+          "options": [
+            "equivalent",
+            "price",
+            "physical"
+          ],
+          "optionLabels": {
+            "equivalent": "加工の投入量を完成品相当量へ換算するため",
+            "price": "販売価格を推定するため",
+            "physical": "現物の個数を減らして記録するため"
+          },
+          "points": 1,
+          "explanation": "完成品換算量は加工の投入程度を表し、現物数量を改めるものではない。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-08-physical-flow-01",
+      "familyId": "n2-industrial-08-family-physical-flow",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-08",
+      "title": "まず現物の数量を保存する",
+      "prompt": "期首仕掛品150個、当月投入950個、当月完成900個。仕損・減損・数量増加・他の出入りはない。期末仕掛品の加工進捗度は40%だが、この問題では現物数量だけを照合する。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "basic",
+      "requirementIds": [
+        "nissho-edb0e12d4162"
+      ],
+      "objectiveIds": [
+        "n2-industrial-08-skill-flow",
+        "n2-industrial-08-skill-reconcile"
+      ],
+      "explanation": {
+        "steps": [
+          "期首と当月投入を足す。",
+          "完成数量を引いて期末数量を求める。"
+        ],
+        "pitfalls": [
+          "期末の現物200個に40%を掛けた80個を、現物の期末数量として記録しない。"
+        ],
+        "check": "1,100個＝完成900個＋期末200個。"
+      },
+      "errorTags": [
+        "physical-flow"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題区分を参照し、状況・数値・解法・解説を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "availableUnits",
+          "label": "期首＋当月投入の現物数量",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 1100,
+          "points": 1,
+          "explanation": "150＋950＝1,100。"
+        },
+        {
+          "id": "endingUnits",
+          "label": "期末仕掛品の現物数量",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 200,
+          "points": 1,
+          "explanation": "1,100−900＝200。加工進捗度で現物を減らさない。"
+        },
+        {
+          "id": "quantityCheck",
+          "label": "期首＋投入−完成−期末の現物数量差",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "150＋950−900−200＝0。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-08-equivalent-units-01",
+      "familyId": "n2-industrial-08-family-equivalent-units",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-08",
+      "title": "材料と加工を別々に換算する",
+      "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品は0個、当月投入1,000個、完成800個、期末仕掛品200個。期末の加工進捗度は40%。費用金額の計算ではなく、平均法の完成品換算量を求める。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-bbe75426d772",
+        "nissho-c5750d58af74"
+      ],
+      "objectiveIds": [
+        "n2-industrial-08-skill-flow",
+        "n2-industrial-08-skill-equivalent"
+      ],
+      "explanation": {
+        "steps": [
+          "完成品は材料・加工とも100%とする。",
+          "期末材料は100%、期末加工だけを40%で換算する。"
+        ],
+        "pitfalls": [
+          "材料にも40%を掛けない。",
+          "材料換算量と加工換算量を足して現物数量だと扱わない。"
+        ],
+        "check": "現物は1,000個。材料と加工の配分基準はそれぞれ1,000個と880個。"
+      },
+      "errorTags": [
+        "equivalent-units"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題区分を参照し、状況・数値・解法・解説を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "endingMaterialEU",
+          "label": "期末仕掛品の材料費の完成品換算量",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 200,
+          "points": 1,
+          "explanation": "材料は始点投入なので200×100%＝200。"
+        },
+        {
+          "id": "endingConversionEU",
+          "label": "期末仕掛品の加工費の完成品換算量",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 80,
+          "points": 1,
+          "explanation": "200×40%＝80。"
+        },
+        {
+          "id": "totalMaterialEU",
+          "label": "材料費の完成品換算量合計",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 1000,
+          "points": 1,
+          "explanation": "完成800＋期末材料200＝1,000。"
+        },
+        {
+          "id": "totalConversionEU",
+          "label": "加工費の完成品換算量合計",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 880,
+          "points": 1,
+          "explanation": "完成800＋期末加工80＝880。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-08-no-opening-allocation-01",
+      "familyId": "n2-industrial-08-family-no-opening-allocation",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-08",
+      "title": "期首なしで配分の基本形をつかむ",
+      "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品0個・0円、当月投入800個、完成600個、期末仕掛品200個（加工50%）。当月材料費40,000円、当月加工費28,000円。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-edb0e12d4162",
+        "nissho-bbe75426d772",
+        "nissho-c5750d58af74"
+      ],
+      "objectiveIds": [
+        "n2-industrial-08-skill-equivalent",
+        "n2-industrial-08-skill-rates",
+        "n2-industrial-08-skill-allocation",
+        "n2-industrial-08-skill-reconcile"
+      ],
+      "explanation": {
+        "steps": [
+          "材料換算量800、加工換算量700を求める。",
+          "各費目の単価を出し、完成品と期末仕掛品へ配分する。"
+        ],
+        "pitfalls": [
+          "期末仕掛品を加工50%だから材料費も半額にする、としない。"
+        ],
+        "check": "総原価68,000円＝完成54,000円＋期末14,000円。"
+      },
+      "errorTags": [
+        "no-opening-allocation"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題区分を参照し、状況・数値・解法・解説を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "materialRate",
+          "label": "材料費の完成品換算量1個当たり原価",
+          "type": "amount",
+          "unit": "円/換算量1個",
+          "decimals": 0,
+          "answer": 50,
+          "points": 1,
+          "explanation": "40,000÷(600＋200)＝50。"
+        },
+        {
+          "id": "conversionRate",
+          "label": "加工費の完成品換算量1個当たり原価",
+          "type": "amount",
+          "unit": "円/換算量1個",
+          "decimals": 0,
+          "answer": 40,
+          "points": 1,
+          "explanation": "28,000÷(600＋200×50%)＝40。"
+        },
+        {
+          "id": "completedCost",
+          "label": "完成品総合原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 54000,
+          "points": 1,
+          "explanation": "600×50＋600×40＝54,000。"
+        },
+        {
+          "id": "endingCost",
+          "label": "期末仕掛品原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 14000,
+          "points": 1,
+          "explanation": "200×50＋(200×50%)×40＝14,000。"
+        },
+        {
+          "id": "costCheck",
+          "label": "総原価−完成品原価−期末仕掛品原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "40,000＋28,000−54,000−14,000＝0。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-08-opening-material-pool-01",
+      "familyId": "n2-industrial-08-family-opening-material-pool",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-08",
+      "title": "期首と当月の材料単価を単純平均しない",
+      "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品200個、当月投入600個、完成600個、期末仕掛品200個（加工50%）。材料費は期首12,000円・当月60,000円。ここでは材料費だけを配分し、加工費の金額は求めない。期首材料費も既に全量投入済みである。",
+      "exhibits": [
+        {
+          "title": "材料費の資料",
+          "headers": [
+            "区分",
+            "数量（個）",
+            "材料費（円）"
+          ],
+          "rows": [
+            [
+              "期首仕掛品",
+              200,
+              12000
+            ],
+            [
+              "当月投入",
+              600,
+              60000
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-bbe75426d772",
+        "nissho-c5750d58af74"
+      ],
+      "objectiveIds": [
+        "n2-industrial-08-skill-pool",
+        "n2-industrial-08-skill-rates",
+        "n2-industrial-08-skill-allocation"
+      ],
+      "explanation": {
+        "steps": [
+          "費目ごとに期首原価と当月費用を合算する。",
+          "合算額を対応する完成品換算量で割る。"
+        ],
+        "pitfalls": [
+          "期首・当月の二つの単価を足して2で割らない。",
+          "期首原価を当月費用へ足さずに計算しない。"
+        ],
+        "check": "72,000円＝完成材料54,000円＋期末材料18,000円。"
+      },
+      "errorTags": [
+        "opening-material-pool"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題区分を参照し、状況・数値・解法・解説を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "materialPool",
+          "label": "平均法で配分する材料費総額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 72000,
+          "points": 1,
+          "explanation": "期首12,000＋当月60,000＝72,000。"
+        },
+        {
+          "id": "materialEU",
+          "label": "材料費の完成品換算量合計",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 800,
+          "points": 1,
+          "explanation": "完成600＋期末200＝800。期首200はこの数量に含まれる。"
+        },
+        {
+          "id": "materialRate",
+          "label": "平均した材料費単価",
+          "type": "amount",
+          "unit": "円/換算量1個",
+          "decimals": 0,
+          "answer": 90,
+          "points": 1,
+          "explanation": "72,000÷800＝90。期首単価60と当月単価100の単純平均80ではない。"
+        },
+        {
+          "id": "completedMaterial",
+          "label": "完成品へ配分する材料費",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 54000,
+          "points": 1,
+          "explanation": "600×90＝54,000。"
+        },
+        {
+          "id": "endingMaterial",
+          "label": "期末仕掛品へ配分する材料費",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 18000,
+          "points": 1,
+          "explanation": "200×90＝18,000。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-08-opening-conversion-denominator-01",
+      "familyId": "n2-industrial-08-family-opening-conversion-denominator",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-08",
+      "title": "平均法では期首の加工換算量を差し引かない",
+      "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品200個（加工25%）、当月投入800個、完成800個、期末仕掛品200個（加工50%）。加工費は期首10,000円・当月80,000円。ここでは加工費だけを配分し、材料費の金額は求めない。期首加工費は既に金額で与えられている。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-bbe75426d772",
+        "nissho-c5750d58af74"
+      ],
+      "objectiveIds": [
+        "n2-industrial-08-skill-pool",
+        "n2-industrial-08-skill-equivalent",
+        "n2-industrial-08-skill-rates",
+        "n2-industrial-08-skill-allocation"
+      ],
+      "explanation": {
+        "steps": [
+          "配分する原価に期首10,000を含める。",
+          "分母は完成800＋期末換算100とする。"
+        ],
+        "pitfalls": [
+          "期首の200×25%＝50を差し引いた850を、平均法の分母にしない。"
+        ],
+        "check": "90,000円＝完成加工80,000円＋期末加工10,000円。"
+      },
+      "errorTags": [
+        "opening-conversion-denominator"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題区分を参照し、状況・数値・解法・解説を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "conversionPool",
+          "label": "平均法で配分する加工費総額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 90000,
+          "points": 1,
+          "explanation": "10,000＋80,000＝90,000。"
+        },
+        {
+          "id": "conversionEU",
+          "label": "平均法の加工費完成品換算量合計",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 900,
+          "points": 1,
+          "explanation": "完成800＋期末200×50%＝900。"
+        },
+        {
+          "id": "conversionRate",
+          "label": "加工費単価",
+          "type": "amount",
+          "unit": "円/換算量1個",
+          "decimals": 0,
+          "answer": 100,
+          "points": 1,
+          "explanation": "90,000÷900＝100。"
+        },
+        {
+          "id": "completedConversion",
+          "label": "完成品へ配分する加工費",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 80000,
+          "points": 1,
+          "explanation": "800×100＝80,000。"
+        },
+        {
+          "id": "endingConversion",
+          "label": "期末仕掛品へ配分する加工費",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 10000,
+          "points": 1,
+          "explanation": "200×50%×100＝10,000。"
+        },
+        {
+          "id": "openingProgressTreatment",
+          "label": "与えられた期首加工25%の扱い",
+          "type": "choice",
+          "answer": "included",
+          "options": [
+            "included",
+            "subtract",
+            "dropCost"
+          ],
+          "optionLabels": {
+            "included": "平均法の分母から期首加工済み量を差し引かない",
+            "subtract": "分母900から期首加工済み50を引く",
+            "dropCost": "期首加工費10,000円を配分対象から外す"
+          },
+          "points": 1,
+          "explanation": "期首原価と当月費用を混合する平均法では、完成品と期末仕掛品に含まれる換算量合計を分母にする。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-08-weighted-average-integrated-01",
+      "familyId": "n2-industrial-08-family-weighted-average-integrated",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-08",
+      "title": "材料・加工を分けた平均法の総合問題",
+      "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品200個（加工30%）、当月投入800個、完成750個、期末仕掛品250個（加工40%）。期首原価は材料14,000円・加工6,000円。当月費用は材料56,000円・加工79,000円。完成品1個当たり原価も求める。",
+      "exhibits": [
+        {
+          "title": "原価資料",
+          "headers": [
+            "費目",
+            "期首（円）",
+            "当月（円）"
+          ],
+          "rows": [
+            [
+              "材料費",
+              14000,
+              56000
+            ],
+            [
+              "加工費",
+              6000,
+              79000
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-edb0e12d4162",
+        "nissho-bbe75426d772",
+        "nissho-c5750d58af74"
+      ],
+      "objectiveIds": [
+        "n2-industrial-08-skill-flow",
+        "n2-industrial-08-skill-pool",
+        "n2-industrial-08-skill-equivalent",
+        "n2-industrial-08-skill-rates",
+        "n2-industrial-08-skill-allocation",
+        "n2-industrial-08-skill-reconcile"
+      ],
+      "explanation": {
+        "steps": [
+          "数量1,000個を完成750と期末250に照合する。",
+          "材料70,000円・加工85,000円を別々の換算量で割る。",
+          "完成品と期末仕掛品を費目別に配分して合計する。"
+        ],
+        "pitfalls": [
+          "原価155,000円を現物1,000個だけで割り、全てに同じ155円を適用しない。"
+        ],
+        "check": "155,000円＝完成127,500円＋期末27,500円。"
+      },
+      "errorTags": [
+        "weighted-average-integrated"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題区分を参照し、状況・数値・解法・解説を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "materialRate",
+          "label": "材料費単価",
+          "type": "amount",
+          "unit": "円/換算量1個",
+          "decimals": 0,
+          "answer": 70,
+          "points": 1,
+          "explanation": "(14,000＋56,000)÷(750＋250)＝70。"
+        },
+        {
+          "id": "conversionRate",
+          "label": "加工費単価",
+          "type": "amount",
+          "unit": "円/換算量1個",
+          "decimals": 0,
+          "answer": 100,
+          "points": 1,
+          "explanation": "(6,000＋79,000)÷(750＋250×40%)＝100。"
+        },
+        {
+          "id": "completedCost",
+          "label": "完成品総合原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 127500,
+          "points": 1,
+          "explanation": "750×70＋750×100＝127,500。"
+        },
+        {
+          "id": "endingCost",
+          "label": "期末仕掛品原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 27500,
+          "points": 1,
+          "explanation": "250×70＋(250×40%)×100＝27,500。"
+        },
+        {
+          "id": "completedUnitCost",
+          "label": "完成品1個当たり原価",
+          "type": "amount",
+          "unit": "円/個",
+          "decimals": 0,
+          "answer": 170,
+          "points": 1,
+          "explanation": "127,500÷750＝170。材料70＋加工100とも一致する。"
+        },
+        {
+          "id": "costCheck",
+          "label": "期首原価＋当月費用−完成−期末の差",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "14,000＋6,000＋56,000＋79,000−127,500−27,500＝0。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-08-worksheet-error-01",
+      "familyId": "n2-industrial-08-family-worksheet-error",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-08",
+      "title": "現物だけで一律配分した表を修正する",
+      "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品0個・0円、当月投入600個、完成400個、期末仕掛品200個（加工50%）。当月材料費30,000円・加工費24,000円。担当者は合計54,000円÷現物600個＝90円を、完成品と未完成品の両方へ一律適用し、期末仕掛品を18,000円とした。この誤った表を正しい平均法へ修正する。過大額は「誤額−正額」の正の金額で答える。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-bbe75426d772",
+        "nissho-c5750d58af74"
+      ],
+      "objectiveIds": [
+        "n2-industrial-08-skill-equivalent",
+        "n2-industrial-08-skill-rates",
+        "n2-industrial-08-skill-allocation",
+        "n2-industrial-08-skill-reconcile"
+      ],
+      "explanation": {
+        "steps": [
+          "材料単価30,000÷600＝50、加工単価24,000÷500＝48に分ける。",
+          "期末の加工は100個相当として配分する。",
+          "正額14,800と誤額18,000を比較する。"
+        ],
+        "pitfalls": [
+          "全体54,000円が保存されていても、完成・期末間の配分が正しいとは限らない。"
+        ],
+        "check": "39,200＋14,800＝54,000。誤表は期末を3,200過大、完成を同額過少にする。"
+      },
+      "errorTags": [
+        "worksheet-error"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題区分を参照し、状況・数値・解法・解説を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "conversionEU",
+          "label": "正しい加工費の完成品換算量",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 500,
+          "points": 1,
+          "explanation": "完成400＋期末200×50%＝500。"
+        },
+        {
+          "id": "conversionRate",
+          "label": "正しい加工費単価",
+          "type": "amount",
+          "unit": "円/換算量1個",
+          "decimals": 0,
+          "answer": 48,
+          "points": 1,
+          "explanation": "24,000÷500＝48。"
+        },
+        {
+          "id": "correctEndingCost",
+          "label": "正しい期末仕掛品原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 14800,
+          "points": 1,
+          "explanation": "材料200×50＋加工100×48＝14,800。"
+        },
+        {
+          "id": "correctCompletedCost",
+          "label": "正しい完成品総合原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 39200,
+          "points": 1,
+          "explanation": "完成400×(材料50＋加工48)＝39,200。"
+        },
+        {
+          "id": "endingOverstatement",
+          "label": "誤った期末仕掛品原価の過大額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 3200,
+          "points": 1,
+          "explanation": "誤額18,000−正額14,800＝3,200。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-08-revised-ending-progress-01",
+      "familyId": "n2-industrial-08-family-revised-ending-progress",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-08",
+      "title": "進捗度の訂正では加工単価も計算し直す",
+      "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品0個・0円、当月投入1,000個、完成800個、期末仕掛品200個。当月材料費60,000円、加工費76,500円は確定している。期末加工進捗度を25%として計算した旧表では期末仕掛品原価16,500円だったが、資料の訂正により正しい進捗度は50%と判明した。数量・費用総額は変わらない。旧表に費用を追加するのではなく、50%で全配分を計算し直す。増加額は「訂正後−旧表」とする。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-bbe75426d772",
+        "nissho-c5750d58af74"
+      ],
+      "objectiveIds": [
+        "n2-industrial-08-skill-equivalent",
+        "n2-industrial-08-skill-rates",
+        "n2-industrial-08-skill-allocation",
+        "n2-industrial-08-skill-reconcile"
+      ],
+      "explanation": {
+        "steps": [
+          "加工換算量を旧850から900へ直す。",
+          "同じ加工費76,500を900で割り直す。",
+          "材料配分12,000と訂正加工費8,500を合計する。"
+        ],
+        "pitfalls": [
+          "旧加工単価90円を固定したまま、期末進捗度だけを倍にしない。"
+        ],
+        "check": "訂正後は完成116,000＋期末20,500＝総原価136,500。"
+      },
+      "errorTags": [
+        "revised-ending-progress"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題区分を参照し、状況・数値・解法・解説を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "revisedConversionEU",
+          "label": "訂正後の加工費完成品換算量",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 900,
+          "points": 1,
+          "explanation": "800＋200×50%＝900。"
+        },
+        {
+          "id": "revisedConversionRate",
+          "label": "訂正後の加工費単価",
+          "type": "amount",
+          "unit": "円/換算量1個",
+          "decimals": 0,
+          "answer": 85,
+          "points": 1,
+          "explanation": "確定加工費76,500÷900＝85。"
+        },
+        {
+          "id": "revisedEndingConversion",
+          "label": "訂正後の期末加工費",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 8500,
+          "points": 1,
+          "explanation": "200×50%×85＝8,500。"
+        },
+        {
+          "id": "revisedEndingCost",
+          "label": "訂正後の期末仕掛品原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 20500,
+          "points": 1,
+          "explanation": "材料200×60＋加工8,500＝20,500。"
+        },
+        {
+          "id": "endingIncrease",
+          "label": "旧表からの期末仕掛品原価増加額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 4000,
+          "points": 1,
+          "explanation": "20,500−16,500＝4,000。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-08-reverse-current-conversion-01",
+      "familyId": "n2-industrial-08-family-reverse-current-conversion",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-08",
+      "title": "平均単価から当月加工費を逆算する",
+      "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品160個（加工50%）、当月投入840個、完成900個、期末仕掛品100個（加工60%）。材料費は期首9,600円・当月50,400円。期首加工費は8,000円で、平均法による加工費単価は完成品換算量1個当たり90円と確定している。当月加工費だけが原価表から欠けている。与えられた平均単価からこれを逆算する。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-edb0e12d4162",
+        "nissho-bbe75426d772",
+        "nissho-c5750d58af74"
+      ],
+      "objectiveIds": [
+        "n2-industrial-08-skill-pool",
+        "n2-industrial-08-skill-equivalent",
+        "n2-industrial-08-skill-rates",
+        "n2-industrial-08-skill-allocation",
+        "n2-industrial-08-skill-reconcile"
+      ],
+      "explanation": {
+        "steps": [
+          "単価×換算量で配分対象の加工費総額を復元する。",
+          "その総額から期首原価を引いて当月費用を出す。",
+          "材料も含めて完成・期末への配分を照合する。"
+        ],
+        "pitfalls": [
+          "総加工費86,400円をそのまま当月加工費としない。",
+          "期首8,000円を引かずに足さない。"
+        ],
+        "check": "総原価146,400円＝完成135,000円＋期末11,400円。"
+      },
+      "errorTags": [
+        "reverse-current-conversion"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題区分を参照し、状況・数値・解法・解説を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "conversionPool",
+          "label": "期首＋当月の加工費総額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 86400,
+          "points": 1,
+          "explanation": "加工換算量900＋100×60%＝960。960×90＝86,400。"
+        },
+        {
+          "id": "currentConversion",
+          "label": "欠けている当月加工費",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 78400,
+          "points": 1,
+          "explanation": "総加工費86,400−期首加工費8,000＝78,400。"
+        },
+        {
+          "id": "completedCost",
+          "label": "完成品総合原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 135000,
+          "points": 1,
+          "explanation": "材料単価60＋加工単価90を完成900個へ配分：900×150＝135,000。"
+        },
+        {
+          "id": "endingCost",
+          "label": "期末仕掛品原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 11400,
+          "points": 1,
+          "explanation": "材料100×60＋加工60×90＝11,400。"
+        },
+        {
+          "id": "costCheck",
+          "label": "期首＋当月−完成−期末の原価差",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "9,600＋8,000＋50,400＋78,400−135,000−11,400＝0。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-08-derived-completion-journal-01",
+      "familyId": "n2-industrial-08-family-derived-completion-journal",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-08",
+      "title": "平均法で求めた完成品だけを製品へ振り替える",
+      "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品100個（加工40%）、当月投入500個、完成500個、期末仕掛品100個（加工60%）。材料費は期首5,000円・当月25,000円、加工費は期首4,000円・当月29,600円。各費用は既に仕掛品へ集計済み。完成品は全て製品倉庫へ移したが未販売。平均法で完成品総合原価を算定し、その完成振替だけを記帳する。",
+      "exhibits": [],
+      "type": "journal",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-edb0e12d4162",
+        "nissho-bbe75426d772",
+        "nissho-c5750d58af74"
+      ],
+      "objectiveIds": [
+        "n2-industrial-08-skill-pool",
+        "n2-industrial-08-skill-equivalent",
+        "n2-industrial-08-skill-allocation",
+        "n2-industrial-08-skill-transfer"
+      ],
+      "explanation": {
+        "steps": [
+          "材料30,000÷600＝50、加工33,600÷560＝60。",
+          "完成品原価500×(50＋60)＝55,000。",
+          "製品を借方、仕掛品を貸方にして完成原価だけを移す。"
+        ],
+        "pitfalls": [
+          "期末仕掛品8,600円まで製品へ移さない。",
+          "未販売の完成品を売上原価へ直接振り替えない。",
+          "すでに集計した費用を再計上しない。"
+        ],
+        "check": "借方 製品55,000 / 貸方 仕掛品55,000。仕掛品には8,600円が残る。"
+      },
+      "errorTags": [
+        "derived-completion-journal"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題区分を参照し、状況・数値・解法・解説を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "unit": "円",
+      "decimals": 0,
+      "accounts": [
+        "仕掛品",
+        "製品",
+        "売上原価"
+      ],
+      "lines": [
+        {
+          "side": "debit",
+          "account": "製品",
+          "amount": 55000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "仕掛品",
+          "amount": 55000,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-08-no-ending-wip-01",
+      "familyId": "n2-industrial-08-family-no-ending-wip",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-08",
+      "title": "期末仕掛品がゼロでも期首原価は落とさない",
+      "prompt": "同種製品1種類を一つの工程で製造する単純総合原価計算。平均法を用いる。材料は工程の始点で全量投入し、加工費は示した加工進捗度に比例して発生する。数量単位は個。仕損・減損・数量増加・他の振替・税金・端数処理はない。材料費と加工費は重複なく分類済みで、他の製造費用はない。期首仕掛品100個（加工40%）、当月投入900個、完成1,000個、期末仕掛品0個。期末の換算量は材料・加工とも0個とする。材料費は期首7,000円・当月63,000円、加工費は期首3,000円・当月47,000円。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-bbe75426d772",
+        "nissho-c5750d58af74"
+      ],
+      "objectiveIds": [
+        "n2-industrial-08-skill-pool",
+        "n2-industrial-08-skill-equivalent",
+        "n2-industrial-08-skill-allocation",
+        "n2-industrial-08-skill-reconcile"
+      ],
+      "explanation": {
+        "steps": [
+          "完成1,000個の換算量を分母にする。",
+          "期首10,000円を含む総原価120,000円を完成品へ配分する。"
+        ],
+        "pitfalls": [
+          "期末がゼロでも、平均法の分母は完成1,000個があるためゼロにならない。",
+          "当月費用110,000円だけを完成原価としない。"
+        ],
+        "check": "数量100＋900＝1,000＋0。原価10,000＋110,000＝120,000＋0。"
+      },
+      "errorTags": [
+        "no-ending-wip"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題区分を参照し、状況・数値・解法・解説を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "conversionEU",
+          "label": "平均法の加工費完成品換算量",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 1000,
+          "points": 1,
+          "explanation": "完成1,000＋期末0＝1,000。"
+        },
+        {
+          "id": "materialRate",
+          "label": "材料費単価",
+          "type": "amount",
+          "unit": "円/換算量1個",
+          "decimals": 0,
+          "answer": 70,
+          "points": 1,
+          "explanation": "(7,000＋63,000)÷1,000＝70。"
+        },
+        {
+          "id": "conversionRate",
+          "label": "加工費単価",
+          "type": "amount",
+          "unit": "円/換算量1個",
+          "decimals": 0,
+          "answer": 50,
+          "points": 1,
+          "explanation": "(3,000＋47,000)÷1,000＝50。"
+        },
+        {
+          "id": "completedCost",
+          "label": "完成品総合原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 120000,
+          "points": 1,
+          "explanation": "1,000×(70＋50)＝120,000。"
+        },
+        {
+          "id": "endingCost",
+          "label": "期末仕掛品原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "期末現物・換算量がともに0なので配分原価0。"
+        },
+        {
+          "id": "costCheck",
+          "label": "期首＋当月−完成−期末の原価差",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "7,000＋3,000＋63,000＋47,000−120,000−0＝0。"
+        }
+      ]
     }
   ],
   "reviewRecords": [
@@ -9643,6 +11065,43 @@
         "n2-industrial-lesson-07": "833968a53a1fccd0a76db802bd8ed8366367c091bfbf1b7ee36e52bf8a30fa58"
       },
       "evidence": "notes/editorial/industrial-job-order-review-20261102.md"
+    },
+    {
+      "kind": "independent-computation",
+      "reviewedBy": "Parent reviewer /root/advance_remaining_site_backlogs (not chapter08 author)",
+      "reviewedAt": "2026-11-02T10:12:29Z",
+      "questionIds": [
+        "n2-industrial-08-purpose-01",
+        "n2-industrial-08-physical-flow-01",
+        "n2-industrial-08-equivalent-units-01",
+        "n2-industrial-08-no-opening-allocation-01",
+        "n2-industrial-08-opening-material-pool-01",
+        "n2-industrial-08-opening-conversion-denominator-01",
+        "n2-industrial-08-weighted-average-integrated-01",
+        "n2-industrial-08-worksheet-error-01",
+        "n2-industrial-08-revised-ending-progress-01",
+        "n2-industrial-08-reverse-current-conversion-01",
+        "n2-industrial-08-derived-completion-journal-01",
+        "n2-industrial-08-no-ending-wip-01"
+      ],
+      "questionHashes": {
+        "n2-industrial-08-purpose-01": "40baa30341e8c96fa5a6b34ba0a06162e2cff6a44f9847aa2ba47a82f44d2ec1",
+        "n2-industrial-08-physical-flow-01": "0118fb635bc29dc6174e1134a12712eb124c0870013ea09373d1c3f97dd1f269",
+        "n2-industrial-08-equivalent-units-01": "1ca2bd330f8113d85f120e04b75dc05bd09ddb2d1f221217345d0b750646bcda",
+        "n2-industrial-08-no-opening-allocation-01": "179513f32c1d9649b48b511d1f1221786064b04bb255d0c2ab6731a08af9191a",
+        "n2-industrial-08-opening-material-pool-01": "3d42736fab2839a2a499385f8294d0b87fc34e10eec0666dd131b11f5fe62e78",
+        "n2-industrial-08-opening-conversion-denominator-01": "df1aadfc792c1d6a91407f3496b9dc6333a94f517ad583b3e723373f00cae93f",
+        "n2-industrial-08-weighted-average-integrated-01": "9d4a5775d4f89003aae74c963f3c61f6edbc3d7dd03d980c09e86f548fbab701",
+        "n2-industrial-08-worksheet-error-01": "8d2ed39d5dda02693e278964375251ef3fa20906339bc8b5016b1afbf617e789",
+        "n2-industrial-08-revised-ending-progress-01": "07d25e516bfbf8975591bba0b057a38eb014f2f11b01d6cb0c4f60c4492c8e36",
+        "n2-industrial-08-reverse-current-conversion-01": "51734c3373ee599539a45e7ae5b7d3375005288bd3f593465bb9fbfcdd2d62d8",
+        "n2-industrial-08-derived-completion-journal-01": "7eaba1eb03f6b53e095a0f30b74e17b746b2989d543473b21bb4a9f5c47d8d4e",
+        "n2-industrial-08-no-ending-wip-01": "f9520b9cc044871bad36420004f7881054a92010752c06bd432e06f24acb703d"
+      },
+      "lessonHashes": {
+        "n2-industrial-lesson-08": "cdc5019f4c39dc73efc112fc7e0604d449c4d59b5332a9c02bd2e52a68e70e39"
+      },
+      "evidence": "notes/editorial/industrial-process-average-review-20261102.md"
     }
   ]
 }
