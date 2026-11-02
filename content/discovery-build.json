@@ -1,6 +1,6 @@
 {
   "canonicalBase": "https://djnaoyaman.github.io/bookkeeping",
-  "htmlPages": 104,
+  "htmlPages": 105,
   "questionPages": 56,
   "pages": [
     "",
@@ -106,6 +106,7 @@
     "lessons/n2-industrial-lesson-07.html",
     "lessons/n2-industrial-lesson-08.html",
     "lessons/n2-industrial-lesson-09.html",
+    "lessons/n2-industrial-lesson-10.html",
     "mock.html"
   ]
 }

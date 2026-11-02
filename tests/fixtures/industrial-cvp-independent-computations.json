@@ -1,0 +1,204 @@
+{
+  "derivedAtUTC": "2026-11-02T11:05:28.438757+00:00",
+  "packetSHA256": "c776d20be706b22303932ea1a99e76e20af25d0849951dcfa78ad0d91c2698eb",
+  "method": "Parent derived using Fraction from stripped prompts, before opening author draft/keys/test code. Definitions already verified independently from primary OpenStax; no source sample copied.",
+  "questions": [
+    {
+      "id": "n2-industrial-10-assumption-boundary-01",
+      "answers": {
+        "fixedAt800": 240000,
+        "variableAt800": 480000,
+        "fixedPerUnit800": 300,
+        "beyondRange": "confirmRange"
+      },
+      "independentReason": "Fixed total remains240000 within0..2000; variable600Q.2500 outside range, no extrapolation guarantee."
+    },
+    {
+      "id": "n2-industrial-10-contribution-build-01",
+      "answers": {
+        "unitVariable": 1080,
+        "unitContribution": 720,
+        "contributionPercent": 40,
+        "sales": 1440000,
+        "totalContribution": 576000,
+        "profit": 144000
+      },
+      "independentReason": "Include variable selling80, avoid fixed-cost allocation into unit contribution."
+    },
+    {
+      "id": "n2-industrial-10-unit-breakeven-01",
+      "answers": {
+        "unitContribution": 640,
+        "breakEvenUnits": 600,
+        "breakEvenSales": 960000,
+        "profitAtBreakEven": 0
+      },
+      "independentReason": "Qb=F/(P-v); zero is an explicit numeric answer."
+    },
+    {
+      "id": "n2-industrial-10-sales-breakeven-01",
+      "answers": {
+        "variablePercent": 60,
+        "contributionPercent": 40,
+        "breakEvenSales": 1680000,
+        "profit": 288000
+      },
+      "independentReason": "Sales contribution ratio .4, not variable .6; profits from total contribution less fixed."
+    },
+    {
+      "id": "n2-industrial-10-target-profit-01",
+      "answers": {
+        "requiredContribution": 1250000,
+        "targetUnits": 1250,
+        "targetSales": 3125000,
+        "verifiedProfit": 350000
+      },
+      "independentReason": "Add target profit to fixed before dividing positive unit contribution."
+    },
+    {
+      "id": "n2-industrial-10-whole-unit-ceiling-01",
+      "answers": {
+        "minimumUnits": 429,
+        "profitAtMinimum": 15370,
+        "profitOneLess": 14840,
+        "salesAtMinimum": 600600
+      },
+      "independentReason": "Ceiling target units, not rounding; n429 gives15370,428gives14840."
+    },
+    {
+      "id": "n2-industrial-10-safety-margin-01",
+      "answers": {
+        "plannedSales": 2000000,
+        "breakEvenSales": 1500000,
+        "safetyAmount": 500000,
+        "safetyPercent": 25,
+        "profit": 200000
+      },
+      "independentReason": "Safety denominator is planned sales, not break-even sales; unchanged assumptions only."
+    },
+    {
+      "id": "n2-industrial-10-capacity-boundary-01",
+      "answers": {
+        "algebraicCandidate": 1100,
+        "maxProfit": 240000,
+        "profitShortfall": 80000,
+        "feasibility": "notReachable"
+      },
+      "independentReason": "Algebraic candidate1100 exceeds1000 capacity; maximum valid profit240000. Expansion conditions unknown."
+    },
+    {
+      "id": "n2-industrial-10-inverse-fixed-01",
+      "answers": {
+        "contribution": 1440000,
+        "fixed": 1080000,
+        "breakEvenSales": 2700000
+      },
+      "independentReason": "Profit=contribution-fixed, so fixed1080000; contribution ratio.4."
+    },
+    {
+      "id": "n2-industrial-10-inverse-price-01",
+      "answers": {
+        "unitContribution": 900,
+        "requiredPrice": 1800,
+        "contributionPercent": 50,
+        "sales": 1440000
+      },
+      "independentReason": "At stipulated demand800 solve price; no optimal-demand or market-price claim."
+    },
+    {
+      "id": "n2-industrial-10-worksheet-error-01",
+      "answers": {
+        "correctPercent": 40,
+        "correctBreakEvenSales": 900000,
+        "lossAtWrongSales": 120000,
+        "cause": "variableDenominator"
+      },
+      "independentReason": "Using .6 gives false break-even600000; .4 gives900000.600000 sales loses120000; positive loss amount required."
+    },
+    {
+      "id": "n2-industrial-10-two-budgets-01",
+      "answers": {
+        "beforeBreakEvenUnits": 600,
+        "afterBreakEvenUnits": 700,
+        "beforeProfit": 240000,
+        "afterProfit": 140000,
+        "profitDecrease": 100000
+      },
+      "independentReason": "Two separately fixed linear budgets; no inference of causal demand or optimality."
+    },
+    {
+      "id": "n2-industrial-10-insufficient-split-01",
+      "answers": {
+        "currentProfit": 300000,
+        "hypothesisASales": 1000000,
+        "hypothesisBSales": 750000,
+        "uniqueActual": "no"
+      },
+      "independentReason": "Both hypotheses yield totalcost1200000 at1000, but different BEP sales1000000vs750000; continuous theoretic amounts explicit."
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "n2-industrial-10-example-1",
+      "answers": {
+        "variable300": 360000,
+        "fixed300": 180000,
+        "profit300": 60000,
+        "variable600": 720000,
+        "fixed600": 180000,
+        "profit600": 300000
+      },
+      "independentReason": "Variable scales, fixedtotal unchanged, contribution less fixed at each Q."
+    },
+    {
+      "id": "n2-industrial-10-example-2",
+      "answers": {
+        "unitContribution": 960,
+        "contributionPercent": 40,
+        "breakEvenUnits": 800,
+        "breakEvenSales": 1920000,
+        "profit": 0
+      },
+      "independentReason": "Unit960;ratio40%;BEP800/1920000;profitzero."
+    },
+    {
+      "id": "n2-industrial-10-example-3",
+      "answers": {
+        "requiredContribution": 700000,
+        "targetUnits": 1000,
+        "targetSales": 2000000
+      },
+      "independentReason": "Requiredcontribution700000,1000units,2000000sales."
+    },
+    {
+      "id": "n2-industrial-10-example-4",
+      "answers": {
+        "breakEvenSales": 1440000,
+        "safetyAmount": 960000,
+        "safetyPercent": 40,
+        "profit": 384000
+      },
+      "independentReason": "BEP1440000,margin960000/40%,profit384000."
+    },
+    {
+      "id": "n2-industrial-10-example-5",
+      "answers": {
+        "contribution": 864000,
+        "unitContribution": 720,
+        "unitVariable": 1080
+      },
+      "independentReason": "Contribution=fixed+profit864000,unit720,variable1080."
+    },
+    {
+      "id": "n2-industrial-10-example-6",
+      "answers": {
+        "minimumUnits": 531,
+        "profitAtMinimum": 20150,
+        "profitOneLess": 19500
+      },
+      "independentReason": "Ceil530.769...to531 within600;20150vs19500."
+    }
+  ],
+  "questionFieldCount": 55,
+  "exampleFieldCount": 24
+}

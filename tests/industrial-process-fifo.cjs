@@ -136,7 +136,7 @@ const journalQ=content.questions.find(q=>q.type==='journal');for(const [label,n]
 check('example-results-all-safe-integers',()=>{for(const r of workedExampleResults)for(const n of Object.values(r))assert(Number.isSafeInteger(n));});
 const schema=validate(content,requirements,{target:'nissho:2'}),publication=validate(content,requirements,{target:'nissho:2',publish:true});
 check('schema-valid',()=>assert.equal(schema.valid,true));check('published-review-gate',()=>assert.equal(publication.valid,true,publication.errors.join('\n')));
-check('genuine-record-attached-by-independent-owner',()=>{assert.equal(all.authoringStatus,'reviewed');assert.equal(all.sourceVerificationPending,false);assert.equal(all.reviewRecords.length,9);});
+check('genuine-record-attached-by-independent-owner',()=>{assert.equal(all.authoringStatus,'reviewed');assert.equal(all.sourceVerificationPending,false);assert.equal(all.reviewRecords.length,10);});
 check('counts',()=>{assert.equal(content.lessons[0].sections.length,10);assert.equal(content.lessons[0].workedExamples.length,6);assert.equal(content.questions.length,13);assert.equal(components,61);});
 check('grade2-current-scope-only',()=>{for(const id of content.lessons[0].requirementIds){const r=requirements.find(r=>r.id===id);assert.equal(r.unit,2);assert.equal(r.source,'https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf');}assert(content.lessons[0].requirementIds.includes('nissho-65ea4a3dac67'));});
 const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
