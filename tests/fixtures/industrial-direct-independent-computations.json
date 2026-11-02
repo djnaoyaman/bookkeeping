@@ -1,0 +1,514 @@
+{
+  "reviewer": "Independent reviewer, separate from chapter author",
+  "derivedBeforeReadingAuthorKeys": true,
+  "packetSHA256": "1da8d8b20f51bfea5cc7264eaee2ee941e331131ee5052ad4ee8cef6cd41d47f",
+  "frozenAtUTC": "2026-11-02T11:36:59.744503+00:00",
+  "method": "Exact Fraction arithmetic; independent FIFO opening/current layers; absorption COGS = variable COGS + opening fixed + incurred fixed - ending fixed; reconcile against separate income statements.",
+  "questions": [
+    {
+      "id": "n2-industrial-11-cost-boundaries-01",
+      "expected": {
+        "variableFactory": "both",
+        "fixedFactory": "period",
+        "fixedSelling": "neither",
+        "traceableFixed": "fixed"
+      },
+      "derivation": {
+        "variableFactory": "both",
+        "fixedFactory": "period",
+        "fixedSelling": "neither",
+        "traceableFixed": "fixed"
+      }
+    },
+    {
+      "id": "n2-industrial-11-unit-inventory-01",
+      "expected": {
+        "variableUnit": 680,
+        "absorptionUnit": 920,
+        "variableInventory": 136000,
+        "absorptionInventory": 184000,
+        "variableSelling": 56000
+      },
+      "derivation": {
+        "variableUnit": 680,
+        "fixedUnit": 240,
+        "absorptionUnit": 920,
+        "endUnits": 200,
+        "variableInventory": 136000,
+        "absorptionInventory": 184000,
+        "endVariable": 136000,
+        "beginFixed": 0,
+        "endFixed": 48000,
+        "adjustment": 48000,
+        "variableCogs": 544000,
+        "absorptionCogs": 736000,
+        "periodFixed": 336000,
+        "variableSelling": 56000,
+        "sellingAdmin": 152000
+      }
+    },
+    {
+      "id": "n2-industrial-11-variable-statement-01",
+      "expected": {
+        "variableCogs": 792000,
+        "variableSelling": 72000,
+        "contribution": 720000,
+        "periodFixed": 360000,
+        "variableProfit": 360000
+      },
+      "derivation": {
+        "variableUnit": 1100,
+        "fixedUnit": 300,
+        "absorptionUnit": 1400,
+        "endUnits": 180,
+        "variableInventory": 198000,
+        "absorptionInventory": 252000,
+        "endVariable": 198000,
+        "beginFixed": 0,
+        "endFixed": 54000,
+        "adjustment": 54000,
+        "variableCogs": 792000,
+        "absorptionCogs": 1008000,
+        "periodFixed": 360000,
+        "variableSelling": 72000,
+        "sellingAdmin": 162000,
+        "sales": 1584000,
+        "contribution": 720000,
+        "variableProfit": 360000,
+        "grossProfit": 576000,
+        "absorptionProfit": 414000
+      }
+    },
+    {
+      "id": "n2-industrial-11-absorption-statement-01",
+      "expected": {
+        "fixedUnit": 200,
+        "absorptionCogs": 715000,
+        "grossProfit": 585000,
+        "sellingAdmin": 116000,
+        "absorptionProfit": 469000
+      },
+      "derivation": {
+        "variableUnit": 900,
+        "fixedUnit": 200,
+        "absorptionUnit": 1100,
+        "endUnits": 150,
+        "variableInventory": 135000,
+        "absorptionInventory": 165000,
+        "endVariable": 135000,
+        "beginFixed": 0,
+        "endFixed": 30000,
+        "adjustment": 30000,
+        "variableCogs": 585000,
+        "absorptionCogs": 715000,
+        "periodFixed": 224000,
+        "variableSelling": 52000,
+        "sellingAdmin": 116000,
+        "sales": 1300000,
+        "contribution": 663000,
+        "variableProfit": 439000,
+        "grossProfit": 585000,
+        "absorptionProfit": 469000
+      }
+    },
+    {
+      "id": "n2-industrial-11-increase-reconciliation-01",
+      "expected": {
+        "beginFixed": 0,
+        "endFixed": 75000,
+        "adjustment": 75000,
+        "absorptionProfit": 265000
+      },
+      "derivation": {
+        "variableUnit": 0,
+        "fixedUnit": 300,
+        "absorptionUnit": 300,
+        "endUnits": 250,
+        "variableInventory": 0,
+        "absorptionInventory": 75000,
+        "endVariable": 0,
+        "beginFixed": 0,
+        "endFixed": 75000,
+        "adjustment": 75000,
+        "variableCogs": 0,
+        "absorptionCogs": 285000,
+        "periodFixed": 360000,
+        "variableSelling": 0,
+        "sellingAdmin": 0,
+        "variableProfit": 190000,
+        "absorptionProfit": 265000
+      }
+    },
+    {
+      "id": "n2-industrial-11-decrease-fifo-01",
+      "expected": {
+        "beginFixed": 54000,
+        "endFixed": 20000,
+        "adjustment": -34000,
+        "absorptionProfit": 226000
+      },
+      "derivation": {
+        "variableUnit": 650,
+        "fixedUnit": 200,
+        "absorptionUnit": 850,
+        "endUnits": 100,
+        "variableInventory": 65000,
+        "absorptionInventory": 85000,
+        "endVariable": 65000,
+        "beginFixed": 54000,
+        "endFixed": 20000,
+        "adjustment": -34000,
+        "variableCogs": 570000,
+        "absorptionCogs": 744000,
+        "periodFixed": 140000,
+        "variableSelling": 0,
+        "sellingAdmin": 0,
+        "variableProfit": 260000,
+        "absorptionProfit": 226000
+      }
+    },
+    {
+      "id": "n2-industrial-11-equal-same-rate-01",
+      "expected": {
+        "endUnits": 120,
+        "adjustment": 0,
+        "absorptionProfit": 88000,
+        "reason": "fixedBalances"
+      },
+      "derivation": {
+        "variableUnit": 700,
+        "fixedUnit": 200,
+        "absorptionUnit": 900,
+        "endUnits": 120,
+        "variableInventory": 84000,
+        "absorptionInventory": 108000,
+        "endVariable": 84000,
+        "beginFixed": 24000,
+        "endFixed": 24000,
+        "adjustment": 0,
+        "variableCogs": 420000,
+        "absorptionCogs": 540000,
+        "periodFixed": 120000,
+        "variableSelling": 0,
+        "sellingAdmin": 0,
+        "variableProfit": 88000,
+        "absorptionProfit": 88000,
+        "reason": "fixedBalances"
+      }
+    },
+    {
+      "id": "n2-industrial-11-equal-changed-rate-01",
+      "expected": {
+        "beginFixed": 12000,
+        "endFixed": 18000,
+        "adjustment": 6000,
+        "absorptionProfit": 80000
+      },
+      "derivation": {
+        "variableUnit": 800,
+        "fixedUnit": 180,
+        "absorptionUnit": 980,
+        "endUnits": 100,
+        "variableInventory": 80000,
+        "absorptionInventory": 98000,
+        "endVariable": 80000,
+        "beginFixed": 12000,
+        "endFixed": 18000,
+        "adjustment": 6000,
+        "variableCogs": 400000,
+        "absorptionCogs": 484000,
+        "periodFixed": 90000,
+        "variableSelling": 0,
+        "sellingAdmin": 0,
+        "variableProfit": 74000,
+        "absorptionProfit": 80000
+      }
+    },
+    {
+      "id": "n2-industrial-11-reverse-profit-01",
+      "expected": {
+        "beginFixed": 12000,
+        "endFixed": 24000,
+        "variableProfit": 135000
+      },
+      "derivation": {
+        "variableUnit": 700,
+        "fixedUnit": 200,
+        "absorptionUnit": 900,
+        "endUnits": 120,
+        "variableInventory": 84000,
+        "absorptionInventory": 108000,
+        "endVariable": 84000,
+        "beginFixed": 12000,
+        "endFixed": 24000,
+        "adjustment": 12000,
+        "variableCogs": 252000,
+        "absorptionCogs": 320000,
+        "periodFixed": 80000,
+        "variableSelling": 0,
+        "sellingAdmin": 0,
+        "variableProfit": 135000
+      }
+    },
+    {
+      "id": "n2-industrial-11-reverse-ending-01",
+      "expected": {
+        "endFixed": 45000,
+        "endUnits": 180,
+        "soldUnits": 520
+      },
+      "derivation": {
+        "endFixed": 45000,
+        "endUnits": 180,
+        "soldUnits": 520
+      }
+    },
+    {
+      "id": "n2-industrial-11-selling-capitalization-error-01",
+      "expected": {
+        "correctUnit": 900,
+        "correctInventory": 180000,
+        "inventoryOverstatement": 20000,
+        "correctProfit": 420000
+      },
+      "derivation": {
+        "correctUnit": 900,
+        "correctInventory": 180000,
+        "inventoryOverstatement": 20000,
+        "correctProfit": 420000
+      }
+    },
+    {
+      "id": "n2-industrial-11-two-period-bridge-01",
+      "expected": {
+        "period1Variable": 235000,
+        "period1Absorption": 265000,
+        "period2Variable": 325000,
+        "period2Absorption": 295000,
+        "totalVariable": 560000,
+        "totalAbsorption": 560000
+      },
+      "derivation": {
+        "period1Variable": 235000,
+        "period1Absorption": 265000,
+        "period2Variable": 325000,
+        "period2Absorption": 295000,
+        "totalVariable": 560000,
+        "totalAbsorption": 560000
+      }
+    },
+    {
+      "id": "n2-industrial-11-missing-opening-rate-01",
+      "expected": {
+        "endFixed": 20000,
+        "uniqueProfit": "no",
+        "needed": "beginFixed"
+      },
+      "derivation": {
+        "endFixed": 20000,
+        "uniqueProfit": "no",
+        "needed": "beginFixed"
+      }
+    },
+    {
+      "id": "n2-industrial-11-fifo-opening-remains-01",
+      "expected": {
+        "endVariable": 380000,
+        "endFixed": 130000,
+        "variableProfit": -55000,
+        "absorptionProfit": 55000,
+        "interpretation": "timing"
+      },
+      "derivation": {
+        "variableUnit": 550,
+        "fixedUnit": 200,
+        "absorptionUnit": 750,
+        "endUnits": 700,
+        "variableInventory": 380000,
+        "absorptionInventory": 510000,
+        "endVariable": 380000,
+        "beginFixed": 20000,
+        "endFixed": 130000,
+        "adjustment": 110000,
+        "variableCogs": 50000,
+        "absorptionCogs": 60000,
+        "periodFixed": 150000,
+        "variableSelling": 5000,
+        "sellingAdmin": 35000,
+        "sales": 150000,
+        "contribution": 95000,
+        "variableProfit": -55000,
+        "grossProfit": 90000,
+        "absorptionProfit": 55000,
+        "interpretation": "timing"
+      }
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "n2-industrial-11-example-1",
+      "expected": {
+        "variableUnit": 700,
+        "absorptionUnit": 900,
+        "variableInventory": 140000,
+        "absorptionInventory": 180000
+      },
+      "derivation": {
+        "variableUnit": 700,
+        "fixedUnit": 200,
+        "absorptionUnit": 900,
+        "endUnits": 200,
+        "variableInventory": 140000,
+        "absorptionInventory": 180000,
+        "endVariable": 140000,
+        "beginFixed": 0,
+        "endFixed": 40000,
+        "adjustment": 40000,
+        "variableCogs": 490000,
+        "absorptionCogs": 630000,
+        "periodFixed": 270000,
+        "variableSelling": 28000,
+        "sellingAdmin": 118000
+      }
+    },
+    {
+      "id": "n2-industrial-11-example-2",
+      "expected": {
+        "sales": 1235000,
+        "variableCogs": 585000,
+        "variableSelling": 52000,
+        "contribution": 598000,
+        "variableProfit": 373000
+      },
+      "derivation": {
+        "variableUnit": 900,
+        "fixedUnit": 200,
+        "absorptionUnit": 1100,
+        "endUnits": 150,
+        "variableInventory": 135000,
+        "absorptionInventory": 165000,
+        "endVariable": 135000,
+        "beginFixed": 0,
+        "endFixed": 30000,
+        "adjustment": 30000,
+        "variableCogs": 585000,
+        "absorptionCogs": 715000,
+        "periodFixed": 225000,
+        "variableSelling": 52000,
+        "sellingAdmin": 117000,
+        "sales": 1235000,
+        "contribution": 598000,
+        "variableProfit": 373000,
+        "grossProfit": 520000,
+        "absorptionProfit": 403000
+      }
+    },
+    {
+      "id": "n2-industrial-11-example-3",
+      "expected": {
+        "absorptionCogs": 765000,
+        "absorptionProfit": 389000,
+        "variableProfit": 344000,
+        "endFixed": 45000
+      },
+      "derivation": {
+        "variableUnit": 600,
+        "fixedUnit": 300,
+        "absorptionUnit": 900,
+        "endUnits": 150,
+        "variableInventory": 90000,
+        "absorptionInventory": 135000,
+        "endVariable": 90000,
+        "beginFixed": 0,
+        "endFixed": 45000,
+        "adjustment": 45000,
+        "variableCogs": 510000,
+        "absorptionCogs": 765000,
+        "periodFixed": 370000,
+        "variableSelling": 51000,
+        "sellingAdmin": 121000,
+        "sales": 1275000,
+        "contribution": 714000,
+        "variableProfit": 344000,
+        "grossProfit": 510000,
+        "absorptionProfit": 389000
+      }
+    },
+    {
+      "id": "n2-industrial-11-example-4",
+      "expected": {
+        "variableCogs": 264000,
+        "beginFixed": 18000,
+        "endFixed": 16000,
+        "adjustment": -2000,
+        "absorptionProfit": 128000
+      },
+      "derivation": {
+        "variableUnit": 540,
+        "fixedUnit": 160,
+        "absorptionUnit": 700,
+        "endUnits": 100,
+        "variableInventory": 54000,
+        "absorptionInventory": 70000,
+        "endVariable": 54000,
+        "beginFixed": 18000,
+        "endFixed": 16000,
+        "adjustment": -2000,
+        "variableCogs": 264000,
+        "absorptionCogs": 338000,
+        "periodFixed": 72000,
+        "variableSelling": 0,
+        "sellingAdmin": 0,
+        "variableProfit": 130000,
+        "absorptionProfit": 128000
+      }
+    },
+    {
+      "id": "n2-industrial-11-example-5",
+      "expected": {
+        "beginFixed": 12000,
+        "endFixed": 18000,
+        "adjustment": 6000,
+        "absorptionProfit": 98000
+      },
+      "derivation": {
+        "variableUnit": 600,
+        "fixedUnit": 225,
+        "absorptionUnit": 825,
+        "endUnits": 80,
+        "variableInventory": 48000,
+        "absorptionInventory": 66000,
+        "endVariable": 48000,
+        "beginFixed": 12000,
+        "endFixed": 18000,
+        "adjustment": 6000,
+        "variableCogs": 240000,
+        "absorptionCogs": 324000,
+        "periodFixed": 90000,
+        "variableSelling": 0,
+        "sellingAdmin": 0,
+        "variableProfit": 92000,
+        "absorptionProfit": 98000
+      }
+    },
+    {
+      "id": "n2-industrial-11-example-6",
+      "expected": {
+        "period1Variable": 220000,
+        "period1Absorption": 240000,
+        "period2Variable": 310000,
+        "period2Absorption": 290000,
+        "totalVariable": 530000,
+        "totalAbsorption": 530000
+      },
+      "derivation": {
+        "period1Variable": 220000,
+        "period1Absorption": 240000,
+        "period2Variable": 310000,
+        "period2Absorption": 290000,
+        "totalVariable": 530000,
+        "totalAbsorption": 530000
+      }
+    }
+  ]
+}

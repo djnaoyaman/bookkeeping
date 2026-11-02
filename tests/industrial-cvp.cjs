@@ -124,7 +124,7 @@ for(let i=0;i<6;i++)check('example-'+(i+1)+'/derived-result-in-answer',()=>{
 const schema=validate(content,requirements,{target:'nissho:2'}),publication=validate(content,requirements,{target:'nissho:2',publish:true});
 check('schema-valid',()=>assert.equal(schema.valid,true));
 check('publication-reviewed',()=>assert.equal(publication.valid,true,publication.errors.join('\n')));
-check('review-attached-by-independent-parent',()=>{assert.equal(all.authoringStatus,'reviewed');assert.equal(all.sourceVerificationPending,false);assert.equal(all.reviewRecords.length,10);});
+check('review-attached-by-independent-parent',()=>{assert.equal(all.authoringStatus,'reviewed');assert.equal(all.sourceVerificationPending,false);assert.equal(all.reviewRecords.length,11);});
 check('counts',()=>{assert.equal(content.lessons[0].sections.length,10);assert.equal(content.lessons[0].workedExamples.length,6);assert.equal(content.questions.length,13);assert.equal(components,55);assert.equal(new Set(content.questions.map(q=>q.familyId)).size,13);});
 check('single-grade2-calculation-row-only',()=>{assert.deepEqual(content.lessons[0].requirementIds,['nissho-c9eaf983a9d4']);for(const q of content.questions)assert.deepEqual(q.requirementIds,['nissho-c9eaf983a9d4']);const r=requirements.find(r=>r.id==='nissho-c9eaf983a9d4');assert.equal(r.unit,2);assert.equal(r.page,2);assert.equal(r.title,'損益分岐分析の計算方法');});
 const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
