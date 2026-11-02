@@ -1,0 +1,234 @@
+{
+  "reviewer": "/root/advance_remaining_site_backlogs/job_order_independent_review",
+  "method": "Derived solely from key-stripped reviewer-prompt-packet.json before reading full draft/author tests.",
+  "packetSha256": "84e54f325c8002baba8351cb510cfaaf4646d9b236bfe00248922aa404447795",
+  "questions": [
+    {
+      "id": "n2-industrial-07-purpose-01",
+      "solution": {
+        "unit": "job",
+        "trace": "record",
+        "cost": "separate"
+      },
+      "derivation": "Different specifications are accumulated by manufacturing order; issue records identify the direct material destination; price or equal quantity is not a cost measure."
+    },
+    {
+      "id": "n2-industrial-07-documents-01",
+      "solution": {
+        "instruction": "order",
+        "accumulation": "sheet",
+        "hours": "time"
+      },
+      "derivation": "Under the stated document system, the order instructs, the sheet accumulates cost, and time records establish actual hours."
+    },
+    {
+      "id": "n2-industrial-07-cost-sheet-01",
+      "solution": {
+        "overhead": 18000,
+        "manufacturingCost": 120000,
+        "costPerUnit": 1200
+      },
+      "derivation": "300×60=18,000; 54,000+42,000+6,000+18,000=120,000; 120,000÷100=1,200."
+    },
+    {
+      "id": "n2-industrial-07-two-jobs-01",
+      "solution": {
+        "overheadA": 24000,
+        "overheadB": 36000,
+        "costA": 80000,
+        "costB": 120000,
+        "total": 200000
+      },
+      "derivation": "A OH24,000 + direct56,000 =80,000; B OH36,000 + direct84,000=120,000; total200,000. Combined hours200×300=60,000."
+    },
+    {
+      "id": "n2-industrial-07-job-status-01",
+      "solution": {
+        "costA": 72000,
+        "costB": 56000,
+        "costC": 44000,
+        "completed": 116000,
+        "endingWIP": 56000,
+        "endingFG": 72000,
+        "COGS": 44000
+      },
+      "derivation": "A72,000 and C44,000 completed:116,000. B56,000 remains WIP. A is unsold FG72,000; C is COGS44,000. Beginning50,000+current122,000=172,000=116,000+56,000."
+    },
+    {
+      "id": "n2-industrial-07-missing-current-01",
+      "solution": {
+        "currentCost": 144000,
+        "available": 190000,
+        "check": 0
+      },
+      "derivation": "46,000+X=132,000+58,000, so X144,000. Total available190,000; reconciliation0."
+    },
+    {
+      "id": "n2-industrial-07-completion-journal-01",
+      "solution": {
+        "debit": {
+          "account": "製品",
+          "amount": 126000
+        },
+        "credit": {
+          "account": "仕掛品",
+          "amount": 126000
+        }
+      },
+      "derivation": "Completion removes accumulated WIP and recognizes finished goods. Unsold means no COGS."
+    },
+    {
+      "id": "n2-industrial-07-sale-cost-journal-01",
+      "solution": {
+        "debit": {
+          "account": "売上原価",
+          "amount": 84000
+        },
+        "credit": {
+          "account": "製品",
+          "amount": 84000
+        }
+      },
+      "derivation": "Sale removes finished goods cost and recognizes COGS; revenue already recorded."
+    },
+    {
+      "id": "n2-industrial-07-unsold-completed-01",
+      "solution": {
+        "availableFG": 132000,
+        "COGS": 108000,
+        "grossProfit": 72000
+      },
+      "derivation": "FG132,000 available less unsold24,000 gives108,000 COGS; sales180,000 less COGS108,000 gives72,000 gross profit."
+    },
+    {
+      "id": "n2-industrial-07-repair-specific-job-01",
+      "solution": {
+        "repairOH": 2400,
+        "repairCost": 8400,
+        "finalJobCost": 104400,
+        "unitCost": 1740
+      },
+      "derivation": "Repair OH2,400; total8,400. Charge once to original96,000 gives104,400; unchanged good output60 yields1,740 each."
+    },
+    {
+      "id": "n2-industrial-07-repair-not-double-01",
+      "solution": {
+        "completedCost": 95000,
+        "duplicateExcess": 7000,
+        "repairRemaining": 0
+      },
+      "derivation": "Original88,000 plus transferred7,000 already equals95,000. Adding repair again would be102,000 (overstated7,000). Repair balance after full transfer0."
+    },
+    {
+      "id": "n2-industrial-07-multi-month-order-01",
+      "solution": {
+        "beginningWIP": 60000,
+        "currentAddition": 48000,
+        "completedCost": 108000,
+        "endingWIP": 0
+      },
+      "derivation": "Beginning60,000 + current48,000 = cumulative108,000. All completed, so no ending WIP; the opening cost cannot be dropped."
+    },
+    {
+      "id": "n2-industrial-07-manufacturing-flow-01",
+      "solution": {
+        "currentManufacturing": 126000,
+        "availableWIP": 160000,
+        "completed": 114000,
+        "COGS": 108000,
+        "grossProfit": 72000,
+        "WIPcheck": 0
+      },
+      "derivation": "Current126,000; WIP available160,000; less ending46,000 gives completed114,000. FG18,000+114,000−24,000=COGS108,000; profit72,000; WIP balance0."
+    },
+    {
+      "id": "n2-industrial-07-completion-vs-sale-choice-01",
+      "solution": {
+        "unfinished": "仕掛品",
+        "completedUnsold": "製品",
+        "sold": "売上原価"
+      },
+      "derivation": "Unfinished remains WIP; completed but unsold remains finished goods; sold cost becomes COGS."
+    }
+  ],
+  "workedExamples": [
+    {
+      "title": "注文別の原価計算表を完成させる",
+      "result": {
+        "overhead": 16000,
+        "total": 100000,
+        "unit": 1250
+      },
+      "derivation": "OH16,000; total100,000; unit1,250."
+    },
+    {
+      "title": "指図書の完成状態で仕掛品を分ける",
+      "result": {
+        "D": 60000,
+        "E": 50000,
+        "F": 40000,
+        "completed": 100000,
+        "endingWIP": 50000,
+        "available": 150000
+      },
+      "derivation": "D60,000; E50,000; F40,000. Completed D+F100,000; ending WIP E50,000; beginning30,000+current120,000=150,000."
+    },
+    {
+      "title": "完成しても売れていない原価を残す",
+      "result": {
+        "available": 125000,
+        "COGS": 90000,
+        "grossProfit": 60000
+      },
+      "derivation": "Available125,000 less ending35,000=COGS90,000; gross profit60,000."
+    },
+    {
+      "title": "完成振替と売上原価振替を別に記録する",
+      "result": {
+        "completion": {
+          "debit": {
+            "account": "製品",
+            "amount": 75000
+          },
+          "credit": {
+            "account": "仕掛品",
+            "amount": 75000
+          }
+        },
+        "sale": {
+          "debit": {
+            "account": "売上原価",
+            "amount": 75000
+          },
+          "credit": {
+            "account": "製品",
+            "amount": 75000
+          }
+        }
+      },
+      "derivation": "Two distinct events: WIP → FG on completion; FG → COGS on sale, each75,000."
+    },
+    {
+      "title": "正常な補修費を特定指図書へ賦課する",
+      "result": {
+        "repairOH": 5000,
+        "repairTotal": 12000,
+        "originalAfterRepair": 94000,
+        "unit": 1880,
+        "repairBalance": 0
+      },
+      "derivation": "OH5,000; repair12,000; original after one charge94,000; 50 good units yields1,880; repair balance0."
+    },
+    {
+      "title": "二段階の残高をつなぐ",
+      "result": {
+        "current": 104000,
+        "availableWIP": 130000,
+        "completed": 100000,
+        "COGS": 94000,
+        "grossProfit": 66000
+      },
+      "derivation": "Current104,000; WIP available130,000; completed100,000; FG available120,000−ending26,000=COGS94,000; profit66,000."
+    }
+  ]
+}
