@@ -42,6 +42,8 @@ jobs:
           node tests/industrial-departments-independent.cjs
           node tests/industrial-job-order.cjs
           node tests/industrial-job-order-independent.cjs
+          node tests/industrial-process-average.cjs
+          node tests/industrial-process-average-independent.cjs
           node tests/check.cjs
           node tests/discovery-client.cjs
   deploy:

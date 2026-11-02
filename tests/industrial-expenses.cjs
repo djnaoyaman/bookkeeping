@@ -4,7 +4,7 @@ const A=require('node:assert/strict'),fs=require('node:fs'),{gradeFields,gradeJo
 const {validate}=require('../scripts/validate-learning-content.cjs');
 const c=JSON.parse(fs.readFileSync('content/industrial-course.json')),requirements=JSON.parse(fs.readFileSync('content/curriculum.json'));
 const q=c.questions.filter(q=>q.lessonId==='n2-industrial-lesson-04'),l=c.lessons.find(l=>l.id==='n2-industrial-lesson-04');
-A.equal(c.lessons.length,7);A.equal(c.questions.length,84);A.equal(q.length,10);A.equal(l.sections.length,8);A.equal(l.workedExamples.length,4);
+A.equal(c.lessons.length,8);A.equal(c.questions.length,96);A.equal(q.length,10);A.equal(l.sections.length,8);A.equal(l.workedExamples.length,4);
 A.equal(validate(c,requirements,{target:'nissho:2',publish:false}).valid,true);
 const fieldAnswers={
  'separate-elements-01':{wood:'materials',wages:'labor',insurance:'expenses',sales:'outside'},
@@ -46,7 +46,7 @@ for(const item of q){
   reject([...structuredClone(a),line('debit','現金',1),line('credit','未払金',1)]);
  }
 }
-A.equal(positive,10);A.equal(components,33);A.equal(c.questions.reduce((sum,q)=>sum+(q.fields||q.lines).length,0),306);
+A.equal(positive,10);A.equal(components,33);A.equal(c.questions.reduce((sum,q)=>sum+(q.fields||q.lines).length,0),361);
 // Signed difference and a true zero are not interchangeable with blanks or missing fields.
 const signed=q.find(q=>q.id.endsWith('adjust-unpaid-prepaid-01')),signedAnswers=fieldAnswers['adjust-unpaid-prepaid-01'];
 A.equal(signedAnswers.difference,-9000);A.equal(gradeFields(signed,{...signedAnswers,difference:'-9,000'}).correct,true);A.equal(gradeFields(signed,{...signedAnswers,difference:'9000'}).correct,false);
