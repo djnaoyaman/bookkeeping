@@ -5,7 +5,7 @@ const {gradeFields,gradeJournal}=require('../dist/assessment-engine.js');
 const {validate}=require('../scripts/validate-learning-content.cjs');
 const c=JSON.parse(fs.readFileSync('content/industrial-course.json')),requirements=JSON.parse(fs.readFileSync('content/curriculum.json'));
 const q=c.questions.filter(x=>x.lessonId==='n2-industrial-lesson-05'),l=c.lessons.find(x=>x.id==='n2-industrial-lesson-05');
-A.equal(c.lessons.length,8);A.equal(c.questions.length,96);A.equal(q.length,14);A.equal(l.sections.length,10);A.equal(l.workedExamples.length,6);A.equal(l.objectives.length,8);
+A.equal(c.lessons.length,9);A.equal(c.questions.length,109);A.equal(q.length,14);A.equal(l.sections.length,10);A.equal(l.workedExamples.length,6);A.equal(l.objectives.length,8);
 A.equal(validate(c,requirements,{target:'nissho:2',publish:false}).valid,true);
 const fields={
  'classify-overhead-01':{oil:'im',maintenance:'il',rent:'ie',outsourcing:'direct'},
@@ -49,7 +49,7 @@ for(const item of q){
   reject([...structuredClone(answer),line('debit','普通預金',1),line('credit','売上原価',1)]);
  }
 }
-A.equal(positive,14);A.equal(components,45);A.equal(c.questions.reduce((s,x)=>s+(x.fields||x.lines).length,0),361);
+A.equal(positive,14);A.equal(components,45);A.equal(c.questions.reduce((s,x)=>s+(x.fields||x.lines).length,0),422);
 // Six original worked examples, including both signs and both closing directions.
 const actual=15000+25000+20000,actualRate=actual/(100+200);A.equal(actualRate,200);A.equal(actualRate*100,20000);A.equal(actualRate*200,40000);A.equal(actualRate*300,actual);
 const plannedRate=1440000/4800,applied=plannedRate*360;A.equal(plannedRate,300);A.equal(applied,108000);A.equal(115000-applied,7000);
