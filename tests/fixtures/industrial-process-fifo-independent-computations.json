@@ -1,0 +1,459 @@
+{
+  "derivedAtUTC": "2026-11-02T10:36:02.215924+00:00",
+  "packetSha256": "c84e460275179acd4695a1275b246535698a488e93e160415821aeb7d797dcde",
+  "independence": "Parent derived from frozen stripped prompts only before reading author keys, code, or tests; manual input transcriptions + rational arithmetic and conservation. Not copied from author code.",
+  "questions": {
+    "n2-industrial-09-period-boundary-01": {
+      "answers": {
+        "openingCost": "completed",
+        "currentRate": "current",
+        "finishedUnit": "aggregate"
+      },
+      "independentWork": "Opening WIP assumed all completed, current unit costs exclude earlier costs, modified FIFO pools all completed-output cost for finished unit cost; no separate cohort units asked."
+    },
+    "n2-industrial-09-current-work-01": {
+      "answers": {
+        "openingRemaining": 180,
+        "startedCompleted": 760,
+        "currentConversionEU": 1060,
+        "currentMaterialEU": 960,
+        "endingConversion": 120
+      },
+      "independentWork": {
+        "currentMaterialEU": 960,
+        "currentConversionEU": 1060,
+        "priorConversionEU": 60,
+        "openingRemaining": 180,
+        "startedCompleted": 760,
+        "endingConversionEU": 120,
+        "materialRate": 0,
+        "conversionRate": 0,
+        "endingMaterial": 0,
+        "endingConversion": 0,
+        "endingCost": 0,
+        "completedMaterial": 0,
+        "completedConversion": 0,
+        "completedCost": 0,
+        "completedUnitCost": 0,
+        "costCheck": 0
+      }
+    },
+    "n2-industrial-09-start-material-01": {
+      "answers": {
+        "openingAdditionalMaterial": 0,
+        "currentMaterialEU": 720,
+        "materialRate": 90,
+        "endingMaterial": 10800,
+        "completedMaterial": 66600
+      },
+      "independentWork": {
+        "currentMaterialEU": 720,
+        "currentConversionEU": 768,
+        "priorConversionEU": 72,
+        "openingRemaining": 108,
+        "startedCompleted": 600,
+        "endingConversionEU": 60,
+        "materialRate": 90,
+        "conversionRate": 0,
+        "endingMaterial": 10800,
+        "endingConversion": 0,
+        "endingCost": 10800,
+        "completedMaterial": 66600,
+        "completedConversion": 0,
+        "completedCost": 66600,
+        "completedUnitCost": "1110/13",
+        "costCheck": 0
+      }
+    },
+    "n2-industrial-09-conversion-denominator-01": {
+      "answers": {
+        "priorConversionEU": 40,
+        "currentConversionEU": 700,
+        "conversionRate": 70,
+        "endingConversion": 6300,
+        "completedConversion": 47500
+      },
+      "independentWork": {
+        "currentMaterialEU": 640,
+        "currentConversionEU": 700,
+        "priorConversionEU": 40,
+        "openingRemaining": 120,
+        "startedCompleted": 490,
+        "endingConversionEU": 90,
+        "materialRate": 0,
+        "conversionRate": 70,
+        "endingMaterial": 0,
+        "endingConversion": 6300,
+        "endingCost": 6300,
+        "completedMaterial": 0,
+        "completedConversion": 47500,
+        "completedCost": 47500,
+        "completedUnitCost": "950/13",
+        "costCheck": 0
+      }
+    },
+    "n2-industrial-09-integrated-allocation-01": {
+      "answers": {
+        "materialRate": 60,
+        "conversionRate": 80,
+        "endingMaterial": 12000,
+        "endingConversion": 8000,
+        "completedCost": 140000,
+        "completedUnitCost": 140,
+        "costCheck": 0
+      },
+      "independentWork": {
+        "currentMaterialEU": 1000,
+        "currentConversionEU": 1020,
+        "priorConversionEU": 80,
+        "openingRemaining": 120,
+        "startedCompleted": 800,
+        "endingConversionEU": 100,
+        "materialRate": 60,
+        "conversionRate": 80,
+        "endingMaterial": 12000,
+        "endingConversion": 8000,
+        "endingCost": 20000,
+        "completedMaterial": 58400,
+        "completedConversion": 81600,
+        "completedCost": 140000,
+        "completedUnitCost": 140,
+        "costCheck": 0
+      }
+    },
+    "n2-industrial-09-method-comparison-01": {
+      "answers": {
+        "fifoEndingMaterial": 18000,
+        "averageEndingMaterial": 16000,
+        "endingDifference": 2000,
+        "fifoCompletedMaterial": 78000,
+        "effect": "fifoLower"
+      },
+      "independentWork": {
+        "currentMaterialEU": 900,
+        "currentConversionEU": 980,
+        "priorConversionEU": 120,
+        "openingRemaining": 180,
+        "startedCompleted": 700,
+        "endingConversionEU": 100,
+        "materialRate": 90,
+        "conversionRate": 0,
+        "endingMaterial": 18000,
+        "endingConversion": 0,
+        "endingCost": 18000,
+        "completedMaterial": 78000,
+        "completedConversion": 0,
+        "completedCost": 78000,
+        "completedUnitCost": 78,
+        "costCheck": 0,
+        "averageEndingMaterial": 16000,
+        "averageCompletedMaterial": 80000
+      }
+    },
+    "n2-industrial-09-worksheet-diagnosis-01": {
+      "answers": {
+        "correctConversionEU": 600,
+        "correctConversionRate": 110,
+        "correctEndingCost": 17500,
+        "correctCompletedCost": 103500,
+        "endingOverstatement": 500
+      },
+      "independentWork": {
+        "currentMaterialEU": 700,
+        "currentConversionEU": 600,
+        "priorConversionEU": 50,
+        "openingRemaining": 50,
+        "startedCompleted": 500,
+        "endingConversionEU": 50,
+        "materialRate": 60,
+        "conversionRate": 110,
+        "endingMaterial": 12000,
+        "endingConversion": 5500,
+        "endingCost": 17500,
+        "completedMaterial": 37000,
+        "completedConversion": 66500,
+        "completedCost": 103500,
+        "completedUnitCost": "345/2",
+        "costCheck": 0
+      }
+    },
+    "n2-industrial-09-opening-cost-correction-01": {
+      "answers": {
+        "conversionRate": 70,
+        "endingCost": 8800,
+        "completedCost": 66000,
+        "completedIncrease": 2400
+      },
+      "independentWork": {
+        "currentMaterialEU": 480,
+        "currentConversionEU": 480,
+        "priorConversionEU": 60,
+        "openingRemaining": 60,
+        "startedCompleted": 380,
+        "endingConversionEU": 40,
+        "materialRate": 60,
+        "conversionRate": 70,
+        "endingMaterial": 6000,
+        "endingConversion": 2800,
+        "endingCost": 8800,
+        "completedMaterial": 22800,
+        "completedConversion": 30800,
+        "completedCost": 66000,
+        "completedUnitCost": 132,
+        "costCheck": 0
+      }
+    },
+    "n2-industrial-09-opening-progress-correction-01": {
+      "answers": {
+        "priorConversionEU": 100,
+        "currentConversionEU": 800,
+        "conversionRate": 85,
+        "endingCost": 20500,
+        "endingIncrease": 500
+      },
+      "independentWork": {
+        "currentMaterialEU": 800,
+        "currentConversionEU": 800,
+        "priorConversionEU": 100,
+        "openingRemaining": 100,
+        "startedCompleted": 600,
+        "endingConversionEU": 100,
+        "materialRate": 60,
+        "conversionRate": 85,
+        "endingMaterial": 12000,
+        "endingConversion": 8500,
+        "endingCost": 20500,
+        "completedMaterial": 48000,
+        "completedConversion": 63500,
+        "completedCost": 111500,
+        "completedUnitCost": "1115/8",
+        "costCheck": 0
+      }
+    },
+    "n2-industrial-09-reverse-current-cost-01": {
+      "answers": {
+        "currentConversionEU": 850,
+        "endingCost": 9000,
+        "completedCost": 120150,
+        "costCheck": 0,
+        "currentConversionCost": 63750
+      },
+      "independentWork": {
+        "currentMaterialEU": 820,
+        "currentConversionEU": 850,
+        "priorConversionEU": 90,
+        "openingRemaining": 90,
+        "startedCompleted": 720,
+        "endingConversionEU": 40,
+        "materialRate": 60,
+        "conversionRate": 75,
+        "endingMaterial": 6000,
+        "endingConversion": 3000,
+        "endingCost": 9000,
+        "completedMaterial": 52200,
+        "completedConversion": 67950,
+        "completedCost": 120150,
+        "completedUnitCost": "267/2",
+        "costCheck": 0
+      }
+    },
+    "n2-industrial-09-completion-journal-01": {
+      "answers": [
+        {
+          "side": "debit",
+          "account": "製品",
+          "amount": 97700
+        },
+        {
+          "side": "credit",
+          "account": "仕掛品",
+          "amount": 97700
+        }
+      ],
+      "independentWork": {
+        "currentMaterialEU": 650,
+        "currentConversionEU": 690,
+        "priorConversionEU": 60,
+        "openingRemaining": 90,
+        "startedCompleted": 550,
+        "endingConversionEU": 50,
+        "materialRate": 60,
+        "conversionRate": 80,
+        "endingMaterial": 6000,
+        "endingConversion": 4000,
+        "endingCost": 10000,
+        "completedMaterial": 40500,
+        "completedConversion": 57200,
+        "completedCost": 97700,
+        "completedUnitCost": "977/7",
+        "costCheck": 0
+      }
+    },
+    "n2-industrial-09-no-ending-01": {
+      "answers": {
+        "currentMaterialEU": 520,
+        "currentConversionEU": 580,
+        "completedCost": 78600,
+        "endingCost": 0,
+        "completedUnitCost": 131,
+        "costCheck": 0
+      },
+      "independentWork": {
+        "currentMaterialEU": 520,
+        "currentConversionEU": 580,
+        "priorConversionEU": 20,
+        "openingRemaining": 60,
+        "startedCompleted": 520,
+        "endingConversionEU": 0,
+        "materialRate": 60,
+        "conversionRate": 70,
+        "endingMaterial": 0,
+        "endingConversion": 0,
+        "endingCost": 0,
+        "completedMaterial": 36000,
+        "completedConversion": 42600,
+        "completedCost": 78600,
+        "completedUnitCost": 131,
+        "costCheck": 0
+      }
+    },
+    "n2-industrial-09-aggregate-opening-data-01": {
+      "answers": {
+        "endingCost": 13800,
+        "completedCost": 91700,
+        "aggregatePossible": "yes",
+        "completedMaterialPossible": "insufficient"
+      },
+      "independentWork": {
+        "currentMaterialEU": 600,
+        "currentConversionEU": 650,
+        "priorConversionEU": 60,
+        "openingRemaining": 140,
+        "startedCompleted": 450,
+        "endingConversionEU": 60,
+        "materialRate": 60,
+        "conversionRate": 80,
+        "endingMaterial": 9000,
+        "endingConversion": 4800,
+        "endingCost": 13800,
+        "completedMaterial": 27000,
+        "completedConversion": 47200,
+        "completedCost": 91700,
+        "completedUnitCost": "1834/13",
+        "costCheck": 0,
+        "individualCompletedMaterials": "not determined: opening breakdown absent"
+      }
+    }
+  },
+  "examples": {
+    "1": {
+      "currentMaterialEU": 680,
+      "currentConversionEU": 710,
+      "priorConversionEU": 30,
+      "openingRemaining": 90,
+      "startedCompleted": 580,
+      "endingConversionEU": 40,
+      "materialRate": 0,
+      "conversionRate": 0,
+      "endingMaterial": 0,
+      "endingConversion": 0,
+      "endingCost": 0,
+      "completedMaterial": 0,
+      "completedConversion": 0,
+      "completedCost": 0,
+      "completedUnitCost": 0,
+      "costCheck": 0
+    },
+    "2": {
+      "currentMaterialEU": 500,
+      "currentConversionEU": 430,
+      "priorConversionEU": 50,
+      "openingRemaining": 50,
+      "startedCompleted": 350,
+      "endingConversionEU": 30,
+      "materialRate": 70,
+      "conversionRate": 0,
+      "endingMaterial": 10500,
+      "endingConversion": 0,
+      "endingCost": 10500,
+      "completedMaterial": 28500,
+      "completedConversion": 0,
+      "completedCost": 28500,
+      "completedUnitCost": "190/3",
+      "costCheck": 0
+    },
+    "3": {
+      "currentMaterialEU": 760,
+      "currentConversionEU": 760,
+      "priorConversionEU": 120,
+      "openingRemaining": 120,
+      "startedCompleted": 560,
+      "endingConversionEU": 80,
+      "materialRate": 60,
+      "conversionRate": 80,
+      "endingMaterial": 12000,
+      "endingConversion": 6400,
+      "endingCost": 18400,
+      "completedMaterial": 45600,
+      "completedConversion": 60400,
+      "completedCost": 106000,
+      "completedUnitCost": "265/2",
+      "costCheck": 0
+    },
+    "4": {
+      "currentMaterialEU": 900,
+      "currentConversionEU": 910,
+      "priorConversionEU": 40,
+      "openingRemaining": 60,
+      "startedCompleted": 800,
+      "endingConversionEU": 50,
+      "materialRate": 70,
+      "conversionRate": 80,
+      "endingMaterial": 7000,
+      "endingConversion": 4000,
+      "endingCost": 11000,
+      "completedMaterial": 63100,
+      "completedConversion": 72800,
+      "completedCost": 135900,
+      "completedUnitCost": 151,
+      "costCheck": 0
+    },
+    "5": {
+      "currentMaterialEU": 640,
+      "currentConversionEU": 710,
+      "priorConversionEU": 40,
+      "openingRemaining": 120,
+      "startedCompleted": 540,
+      "endingConversionEU": 50,
+      "materialRate": 60,
+      "conversionRate": 60,
+      "endingMaterial": 6000,
+      "endingConversion": 3000,
+      "endingCost": 9000,
+      "completedMaterial": 40400,
+      "completedConversion": 42800,
+      "completedCost": 83200,
+      "completedUnitCost": "832/7",
+      "costCheck": 0,
+      "currentConversionCost": 42600
+    },
+    "6": {
+      "currentMaterialEU": 400,
+      "currentConversionEU": 380,
+      "priorConversionEU": 60,
+      "openingRemaining": 40,
+      "startedCompleted": 300,
+      "endingConversionEU": 40,
+      "materialRate": 60,
+      "conversionRate": 80,
+      "endingMaterial": 6000,
+      "endingConversion": 3200,
+      "endingCost": 9200,
+      "completedMaterial": 24000,
+      "completedConversion": 32600,
+      "completedCost": 56600,
+      "completedUnitCost": "283/2",
+      "costCheck": 0
+    }
+  }
+}
