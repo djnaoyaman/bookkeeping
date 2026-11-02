@@ -6,7 +6,7 @@ permissions:
   contents: read
 jobs:
   profile:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -22,6 +22,7 @@ jobs:
       - run: node tests/learning-course.cjs
       - run: node tests/nissho2-scope.cjs
       - run: node tests/industrial-course.cjs
+      - run: node tests/industrial-labor.cjs
       - run: node tests/check.cjs
       - run: node tests/discovery-client.cjs
       - run: python profile-check.py
@@ -73,3 +74,4 @@ jobs:
         with:
           name: industrial-course-review
           path: industrial-shots
+

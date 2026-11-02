@@ -42,7 +42,7 @@ function question(id){const q=bank.find(x=>x.id===id);if(!q){overview();return;}
  host().scrollIntoView?.({block:'start'});
 }
 const originalExamSwitch=renderExamSwitch;
-renderExamSwitch=function(){originalExamSwitch();const label=$('examswitch')?.querySelector?.('.muted');if(label&&exam==='nissho')label.textContent=questions.filter(q=>q.exam===exam).length+'問（単問演習） / 講義演習 '+bank.length+'問（3級228問・2級工業22問）';};
+renderExamSwitch=function(){originalExamSwitch();const label=$('examswitch')?.querySelector?.('.muted');if(label&&exam==='nissho')label.textContent=questions.filter(q=>q.exam===exam).length+'問（単問演習） / 講義演習 '+bank.length+'問（3級'+data.questions.length+'問'+(industrial?'・2級工業'+industrial.questions.length+'問':'')+'）';};
 const originalCourseDashboard=renderDashboard;
 renderDashboard=function(){originalCourseDashboard();if(exam==='nissho'&&level===3){$('herotitle').textContent='基礎から、手を動かして学ぶ。';$('herotext').textContent='仕組みを読む。例題を追う。初めての問題で確かめる。';$('start').textContent='基礎講義からはじめる →';$('start').onclick=()=>navigate('learningcourse');}};
 const courseNav=document.querySelector?.('aside [data-view="learningcourse"]');if(courseNav)courseNav.innerHTML='<span>▤</span>級別の講義と演習';

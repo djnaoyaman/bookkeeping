@@ -5,7 +5,7 @@
   "scopeVersion": "nissho-2026",
   "authoringStatus": "reviewed",
   "sourceVerificationPending": false,
-  "coverageNote": "公開済みは工業簿記の導入2章・22問です。材料費は実際原価の基礎までで、予定価格・差異などは未収録。2級全範囲の完成・技能の修得・合格可能性を示しません。",
+  "coverageNote": "公開済みは工業簿記の導入3章・34問です。材料費・労務費は実際原価の基礎までで、予定価格・予定賃率・差異などは未収録。2級全範囲の完成・技能の修得・合格可能性を示しません。",
   "lessons": [
     {
       "id": "n2-industrial-lesson-01",
@@ -579,6 +579,265 @@
             "nissho-061ab99cdd31"
           ],
           "description": "正しい受払伝票と実地数量を根拠に、材料帳の数量記入ミスと残高の過大・過少を特定できる。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-lesson-03",
+      "title": "労務費 — 支払った額と働いた分、直接作業と共通作業",
+      "requirementIds": [
+        "nissho-92d0c81f1bd1",
+        "nissho-febd4c05a824",
+        "nissho-7ddb64955440",
+        "nissho-e6e77306efee",
+        "nissho-b27850a003af"
+      ],
+      "prerequisiteIds": [
+        "n2-industrial-lesson-01",
+        "n2-industrial-lesson-02"
+      ],
+      "sections": [
+        {
+          "title": "この章でつかむ二つの区別",
+          "paragraphs": [
+            "材料の次は、人が働いた分を原価として集めます。労務費（ろうむひ）は、製品を作るために使った労働に対応する原価です。材料と同じように、払った日と、使った月と、製品への行き先を分けることが大切です。",
+            "この章は正常な工場作業の実際賃金だけを扱います。予定賃率や賃率差異、標準原価、異常な休業、賞与引当金、退職給付などはこの章では扱いません。この1章で労務費計算の全範囲を学び終えたとはしません。"
+          ]
+        },
+        {
+          "title": "直接工の賃金が、全部直接費とは限らない",
+          "paragraphs": [
+            "注文Aを加工した時間が記録されていれば、その時間に対応する賃金を注文Aへ直接集計できます。一方、同じ人が工場全体の清掃をする時間は、この章の会社では共通作業として間接費へ集めます。",
+            "「誰が働いたか」だけでなく「何をした時間か」を見ます。直接工の直接作業分は直接労務費、直接工の間接作業分や間接工の賃金は間接労務費という区別が基本です。設問が特別な集計条件を示している場合は、その条件を確認します。営業担当者の給料は製造原価へ入れません。"
+          ]
+        },
+        {
+          "title": "出勤簿と作業日報は、知りたいことが違う",
+          "paragraphs": [
+            "出勤簿は出退勤と休憩、作業日報はどの注文や共通作業へ時間を使ったか、賃金台帳は支払総額と控除・差引額を示します。銀行の振込記録が示すのは、実際に送金した額です。",
+            "出勤簿の8時間を、根拠なく注文Aへ全部振り分けてはいけません。作業日報と突き合わせ、時間の抜けや重複がないか確認します。単位にも注意しましょう。1時間30分は1.3時間ではなく、90分＝1.5時間です。"
+          ]
+        },
+        {
+          "title": "当月消費額は、当月に働いた分",
+          "paragraphs": [
+            "賃金の締日と月末が違うと、その月に支払った額の中に前月分が入ったり、今月働いた分が翌月払いになったりします。当月の原価にしたいのは、支払日で切った額ではなく、当月の労働に対応する額です。",
+            "前月末未払を当月に全額決済し、前払い・訂正などがない場合、当月消費賃金＝当月支払総額−前月末未払＋当月末未払です。月初の前月分を外し、月末の当月分を加える、と意味からたどりましょう。"
+          ]
+        },
+        {
+          "title": "未払の増減からも検算できる",
+          "paragraphs": [
+            "同じ関係を、月初未払＋当月消費＝当月支払＋月末未払、と並べ替えられます。先月からの支払義務に今月働いた分を足し、支払った分と月末に残る分へ分ける式です。",
+            "未払額が増えた月は、ほかの増減がなければ消費額が支払総額より多くなります。逆算問題で迷ったら、この左右のつり合いへ戻ります。前払いなどがある問題では、この単純な式をそのまま使わず、追加条件を整理する必要があります。"
+          ]
+        },
+        {
+          "title": "控除前の総額と、本人に渡す額を分ける",
+          "paragraphs": [
+            "支払総額から、本人が負担する所得税や社会保険料などの確定額を控除すると、差引支払額になります。控除額は会社が預かる金額であり、それだけ労働の原価が減ったという意味ではありません。",
+            "この章では控除額を問題で与え、税率・保険料率・給与計算の法律判断は扱いません。会社負担の法定福利費も別論点です。総額240,000円から30,000円を預かれば、本人への支払は210,000円ですが、賃金総額は240,000円です。"
+          ]
+        },
+        {
+          "title": "実際の時間と賃率で、原価の行き先を求める",
+          "paragraphs": [
+            "賃率（ちんりつ）は、この章では1時間当たりの賃金額です。実際賃率が1,600円で注文Aを100時間加工したなら、注文Aに集める直接賃金は160,000円です。共通作業24時間なら、間接賃金は38,400円になります。",
+            "実際賃率を逆算するときは、同じ人の範囲・同じ月・同じ賃金の範囲に対応する時間を分母にします。この章では必要な全時間を明示し、割増や手当などの別計算はありません。製品がまだ完成していなくても、当月の労働は仕掛品などの原価に集めます。"
+          ]
+        },
+        {
+          "title": "賃金勘定に集めてから、仕掛品と製造間接費へ",
+          "paragraphs": [
+            "この章の仕訳は、支払総額をいったん賃金勘定に集める方法です。支払時は借方 賃金／貸方 普通預金・預り金。直接労務費の振替は借方 仕掛品／貸方 賃金、間接労務費の振替は借方 製造間接費／貸方 賃金です。",
+            "直接分と間接分を一つの仕訳でまとめるなら、貸方の賃金は合計額の1行にします。原価への振替で、現金や預金をもう一度減らしてはいけません。製造間接費に集めた額を製品へ配賦する処理は、後続の章で扱います。"
+          ]
+        },
+        {
+          "title": "月末の未払と、翌月初の再振替",
+          "paragraphs": [
+            "月末に未計上の当月分があれば、借方 賃金／貸方 未払賃金で記帳します。これで当月消費額を正しく賃金勘定へ集められます。その後、直接・間接の消費額を原価へ振り替えます。",
+            "翌月も支払総額を賃金に計上する方法では、月初に借方 未払賃金／貸方 賃金と再振替します。前月の原価を消す処理ではなく、翌月の支払総額に含まれる前月分を翌月原価へ二重計上しないための調整です。再振替の有無は、設問で指定した記帳方法に従います。"
+          ]
+        },
+        {
+          "title": "二つの勘定を、別々に確かめる",
+          "paragraphs": [
+            "賃金勘定は、支払・月初調整・月末調整で当月消費額を集め、原価への振替が済めば、この章の条件では残高がゼロになります。一方、未払賃金勘定には、翌月に支払うべき月末未払額が残ります。",
+            "「賃金勘定がゼロだから未払いもない」は間違いです。金額のつり合いだけでなく、どの勘定が原価の集計用で、どの勘定が未払の義務を表すのかまで説明できるようにしましょう。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "title": "支払った前月分を引き、当月の未払分を足す",
+          "prompt": "当月賃金支払総額310,000円。前月末未払25,000円は当月中に全額支払済み。当月末未払35,000円。前払い・訂正・その他の増減はない。",
+          "steps": [
+            "支払総額のうち当月分は310,000−25,000＝285,000円。",
+            "当月に働いてまだ支払っていない35,000円を足す。",
+            "当月消費額320,000円。25,000＋320,000＝310,000＋35,000で検算。"
+          ],
+          "answer": "当月消費賃金は320,000円。",
+          "objectiveIds": [
+            "n2-industrial-03-skill-period-wages"
+          ]
+        },
+        {
+          "title": "出勤時間から休憩を除き、作業日報とつなぐ",
+          "prompt": "9時から18時まで在社し、休憩は60分。残りはすべて正常な作業。日報には注文A 180分、注文B 240分、共通作業60分と記録されている。",
+          "steps": [
+            "在社9時間＝540分から休憩60分を除き、就業480分。",
+            "直接作業180＋240＝420分。共通60分と合わせて480分。"
+          ],
+          "answer": "就業480分＝直接420分＋間接60分。",
+          "objectiveIds": [
+            "n2-industrial-03-skill-work-time",
+            "n2-industrial-03-skill-records"
+          ]
+        },
+        {
+          "title": "実際賃率で二つの注文と共通作業へ分ける",
+          "prompt": "当月実際賃率1,800円。注文Aの直接作業50時間、注文Bの直接作業30時間、工場共通作業20時間。他の対象時間・賃金はない。",
+          "steps": [
+            "注文A 50×1,800＝90,000円、注文B 30×1,800＝54,000円。",
+            "共通作業20×1,800＝36,000円。合計180,000円。"
+          ],
+          "answer": "直接144,000円は仕掛品、間接36,000円は製造間接費へ集める。",
+          "objectiveIds": [
+            "n2-industrial-03-skill-actual-allocation",
+            "n2-industrial-03-skill-consumption-entry"
+          ]
+        },
+        {
+          "title": "預かった分は消えた賃金ではない",
+          "prompt": "賃金支払総額280,000円、従業員から控除して預かる確定額28,000円。差引額を普通預金から支払う。支払総額をいったん賃金に集計する。",
+          "steps": [
+            "本人への振込は280,000−28,000＝252,000円。",
+            "借方 賃金280,000／貸方 普通預金252,000・預り金28,000。"
+          ],
+          "answer": "賃金総額280,000円を、本人への支払と預り金に分ける。",
+          "objectiveIds": [
+            "n2-industrial-03-skill-gross-net"
+          ]
+        },
+        {
+          "title": "月末と翌月初は反対の仕訳になる",
+          "prompt": "月末に未計上の当月賃金18,000円があり、翌月初に再振替する方法を採用している。",
+          "steps": [
+            "月末：借方 賃金18,000／貸方 未払賃金18,000。",
+            "翌月初：借方 未払賃金18,000／貸方 賃金18,000。",
+            "翌月の支払時は総額を賃金へ計上するので、月初の貸方が前月分を取り除く役目になる。"
+          ],
+          "answer": "月末は当月分を加え、翌月初は二重計上を防ぐ調整。どちらも現金の支払ではない。",
+          "objectiveIds": [
+            "n2-industrial-03-skill-accrual-entry"
+          ]
+        },
+        {
+          "title": "賃金勘定がゼロでも、未払は残る",
+          "prompt": "当月支払総額200,000円、前月末未払10,000円、当月末未払20,000円。前月末分は当月に支払済み。追加要因はない。月初再振替・当月支払・月末計上の後、実際消費分をすべて原価へ振り替える。",
+          "steps": [
+            "当月消費200,000−10,000＋20,000＝210,000円。",
+            "賃金の借方200,000＋20,000＝220,000円、貸方10,000＋振替210,000＝220,000円。",
+            "未払賃金には月末の20,000円が残る。"
+          ],
+          "answer": "賃金勘定残高0円と、未払賃金残高20,000円を区別する。",
+          "objectiveIds": [
+            "n2-industrial-03-skill-integrated",
+            "n2-industrial-03-skill-period-wages"
+          ]
+        }
+      ],
+      "pitfalls": [
+        "支払総額・差引支払額・当月消費額は、それぞれ意味が違います。",
+        "直接工の共通作業分を、直接労務費へまとめないでください。",
+        "予定賃率・差異や複雑な手当は未収録です。基礎の問題で得点できても、労務費の全技能を修得したとは判断しません。"
+      ],
+      "questionIds": [
+        "n2-industrial-03-classify-work-01",
+        "n2-industrial-03-choose-records-01",
+        "n2-industrial-03-reconcile-minutes-01",
+        "n2-industrial-03-consume-from-payments-01",
+        "n2-industrial-03-find-ending-unpaid-01",
+        "n2-industrial-03-gross-and-net-01",
+        "n2-industrial-03-pay-wages-01",
+        "n2-industrial-03-actual-time-allocation-01",
+        "n2-industrial-03-transfer-consumed-wages-01",
+        "n2-industrial-03-accrue-unpaid-01",
+        "n2-industrial-03-reverse-opening-unpaid-01",
+        "n2-industrial-03-monthly-integrated-01"
+      ],
+      "objectives": [
+        {
+          "id": "n2-industrial-03-skill-classify",
+          "requirementIds": [
+            "nissho-92d0c81f1bd1"
+          ],
+          "description": "作業内容と製品別の記録条件から、直接労務費・間接労務費・製造以外の費用を分けられる。"
+        },
+        {
+          "id": "n2-industrial-03-skill-records",
+          "requirementIds": [
+            "nissho-febd4c05a824"
+          ],
+          "description": "出勤簿・作業記録・賃金台帳・振込記録の役割を区別し、必要な資料を選べる。"
+        },
+        {
+          "id": "n2-industrial-03-skill-work-time",
+          "requirementIds": [
+            "nissho-7ddb64955440"
+          ],
+          "description": "休憩を除いた就業時間を求め、直接作業時間と間接作業時間の合計を照合できる。"
+        },
+        {
+          "id": "n2-industrial-03-skill-period-wages",
+          "requirementIds": [
+            "nissho-e6e77306efee",
+            "nissho-b27850a003af"
+          ],
+          "description": "前月末未払・当月支払総額・当月末未払を用いて、当月の実際消費賃金を求め、式を逆算できる。"
+        },
+        {
+          "id": "n2-industrial-03-skill-gross-net",
+          "requirementIds": [
+            "nissho-b27850a003af"
+          ],
+          "description": "所定の賃金と与えられた控除額から、支払総額と差引支払額を区別して計算・記帳できる。"
+        },
+        {
+          "id": "n2-industrial-03-skill-actual-allocation",
+          "requirementIds": [
+            "nissho-92d0c81f1bd1",
+            "nissho-7ddb64955440",
+            "nissho-e6e77306efee"
+          ],
+          "description": "実際賃率と製品別・共通作業時間から直接賃金と間接賃金を求められる。"
+        },
+        {
+          "id": "n2-industrial-03-skill-consumption-entry",
+          "requirementIds": [
+            "nissho-92d0c81f1bd1",
+            "nissho-e6e77306efee"
+          ],
+          "description": "実際消費賃金を仕掛品と製造間接費へ振り替える仕訳を作れる。"
+        },
+        {
+          "id": "n2-industrial-03-skill-accrual-entry",
+          "requirementIds": [
+            "nissho-e6e77306efee",
+            "nissho-b27850a003af"
+          ],
+          "description": "賃金勘定を用いる明示条件で、月末未払の計上と翌月初の再振替を区別して仕訳できる。"
+        },
+        {
+          "id": "n2-industrial-03-skill-integrated",
+          "requirementIds": [
+            "nissho-febd4c05a824",
+            "nissho-7ddb64955440",
+            "nissho-e6e77306efee",
+            "nissho-b27850a003af"
+          ],
+          "description": "賃金台帳と作業記録をつなぎ、実際賃率・原価振替・賃金勘定残高を照合できる。"
         }
       ]
     }
@@ -2713,6 +2972,971 @@
           "explanation": "運賃4,000＋旧買掛金支払9,000＝13,000。"
         }
       ]
+    },
+    {
+      "id": "n2-industrial-03-classify-work-01",
+      "familyId": "n2-industrial-03-family-classify-work",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-03",
+      "requirementIds": [
+        "nissho-92d0c81f1bd1"
+      ],
+      "objectiveIds": [
+        "n2-industrial-03-skill-classify"
+      ],
+      "stage": "basic",
+      "title": "同じ賃金でも、仕事の内容を確かめる",
+      "prompt": "木製看板を作る会社です。次の金額はいずれも当月に負担する賃金で、正常な業務に関するものです。製造作業のうち、注文別の実際作業時間を記録した分はその注文へ直接集計し、工場全体の共通作業は製造間接費へ集計します。この会社での分類を選んでください。",
+      "exhibits": [],
+      "explanation": {
+        "steps": [
+          "特定注文の加工分は直接労務費、工場共通の点検・清掃分は間接労務費にする。",
+          "営業担当者の給料は販売費であり、製造原価へ混ぜない。"
+        ],
+        "pitfalls": [
+          "直接工の賃金を、共通作業分まで全部直接労務費にしない。"
+        ],
+        "check": "加工・共通作業・販売という実際の業務に対応させる。"
+      },
+      "errorTags": [
+        "classify"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参考に、資料・場面・解答を独自に制作しています。公式過去問の転載ではありません。"
+      },
+      "type": "fields",
+      "fields": [
+        {
+          "id": "order",
+          "label": "注文Aの加工だけを担当し、注文Aへの作業時間が記録された賃金",
+          "type": "choice",
+          "options": [
+            "direct",
+            "indirect",
+            "outside"
+          ],
+          "optionLabels": {
+            "direct": "直接労務費",
+            "indirect": "間接労務費",
+            "outside": "製造原価に含めない販売費"
+          },
+          "answer": "direct",
+          "points": 1,
+          "explanation": "注文Aに直接追跡できる製造作業の賃金。"
+        },
+        {
+          "id": "maintenance",
+          "label": "複数注文で共用する工場設備を点検する係の賃金",
+          "type": "choice",
+          "options": [
+            "direct",
+            "indirect",
+            "outside"
+          ],
+          "optionLabels": {
+            "direct": "直接労務費",
+            "indirect": "間接労務費",
+            "outside": "製造原価に含めない販売費"
+          },
+          "answer": "indirect",
+          "points": 1,
+          "explanation": "工場全体に関わる共通作業の賃金。"
+        },
+        {
+          "id": "cleanup",
+          "label": "普段は加工をする直接工が、工場全体の共通清掃をした時間の賃金",
+          "type": "choice",
+          "options": [
+            "direct",
+            "indirect",
+            "outside"
+          ],
+          "optionLabels": {
+            "direct": "直接労務費",
+            "indirect": "間接労務費",
+            "outside": "製造原価に含めない販売費"
+          },
+          "answer": "indirect",
+          "points": 1,
+          "explanation": "職名ではなく当該時間の作業内容で分ける。"
+        },
+        {
+          "id": "sales",
+          "label": "商品を販売するだけの営業担当者の給料",
+          "type": "choice",
+          "options": [
+            "direct",
+            "indirect",
+            "outside"
+          ],
+          "optionLabels": {
+            "direct": "直接労務費",
+            "indirect": "間接労務費",
+            "outside": "製造原価に含めない販売費"
+          },
+          "answer": "outside",
+          "points": 1,
+          "explanation": "製品を作る活動ではなく販売活動の費用。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-03-choose-records-01",
+      "familyId": "n2-industrial-03-family-choose-records",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-03",
+      "requirementIds": [
+        "nissho-febd4c05a824"
+      ],
+      "objectiveIds": [
+        "n2-industrial-03-skill-records"
+      ],
+      "stage": "basic",
+      "title": "どの資料が必要かを選ぶ",
+      "prompt": "看板工房には、名称どおりの内容を記録した次の4資料があります。各目的に直接対応する資料を一つずつ選んでください。資料間の突合は別途行うものとし、出勤簿だけから注文別時間を推測してはいけません。",
+      "exhibits": [],
+      "explanation": {
+        "steps": [
+          "注文への集計には作業記録、賃金の総額と控除には賃金台帳を使う。",
+          "送金記録だけでは、支払総額や当月消費額は分からない。"
+        ],
+        "pitfalls": [
+          "銀行振込額を、そのまま当月の労務費にしない。"
+        ],
+        "check": "出勤・作業・賃金計算・送金は異なる事実の記録。"
+      },
+      "errorTags": [
+        "records"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参考に、資料・場面・解答を独自に制作しています。公式過去問の転載ではありません。"
+      },
+      "type": "fields",
+      "fields": [
+        {
+          "id": "order-time",
+          "label": "注文Bに使った実際作業時間を確かめる",
+          "type": "choice",
+          "options": [
+            "attendance",
+            "work",
+            "payroll",
+            "bank"
+          ],
+          "optionLabels": {
+            "attendance": "出勤簿（出退勤と休憩の記録）",
+            "work": "作業日報（注文別・共通作業別の時間）",
+            "payroll": "賃金台帳（総額・控除額・差引支払額）",
+            "bank": "銀行の振込記録"
+          },
+          "answer": "work",
+          "points": 1,
+          "explanation": "作業日報が注文別の時間を記録する。"
+        },
+        {
+          "id": "present",
+          "label": "出退勤時刻と休憩を確かめる",
+          "type": "choice",
+          "options": [
+            "attendance",
+            "work",
+            "payroll",
+            "bank"
+          ],
+          "optionLabels": {
+            "attendance": "出勤簿（出退勤と休憩の記録）",
+            "work": "作業日報（注文別・共通作業別の時間）",
+            "payroll": "賃金台帳（総額・控除額・差引支払額）",
+            "bank": "銀行の振込記録"
+          },
+          "answer": "attendance",
+          "points": 1,
+          "explanation": "出勤簿は在社・休憩の時間を記録するが、注文別配分は示さない。"
+        },
+        {
+          "id": "deduct",
+          "label": "総支給額と控除の内訳を確かめる",
+          "type": "choice",
+          "options": [
+            "attendance",
+            "work",
+            "payroll",
+            "bank"
+          ],
+          "optionLabels": {
+            "attendance": "出勤簿（出退勤と休憩の記録）",
+            "work": "作業日報（注文別・共通作業別の時間）",
+            "payroll": "賃金台帳（総額・控除額・差引支払額）",
+            "bank": "銀行の振込記録"
+          },
+          "answer": "payroll",
+          "points": 1,
+          "explanation": "賃金台帳で総額から差引額への内訳を確認する。"
+        },
+        {
+          "id": "transfer",
+          "label": "普通預金から実際に送金した金額を確かめる",
+          "type": "choice",
+          "options": [
+            "attendance",
+            "work",
+            "payroll",
+            "bank"
+          ],
+          "optionLabels": {
+            "attendance": "出勤簿（出退勤と休憩の記録）",
+            "work": "作業日報（注文別・共通作業別の時間）",
+            "payroll": "賃金台帳（総額・控除額・差引支払額）",
+            "bank": "銀行の振込記録"
+          },
+          "answer": "bank",
+          "points": 1,
+          "explanation": "振込記録が送金の事実を示す。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-03-reconcile-minutes-01",
+      "familyId": "n2-industrial-03-family-reconcile-minutes",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-03",
+      "requirementIds": [
+        "nissho-7ddb64955440",
+        "nissho-febd4c05a824"
+      ],
+      "objectiveIds": [
+        "n2-industrial-03-skill-work-time",
+        "n2-industrial-03-skill-records"
+      ],
+      "stage": "basic",
+      "title": "時間を同じ単位にそろえる",
+      "prompt": "ある直接工は8時30分に出勤し17時30分に退勤しました。この間に、作業時間に含めない休憩が60分あります。それ以外はすべて表の正常な作業で、手待ちや時間の重複はありません。分単位で答えてください。",
+      "exhibits": [
+        {
+          "title": "作業日報",
+          "headers": [
+            "作業",
+            "時間"
+          ],
+          "rows": [
+            [
+              "注文Aの加工",
+              "3時間20分"
+            ],
+            [
+              "注文Bの加工",
+              "3時間10分"
+            ],
+            [
+              "工場共通の片付け",
+              "残りの時間"
+            ]
+          ]
+        }
+      ],
+      "explanation": {
+        "steps": [
+          "出退勤の間は9時間＝540分。休憩60分を除き480分。",
+          "注文別の200＋190＝390分を直接作業とし、残り90分が共通作業。"
+        ],
+        "pitfalls": [
+          "8時間を800分として計算しない。休憩時間を作業時間へ足さない。"
+        ],
+        "check": "就業480分＝直接390分＋共通90分。"
+      },
+      "errorTags": [
+        "work-time",
+        "records"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参考に、資料・場面・解答を独自に制作しています。公式過去問の転載ではありません。"
+      },
+      "type": "fields",
+      "fields": [
+        {
+          "id": "employment",
+          "label": "休憩を除いた就業時間",
+          "type": "amount",
+          "unit": "分",
+          "decimals": 0,
+          "answer": 480,
+          "points": 1,
+          "explanation": "9時間×60−60＝480分。"
+        },
+        {
+          "id": "direct",
+          "label": "直接作業時間の合計",
+          "type": "amount",
+          "unit": "分",
+          "decimals": 0,
+          "answer": 390,
+          "points": 1,
+          "explanation": "注文A 200分＋注文B 190分＝390分。"
+        },
+        {
+          "id": "indirect",
+          "label": "共通作業の時間",
+          "type": "amount",
+          "unit": "分",
+          "decimals": 0,
+          "answer": 90,
+          "points": 1,
+          "explanation": "480−390＝90分。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-03-consume-from-payments-01",
+      "familyId": "n2-industrial-03-family-consume-from-payments",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-03",
+      "requirementIds": [
+        "nissho-e6e77306efee",
+        "nissho-b27850a003af"
+      ],
+      "objectiveIds": [
+        "n2-industrial-03-skill-period-wages"
+      ],
+      "stage": "basic",
+      "title": "支払月と働いた月を分ける",
+      "prompt": "当月の賃金支払総額は462,000円です。そのうち42,000円は前月末に未払計上した前月分で、当月中に全額決済されています。当月の作業に対する賃金のうち、当月末に未払となる額は54,000円です。前払い・未払の免除・訂正・その他の賃金増減はありません。実際消費賃金を求めてください。支払総額は控除前の額です。",
+      "exhibits": [],
+      "explanation": {
+        "steps": [
+          "当月に払った前月分42,000円を、当月の負担から外す。",
+          "当月に働いたが未払いの54,000円を当月の負担へ加える。"
+        ],
+        "pitfalls": [
+          "月初の未払額を加算し、月末の未払額を減算する逆向きの式にしない。"
+        ],
+        "check": "月初未払42,000＋当月消費474,000＝当月支払462,000＋月末未払54,000。"
+      },
+      "errorTags": [
+        "period-wages"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参考に、資料・場面・解答を独自に制作しています。公式過去問の転載ではありません。"
+      },
+      "type": "fields",
+      "fields": [
+        {
+          "id": "paid-current",
+          "label": "当月支払総額のうち当月分",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 420000,
+          "points": 1,
+          "explanation": "462,000−42,000＝420,000円。"
+        },
+        {
+          "id": "consumed",
+          "label": "当月の実際消費賃金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 474000,
+          "points": 1,
+          "explanation": "420,000＋54,000＝474,000円。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-03-find-ending-unpaid-01",
+      "familyId": "n2-industrial-03-family-find-ending-unpaid",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-03",
+      "requirementIds": [
+        "nissho-e6e77306efee",
+        "nissho-b27850a003af"
+      ],
+      "objectiveIds": [
+        "n2-industrial-03-skill-period-wages"
+      ],
+      "stage": "application",
+      "title": "月末未払額を逆算する",
+      "prompt": "当月の実際消費賃金は386,000円、当月の賃金支払総額は400,000円、前月末未払額は29,000円です。前月末未払は当月中に全額決済されています。前払いや訂正などはなく、当月末未払だけが不明です。",
+      "exhibits": [],
+      "explanation": {
+        "steps": [
+          "月初未払＋当月消費＝当月支払＋月末未払を使う。",
+          "29,000＋386,000−400,000＝15,000。"
+        ],
+        "pitfalls": [
+          "支払額が消費額より大きいだけで、月末未払は必ずゼロとはいえない。"
+        ],
+        "check": "29,000＋386,000＝400,000＋15,000＝415,000円。"
+      },
+      "errorTags": [
+        "period-wages"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参考に、資料・場面・解答を独自に制作しています。公式過去問の転載ではありません。"
+      },
+      "type": "fields",
+      "fields": [
+        {
+          "id": "ending",
+          "label": "当月末未払賃金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 15000,
+          "points": 1,
+          "explanation": "386,000−400,000＋29,000＝15,000円。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-03-gross-and-net-01",
+      "familyId": "n2-industrial-03-family-gross-and-net",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-03",
+      "requirementIds": [
+        "nissho-b27850a003af"
+      ],
+      "objectiveIds": [
+        "n2-industrial-03-skill-gross-net"
+      ],
+      "stage": "basic",
+      "title": "総額と手取り額を分ける",
+      "prompt": "今回の賃金支払について、基本賃金は144時間×1時間1,500円、これに加える手当の確定額は24,000円です。従業員負担分として控除する金額は所得税18,000円と社会保険料12,000円で、どちらも確定済みです。他の加算・控除はありません。税率・保険料率の計算は求めません。",
+      "exhibits": [],
+      "explanation": {
+        "steps": [
+          "労働に対応する賃金総額は240,000円。",
+          "控除した30,000円を差し引いて、本人へ210,000円を支払う。"
+        ],
+        "pitfalls": [
+          "従業員の手取りが減っても、確定した賃金総額が減ったわけではない。"
+        ],
+        "check": "総額240,000＝本人への支払210,000＋預かる額30,000。"
+      },
+      "errorTags": [
+        "gross-net"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参考に、資料・場面・解答を独自に制作しています。公式過去問の転載ではありません。"
+      },
+      "type": "fields",
+      "fields": [
+        {
+          "id": "gross",
+          "label": "控除前の賃金支払総額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 240000,
+          "points": 1,
+          "explanation": "144×1,500＋24,000＝240,000円。"
+        },
+        {
+          "id": "deductions",
+          "label": "控除額の合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 30000,
+          "points": 1,
+          "explanation": "18,000＋12,000＝30,000円。"
+        },
+        {
+          "id": "net",
+          "label": "差引支払額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 210000,
+          "points": 1,
+          "explanation": "240,000−30,000＝210,000円。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-03-pay-wages-01",
+      "familyId": "n2-industrial-03-family-pay-wages",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-03",
+      "requirementIds": [
+        "nissho-b27850a003af"
+      ],
+      "objectiveIds": [
+        "n2-industrial-03-skill-gross-net"
+      ],
+      "stage": "application",
+      "title": "賃金の支払を仕訳する",
+      "prompt": "当社は賃金の支払総額を、支払時にいったん賃金勘定の借方へ計上します。今回の控除前総額は240,000円、従業員から預かる所得税・社会保険料の合計は30,000円です。差引額を普通預金から振り込みました。控除分はまとめて預り金勘定を使います。今回の支払だけを仕訳してください。",
+      "exhibits": [],
+      "explanation": {
+        "steps": [
+          "賃金勘定は控除前総額240,000円を借方へ。",
+          "振込210,000円と預り金30,000円を貸方へ分ける。"
+        ],
+        "pitfalls": [
+          "支払と製造原価への振替は別処理。この設問で仕掛品への振替まで重ねない。"
+        ],
+        "check": "借方240,000＝貸方210,000＋30,000。"
+      },
+      "errorTags": [
+        "gross-net"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参考に、資料・場面・解答を独自に制作しています。公式過去問の転載ではありません。"
+      },
+      "type": "journal",
+      "unit": "円",
+      "decimals": 0,
+      "accounts": [
+        "賃金",
+        "普通預金",
+        "預り金",
+        "仕掛品",
+        "製造間接費",
+        "未払賃金"
+      ],
+      "lines": [
+        {
+          "side": "debit",
+          "account": "賃金",
+          "amount": 240000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "普通預金",
+          "amount": 210000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "預り金",
+          "amount": 30000,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-03-actual-time-allocation-01",
+      "familyId": "n2-industrial-03-family-actual-time-allocation",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-03",
+      "requirementIds": [
+        "nissho-92d0c81f1bd1",
+        "nissho-7ddb64955440",
+        "nissho-e6e77306efee"
+      ],
+      "objectiveIds": [
+        "n2-industrial-03-skill-actual-allocation"
+      ],
+      "stage": "application",
+      "title": "実際賃率で注文別に集計する",
+      "prompt": "直接工について、当月の実際賃率は1時間当たり1,600円です。作業記録は、注文Aの直接作業100時間、注文Bの直接作業56時間、工場共通の間接作業24時間です。この3区分が賃率を掛ける全時間であり、手待ち・割増・他の賃金はありません。実際原価で計算します。",
+      "exhibits": [],
+      "explanation": {
+        "steps": [
+          "注文別に追える100＋56＝156時間分を直接賃金にする。",
+          "共通作業24時間分も製造原価だが、製造間接費へ集める。"
+        ],
+        "pitfalls": [
+          "直接工という職名だけで180時間すべてを直接賃金にしない。"
+        ],
+        "check": "160,000＋89,600＋38,400＝288,000円。"
+      },
+      "errorTags": [
+        "actual-allocation"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参考に、資料・場面・解答を独自に制作しています。公式過去問の転載ではありません。"
+      },
+      "type": "fields",
+      "fields": [
+        {
+          "id": "order-a",
+          "label": "注文Aの直接賃金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 160000,
+          "points": 1,
+          "explanation": "100×1,600＝160,000円。"
+        },
+        {
+          "id": "order-b",
+          "label": "注文Bの直接賃金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 89600,
+          "points": 1,
+          "explanation": "56×1,600＝89,600円。"
+        },
+        {
+          "id": "indirect",
+          "label": "共通作業の間接賃金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 38400,
+          "points": 1,
+          "explanation": "24×1,600＝38,400円。"
+        },
+        {
+          "id": "total",
+          "label": "実際消費賃金の合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 288000,
+          "points": 1,
+          "explanation": "（100＋56＋24）×1,600＝288,000円。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-03-transfer-consumed-wages-01",
+      "familyId": "n2-industrial-03-family-transfer-consumed-wages",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-03",
+      "requirementIds": [
+        "nissho-92d0c81f1bd1",
+        "nissho-e6e77306efee"
+      ],
+      "objectiveIds": [
+        "n2-industrial-03-skill-consumption-entry"
+      ],
+      "stage": "application",
+      "title": "賃金を二つの原価の行き先へ移す",
+      "prompt": "当月の実際消費賃金は、注文別の直接作業分360,000円と、工場共通の間接作業分72,000円です。金額の計算と賃金勘定への計上は済んでいます。直接分は仕掛品、間接分は製造間接費へ集計する会社です。当月消費分の振替だけを、一つの複合仕訳にしてください。",
+      "exhibits": [],
+      "explanation": {
+        "steps": [
+          "直接作業分360,000円を仕掛品、共通作業分72,000円を製造間接費へ。",
+          "合計432,000円を賃金勘定の貸方へ振り替える。"
+        ],
+        "pitfalls": [
+          "原価を移す処理であり、もう一度普通預金を減らす処理ではない。"
+        ],
+        "check": "借方360,000＋72,000＝貸方432,000円。"
+      },
+      "errorTags": [
+        "consumption-entry"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参考に、資料・場面・解答を独自に制作しています。公式過去問の転載ではありません。"
+      },
+      "type": "journal",
+      "unit": "円",
+      "decimals": 0,
+      "accounts": [
+        "賃金",
+        "仕掛品",
+        "製造間接費",
+        "普通預金",
+        "未払賃金",
+        "売上原価"
+      ],
+      "lines": [
+        {
+          "side": "debit",
+          "account": "仕掛品",
+          "amount": 360000,
+          "points": 1
+        },
+        {
+          "side": "debit",
+          "account": "製造間接費",
+          "amount": 72000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "賃金",
+          "amount": 432000,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-03-accrue-unpaid-01",
+      "familyId": "n2-industrial-03-family-accrue-unpaid",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-03",
+      "requirementIds": [
+        "nissho-e6e77306efee",
+        "nissho-b27850a003af"
+      ],
+      "objectiveIds": [
+        "n2-industrial-03-skill-accrual-entry"
+      ],
+      "stage": "application",
+      "title": "月末に、今月働いた未払分を入れる",
+      "prompt": "当社は賃金支払時に賃金勘定の借方へ記帳し、月末未払分は賃金／未払賃金で追加計上します。当月の作業に対する賃金のうち、翌月の支払日まで未払いとなる57,500円は、まだ帳簿に計上していません。当月消費分の原価振替を行う前に、この月末未払分だけを計上してください。",
+      "exhibits": [],
+      "explanation": {
+        "steps": [
+          "当月の労働に対応する額を賃金勘定の借方へ加える。",
+          "支払義務は未払賃金の貸方に残す。"
+        ],
+        "pitfalls": [
+          "まだ支払っていないので普通預金は減らさない。"
+        ],
+        "check": "未計上だった当月負担57,500円と未払債務57,500円を同時に記録。"
+      },
+      "errorTags": [
+        "accrual-entry"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参考に、資料・場面・解答を独自に制作しています。公式過去問の転載ではありません。"
+      },
+      "type": "journal",
+      "unit": "円",
+      "decimals": 0,
+      "accounts": [
+        "賃金",
+        "未払賃金",
+        "普通預金",
+        "仕掛品",
+        "製造間接費"
+      ],
+      "lines": [
+        {
+          "side": "debit",
+          "account": "賃金",
+          "amount": 57500,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "未払賃金",
+          "amount": 57500,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-03-reverse-opening-unpaid-01",
+      "familyId": "n2-industrial-03-family-reverse-opening-unpaid",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-03",
+      "requirementIds": [
+        "nissho-e6e77306efee",
+        "nissho-b27850a003af"
+      ],
+      "objectiveIds": [
+        "n2-industrial-03-skill-accrual-entry"
+      ],
+      "stage": "application",
+      "title": "翌月初に、前月分を再振替する",
+      "prompt": "前月末に、借方 賃金57,500円／貸方 未払賃金57,500円を記帳しています。当社は翌月の賃金支払時に総額を賃金勘定へ計上するため、月初に前月末の未払仕訳を再振替する方法です。月初の再振替だけを仕訳してください。この時点では現金・預金の支払はありません。",
+      "exhibits": [],
+      "explanation": {
+        "steps": [
+          "前月末仕訳の借方と貸方を反対にする。",
+          "後日支払う総額に含まれる前月分が、翌月の消費賃金へ二重に入らないよう調整する。"
+        ],
+        "pitfalls": [
+          "再振替は債務を免除したという意味ではなく、採用した記帳方法による調整。支払自体は別に記帳する。"
+        ],
+        "check": "未払賃金57,500／賃金57,500。前月の原価振替は取り消さない。"
+      },
+      "errorTags": [
+        "accrual-entry"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参考に、資料・場面・解答を独自に制作しています。公式過去問の転載ではありません。"
+      },
+      "type": "journal",
+      "unit": "円",
+      "decimals": 0,
+      "accounts": [
+        "賃金",
+        "未払賃金",
+        "普通預金",
+        "仕掛品",
+        "製造間接費"
+      ],
+      "lines": [
+        {
+          "side": "debit",
+          "account": "未払賃金",
+          "amount": 57500,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "賃金",
+          "amount": 57500,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-03-monthly-integrated-01",
+      "familyId": "n2-industrial-03-family-monthly-integrated",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-03",
+      "requirementIds": [
+        "nissho-febd4c05a824",
+        "nissho-7ddb64955440",
+        "nissho-e6e77306efee",
+        "nissho-b27850a003af",
+        "nissho-92d0c81f1bd1"
+      ],
+      "objectiveIds": [
+        "n2-industrial-03-skill-integrated",
+        "n2-industrial-03-skill-period-wages",
+        "n2-industrial-03-skill-actual-allocation",
+        "n2-industrial-03-skill-gross-net",
+        "n2-industrial-03-skill-consumption-entry"
+      ],
+      "stage": "integrated",
+      "title": "賃金台帳と作業日報を一か月分つなぐ",
+      "prompt": "直接工だけの賃金を集計します。当月支払総額558,000円、前月末未払42,000円、当月末未払60,000円です。前月末未払は当月支払で全額決済され、前払・訂正・賞与・別途の手当・その他の賃金増減はありません。作業記録は直接作業300時間、工場共通の間接作業60時間で、これが実際賃率を掛ける全時間です。全時間に同じ当月実際賃率を使います。賃金勘定には、月初再振替・支払・月末未払計上を済ませています。原価振替後の残高まで答えてください。支払総額から控除して預かる金額は39,000円で、控除以外は全額普通預金から本人へ支払いました。",
+      "exhibits": [],
+      "explanation": {
+        "steps": [
+          "支払から前月分を除き、当月末未払を足して576,000円にする。",
+          "360時間で割った実際賃率1,600円を、直接300時間と間接60時間へ適用する。",
+          "手取り519,000円は支払の内訳であり、消費賃金576,000円とは別。",
+          "賃金勘定は借方618,000円＝貸方618,000円でゼロ。未払債務60,000円は別勘定に残る。"
+        ],
+        "pitfalls": [
+          "振替後の賃金勘定ゼロを、未払債務もゼロという意味にしない。",
+          "振込額519,000円を賃率の分子にしない。"
+        ],
+        "check": "42,000＋576,000＝558,000＋60,000。480,000＋96,000＝576,000。"
+      },
+      "errorTags": [
+        "integrated",
+        "period-wages",
+        "actual-allocation",
+        "gross-net",
+        "consumption-entry"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参考に、資料・場面・解答を独自に制作しています。公式過去問の転載ではありません。"
+      },
+      "type": "fields",
+      "fields": [
+        {
+          "id": "consumed",
+          "label": "当月の実際消費賃金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 576000,
+          "points": 1,
+          "explanation": "558,000−42,000＋60,000＝576,000円。"
+        },
+        {
+          "id": "rate",
+          "label": "当月の実際賃率",
+          "type": "amount",
+          "unit": "円/時間",
+          "decimals": 0,
+          "answer": 1600,
+          "points": 1,
+          "explanation": "576,000÷（300＋60）＝1,600円/時間。"
+        },
+        {
+          "id": "direct",
+          "label": "仕掛品へ振り替える直接賃金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 480000,
+          "points": 1,
+          "explanation": "300×1,600＝480,000円。"
+        },
+        {
+          "id": "indirect",
+          "label": "製造間接費へ振り替える間接賃金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 96000,
+          "points": 1,
+          "explanation": "60×1,600＝96,000円。"
+        },
+        {
+          "id": "net-paid",
+          "label": "普通預金から本人へ支払った額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 519000,
+          "points": 1,
+          "explanation": "558,000−39,000＝519,000円。"
+        },
+        {
+          "id": "wage-balance",
+          "label": "全消費分の振替後の賃金勘定残高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "借方558,000＋60,000と貸方42,000＋576,000が一致する。"
+        },
+        {
+          "id": "liability",
+          "label": "月末に残る未払賃金",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 60000,
+          "points": 1,
+          "explanation": "賃金勘定がゼロでも、未払賃金勘定には翌月支払う60,000円が残る。"
+        }
+      ]
     }
   ],
   "reviewRecords": [
@@ -2783,6 +4007,43 @@
       "lessonHashes": {
         "n2-industrial-lesson-02": "504d6c767f89c2269d57f93241521191214b54cbc7bb5ac55ab0614da800262f"
       }
+    },
+    {
+      "kind": "independent-computation",
+      "reviewedBy": "Independent reviewer /root/advance_remaining_site_backlogs (not draft author)",
+      "reviewedAt": "2026-11-02T07:31:00Z",
+      "questionIds": [
+        "n2-industrial-03-classify-work-01",
+        "n2-industrial-03-choose-records-01",
+        "n2-industrial-03-reconcile-minutes-01",
+        "n2-industrial-03-consume-from-payments-01",
+        "n2-industrial-03-find-ending-unpaid-01",
+        "n2-industrial-03-gross-and-net-01",
+        "n2-industrial-03-pay-wages-01",
+        "n2-industrial-03-actual-time-allocation-01",
+        "n2-industrial-03-transfer-consumed-wages-01",
+        "n2-industrial-03-accrue-unpaid-01",
+        "n2-industrial-03-reverse-opening-unpaid-01",
+        "n2-industrial-03-monthly-integrated-01"
+      ],
+      "questionHashes": {
+        "n2-industrial-03-classify-work-01": "fb87f5db3d2b15be5b6dc5697800f58a7f94c9f8032b9e3faaac49417812d4e9",
+        "n2-industrial-03-choose-records-01": "8cd857a88c09072db034086aab0110acb22d9458d099d557434b8f5fcbf33d67",
+        "n2-industrial-03-reconcile-minutes-01": "7134a0c5c40ab551151c3d6fda211f9bf11b563c712b28e784924262d7c8a837",
+        "n2-industrial-03-consume-from-payments-01": "323b2c36e7e6579d6bb6b161cb2e17ec3411ba96bee981d1ddd5bf6bacdf8c86",
+        "n2-industrial-03-find-ending-unpaid-01": "2467438ec66da425647b553bd26396c3a5b2c8d886c21df08434e02f47d08202",
+        "n2-industrial-03-gross-and-net-01": "a3964d9e2a426ff18238320ab94f1e7d8d0ab04999c86c1a8024e238f2501777",
+        "n2-industrial-03-pay-wages-01": "58d61ec7c9fb99a43368ceb4c5e2c10564d4ed04e8e270c9d492d620d12eaac6",
+        "n2-industrial-03-actual-time-allocation-01": "f90617c5b3e0c20d69a7c0286255eae8e8bbcd7b2adbd0c29e30b3e81f1a0f6d",
+        "n2-industrial-03-transfer-consumed-wages-01": "fdf2c7727a467f8912e5d161253b62ac0bc3b19371bd8e6fae21c71c071300a8",
+        "n2-industrial-03-accrue-unpaid-01": "2f2b012fb25575511ba30382de9c2cd94b4581d840d19abd168d66994fb4aa78",
+        "n2-industrial-03-reverse-opening-unpaid-01": "a7b5161aa1afb6fca38591797ffca5309604d3758c61fa60bf8fca26ccd03c83",
+        "n2-industrial-03-monthly-integrated-01": "c412204d1305d2ffab4555cc7f6d71c9ed8375e945b7be07188c70e4e3dbf5ba"
+      },
+      "lessonHashes": {
+        "n2-industrial-lesson-03": "cbef5f2839e1fe5dade63570345840799ac907970adbbce0aeedef57d8fe0bdc"
+      },
+      "evidence": "notes/editorial/industrial-labor-review-20261102.md"
     }
   ]
 }
