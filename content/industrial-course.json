@@ -5,7 +5,7 @@
   "scopeVersion": "nissho-2026",
   "authoringStatus": "reviewed",
   "sourceVerificationPending": false,
-  "coverageNote": "工業簿記の導入9章・109問。材料費・労務費・経費は実際原価の基礎、製造間接費は実際・予定配賦と公式変動予算の2差異、部門費は第一次集計・直接配賦・限定した補助部門の実際/予定配賦、個別原価計算は指図書別原価と完成/販売の記帳・補修指図書の当該指図書賦課を扱います。単純総合原価計算は1種類・1工程、材料始点投入、加工比例発生、仕損等なしの平均法と（修正）先入先出法までです。材料の予定価格・予定賃率・複合費・相互配賦法・純粋先入先出法・仕損/減損・工程別/標準原価計算等は未収録。部門費の親項目への対応は全配賦法の完成を意味しません。税金は正常な製造活動の基礎に限定し、税法判断・確定負担率・異常損失の判定は扱いません。2級全範囲の完成・技能の同等・合格可能性を示しません。既存の56問と記録はそのまま残しています。",
+  "coverageNote": "工業簿記の導入10章・122問。材料費・労務費・経費は実際原価の基礎、製造間接費は実際・予定配賦と公式変動予算の2差異、部門費は第一次集計・直接配賦・限定した補助部門の実際/予定配賦、個別原価計算は指図書別原価と完成/販売の記帳・補修指図書の当該指図書賦課を扱います。単純総合原価計算は1種類・1工程、材料始点投入、加工比例発生、仕損等なしの平均法と（修正）先入先出法までです。CVPは1製品・線形費用の明示範囲・在庫増減なしの損益分岐点、目標利益、安全余裕等の基礎計算までで、作図・読図・上級分析は未収録です。材料の予定価格・予定賃率・複合費・相互配賦法・純粋先入先出法・仕損/減損・工程別/標準原価計算等は未収録。部門費の親項目への対応は全配賦法の完成を意味しません。税金は正常な製造活動の基礎に限定し、税法判断・確定負担率・異常損失の判定は扱いません。2級全範囲の完成・技能の同等・合格可能性を示しません。既存の56問と記録はそのまま残しています。",
   "lessons": [
     {
       "id": "n2-industrial-lesson-01",
@@ -2431,6 +2431,286 @@
         "n2-industrial-09-completion-journal-01",
         "n2-industrial-09-no-ending-01",
         "n2-industrial-09-aggregate-opening-data-01"
+      ]
+    },
+    {
+      "id": "n2-industrial-lesson-10",
+      "title": "CVPの基礎 — 貢献利益から損益分岐点と目標利益へ",
+      "requirementIds": [
+        "nissho-c9eaf983a9d4"
+      ],
+      "prerequisiteIds": [
+        "n2-industrial-lesson-01",
+        "n2-industrial-lesson-05"
+      ],
+      "sections": [
+        {
+          "title": "製品別原価から、月間の利益へ",
+          "paragraphs": [
+            "第01章の固定費・変動費の区別と、第05章で使った一定範囲の費用の考え方を、今度は営業利益の計算に用います。本章は1種類の製品を1か月に生産しただけ販売し、在庫増減がない場合です。製造費だけでなく販売費・一般管理費も固定・変動に分類済みとします。",
+            "販売単価p、1個当たり変動費v、販売数量Q、月間固定費Fとすると、売上高pQ、変動費vQ、営業利益P＝pQ−vQ−Fです。税金・利息は対象外。各式は、明示した適用範囲の中で単価と費用の性質が変わらない場合に限ります。"
+          ]
+        },
+        {
+          "title": "固定総額と変動単位額を保つ",
+          "paragraphs": [
+            "固定費は総額Fが一定、変動費は単位額vが一定です。販売数量を増やせば変動費総額は増えますが、固定費総額はこの範囲内では増えません。単位固定費F÷Qは数量によって変わるので、それを新しい数量へ固定して掛け直すと誤ります。",
+            "直接費か間接費かという分類と、固定費か変動費かという分類は別です。材料・人件費などの名前から勝手に変動・固定を決めず、問題に示された費用構造を使います。"
+          ]
+        },
+        {
+          "title": "貢献利益は固定費回収の手前にある",
+          "paragraphs": [
+            "単位貢献利益c＝p−v。貢献利益総額M＝cQ＝売上高−変動費総額です。これから固定費Fを引いたものが営業利益Pなので、貢献利益と営業利益は同じではありません。変動販売費を除外すると貢献利益を過大に計算します。",
+            "貢献利益率r＝c÷p＝M÷売上高＝1−変動費率。計算では40%を0.40として使い、百分率を求める解答欄では40と入力します。本章では販売単価と貢献利益は正で、分母が0になる問題は出しません。"
+          ]
+        },
+        {
+          "title": "損益分岐点を数量と売上高で求める",
+          "paragraphs": [
+            "損益分岐点は営業利益が0となる点です。cQ−F＝0を解けば、損益分岐点販売数量Q0＝F÷c。損益分岐点売上高S0＝pQ0＝F÷rです。数量の式の分母は円/個、金額の式の分母は無単位の率で、答えの単位が異なります。",
+            "売上高から変動費と固定費を引いて0になるか必ず確認します。理論的な分岐点では数量を連続量として扱うことがあり、整数個で赤字を避ける最小数量とは区別します。図の作成・読取りは本章では扱いません。"
+          ]
+        },
+        {
+          "title": "目標利益を加えて必要販売量へ進む",
+          "paragraphs": [
+            "目標営業利益をTとすると必要貢献利益はF＋Tです。目標数量＝(F＋T)÷c、目標売上高＝(F＋T)÷r。Tだけを割ると、固定費を回収する分が欠けます。求めた数量・売上高を元の利益式へ戻して確かめます。",
+            "整数個で販売し、目標以上が必要なら、理論数量を最小の整数へ切り上げます。四捨五入ではなく、切り上げた数量で目標以上、1個少なければ未達であることを確かめます。整数化後の利益は目標を少し上回る場合があります。"
+          ]
+        },
+        {
+          "title": "安全余裕額と安全余裕率を区別する",
+          "paragraphs": [
+            "基準となる計画売上高または実際売上高をSとすると、安全余裕額はS−S0、安全余裕率は(S−S0)÷Sです。本章の安全余裕の問題ではSは分岐点より大きく、どちらを基準にするかを明記します。分母をS0や営業利益に置き換えません。",
+            "単価・費用構造が変わらず数量だけが減る条件で、分岐点までどれだけ売上高が減少できるかを表します。安全余裕額×貢献利益率＝営業利益とも照合できます。ただし安全余裕額そのものは利益・現金残高ではなく、倒産確率や値下げ許容率でもありません。"
+          ]
+        },
+        {
+          "title": "能力と適用範囲を計算の後に照合する",
+          "paragraphs": [
+            "式から候補数量が出ても、現行設備で作れる・予定価格で売れることまで証明したわけではありません。候補が適用範囲を超えたら、同じ固定費や単位変動費をそのまま使って範囲外の利益を予測しません。",
+            "単位貢献利益が正なら、現行範囲内の利益は数量とともに増加します。能力上限での利益が目標に満たなければ、現行条件では達成できません。拡張後の設備費・単価・需要などは不明なら不明のままにします。"
+          ]
+        },
+        {
+          "title": "未知の一つを逆算し、足りない情報は作らない",
+          "paragraphs": [
+            "P＝pQ−vQ−Fを変形すればF＝(p−v)Q−Pです。数量・単位変動費・固定費・目標利益が決まれば、必要な販売単価はv＋(F＋T)÷Qと逆算できます。これは与えられた数量での計算であり、市場での最適価格の提案ではありません。",
+            "一方、ある数量での総費用しかなければ、固定費と変動費の内訳は一つに決まりません。その時点の利益は計算できても、実際の分岐点を確定できるとは限りません。仮の内訳を実際の事実として採用しないことも計算技能です。"
+          ]
+        },
+        {
+          "title": "誤ったワークシートと二つの計画を点検する",
+          "paragraphs": [
+            "固定費を変動費率で割った値を、損益分岐点売上高と呼んではいけません。元の利益式へ戻せばゼロにならず、誤りを発見できます。ゼロを求めた欄には0を入力し、空欄で代用しません。",
+            "二つの価格・費用条件を比較する場合も、各条件の単位貢献利益・固定費を使って基本式を別々に計算します。安く作れるようになっても値下げや固定費増加があれば利益が増えるとは限りません。本章の比較は二つの確定した仮定の再計算に限り、需要予測・不確実性・多品種最適化は扱いません。"
+          ]
+        },
+        {
+          "title": "扱った範囲を明確にする",
+          "paragraphs": [
+            "公式出題区分の第十三「損益分岐分析の計算方法」の基礎を扱いました。「損益分岐図表」は作図・読図の実習がないため未収録です。上級のCVP感度分析、多品種CVP、全部原価計算で在庫増減を含める分析、税引後目標利益、営業レバレッジ、資金計画は扱いません。第十三全体や2級全範囲の完成を意味しません。",
+            "2026年度に適用される2022年度版の区分表を参照しています。基本関係式は教育機関の資料でも確認していますが、本章の状況・数値・解説は独自制作です。公式教材・公式採点との同等性や合格可能性を保証しません。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "title": "数量が変わっても固定費総額は据え置く",
+          "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。組立用棚板の販売単価2,000円、単位変動費1,200円、固定費180,000円。300個時と600個時の変動費総額・固定費総額・営業利益を比べる。",
+          "steps": [
+            "300個：売上600,000、変動費360,000、固定費180,000、利益60,000円。",
+            "600個：売上1,200,000、変動費720,000、固定費180,000、利益300,000円。",
+            "増加300個×単位貢献利益800円＝利益増加240,000円。"
+          ],
+          "answer": "300個時：変動360,000円・固定180,000円・利益60,000円。600個時：変動720,000円・固定180,000円・利益300,000円。",
+          "objectiveIds": [
+            "n2-industrial-10-skill-assumptions",
+            "n2-industrial-10-skill-contribution"
+          ],
+          "familyId": "n2-industrial-10-family-example-1"
+        },
+        {
+          "title": "数量式と売上高式が同じ点を示す",
+          "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。工具ケースの販売単価2,400円、単位変動費1,440円、固定費768,000円。単位貢献利益・貢献利益率・損益分岐点数量と売上高を求め、利益ゼロを確認する。",
+          "steps": [
+            "単位貢献利益960円、貢献利益率960÷2,400＝40%。",
+            "分岐点数量768,000÷960＝800個。売上高800×2,400＝1,920,000円。",
+            "金額式768,000÷0.40でも1,920,000円。売上−変動1,152,000−固定768,000＝0。"
+          ],
+          "answer": "単位貢献利益960円、貢献利益率40%、分岐点800個・1,920,000円、営業利益0円。",
+          "objectiveIds": [
+            "n2-industrial-10-skill-unit-bep",
+            "n2-industrial-10-skill-sales-bep"
+          ],
+          "familyId": "n2-industrial-10-family-example-2"
+        },
+        {
+          "title": "目標利益を含む売上高を計画する",
+          "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。木製トレーの販売単価2,000円、単位変動費1,300円、固定費455,000円、目標営業利益245,000円。必要貢献利益、販売数量、売上高を求める。",
+          "steps": [
+            "必要貢献利益455,000＋245,000＝700,000円。",
+            "単位貢献利益700円なので数量1,000個。貢献利益率35%なので売上高700,000÷0.35＝2,000,000円。",
+            "1,000×700−455,000＝245,000円と目標を確認する。"
+          ],
+          "answer": "必要貢献利益700,000円、必要数量1,000個、必要売上高2,000,000円。",
+          "objectiveIds": [
+            "n2-industrial-10-skill-target"
+          ],
+          "familyId": "n2-industrial-10-family-example-3"
+        },
+        {
+          "title": "安全余裕を利益と混同しない",
+          "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。収納仕切りの販売単価1,600円、単位変動費960円、固定費576,000円、計画売上高2,400,000円。損益分岐点売上高、安全余裕額・率、計画営業利益を求める。",
+          "steps": [
+            "貢献利益率40%。分岐点売上高576,000÷0.40＝1,440,000円。",
+            "安全余裕額2,400,000−1,440,000＝960,000円。率960,000÷2,400,000＝40%。",
+            "計画利益は960,000×0.40＝384,000円で、安全余裕額とは異なる。"
+          ],
+          "answer": "分岐点1,440,000円、安全余裕960,000円・40%、計画利益384,000円。",
+          "objectiveIds": [
+            "n2-industrial-10-skill-safety"
+          ],
+          "familyId": "n2-industrial-10-family-example-4"
+        },
+        {
+          "title": "利益から単位変動費を逆算する",
+          "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。小型書見台を販売単価1,800円で1,200個販売した。固定費648,000円、営業利益216,000円。単位変動費だけが不明である。貢献利益総額、単位貢献利益、単位変動費を復元する。",
+          "steps": [
+            "貢献利益総額＝固定648,000＋利益216,000＝864,000円。",
+            "単位貢献利益864,000÷1,200＝720円。単位変動費1,800−720＝1,080円。",
+            "売上2,160,000−変動1,296,000−固定648,000＝利益216,000円。"
+          ],
+          "answer": "貢献利益864,000円、単位貢献利益720円、単位変動費1,080円。",
+          "objectiveIds": [
+            "n2-industrial-10-skill-reverse"
+          ],
+          "familyId": "n2-industrial-10-family-example-5"
+        },
+        {
+          "title": "最小整数数量は一つ手前と比較する",
+          "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。展示用ケースの販売単価1,700円、単位変動費1,050円、固定費325,000円、目標営業利益20,000円以上。1個単位で販売する。ここでは適用範囲・能力上限とも0〜600個である。最小数量、その利益、1個少ない場合の利益を求め、能力内か判断する。",
+          "steps": [
+            "単位貢献利益650円。必要数量345,000÷650＝530と500/650なので531個。",
+            "531個の利益は20,150円、530個は19,500円。最小性が確認できる。",
+            "531個は上限600個以下で、与えられた適用範囲内。"
+          ],
+          "answer": "最小531個、利益20,150円、1個少ない場合19,500円。能力・適用範囲内。",
+          "objectiveIds": [
+            "n2-industrial-10-skill-whole-units",
+            "n2-industrial-10-skill-range"
+          ],
+          "familyId": "n2-industrial-10-family-example-6"
+        }
+      ],
+      "pitfalls": [
+        "貢献利益と営業利益、変動費率と貢献利益率、総額と単位額を混同しない。",
+        "固定費は適用範囲内での総額が一定であり、すべての数量に無制限に使えるとは限らない。",
+        "安全余裕額は利益でも現金でもなく、基準売上高との差額である。",
+        "目標以上の最小整数数量は切り上げて1個少ない場合と照合する。",
+        "不足する費用内訳・範囲外の条件・需要を推測しない。"
+      ],
+      "objectives": [
+        {
+          "id": "n2-industrial-10-skill-assumptions",
+          "requirementIds": [
+            "nissho-c9eaf983a9d4"
+          ],
+          "description": "固定費総額・単位変動費・単位固定費を区別する。"
+        },
+        {
+          "id": "n2-industrial-10-skill-contribution",
+          "requirementIds": [
+            "nissho-c9eaf983a9d4"
+          ],
+          "description": "製造と販売の変動費を含め、貢献利益額・率と営業利益を分ける。"
+        },
+        {
+          "id": "n2-industrial-10-skill-unit-bep",
+          "requirementIds": [
+            "nissho-c9eaf983a9d4"
+          ],
+          "description": "固定費と単位貢献利益から損益分岐点数量を求める。"
+        },
+        {
+          "id": "n2-industrial-10-skill-sales-bep",
+          "requirementIds": [
+            "nissho-c9eaf983a9d4"
+          ],
+          "description": "貢献利益率で損益分岐点売上高を求め、単位を点検する。"
+        },
+        {
+          "id": "n2-industrial-10-skill-target",
+          "requirementIds": [
+            "nissho-c9eaf983a9d4"
+          ],
+          "description": "固定費と目標利益を回収する数量・売上高を求める。"
+        },
+        {
+          "id": "n2-industrial-10-skill-whole-units",
+          "requirementIds": [
+            "nissho-c9eaf983a9d4"
+          ],
+          "description": "最小整数数量を切り上げ、1個少ない場合の未達を検証する。"
+        },
+        {
+          "id": "n2-industrial-10-skill-safety",
+          "requirementIds": [
+            "nissho-c9eaf983a9d4"
+          ],
+          "description": "基準売上高を明示して安全余裕額・率を求める。"
+        },
+        {
+          "id": "n2-industrial-10-skill-range",
+          "requirementIds": [
+            "nissho-c9eaf983a9d4"
+          ],
+          "description": "能力上限と適用範囲に照らし、外挿できない場合を判断する。"
+        },
+        {
+          "id": "n2-industrial-10-skill-reverse",
+          "requirementIds": [
+            "nissho-c9eaf983a9d4"
+          ],
+          "description": "利益式から不明な固定費・単位変動費・必要単価を逆算する。"
+        },
+        {
+          "id": "n2-industrial-10-skill-diagnose",
+          "requirementIds": [
+            "nissho-c9eaf983a9d4"
+          ],
+          "description": "率・単位・元の利益式への代入で誤ったワークシートを訂正する。"
+        },
+        {
+          "id": "n2-industrial-10-skill-compare",
+          "requirementIds": [
+            "nissho-c9eaf983a9d4"
+          ],
+          "description": "二つの確定条件を混ぜず、基本式を別々に再計算する。"
+        },
+        {
+          "id": "n2-industrial-10-skill-sufficiency",
+          "requirementIds": [
+            "nissho-c9eaf983a9d4"
+          ],
+          "description": "総費用のみでは分岐点が確定しない理由を説明する。"
+        }
+      ],
+      "questionIds": [
+        "n2-industrial-10-assumption-boundary-01",
+        "n2-industrial-10-contribution-build-01",
+        "n2-industrial-10-unit-breakeven-01",
+        "n2-industrial-10-sales-breakeven-01",
+        "n2-industrial-10-target-profit-01",
+        "n2-industrial-10-whole-unit-ceiling-01",
+        "n2-industrial-10-safety-margin-01",
+        "n2-industrial-10-capacity-boundary-01",
+        "n2-industrial-10-inverse-fixed-01",
+        "n2-industrial-10-inverse-price-01",
+        "n2-industrial-10-worksheet-error-01",
+        "n2-industrial-10-two-budgets-01",
+        "n2-industrial-10-insufficient-split-01"
       ]
     }
   ],
@@ -12337,6 +12617,1134 @@
           "explanation": "費目別完成材料費は期首材料費を含むが、その金額は与えられていない。"
         }
       ]
+    },
+    {
+      "id": "n2-industrial-10-assumption-boundary-01",
+      "familyId": "n2-industrial-10-family-assumption-boundary",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-10",
+      "title": "固定総額と単位額を取り違えない",
+      "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。木製ケースの固定費は月240,000円、1個当たり変動費は600円。販売単価は1,000円。月400個から800個へ増やす場合を考える。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "basic",
+      "requirementIds": [
+        "nissho-c9eaf983a9d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-10-skill-assumptions",
+        "n2-industrial-10-skill-range"
+      ],
+      "fields": [
+        {
+          "id": "fixedAt800",
+          "label": "800個時の固定費総額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 240000,
+          "points": 1,
+          "explanation": "適用範囲内では固定費総額は240,000円のまま。"
+        },
+        {
+          "id": "variableAt800",
+          "label": "800個時の変動費総額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 480000,
+          "points": 1,
+          "explanation": "600×800＝480,000。"
+        },
+        {
+          "id": "fixedPerUnit800",
+          "label": "800個時の1個当たり固定費",
+          "type": "amount",
+          "unit": "円/個",
+          "decimals": 0,
+          "answer": 300,
+          "points": 1,
+          "explanation": "240,000÷800＝300。"
+        },
+        {
+          "id": "beyondRange",
+          "label": "同じ式で2,500個時の利益まで確定できるか",
+          "type": "choice",
+          "answer": "confirmRange",
+          "options": [
+            "yes",
+            "confirmRange",
+            "zero"
+          ],
+          "optionLabels": {
+            "yes": "固定費は数量にかかわらず永久に同じなので確定できる",
+            "confirmRange": "範囲外の単価・費用・能力の条件を追加確認する",
+            "zero": "範囲外なので利益は必ず0になる"
+          },
+          "points": 1,
+          "explanation": "固定費一定などの仮定は0〜2,000個の範囲内のもの。範囲外の条件は与えられていない。"
+        }
+      ],
+      "explanation": {
+        "steps": [
+          "総額が一定なのは固定費、単位額が一定なのは変動費。",
+          "単位固定費は数量で割り直す。"
+        ],
+        "pitfalls": [
+          "400個時の単位固定費600円を800個へそのまま掛けない。",
+          "固定費という名称だけで無制限に外挿しない。"
+        ],
+        "check": "800個では費用総額240,000＋480,000＝720,000円。"
+      },
+      "errorTags": [
+        "assumption-boundary"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin"
+        ],
+        "note": "IL MASTROの独自教材。公式出題区分と大学刊行教材で範囲・基本関係式を確認し、状況・数値・解説を新規に制作しました。原典の例題・過去問・出版社問題の転載や改変ではなく、公式問題や公式採点基準ではありません。"
+      }
+    },
+    {
+      "id": "n2-industrial-10-contribution-build-01",
+      "familyId": "n2-industrial-10-family-contribution-build",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-10",
+      "title": "販売に連動する費用も変動費に含める",
+      "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。小型ラックの販売単価は1,800円。1個当たりの変動製造費は材料700円・加工300円、変動販売費は80円である。固定費総額432,000円、販売数量800個。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "basic",
+      "requirementIds": [
+        "nissho-c9eaf983a9d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-10-skill-contribution"
+      ],
+      "fields": [
+        {
+          "id": "unitVariable",
+          "label": "1個当たり変動費の合計",
+          "type": "amount",
+          "unit": "円/個",
+          "decimals": 0,
+          "answer": 1080,
+          "points": 1,
+          "explanation": "700＋300＋80＝1,080。"
+        },
+        {
+          "id": "unitContribution",
+          "label": "単位貢献利益",
+          "type": "amount",
+          "unit": "円/個",
+          "decimals": 0,
+          "answer": 720,
+          "points": 1,
+          "explanation": "1,800−1,080＝720。"
+        },
+        {
+          "id": "contributionPercent",
+          "label": "貢献利益率",
+          "type": "amount",
+          "unit": "%",
+          "decimals": 0,
+          "answer": 40,
+          "points": 1,
+          "explanation": "720÷1,800×100＝40。"
+        },
+        {
+          "id": "sales",
+          "label": "売上高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 1440000,
+          "points": 1,
+          "explanation": "1,800×800＝1,440,000。"
+        },
+        {
+          "id": "totalContribution",
+          "label": "貢献利益総額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 576000,
+          "points": 1,
+          "explanation": "720×800＝576,000。"
+        },
+        {
+          "id": "profit",
+          "label": "営業利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 144000,
+          "points": 1,
+          "explanation": "576,000−432,000＝144,000。"
+        }
+      ],
+      "explanation": {
+        "steps": [
+          "製造費だけでなく変動販売費も単位変動費に足す。",
+          "売上高−変動費＝貢献利益、貢献利益−固定費＝営業利益。"
+        ],
+        "pitfalls": [
+          "貢献利益を売上総利益や営業利益と同じものとして扱わない。",
+          "貢献利益率の分母は売上高・販売単価であり、変動費ではない。"
+        ],
+        "check": "売上1,440,000−変動864,000−固定432,000＝利益144,000円。"
+      },
+      "errorTags": [
+        "contribution-build"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin"
+        ],
+        "note": "IL MASTROの独自教材。公式出題区分と大学刊行教材で範囲・基本関係式を確認し、状況・数値・解説を新規に制作しました。原典の例題・過去問・出版社問題の転載や改変ではなく、公式問題や公式採点基準ではありません。"
+      }
+    },
+    {
+      "id": "n2-industrial-10-unit-breakeven-01",
+      "familyId": "n2-industrial-10-family-unit-breakeven",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-10",
+      "title": "損益ゼロの数量と売上高を求める",
+      "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。収納箱の販売単価は1,600円、単位変動費960円、固定費総額384,000円。利益がちょうど0となる点を求める。0の解答も空欄にせず記入する。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-c9eaf983a9d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-10-skill-unit-bep",
+        "n2-industrial-10-skill-sales-bep"
+      ],
+      "fields": [
+        {
+          "id": "unitContribution",
+          "label": "単位貢献利益",
+          "type": "amount",
+          "unit": "円/個",
+          "decimals": 0,
+          "answer": 640,
+          "points": 1,
+          "explanation": "1,600−960＝640。"
+        },
+        {
+          "id": "breakEvenUnits",
+          "label": "損益分岐点販売数量",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 600,
+          "points": 1,
+          "explanation": "384,000÷640＝600。"
+        },
+        {
+          "id": "breakEvenSales",
+          "label": "損益分岐点売上高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 960000,
+          "points": 1,
+          "explanation": "600×1,600＝960,000。"
+        },
+        {
+          "id": "profitAtBreakEven",
+          "label": "損益分岐点の営業利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "960,000−600×960−384,000＝0。"
+        }
+      ],
+      "explanation": {
+        "steps": [
+          "まず単位貢献利益を求め、固定費を回収する個数を計算する。",
+          "数量に販売単価を掛けて売上高に直す。"
+        ],
+        "pitfalls": [
+          "固定費÷販売単価では変動費を回収できない。",
+          "固定費÷単位貢献利益の答えは円ではなく個。"
+        ],
+        "check": "損益分岐点では貢献利益総額384,000円と固定費が一致する。"
+      },
+      "errorTags": [
+        "unit-breakeven"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars"
+        ],
+        "note": "IL MASTROの独自教材。公式出題区分と大学刊行教材で範囲・基本関係式を確認し、状況・数値・解説を新規に制作しました。原典の例題・過去問・出版社問題の転載や改変ではなく、公式問題や公式採点基準ではありません。"
+      }
+    },
+    {
+      "id": "n2-industrial-10-sales-breakeven-01",
+      "familyId": "n2-industrial-10-family-sales-breakeven",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-10",
+      "title": "金額資料から変動費率を取り出す",
+      "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。販売単価2,000円の保管トレーについて、月間売上高2,400,000円、変動費総額1,440,000円、固定費総額672,000円であった。単価・費用の仮定は同じまま、損益分岐点売上高を求める。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-c9eaf983a9d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-10-skill-contribution",
+        "n2-industrial-10-skill-sales-bep"
+      ],
+      "fields": [
+        {
+          "id": "variablePercent",
+          "label": "変動費率",
+          "type": "amount",
+          "unit": "%",
+          "decimals": 0,
+          "answer": 60,
+          "points": 1,
+          "explanation": "1,440,000÷2,400,000×100＝60。"
+        },
+        {
+          "id": "contributionPercent",
+          "label": "貢献利益率",
+          "type": "amount",
+          "unit": "%",
+          "decimals": 0,
+          "answer": 40,
+          "points": 1,
+          "explanation": "100−60＝40。"
+        },
+        {
+          "id": "breakEvenSales",
+          "label": "損益分岐点売上高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 1680000,
+          "points": 1,
+          "explanation": "672,000÷0.40＝1,680,000。"
+        },
+        {
+          "id": "profit",
+          "label": "資料の売上高における営業利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 288000,
+          "points": 1,
+          "explanation": "2,400,000−1,440,000−672,000＝288,000。"
+        }
+      ],
+      "explanation": {
+        "steps": [
+          "変動費率の補数が貢献利益率。",
+          "円の固定費を無単位の率で割ると、円の売上高になる。"
+        ],
+        "pitfalls": [
+          "40%を40のまま割り算の分母にしない。",
+          "変動費率60%で固定費を割らない。"
+        ],
+        "check": "分岐点数量は840個で、0〜2,000個の範囲内。"
+      },
+      "errorTags": [
+        "sales-breakeven"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars"
+        ],
+        "note": "IL MASTROの独自教材。公式出題区分と大学刊行教材で範囲・基本関係式を確認し、状況・数値・解説を新規に制作しました。原典の例題・過去問・出版社問題の転載や改変ではなく、公式問題や公式採点基準ではありません。"
+      }
+    },
+    {
+      "id": "n2-industrial-10-target-profit-01",
+      "familyId": "n2-industrial-10-family-target-profit",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-10",
+      "title": "目標利益を固定費に加えてから割る",
+      "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。組立キットの販売単価は2,500円、単位変動費1,500円、固定費総額900,000円。月間目標営業利益350,000円をちょうど得る数量・売上高を求める。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-c9eaf983a9d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-10-skill-target"
+      ],
+      "fields": [
+        {
+          "id": "requiredContribution",
+          "label": "必要な貢献利益総額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 1250000,
+          "points": 1,
+          "explanation": "900,000＋350,000＝1,250,000。"
+        },
+        {
+          "id": "targetUnits",
+          "label": "必要販売数量",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 1250,
+          "points": 1,
+          "explanation": "1,250,000÷(2,500−1,500)＝1,250。"
+        },
+        {
+          "id": "targetSales",
+          "label": "必要売上高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 3125000,
+          "points": 1,
+          "explanation": "1,250×2,500＝3,125,000。"
+        },
+        {
+          "id": "verifiedProfit",
+          "label": "その数量での営業利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 350000,
+          "points": 1,
+          "explanation": "1,250×1,000−900,000＝350,000。"
+        }
+      ],
+      "explanation": {
+        "steps": [
+          "貢献利益で固定費と目標利益の両方を賄う。",
+          "求めた数量を元の利益式へ戻す。"
+        ],
+        "pitfalls": [
+          "目標利益だけを単位貢献利益で割ると、固定費を回収する数量が欠ける。",
+          "目標利益を固定費から引かない。"
+        ],
+        "check": "必要1,250個は適用範囲内で、目標利益をちょうど達成する。"
+      },
+      "errorTags": [
+        "target-profit"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars"
+        ],
+        "note": "IL MASTROの独自教材。公式出題区分と大学刊行教材で範囲・基本関係式を確認し、状況・数値・解説を新規に制作しました。原典の例題・過去問・出版社問題の転載や改変ではなく、公式問題や公式採点基準ではありません。"
+      }
+    },
+    {
+      "id": "n2-industrial-10-whole-unit-ceiling-01",
+      "familyId": "n2-industrial-10-family-whole-unit-ceiling",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-10",
+      "title": "端数が出るときは最小の整数個数を検証する",
+      "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。展示台の販売単価は1,400円、単位変動費870円、固定費総額212,000円。目標営業利益15,000円以上が必要である。製品は1個単位でしか販売できない。四捨五入せず、目標以上となる最小の整数個数を求め、1個少ない場合とも比較する。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-c9eaf983a9d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-10-skill-target",
+        "n2-industrial-10-skill-whole-units"
+      ],
+      "fields": [
+        {
+          "id": "minimumUnits",
+          "label": "目標以上となる最小販売数量",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 429,
+          "points": 1,
+          "explanation": "(212,000＋15,000)÷530＝428と160/530。最小整数は429。"
+        },
+        {
+          "id": "profitAtMinimum",
+          "label": "その最小数量での営業利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 15370,
+          "points": 1,
+          "explanation": "429×530−212,000＝15,370。"
+        },
+        {
+          "id": "profitOneLess",
+          "label": "1個少ない数量での営業利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 14840,
+          "points": 1,
+          "explanation": "428×530−212,000＝14,840で目標未達。"
+        },
+        {
+          "id": "salesAtMinimum",
+          "label": "その最小数量での売上高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 600600,
+          "points": 1,
+          "explanation": "429×1,400＝600,600。"
+        }
+      ],
+      "explanation": {
+        "steps": [
+          "理論数量を整数個に切り上げる。",
+          "切り上げ後は利益が目標に完全一致するとは限らない。"
+        ],
+        "pitfalls": [
+          "428個へ切り捨て・四捨五入すると15000円に届かない。",
+          "切り上げた個数の売上高と、連続量として計算した必要売上高を混同しない。"
+        ],
+        "check": "429個では15,370≧15,000、428個では14,840＜15,000。"
+      },
+      "errorTags": [
+        "whole-unit-ceiling"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars"
+        ],
+        "note": "IL MASTROの独自教材。公式出題区分と大学刊行教材で範囲・基本関係式を確認し、状況・数値・解説を新規に制作しました。原典の例題・過去問・出版社問題の転載や改変ではなく、公式問題や公式採点基準ではありません。"
+      }
+    },
+    {
+      "id": "n2-industrial-10-safety-margin-01",
+      "familyId": "n2-industrial-10-family-safety-margin",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-10",
+      "title": "売上減少への余裕を売上高で測る",
+      "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。台座の販売単価1,250円、単位変動費750円、固定費総額600,000円。計画販売数量1,600個で、計画売上高を基準に安全余裕額と安全余裕率を求める。価格と費用条件は変えず、数量だけが減る場合の指標である。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-c9eaf983a9d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-10-skill-safety",
+        "n2-industrial-10-skill-sales-bep"
+      ],
+      "fields": [
+        {
+          "id": "plannedSales",
+          "label": "計画売上高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 2000000,
+          "points": 1,
+          "explanation": "1,600×1,250＝2,000,000。"
+        },
+        {
+          "id": "breakEvenSales",
+          "label": "損益分岐点売上高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 1500000,
+          "points": 1,
+          "explanation": "600,000÷0.40＝1,500,000。"
+        },
+        {
+          "id": "safetyAmount",
+          "label": "安全余裕額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 500000,
+          "points": 1,
+          "explanation": "2,000,000−1,500,000＝500,000。"
+        },
+        {
+          "id": "safetyPercent",
+          "label": "安全余裕率",
+          "type": "amount",
+          "unit": "%",
+          "decimals": 0,
+          "answer": 25,
+          "points": 1,
+          "explanation": "500,000÷2,000,000×100＝25。"
+        },
+        {
+          "id": "profit",
+          "label": "計画営業利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 200000,
+          "points": 1,
+          "explanation": "500,000×0.40＝200,000。"
+        }
+      ],
+      "explanation": {
+        "steps": [
+          "計画売上高から損益分岐点売上高を引く。",
+          "率の分母は計画売上高で、利益ではない。"
+        ],
+        "pitfalls": [
+          "安全余裕額500,000円は利益200,000円ではない。",
+          "この指標を倒産確率・資金繰りの保証や、値下げに耐えられる割合と解釈しない。"
+        ],
+        "check": "単価・費用が同じなら販売数量400個の減少で損益分岐点に達する。"
+      },
+      "errorTags": [
+        "safety-margin"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-5-calculate-and-interpret-a-companys-margin-of-safety-and-operating-leverage",
+          "https://www.fao.org/4/w4343e/w4343e06.htm"
+        ],
+        "note": "IL MASTROの独自教材。公式出題区分と大学刊行教材で範囲・基本関係式を確認し、状況・数値・解説を新規に制作しました。原典の例題・過去問・出版社問題の転載や改変ではなく、公式問題や公式採点基準ではありません。"
+      }
+    },
+    {
+      "id": "n2-industrial-10-capacity-boundary-01",
+      "familyId": "n2-industrial-10-family-capacity-boundary",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-10",
+      "title": "式の候補が能力上限を超えたら止める",
+      "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。検査治具の販売単価2,000円、単位変動費1,200円、固定費総額560,000円。ここだけ適用範囲は0〜1,000個で、月間生産・販売能力の上限も1,000個である。これを超える設備・費用・販売条件は不明。目標営業利益320,000円について、現行の利益式を機械的に解いた候補数量と、現行範囲内での達成可否を答える。範囲外の候補を実現可能な予測とみなさない。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-c9eaf983a9d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-10-skill-range",
+        "n2-industrial-10-skill-target"
+      ],
+      "fields": [
+        {
+          "id": "algebraicCandidate",
+          "label": "現行式を機械的に解いた候補数量",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 1100,
+          "points": 1,
+          "explanation": "(560,000＋320,000)÷800＝1,100。ただし現行範囲外。"
+        },
+        {
+          "id": "maxProfit",
+          "label": "現行能力上限での営業利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 240000,
+          "points": 1,
+          "explanation": "1,000×800−560,000＝240,000。"
+        },
+        {
+          "id": "profitShortfall",
+          "label": "目標利益−現行能力上限での利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 80000,
+          "points": 1,
+          "explanation": "320,000−240,000＝80,000。"
+        },
+        {
+          "id": "feasibility",
+          "label": "現行能力・費用条件での判断",
+          "type": "choice",
+          "answer": "notReachable",
+          "options": [
+            "reachable",
+            "notReachable",
+            "zero"
+          ],
+          "optionLabels": {
+            "reachable": "候補1,100個を売ればよいので現行能力で達成可能",
+            "notReachable": "現行能力では未達。拡張後は追加の条件が必要",
+            "zero": "候補が範囲外なので現行上限でも利益0"
+          },
+          "points": 1,
+          "explanation": "単位貢献利益が正なので現行範囲の最大利益は上限で得られ、それでも目標に届かない。"
+        }
+      ],
+      "explanation": {
+        "steps": [
+          "候補数量と能力上限を比べる。",
+          "実際に与えられた範囲の上限で利益を計算する。"
+        ],
+        "pitfalls": [
+          "式を解けることと、そこまで同じ費用構造で生産販売できることは別。",
+          "拡張後の固定費を勝手に据え置かない。"
+        ],
+        "check": "現行条件の最大240,000円は目標320,000円より80,000円少ない。"
+      },
+      "errorTags": [
+        "capacity-boundary"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars"
+        ],
+        "note": "IL MASTROの独自教材。公式出題区分と大学刊行教材で範囲・基本関係式を確認し、状況・数値・解説を新規に制作しました。原典の例題・過去問・出版社問題の転載や改変ではなく、公式問題や公式採点基準ではありません。"
+      }
+    },
+    {
+      "id": "n2-industrial-10-inverse-fixed-01",
+      "familyId": "n2-industrial-10-family-inverse-fixed",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-10",
+      "title": "利益から不明な固定費を復元する",
+      "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。販売単価1,800円の部品箱について、売上高3,600,000円、変動費総額2,160,000円、営業利益360,000円が分かっている。固定費の記載が欠けているが、ほかの費用・利益項目はない。この資料から固定費と損益分岐点売上高を復元する。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-c9eaf983a9d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-10-skill-reverse",
+        "n2-industrial-10-skill-sales-bep"
+      ],
+      "fields": [
+        {
+          "id": "contribution",
+          "label": "貢献利益総額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 1440000,
+          "points": 1,
+          "explanation": "3,600,000−2,160,000＝1,440,000。"
+        },
+        {
+          "id": "fixed",
+          "label": "固定費総額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 1080000,
+          "points": 1,
+          "explanation": "1,440,000−360,000＝1,080,000。"
+        },
+        {
+          "id": "breakEvenSales",
+          "label": "損益分岐点売上高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 2700000,
+          "points": 1,
+          "explanation": "貢献利益率40%。1,080,000÷0.40＝2,700,000。"
+        }
+      ],
+      "explanation": {
+        "steps": [
+          "営業利益＝貢献利益−固定費を固定費について解く。",
+          "復元した固定費を使って分岐点を計算する。"
+        ],
+        "pitfalls": [
+          "利益を固定費へ加算しない。",
+          "固定費を含む総費用を変動費率の分子にしない。"
+        ],
+        "check": "3,600,000−2,160,000−1,080,000＝360,000円。"
+      },
+      "errorTags": [
+        "inverse-fixed"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars"
+        ],
+        "note": "IL MASTROの独自教材。公式出題区分と大学刊行教材で範囲・基本関係式を確認し、状況・数値・解説を新規に制作しました。原典の例題・過去問・出版社問題の転載や改変ではなく、公式問題や公式採点基準ではありません。"
+      }
+    },
+    {
+      "id": "n2-industrial-10-inverse-price-01",
+      "familyId": "n2-industrial-10-family-inverse-price",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-10",
+      "title": "販売数量を固定して必要単価を逆算する",
+      "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。木製スタンドを800個生産販売する計画で、単位変動費900円、固定費総額480,000円、目標営業利益240,000円である。ここでは数量800個は与えられた条件で、単価変更による需要変化は扱わない。目標をちょうど満たす販売単価と貢献利益率を求める。最適価格や実際の売れ行きの保証ではない。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-c9eaf983a9d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-10-skill-reverse",
+        "n2-industrial-10-skill-target"
+      ],
+      "fields": [
+        {
+          "id": "unitContribution",
+          "label": "必要な単位貢献利益",
+          "type": "amount",
+          "unit": "円/個",
+          "decimals": 0,
+          "answer": 900,
+          "points": 1,
+          "explanation": "(480,000＋240,000)÷800＝900。"
+        },
+        {
+          "id": "requiredPrice",
+          "label": "必要販売単価",
+          "type": "amount",
+          "unit": "円/個",
+          "decimals": 0,
+          "answer": 1800,
+          "points": 1,
+          "explanation": "変動費900＋必要貢献利益900＝1,800。"
+        },
+        {
+          "id": "contributionPercent",
+          "label": "その単価での貢献利益率",
+          "type": "amount",
+          "unit": "%",
+          "decimals": 0,
+          "answer": 50,
+          "points": 1,
+          "explanation": "900÷1,800×100＝50。"
+        },
+        {
+          "id": "sales",
+          "label": "その単価での売上高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 1440000,
+          "points": 1,
+          "explanation": "1,800×800＝1,440,000。"
+        }
+      ],
+      "explanation": {
+        "steps": [
+          "必要な貢献利益を800個で割り、単位変動費へ加える。",
+          "数量を固定する条件を守り、需要を推測しない。"
+        ],
+        "pitfalls": [
+          "固定費だけを800個で割って変動費へ加えると目標利益が欠ける。",
+          "利益240,000円を1個の単価にそのまま加えない。"
+        ],
+        "check": "(1,800−900)×800−480,000＝240,000円。"
+      },
+      "errorTags": [
+        "inverse-price"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars"
+        ],
+        "note": "IL MASTROの独自教材。公式出題区分と大学刊行教材で範囲・基本関係式を確認し、状況・数値・解説を新規に制作しました。原典の例題・過去問・出版社問題の転載や改変ではなく、公式問題や公式採点基準ではありません。"
+      }
+    },
+    {
+      "id": "n2-industrial-10-worksheet-error-01",
+      "familyId": "n2-industrial-10-family-worksheet-error",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-10",
+      "title": "変動費率で割った表を訂正する",
+      "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。販売単価1,500円、単位変動費900円、固定費総額360,000円の筆記具ケースを分析した。担当者は「変動費率60%なので、損益分岐点売上高＝360,000÷0.60＝600,000円」と記入した。誤りを特定し、その売上高ではいくらの営業損失になるかも求める。損失額は正の数で答える。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-c9eaf983a9d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-10-skill-diagnose",
+        "n2-industrial-10-skill-sales-bep"
+      ],
+      "fields": [
+        {
+          "id": "correctPercent",
+          "label": "正しい計算に用いる貢献利益率",
+          "type": "amount",
+          "unit": "%",
+          "decimals": 0,
+          "answer": 40,
+          "points": 1,
+          "explanation": "(1,500−900)÷1,500×100＝40。"
+        },
+        {
+          "id": "correctBreakEvenSales",
+          "label": "正しい損益分岐点売上高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 900000,
+          "points": 1,
+          "explanation": "360,000÷0.40＝900,000。"
+        },
+        {
+          "id": "lossAtWrongSales",
+          "label": "売上高600,000円での営業損失額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 120000,
+          "points": 1,
+          "explanation": "600,000×0.40−360,000＝−120,000。損失額は120,000。"
+        },
+        {
+          "id": "cause",
+          "label": "担当者の誤り",
+          "type": "choice",
+          "answer": "variableDenominator",
+          "options": [
+            "variableDenominator",
+            "rounding",
+            "quantity"
+          ],
+          "optionLabels": {
+            "variableDenominator": "固定費を貢献利益率でなく変動費率で割った",
+            "rounding": "正しい式だが四捨五入だけを誤った",
+            "quantity": "売上高は正しく、単位だけが個である"
+          },
+          "points": 1,
+          "explanation": "売上高のうち固定費と利益に向かう部分は貢献利益率40%である。"
+        }
+      ],
+      "explanation": {
+        "steps": [
+          "率の名称と分母を照合する。",
+          "誤答を元の利益式へ戻して、ゼロにならないことを確認する。"
+        ],
+        "pitfalls": [
+          "600,000円という正の売上高だから黒字とは限らない。",
+          "損失額を求める欄と符号付き利益の欄を区別する。"
+        ],
+        "check": "正しい900,000円なら変動費540,000円・固定費360,000円をちょうど回収する。"
+      },
+      "errorTags": [
+        "worksheet-error"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars"
+        ],
+        "note": "IL MASTROの独自教材。公式出題区分と大学刊行教材で範囲・基本関係式を確認し、状況・数値・解説を新規に制作しました。原典の例題・過去問・出版社問題の転載や改変ではなく、公式問題や公式採点基準ではありません。"
+      }
+    },
+    {
+      "id": "n2-industrial-10-two-budgets-01",
+      "familyId": "n2-industrial-10-family-two-budgets",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-10",
+      "title": "二つの確定条件で基本式を計算し直す",
+      "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。同じ形状の梱包台について、変更前・変更後の二つの月次計画を比較する。変更前は販売単価2,000円・単位変動費1,200円・固定費総額480,000円、変更後は販売単価1,800円・単位変動費1,100円・固定費総額490,000円である。どちらも販売数量900個、適用範囲0〜2,000個。各計画の条件はそれぞれ一定とし、需要の予測・最適案の決定・高度な感度分析は行わない。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-c9eaf983a9d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-10-skill-compare",
+        "n2-industrial-10-skill-unit-bep",
+        "n2-industrial-10-skill-diagnose"
+      ],
+      "fields": [
+        {
+          "id": "beforeBreakEvenUnits",
+          "label": "変更前の損益分岐点販売数量",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 600,
+          "points": 1,
+          "explanation": "480,000÷(2,000−1,200)＝600。"
+        },
+        {
+          "id": "afterBreakEvenUnits",
+          "label": "変更後の損益分岐点販売数量",
+          "type": "amount",
+          "unit": "個",
+          "decimals": 0,
+          "answer": 700,
+          "points": 1,
+          "explanation": "490,000÷(1,800−1,100)＝700。"
+        },
+        {
+          "id": "beforeProfit",
+          "label": "変更前の計画営業利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 240000,
+          "points": 1,
+          "explanation": "900×800−480,000＝240,000。"
+        },
+        {
+          "id": "afterProfit",
+          "label": "変更後の計画営業利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 140000,
+          "points": 1,
+          "explanation": "900×700−490,000＝140,000。"
+        },
+        {
+          "id": "profitDecrease",
+          "label": "変更前利益−変更後利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 100000,
+          "points": 1,
+          "explanation": "240,000−140,000＝100,000。"
+        }
+      ],
+      "explanation": {
+        "steps": [
+          "変更後の単位貢献利益は700円で、変更前の800円を流用しない。",
+          "固定費もそれぞれの月次計画に合わせる。"
+        ],
+        "pitfalls": [
+          "単位変動費が下がっただけで必ず利益が増えるとはいえない。",
+          "売上単価・単位変動費・固定費を別々の計画から混ぜない。"
+        ],
+        "check": "二つの損益分岐点と900個はいずれも各計画の適用範囲内。"
+      },
+      "errorTags": [
+        "two-budgets"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars"
+        ],
+        "note": "IL MASTROの独自教材。公式出題区分と大学刊行教材で範囲・基本関係式を確認し、状況・数値・解説を新規に制作しました。原典の例題・過去問・出版社問題の転載や改変ではなく、公式問題や公式採点基準ではありません。"
+      }
+    },
+    {
+      "id": "n2-industrial-10-insufficient-split-01",
+      "familyId": "n2-industrial-10-family-insufficient-split",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-10",
+      "title": "総費用だけでは損益分岐点は一つに決まらない",
+      "prompt": "同規格の製品1種類について1か月を分析する。生産数量と販売数量は等しく、仕掛品・製品の在庫増減はない。別記のない限り、販売数量0〜2,000個の範囲で販売単価と1個当たり変動費は一定、固定費総額も一定とする。変動費・固定費には製造と販売・管理に関する費用を重複なくすべて含み、ほかの営業費用はない。税金・利息は扱わず、利益は営業利益を指す。単位貢献利益は正。金額は円、数量は個で、割合の解答欄には百分率の数値を入力する（例：40%なら40）。販売単価1,500円、販売数量1,000個、総費用1,200,000円だけが分かり、実際の固定費・変動費の内訳は不明である。比較用に「仮の内訳A：単位変動費600円・固定費600,000円」「仮の内訳B：単位変動費900円・固定費300,000円」を示す。AもBも0〜2,000個で一定とする別々の仮説であり、実際の内訳と断定しない。現在の利益と各仮説の分岐点を求め、元の資料だけで実際の分岐点を一つに確定できるか判断する。各仮説の分岐点売上高は数量を連続量として扱う理論値を求め、最小整数販売数量は求めない。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-c9eaf983a9d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-10-skill-sufficiency",
+        "n2-industrial-10-skill-sales-bep"
+      ],
+      "fields": [
+        {
+          "id": "currentProfit",
+          "label": "元の資料から確定する現在の営業利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 300000,
+          "points": 1,
+          "explanation": "売上1,500,000−総費用1,200,000＝300,000。"
+        },
+        {
+          "id": "hypothesisASales",
+          "label": "仮の内訳Aの損益分岐点売上高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 1000000,
+          "points": 1,
+          "explanation": "貢献利益率(1,500−600)÷1,500＝60%。600,000÷0.60＝1,000,000。"
+        },
+        {
+          "id": "hypothesisBSales",
+          "label": "仮の内訳Bの損益分岐点売上高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 750000,
+          "points": 1,
+          "explanation": "貢献利益率40%。300,000÷0.40＝750,000。"
+        },
+        {
+          "id": "uniqueActual",
+          "label": "元の資料だけで実際の分岐点を確定できるか",
+          "type": "choice",
+          "answer": "no",
+          "options": [
+            "yesA",
+            "yesB",
+            "no"
+          ],
+          "optionLabels": {
+            "yesA": "Aの分岐点が実際の値と確定する",
+            "yesB": "Bの分岐点が実際の値と確定する",
+            "no": "内訳が不足し、実際の分岐点は一つに確定しない"
+          },
+          "points": 1,
+          "explanation": "同じ1,000個時の総費用と利益に合う二つの内訳で分岐点が異なる。実際の変動費・固定費の内訳が必要。"
+        }
+      ],
+      "explanation": {
+        "steps": [
+          "現在の利益は総費用だけでも差し引ける。",
+          "異なる費用構造が同じ観測値に合うことを確認する。"
+        ],
+        "pitfalls": [
+          "総費用をすべて変動費と勝手に置かない。",
+          "仮説Aの分岐点数量は整数ではないが、ここでは連続量としての理論分岐点売上高を求めている。最小整数販売数量の問いではない。"
+        ],
+        "check": "1,000個時の費用はA：600,000＋600×1,000、B：300,000＋900×1,000で、ともに1,200,000円。"
+      },
+      "errorTags": [
+        "insufficient-split"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf",
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars"
+        ],
+        "note": "IL MASTROの独自教材。公式出題区分と大学刊行教材で範囲・基本関係式を確認し、状況・数値・解説を新規に制作しました。原典の例題・過去問・出版社問題の転載や改変ではなく、公式問題や公式採点基準ではありません。"
+      }
     }
   ],
   "reviewRecords": [
@@ -12672,6 +14080,45 @@
         "n2-industrial-lesson-09": "3f6ede7130c553c591aba1e2900546b1312a450303d3efad52956a5406bf4ba1"
       },
       "evidence": "notes/editorial/industrial-process-fifo-review-20261102.md"
+    },
+    {
+      "kind": "independent-computation",
+      "reviewedBy": "Parent reviewer /root/advance_remaining_site_backlogs (not chapter10 author)",
+      "reviewedAt": "2026-11-02T11:09:41Z",
+      "questionIds": [
+        "n2-industrial-10-assumption-boundary-01",
+        "n2-industrial-10-contribution-build-01",
+        "n2-industrial-10-unit-breakeven-01",
+        "n2-industrial-10-sales-breakeven-01",
+        "n2-industrial-10-target-profit-01",
+        "n2-industrial-10-whole-unit-ceiling-01",
+        "n2-industrial-10-safety-margin-01",
+        "n2-industrial-10-capacity-boundary-01",
+        "n2-industrial-10-inverse-fixed-01",
+        "n2-industrial-10-inverse-price-01",
+        "n2-industrial-10-worksheet-error-01",
+        "n2-industrial-10-two-budgets-01",
+        "n2-industrial-10-insufficient-split-01"
+      ],
+      "questionHashes": {
+        "n2-industrial-10-assumption-boundary-01": "89e1c5e8ddfc56adb938686e8638dc8cd1c4dae157a419290e6236de1c217f80",
+        "n2-industrial-10-contribution-build-01": "08006ce4c7aba025abefe4ff233d6c137dc00175a649d3fb5d8891c72bdbd73a",
+        "n2-industrial-10-unit-breakeven-01": "067e0aff0c9c527062ed6940d2dda50652ba87a6e16af90a162b9e87b5405a3b",
+        "n2-industrial-10-sales-breakeven-01": "c561fb18d377c26a6355e774ce3b17bb000b93b2dd9d9cce9aefd5490d7e736e",
+        "n2-industrial-10-target-profit-01": "2769929def2d3e3a3bbb7fa4bddebd71b454322110f832c93f0ecbb32e29a336",
+        "n2-industrial-10-whole-unit-ceiling-01": "d219c3ed64cd8615e244bd52585e0700c96f0ffe7f406bd36b99477f5d837f77",
+        "n2-industrial-10-safety-margin-01": "8defc78580b83aa4decf52e64990b2840e798e60d6268cd792213bc2013a5eda",
+        "n2-industrial-10-capacity-boundary-01": "2309bea8d17cfd48fbc87790af50a6a55972d6736ee4b9357c4226bb789f5d74",
+        "n2-industrial-10-inverse-fixed-01": "7a0b054a2e969e1352ed7fc7ace249bd3b9147a3ae5bdcd1963b9f36542feaea",
+        "n2-industrial-10-inverse-price-01": "6d7ba8f711580523a1847fc5174c3d3412510d4b3f0314195172d8c27db16798",
+        "n2-industrial-10-worksheet-error-01": "bd45c2e22b3b6c41ad430c97d2cca1df87a9ae88093041c8a90f6e02cc97c8a0",
+        "n2-industrial-10-two-budgets-01": "30271bf4abc543905a57dbea80fae524b4689c9a9db5d3bf338f820be9baf469",
+        "n2-industrial-10-insufficient-split-01": "75e51ac736cfb40ae481c9340ae2901a6f6353ffd26ffe01fdd18fd450be6cb3"
+      },
+      "lessonHashes": {
+        "n2-industrial-lesson-10": "9fb22cca772eeb5f0df028fc1246318092db23101165439b37773a7917a18849"
+      },
+      "evidence": "notes/editorial/industrial-cvp-review-20261102.md"
     }
   ]
 }

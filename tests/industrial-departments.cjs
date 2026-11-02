@@ -27,7 +27,7 @@ const solutions=new Map([
 [id('support-actual-planned'),{'actual-rate':117000/(500+400),'planned-rate':planned,p:planned*500,q:planned*400,difference:117000-planned*(500+400)}],
 [id('planned-total-reconciliation'),{'final-p':pp,'final-q':qq,'applied-s':applied,'difference-s':difference,'actual-total':actualTotal,'check-difference':pp+qq+difference-actualTotal}]
 ]);
-assert.equal(all.authoringStatus,'reviewed');assert.equal(all.sourceVerificationPending,false);assert.equal(all.reviewRecords.length,9);
+assert.equal(all.authoringStatus,'reviewed');assert.equal(all.sourceVerificationPending,false);assert.equal(all.reviewRecords.length,10);
 assert.equal(d.lessons.length,1);assert.equal(d.lessons[0].sections.length,10);assert.equal(d.lessons[0].workedExamples.length,6);
 assert.equal(d.questions.length,12);assert.deepEqual([...solutions.keys()],d.lessons[0].questionIds);
 assert(!d.lessons[0].requirementIds.includes('nissho-f1d8ec93c3ea'));

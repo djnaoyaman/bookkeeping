@@ -46,6 +46,8 @@ jobs:
           node tests/industrial-process-average-independent.cjs
           node tests/industrial-process-fifo.cjs
           node tests/industrial-process-fifo-independent.cjs
+          node tests/industrial-cvp.cjs
+          node tests/industrial-cvp-independent.cjs
           node tests/check.cjs
           node tests/discovery-client.cjs
   deploy:

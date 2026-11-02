@@ -35,6 +35,8 @@ jobs:
       - run: node tests/industrial-process-average-independent.cjs
       - run: node tests/industrial-process-fifo.cjs
       - run: node tests/industrial-process-fifo-independent.cjs
+      - run: node tests/industrial-cvp.cjs
+      - run: node tests/industrial-cvp-independent.cjs
       - run: node tests/check.cjs
       - run: node tests/discovery-client.cjs
       - run: python profile-check.py
