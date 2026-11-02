@@ -3,3 +3,4 @@
 @media(min-width:641px) and (max-width:850px){.course-journal-row{grid-template-columns:1fr}}
 /* Keep unspaced calculation strings readable inside narrow result cards. */
 #courseresult { overflow-wrap:anywhere; }
+#courseresult .course-number { white-space:nowrap; }
