@@ -29,6 +29,8 @@ jobs:
       - run: node tests/industrial-overhead-independent.cjs
       - run: node tests/industrial-departments.cjs
       - run: node tests/industrial-departments-independent.cjs
+      - run: node tests/industrial-job-order.cjs
+      - run: node tests/industrial-job-order-independent.cjs
       - run: node tests/check.cjs
       - run: node tests/discovery-client.cjs
       - run: python profile-check.py

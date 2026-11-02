@@ -5,7 +5,7 @@
   "scopeVersion": "nissho-2026",
   "authoringStatus": "reviewed",
   "sourceVerificationPending": false,
-  "coverageNote": "工業簿記の導入6章・70問です。材料費・労務費・経費は実際原価の基礎、製造間接費は実際・予定配賦と公式法変動予算の2差異、部門費は第一次集計・直接配賦・限定した補助部門の実際/予定配賦を扱います。材料の予定価格・予定賃率・複合費・相互配賦法・標準原価計算などは未収録。部門費の親項目への対応は全配賦法の完成を意味しません。経費は正常な製造活動の基礎に限定し、税法判断・法定償却率・異常損失の判定は扱いません。2級全範囲の完成・技能の修得・合格可能性を示しません。",
+  "coverageNote": "工業簿記の導入7章・84問。材料費・労務費・経費は実際原価の基礎、製造間接費は実際・予定配賦と公式変動予算の2差異、部門費は第一次集計・直接配賦・限定した補助部門の実際/予定配賦、個別原価計算は指図書別原価と完成/販売の記帳・補修指図書の当該指図書賦課を扱います。材料の予定価格・予定賃率・複合費・相互配賦法・標準原価計算等は未収録。部門費の親項目への対応は全配賦法の完成を意味しません。税金は正常な製造活動の基礎に限定し、税法判断・確定負担率・異常損失の判定は扱いません。2級全範囲の完成・技能の同等・合格可能性を示しません。既存の56問と記録はそのまま残しています。",
   "lessons": [
     {
       "id": "n2-industrial-lesson-01",
@@ -1599,6 +1599,270 @@
         "n2-industrial-06-support-transfer-journal-01",
         "n2-industrial-06-support-actual-planned-01",
         "n2-industrial-06-planned-total-reconciliation-01"
+      ]
+    },
+    {
+      "id": "n2-industrial-lesson-07",
+      "title": "個別原価計算 — 指図書から完成品・売上原価へ",
+      "requirementIds": [
+        "nissho-8f82b6d44a80",
+        "nissho-518843dbb4d4",
+        "nissho-f1d12ed9ccbe",
+        "nissho-ae5b20dac83f",
+        "nissho-be1b1e861f67"
+      ],
+      "prerequisiteIds": [
+        "n2-industrial-lesson-06"
+      ],
+      "sections": [
+        {
+          "title": "注文ごとの原価を、指図書番号で追う",
+          "paragraphs": [
+            "個別原価計算は、製造指図書を単位として製品の原価を集計する方法です。仕様の異なる注文を同時に作る工場では、工場全体の費用を製品の個数だけで均等割りしても、各注文が使った資源の違いを表せません。ここでは特定の注文について発行した個別の指図書番号を、費用集計の鍵にします。",
+            "本章は受注別に費用を把握できるという条件の教材です。実際の会社名や業種だけで採用方法を断定しません。大量連続生産の総合原価計算や、その月末仕掛品の換算量計算は別の章の論点です。"
+          ]
+        },
+        {
+          "title": "製造指図書と原価計算表は役割が違う",
+          "paragraphs": [
+            "製造指図書は、どの注文について何を製造するかを示す資料です。原価計算表は、その指図書に集めた材料費・労務費・経費・製造間接費などを記録し、原価を計算するための表です。注文番号が同じでも、製造を指示することと費用を集計することは同じ作業ではありません。",
+            "材料の出庫記録や作業記録には対象指図書を対応させます。記録がない費用を、注文の売価や番号の順番だけで恣意的に割り振りません。資料に費用の帰属が示されていることを確認してから原価計算表へ転記します。"
+          ]
+        },
+        {
+          "title": "直接費は当該注文へ、間接費は配賦額を集める",
+          "paragraphs": [
+            "特定の指図書へ直接把握した材料費・労務費・直接経費を、その指図書の原価計算表へ集めます。複数注文に共通する製造間接費は、指定された配賦方法による配賦額を加えます。第05章・第06章の計算結果は、この指図書別の原価へつながります。",
+            "本章の予定配賦問題では、事前に設定した率に当該注文の実際作業時間を掛けます。予定率を売価に掛けたり、工場全体の予定予算を注文ごとに全額加えたりしません。配賦差額を調整する条件のない問題では、その処理を勝手に追加しません。"
+          ]
+        },
+        {
+          "title": "期首原価を落とさず、当月分と区別する",
+          "paragraphs": [
+            "前月から未完成の注文には、前月末までに集まった原価が残っています。当月に完成する注文の原価は、期首までの累計と当月の追加原価を合わせた額です。当月の支出だけを完成品原価にすると、前月から持ち越した製造活動の分が抜けてしまいます。",
+            "原価計算表が受注から完成までの累計表なのか、当月加算だけを示す欄なのかを読み分けます。本章の金額はすべて原価として集計すべき額が与えられており、支払額から発生額へ修正する計算を重ねて行う必要はありません。"
+          ]
+        },
+        {
+          "title": "完成した指図書と、未完成の指図書を分ける",
+          "paragraphs": [
+            "本章では各指図書が丸ごとの完成か未完成かに分かれ、部分完成はない条件とします。完成した指図書の累計原価を完成品原価へ移し、未完成の指図書の累計原価を期末仕掛品とします。注文の開始月ではなく、当月末の実際の完成状態で分けます。",
+            "仕掛品の総額照合は「期首仕掛品＋当月製造費用＝当月完成品原価＋期末仕掛品」です。他の振替・仕損などがないという条件を確認して使います。完成品原価から期首仕掛品をもう一度差し引くことも、未完成原価を完成額へ混ぜることも誤りです。"
+          ]
+        },
+        {
+          "title": "完成しても、売れていなければ製品に残る",
+          "paragraphs": [
+            "完成品は仕掛品から製品へ移りますが、完成しただけで直ちに売上原価になるわけではありません。完成済みで未販売の注文原価は製品に残り、販売した完成品の原価は売上原価へ振り替えます。本章では指図書単位で全量販売または未販売とするか、製品の期首・期末額を明示します。",
+            "返品・仕損・他の増減がない条件なら「期首製品＋当月完成品原価−期末製品＝売上原価」。売上総利益は売上高から売上原価を引いた額であり、売上高を原価計算表の製造原価へ足しません。販売費等を控除した営業利益と同じ意味でもありません。"
+          ]
+        },
+        {
+          "title": "仕訳は、費用発生・完成・販売原価の段階を区別する",
+          "paragraphs": [
+            "直接費や配賦製造間接費を仕掛品へ集める段階と、完成後に製品へ移す段階を分けます。完成時の振替は、借方「製品」・貸方「仕掛品」。すでに仕掛品へ集計済みの材料費や労務費を、完成時にもう一度計上しません。",
+            "販売した製品の原価振替は、借方「売上原価」・貸方「製品」。これは売上代金を記録する仕訳とは別です。本章の仕訳問題は指定した原価振替だけを求めるので、別途処理済みの売上仕訳や未指示の税金処理を追加しません。"
+          ]
+        },
+        {
+          "title": "補修指図書の費用は、元の指図書へ一度だけ賦課する",
+          "paragraphs": [
+            "本章で扱う仕損は、正常な補修について別の補修指図書を発行し、その補修費を当該の元指図書へ全額賦課する場合に限定します。補修で生じた直接材料費・直接労務費と配賦製造間接費を補修指図書に集計し、元指図書の原価へ加えます。補修で同じ製品を直す条件であり、代わりの製品を新規製造する条件ではありません。",
+            "元指図書へ補修費を振り替えた後は、元指図書の新しい原価に補修費が含まれます。その元指図書と補修指図書を別々の完成品として足すと二重計上です。補修前の原価表なのか、補修費を加算済みの原価表なのかを必ず確認してください。"
+          ]
+        },
+        {
+          "title": "単位原価の分母は、示された良品数量を使う",
+          "paragraphs": [
+            "全て同じ条件の良品が完成した一つの指図書なら、指図書の完成品原価をその良品数量で割って単位原価を求めます。本章の補修問題は補修後に指定数量がすべて良品完成し、仕損の売却価値・作業屑・数量減少はない条件とします。",
+            "補修指図書がもう一枚増えたから製品数量が増えた、とは扱いません。未完成数量や別注文の数量を分母へ混ぜず、問題にない回収額や異常仕損処理を推測して差し引かないことが大切です。"
+          ]
+        },
+        {
+          "title": "原価計算表と勘定の総額を照合する",
+          "paragraphs": [
+            "複数の指図書を扱うときは、各注文の期首原価・当月加算・累計と完成状態を整理します。各指図書の累計合計は、期首仕掛品総額と当月製造費用総額の合計に一致するはずです。その合計を完成品と未完成品へ分け、続いて製品の期首・期末と売上原価を照合します。",
+            "本章は個別原価計算の基礎と、補修指図書を発行して当該指図書へ賦課する限定した仕損費です。1級側の代品指図書、補修・代品指図書を発行しない方法、仕損費を発生部門の間接費にする方法、作業屑は扱いません。教材の問題数が増えても、日商簿記2級全範囲の完成や合格保証を意味しません。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "title": "注文別の原価計算表を完成させる",
+          "prompt": "注文Mを80個製造して全て完成した。期首仕掛品なし。直接材料48,000円・直接労務32,000円・直接経費4,000円。予定率250円/時間、当月実際64時間。税金・他費用・配賦差額調整なし。",
+          "steps": [
+            "製造間接費は250×64＝16,000円。",
+            "製造原価は48,000＋32,000＋4,000＋16,000＝100,000円。",
+            "単位原価は100,000÷80＝1,250円。"
+          ],
+          "answer": "注文Mの原価100,000円、単位原価1,250円。",
+          "objectiveIds": [
+            "n2-industrial-07-skill-sheet"
+          ],
+          "familyId": "n2-industrial-07-family-example-1"
+        },
+        {
+          "title": "指図書の完成状態で仕掛品を分ける",
+          "prompt": "指図書D/E/Fの期首原価は20,000/0/10,000円。当月加算は40,000/50,000/30,000円。DとFは全て完成、Eは全て未完成。これ以外の指図書・費用・振替・税金なし。",
+          "steps": [
+            "D累計60,000、E累計50,000、F累計40,000。",
+            "完成品原価はD60,000＋F40,000＝100,000円。期末仕掛品はE50,000円。",
+            "期首30,000＋当月120,000＝完成100,000＋期末50,000。"
+          ],
+          "answer": "完成100,000円、期末仕掛品50,000円。",
+          "objectiveIds": [
+            "n2-industrial-07-skill-wip",
+            "n2-industrial-07-skill-completion",
+            "n2-industrial-07-skill-check"
+          ],
+          "familyId": "n2-industrial-07-family-example-2"
+        },
+        {
+          "title": "完成しても売れていない原価を残す",
+          "prompt": "期首製品25,000円、当月完成品原価100,000円、期末製品35,000円。製品の増減は完成と販売のみ。売上150,000円。税金・配賦差額調整なし。",
+          "steps": [
+            "販売可能な製品原価は25,000＋100,000＝125,000円。",
+            "売上原価は125,000−35,000＝90,000円。",
+            "売上総利益は150,000−90,000＝60,000円。"
+          ],
+          "answer": "売上原価90,000円、売上総利益60,000円。",
+          "objectiveIds": [
+            "n2-industrial-07-skill-sale",
+            "n2-industrial-07-skill-check"
+          ],
+          "familyId": "n2-industrial-07-family-example-3"
+        },
+        {
+          "title": "完成振替と売上原価振替を別に記録する",
+          "prompt": "注文Nの仕掛品累計原価75,000円を全て完成し、その後すべて販売した。費用集計と売上高の仕訳は別途済み。税金・他費用なし。二つの原価振替だけを示す。",
+          "steps": [
+            "完成時：借方 製品75,000 / 貸方 仕掛品75,000。",
+            "販売時：借方 売上原価75,000 / 貸方 製品75,000。",
+            "製品勘定は75,000増加後75,000減少する。原価が150,000へ増えたわけではない。"
+          ],
+          "answer": "二つの段階で同じ75,000円が仕掛品→製品→売上原価へ移る。",
+          "objectiveIds": [
+            "n2-industrial-07-skill-completion",
+            "n2-industrial-07-skill-sale"
+          ],
+          "familyId": "n2-industrial-07-family-example-4"
+        },
+        {
+          "title": "正常な補修費を特定指図書へ賦課する",
+          "prompt": "注文Vの補修前原価82,000円、良品完成数量50個。別発行の補修指図書で材料3,000円・労務4,000円・間接費250円/時間×実際20時間を集計し、全額Vへ一度だけ賦課する。補修後50個すべて良品。税金・代品・作業屑・回収額・他費用なし。",
+          "steps": [
+            "補修間接費250×20＝5,000円。補修費合計は3,000＋4,000＋5,000＝12,000円。",
+            "元指図書の補修後原価は82,000＋12,000＝94,000円。",
+            "良品1個当たり94,000÷50＝1,880円。補修指図書を新たな製品数量には数えない。"
+          ],
+          "answer": "元指図書94,000円、単位原価1,880円。",
+          "objectiveIds": [
+            "n2-industrial-07-skill-repair",
+            "n2-industrial-07-skill-sheet"
+          ],
+          "familyId": "n2-industrial-07-family-example-5"
+        },
+        {
+          "title": "二段階の残高をつなぐ",
+          "prompt": "期首仕掛品26,000円、当月直接材料44,000・直接労務34,000・直接経費4,000・配賦間接費22,000円、期末仕掛品30,000円。期首製品20,000円、期末製品26,000円。売上160,000円。仕損・返品・他振替・税金・配賦差額調整なし。",
+          "steps": [
+            "当月製造費用は44,000＋34,000＋4,000＋22,000＝104,000円。",
+            "完成品原価は26,000＋104,000−30,000＝100,000円。",
+            "売上原価は20,000＋100,000−26,000＝94,000円。売上総利益は160,000−94,000＝66,000円。"
+          ],
+          "answer": "完成品100,000円、売上原価94,000円、売上総利益66,000円。",
+          "objectiveIds": [
+            "n2-industrial-07-skill-wip",
+            "n2-industrial-07-skill-completion",
+            "n2-industrial-07-skill-sale",
+            "n2-industrial-07-skill-check"
+          ],
+          "familyId": "n2-industrial-07-family-example-6"
+        }
+      ],
+      "pitfalls": [
+        "期首原価を落とさず、当月加算との二重計上もしない。",
+        "完成と販売は別の状態。未販売の完成品は製品に残す。",
+        "完成時・販売時の原価振替を、直接費の再計上や売上高の記帳と混同しない。",
+        "補修費を元指図書へ加えた後、補修指図書を別の完成品として再加算しない。",
+        "補修後の良品数量と補修指図書の枚数を混同しない。",
+        "本章で未実装の代品・作業屑・異常仕損等を推測して処理しない。"
+      ],
+      "objectives": [
+        {
+          "id": "n2-industrial-07-skill-purpose",
+          "requirementIds": [
+            "nissho-8f82b6d44a80"
+          ],
+          "description": "個別の製造指図書を原価集計の単位とする意味を説明する。"
+        },
+        {
+          "id": "n2-industrial-07-skill-documents",
+          "requirementIds": [
+            "nissho-518843dbb4d4"
+          ],
+          "description": "製造指示・原価累計・実際作業記録の役割を区別する。"
+        },
+        {
+          "id": "n2-industrial-07-skill-sheet",
+          "requirementIds": [
+            "nissho-f1d12ed9ccbe",
+            "nissho-518843dbb4d4"
+          ],
+          "description": "指図書ごとの直接費と配賦間接費を集め、完成品の単位原価を求める。"
+        },
+        {
+          "id": "n2-industrial-07-skill-wip",
+          "requirementIds": [
+            "nissho-f1d12ed9ccbe"
+          ],
+          "description": "期首原価と当月加算を区別し、未完成指図書を期末仕掛品へ集計する。"
+        },
+        {
+          "id": "n2-industrial-07-skill-completion",
+          "requirementIds": [
+            "nissho-f1d12ed9ccbe"
+          ],
+          "description": "完成指図書の原価を製品へ振り替え、仕訳を示す。"
+        },
+        {
+          "id": "n2-industrial-07-skill-sale",
+          "requirementIds": [
+            "nissho-f1d12ed9ccbe"
+          ],
+          "description": "未販売製品と販売済み原価を区別し、売上原価・売上総利益を計算する。"
+        },
+        {
+          "id": "n2-industrial-07-skill-repair",
+          "requirementIds": [
+            "nissho-ae5b20dac83f",
+            "nissho-be1b1e861f67"
+          ],
+          "description": "別発行の補修指図書の正常補修費を計算し、当該元指図書へ一度だけ賦課する。"
+        },
+        {
+          "id": "n2-industrial-07-skill-check",
+          "requirementIds": [
+            "nissho-f1d12ed9ccbe"
+          ],
+          "description": "指図書別累計、仕掛品、製品の総額保存を照合する。"
+        }
+      ],
+      "questionIds": [
+        "n2-industrial-07-purpose-01",
+        "n2-industrial-07-documents-01",
+        "n2-industrial-07-cost-sheet-01",
+        "n2-industrial-07-two-jobs-01",
+        "n2-industrial-07-job-status-01",
+        "n2-industrial-07-missing-current-01",
+        "n2-industrial-07-completion-journal-01",
+        "n2-industrial-07-sale-cost-journal-01",
+        "n2-industrial-07-unsold-completed-01",
+        "n2-industrial-07-repair-specific-job-01",
+        "n2-industrial-07-repair-not-double-01",
+        "n2-industrial-07-multi-month-order-01",
+        "n2-industrial-07-manufacturing-flow-01",
+        "n2-industrial-07-completion-vs-sale-choice-01"
       ]
     }
   ],
@@ -7885,6 +8149,1241 @@
           "explanation": "120,000＋90,000−3,000−207,000＝0。0を明示する。"
         }
       ]
+    },
+    {
+      "id": "n2-industrial-07-purpose-01",
+      "familyId": "n2-industrial-07-family-purpose",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-07",
+      "title": "注文番号で違いを追う",
+      "prompt": "仕様の異なる注文を個別の製造指図書で管理し、材料の出庫・作業記録にも注文番号がある工場を考える。以下の判断を選んでください。会社名や業種からの推測は不要。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "basic",
+      "requirementIds": [
+        "nissho-8f82b6d44a80"
+      ],
+      "objectiveIds": [
+        "n2-industrial-07-skill-purpose"
+      ],
+      "explanation": {
+        "steps": [
+          "指図書で対象注文を特定する。",
+          "帰属資料に基づき原価を区別する。"
+        ],
+        "pitfalls": [
+          "個別原価計算を、原価を販売価格から逆算する方法と捉えない。"
+        ],
+        "check": "注文番号は費用を追跡する鍵であり、金額を割り振る比率ではない。"
+      },
+      "errorTags": [
+        "purpose"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "unit",
+          "label": "原価集計の単位",
+          "type": "choice",
+          "answer": "job",
+          "options": [
+            "job",
+            "month",
+            "price"
+          ],
+          "optionLabels": {
+            "job": "個別の製造指図書",
+            "month": "全注文をまとめた月だけ",
+            "price": "注文の販売価格だけ"
+          },
+          "points": 1,
+          "explanation": "注文を識別できる個別の指図書を単位に集計する。"
+        },
+        {
+          "id": "trace",
+          "label": "直接材料を帰属させる根拠",
+          "type": "choice",
+          "answer": "record",
+          "options": [
+            "record",
+            "rank",
+            "equal"
+          ],
+          "optionLabels": {
+            "record": "当該注文を示す出庫記録",
+            "rank": "指図書番号の小さい順",
+            "equal": "全注文へ常に均等配分"
+          },
+          "points": 1,
+          "explanation": "直接把握できる資料によって対象指図書へ賦課する。"
+        },
+        {
+          "id": "cost",
+          "label": "仕様が違う注文原価",
+          "type": "choice",
+          "answer": "separate",
+          "options": [
+            "separate",
+            "same",
+            "sale"
+          ],
+          "optionLabels": {
+            "separate": "注文ごとの消費・配賦額を集める",
+            "same": "個数が同じなら必ず同じ原価",
+            "sale": "必ず販売価格と同額"
+          },
+          "points": 1,
+          "explanation": "個数だけで異なる注文の資源消費を同一としない。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-07-documents-01",
+      "familyId": "n2-industrial-07-family-documents",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-07",
+      "title": "製造指示・原価集計・作業実績を分ける",
+      "prompt": "この工場では製造指図書で製造内容を指示し、原価計算表に注文の原価を累計し、注文番号付き作業記録に実際作業時間を記録する。この資料体系に従って役割を選んでください。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "basic",
+      "requirementIds": [
+        "nissho-518843dbb4d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-07-skill-documents"
+      ],
+      "explanation": {
+        "steps": [
+          "指示・累計・実績の役割を一つずつ読む。"
+        ],
+        "pitfalls": [
+          "同じ注文番号が付く資料でも役割は同じではない。"
+        ],
+        "check": "資料名の暗記だけでなく、どの数値の根拠かを確認する。"
+      },
+      "errorTags": [
+        "documents"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "instruction",
+          "label": "何を製造するかの指示",
+          "type": "choice",
+          "answer": "order",
+          "options": [
+            "order",
+            "sheet",
+            "time"
+          ],
+          "optionLabels": {
+            "order": "製造指図書",
+            "sheet": "原価計算表",
+            "time": "注文番号付き作業記録"
+          },
+          "points": 1,
+          "explanation": "本問で製造内容を指示する資料は製造指図書。"
+        },
+        {
+          "id": "accumulation",
+          "label": "注文の材料費・労務費・間接費を累計する表",
+          "type": "choice",
+          "answer": "sheet",
+          "options": [
+            "order",
+            "sheet",
+            "time"
+          ],
+          "optionLabels": {
+            "order": "製造指図書",
+            "sheet": "原価計算表",
+            "time": "注文番号付き作業記録"
+          },
+          "points": 1,
+          "explanation": "費用集計と原価計算を行うのは原価計算表。"
+        },
+        {
+          "id": "hours",
+          "label": "注文に要した実際作業時間の根拠",
+          "type": "choice",
+          "answer": "time",
+          "options": [
+            "order",
+            "sheet",
+            "time"
+          ],
+          "optionLabels": {
+            "order": "製造指図書",
+            "sheet": "原価計算表",
+            "time": "注文番号付き作業記録"
+          },
+          "points": 1,
+          "explanation": "注文に対応する作業実績を示す記録を使う。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-07-cost-sheet-01",
+      "familyId": "n2-industrial-07-family-cost-sheet",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-07",
+      "title": "注文Jの原価計算表",
+      "prompt": "受注製造の注文Jは100個全て完成。期首仕掛品なし。直接材料54,000円、直接労務42,000円、直接経費6,000円。製造間接費の予定率300円/直接作業時間、当月実際60時間。注文ごとの原価計算表を作る。販売費・税金・仕損・端数・他の費用なし。配賦差額処理前の原価を求める。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-f1d12ed9ccbe",
+        "nissho-518843dbb4d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-07-skill-sheet"
+      ],
+      "explanation": {
+        "steps": [
+          "製造間接費は300×60＝18,000。",
+          "直接費と間接費を足し、良品数量100で割る。"
+        ],
+        "pitfalls": [
+          "予定率に製造数量を掛けない。"
+        ],
+        "check": "54,000＋42,000＋6,000＋18,000＝120,000。120,000÷100＝1,200。"
+      },
+      "errorTags": [
+        "cost-sheet"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "overhead",
+          "label": "製造間接費配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 18000,
+          "points": 1,
+          "explanation": "300×60＝18,000。"
+        },
+        {
+          "id": "manufacturingCost",
+          "label": "注文の製造原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 120000,
+          "points": 1,
+          "explanation": "54,000＋42,000＋6,000＋18,000＝120,000。"
+        },
+        {
+          "id": "costPerUnit",
+          "label": "良品1個当たり原価",
+          "type": "amount",
+          "unit": "円/個",
+          "decimals": 0,
+          "answer": 1200,
+          "points": 1,
+          "explanation": "120,000÷100＝1,200。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-07-two-jobs-01",
+      "familyId": "n2-industrial-07-family-two-jobs",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-07",
+      "title": "異なる二つの指図書へ集計する",
+      "prompt": "注文A/Bの直接材料は30,000/45,000円、直接労務は24,000/36,000円、直接経費2,000/3,000円。工場の製造間接費予定率は300円/時間。実際作業時間A80/B120。期首仕掛品・他の注文・他の費用・税金なし。配賦差額処理前のA/B原価を求める。",
+      "exhibits": [
+        {
+          "title": "指図書別の当月資料",
+          "headers": [
+            "項目",
+            "A",
+            "B"
+          ],
+          "rows": [
+            [
+              "直接材料（円）",
+              30000,
+              45000
+            ],
+            [
+              "直接労務（円）",
+              24000,
+              36000
+            ],
+            [
+              "直接経費（円）",
+              2000,
+              3000
+            ],
+            [
+              "実際時間（時間）",
+              80,
+              120
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-f1d12ed9ccbe"
+      ],
+      "objectiveIds": [
+        "n2-industrial-07-skill-sheet",
+        "n2-industrial-07-skill-check"
+      ],
+      "explanation": {
+        "steps": [
+          "A/Bの実際時間へ同じ予定率を掛ける。",
+          "直接費はそれぞれ対応する注文へ加える。"
+        ],
+        "pitfalls": [
+          "Aの費用をBへ移したり、工場の合計を両方へ全額加えたりしない。"
+        ],
+        "check": "80,000＋120,000＝200,000。"
+      },
+      "errorTags": [
+        "two-jobs"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "overheadA",
+          "label": "Aへの間接費配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 24000,
+          "points": 1,
+          "explanation": "300×80＝24,000。"
+        },
+        {
+          "id": "overheadB",
+          "label": "Bへの間接費配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 36000,
+          "points": 1,
+          "explanation": "300×120＝36,000。"
+        },
+        {
+          "id": "costA",
+          "label": "指図書Aの累計原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 80000,
+          "points": 1,
+          "explanation": "30,000＋24,000＋2,000＋24,000＝80,000。"
+        },
+        {
+          "id": "costB",
+          "label": "指図書Bの累計原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 120000,
+          "points": 1,
+          "explanation": "45,000＋36,000＋3,000＋36,000＝120,000。"
+        },
+        {
+          "id": "total",
+          "label": "二つの指図書の原価合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 200000,
+          "points": 1,
+          "explanation": "80,000＋120,000＝200,000。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-07-job-status-01",
+      "familyId": "n2-industrial-07-family-job-status",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-07",
+      "title": "完成・未完成・未販売を指図書で区分する",
+      "prompt": "各指図書は丸ごとの完成か未完成のみ。当月末の状態はA完成・未販売、B未完成、C完成・全て販売。A/B/Cの期首仕掛品は30,000/0/20,000円、当月製造費用加算は42,000/56,000/24,000円（配賦製造間接費を含む）。他の指図書・費用・仕損・税金・期首製品なし。",
+      "exhibits": [
+        {
+          "title": "原価計算表の資料",
+          "headers": [
+            "指図書",
+            "期首原価（円）",
+            "当月加算（円）",
+            "月末状態"
+          ],
+          "rows": [
+            [
+              "A",
+              30000,
+              42000,
+              "完成・未販売"
+            ],
+            [
+              "B",
+              0,
+              56000,
+              "未完成"
+            ],
+            [
+              "C",
+              20000,
+              24000,
+              "完成・全て販売"
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-f1d12ed9ccbe",
+        "nissho-518843dbb4d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-07-skill-wip",
+        "n2-industrial-07-skill-completion",
+        "n2-industrial-07-skill-sale",
+        "n2-industrial-07-skill-check"
+      ],
+      "explanation": {
+        "steps": [
+          "期首と当月加算を指図書ごとに足す。",
+          "A/Cを完成品へ、Bを期末仕掛品へ分ける。",
+          "完成済みのAは未販売なので製品、Cは販売済みなので売上原価。"
+        ],
+        "pitfalls": [
+          "完成した全指図書が同時に売れたとは読まない。"
+        ],
+        "check": "期首50,000＋当月122,000＝完成116,000＋期末仕掛品56,000。"
+      },
+      "errorTags": [
+        "job-status"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "costA",
+          "label": "指図書Aの累計原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 72000,
+          "points": 1,
+          "explanation": "30,000＋42,000＝72,000。"
+        },
+        {
+          "id": "costB",
+          "label": "指図書Bの累計原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 56000,
+          "points": 1,
+          "explanation": "0＋56,000＝56,000。"
+        },
+        {
+          "id": "costC",
+          "label": "指図書Cの累計原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 44000,
+          "points": 1,
+          "explanation": "20,000＋24,000＝44,000。"
+        },
+        {
+          "id": "completed",
+          "label": "当月完成品原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 116000,
+          "points": 1,
+          "explanation": "完成したA72,000＋C44,000＝116,000。"
+        },
+        {
+          "id": "endingWIP",
+          "label": "期末仕掛品",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 56000,
+          "points": 1,
+          "explanation": "未完成Bの56,000。"
+        },
+        {
+          "id": "endingFG",
+          "label": "期末製品",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 72000,
+          "points": 1,
+          "explanation": "未販売の完成済みA72,000。"
+        },
+        {
+          "id": "COGS",
+          "label": "売上原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 44000,
+          "points": 1,
+          "explanation": "販売済みの完成済みC44,000。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-07-missing-current-01",
+      "familyId": "n2-industrial-07-family-missing-current",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-07",
+      "title": "仕掛品の不足欄を逆算する",
+      "prompt": "仕掛品の期首残高46,000円、当月完成し製品へ振り替えた原価132,000円、月末の未完成指図書原価58,000円。期中の仕損・他の振替・税金なし。当月製造費用加算額を逆算し、貸借を照合する。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-f1d12ed9ccbe"
+      ],
+      "objectiveIds": [
+        "n2-industrial-07-skill-wip",
+        "n2-industrial-07-skill-check"
+      ],
+      "explanation": {
+        "steps": [
+          "期首＋当月加算＝完成＋期末という等式を立てる。",
+          "完成と期末を合計し、期首を引く。"
+        ],
+        "pitfalls": [
+          "期首を加算する方向で逆算しない。"
+        ],
+        "check": "46,000＋144,000＝132,000＋58,000＝190,000。差は0。"
+      },
+      "errorTags": [
+        "missing-current"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "currentCost",
+          "label": "当月製造費用加算額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 144000,
+          "points": 1,
+          "explanation": "132,000＋58,000−46,000＝144,000。"
+        },
+        {
+          "id": "available",
+          "label": "仕掛品の期首＋当月加算",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 190000,
+          "points": 1,
+          "explanation": "46,000＋144,000＝190,000。"
+        },
+        {
+          "id": "check",
+          "label": "期首＋当月−完成−期末の差",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "46,000＋144,000−132,000−58,000＝0。0を明示する。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-07-completion-journal-01",
+      "familyId": "n2-industrial-07-family-completion-journal",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-07",
+      "title": "未販売でも完成したら製品へ",
+      "prompt": "注文Qの原価計算表の累計は126,000円。当月に全て完成し製品倉庫へ引き渡したが未販売。消費済みの費用は既に仕掛品へ集計済み。税金・他の費用・他の振替なし。製品・仕掛品・売上原価から科目を選んで完成振替だけを記帳する。",
+      "exhibits": [],
+      "type": "journal",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-f1d12ed9ccbe"
+      ],
+      "objectiveIds": [
+        "n2-industrial-07-skill-completion"
+      ],
+      "explanation": {
+        "steps": [
+          "完成により製品が増え、仕掛品が減る。"
+        ],
+        "pitfalls": [
+          "未販売なのに売上原価へ直接振り替えない。",
+          "集計済み材料費などを重ねて計上しない。"
+        ],
+        "check": "借方 製品126,000 / 貸方 仕掛品126,000。"
+      },
+      "errorTags": [
+        "completion-journal"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "unit": "円",
+      "decimals": 0,
+      "accounts": [
+        "仕掛品",
+        "製品",
+        "売上原価"
+      ],
+      "lines": [
+        {
+          "side": "debit",
+          "account": "製品",
+          "amount": 126000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "仕掛品",
+          "amount": 126000,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-07-sale-cost-journal-01",
+      "familyId": "n2-industrial-07-family-sale-cost-journal",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-07",
+      "title": "販売した原価だけを振り替える",
+      "prompt": "完成済みの注文Rを全て販売した。製品に記帳されている注文Rの原価84,000円。税金・販売費・差額調整なし。売上の記帳は別途済んでいるので、原価振替だけを記帳する。科目は製品・仕掛品・売上原価。",
+      "exhibits": [],
+      "type": "journal",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-f1d12ed9ccbe"
+      ],
+      "objectiveIds": [
+        "n2-industrial-07-skill-sale"
+      ],
+      "explanation": {
+        "steps": [
+          "販売によって製品が減り、売上原価になる。"
+        ],
+        "pitfalls": [
+          "別途済んだ売上高の仕訳を追加しない。",
+          "仕掛品から売上原価へ飛び越して振り替えない。"
+        ],
+        "check": "借方 売上原価84,000 / 貸方 製品84,000。"
+      },
+      "errorTags": [
+        "sale-cost-journal"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "unit": "円",
+      "decimals": 0,
+      "accounts": [
+        "仕掛品",
+        "製品",
+        "売上原価"
+      ],
+      "lines": [
+        {
+          "side": "debit",
+          "account": "売上原価",
+          "amount": 84000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "製品",
+          "amount": 84000,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-07-unsold-completed-01",
+      "familyId": "n2-industrial-07-family-unsold-completed",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-07",
+      "title": "期末製品を残し、売上総利益を求める",
+      "prompt": "期首製品18,000円、当月完成品原価114,000円、月末製品24,000円。製品の増減は完成と販売のみであり、返品・仕損・他の振替・税金なし。売上高180,000円。配賦差額調整はなく、売上原価と売上総利益を求める。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-f1d12ed9ccbe"
+      ],
+      "objectiveIds": [
+        "n2-industrial-07-skill-sale",
+        "n2-industrial-07-skill-check"
+      ],
+      "explanation": {
+        "steps": [
+          "期首製品と当月完成品を足す。",
+          "期末製品を引いて売上原価を求める。",
+          "売上高から売上原価を引く。"
+        ],
+        "pitfalls": [
+          "当月完成品114,000だけを売上原価としない。"
+        ],
+        "check": "18,000＋114,000−24,000＝108,000。売上総利益72,000。"
+      },
+      "errorTags": [
+        "unsold-completed"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "availableFG",
+          "label": "期首製品＋当月完成品原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 132000,
+          "points": 1,
+          "explanation": "18,000＋114,000＝132,000。"
+        },
+        {
+          "id": "COGS",
+          "label": "売上原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 108000,
+          "points": 1,
+          "explanation": "132,000−24,000＝108,000。"
+        },
+        {
+          "id": "grossProfit",
+          "label": "売上総利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 72000,
+          "points": 1,
+          "explanation": "180,000−108,000＝72,000。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-07-repair-specific-job-01",
+      "familyId": "n2-industrial-07-family-repair-specific-job",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-07",
+      "title": "補修費を元の指図書へ賦課する",
+      "prompt": "指図書Sの当初原価96,000円、良品完成数量60個。正常な補修に補修指図書S-Rを発行し、直接材料2,400円、直接労務3,600円、製造間接費200円/時間×実際12時間を集計した。補修費は指示により全額を当該指図書Sに一度だけ賦課し、補修後60個全て良品完成。代品製造・作業屑・回収価値・税金・他の費用なし。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-ae5b20dac83f",
+        "nissho-be1b1e861f67"
+      ],
+      "objectiveIds": [
+        "n2-industrial-07-skill-repair",
+        "n2-industrial-07-skill-sheet"
+      ],
+      "explanation": {
+        "steps": [
+          "補修間接費200×12＝2,400を計算。",
+          "補修費合計8,400を元の96,000へ一度だけ加える。",
+          "補修後の良品60個で割る。"
+        ],
+        "pitfalls": [
+          "補修指図書の発行で製品数量が増えたとしない。",
+          "元の96,000を仕損費として全額もう一度足さない。"
+        ],
+        "check": "96,000＋8,400＝104,400。104,400÷60＝1,740。"
+      },
+      "errorTags": [
+        "repair-specific-job"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "repairOH",
+          "label": "補修の製造間接費",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 2400,
+          "points": 1,
+          "explanation": "200×12＝2,400。"
+        },
+        {
+          "id": "repairCost",
+          "label": "補修指図書の原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 8400,
+          "points": 1,
+          "explanation": "2,400＋3,600＋2,400＝8,400。"
+        },
+        {
+          "id": "finalJobCost",
+          "label": "補修後の元指図書原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 104400,
+          "points": 1,
+          "explanation": "96,000＋8,400＝104,400。"
+        },
+        {
+          "id": "unitCost",
+          "label": "良品1個当たり原価",
+          "type": "amount",
+          "unit": "円/個",
+          "decimals": 0,
+          "answer": 1740,
+          "points": 1,
+          "explanation": "104,400÷60＝1,740。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-07-repair-not-double-01",
+      "familyId": "n2-industrial-07-family-repair-not-double",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-07",
+      "title": "補修費の二重計上を除く",
+      "prompt": "指図書T本体の補修前累計88,000円、独立して集計した補修指図書T-Rの原価7,000円。正常な補修費をTへ全額振り替え済みで、Tの新しい原価計算表は95,000円。このTを全て完成した。T-Rの7,000円をさらに別の完成指図書原価として足す誤集計を直す。税金・他費用なし。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-be1b1e861f67"
+      ],
+      "objectiveIds": [
+        "n2-industrial-07-skill-repair",
+        "n2-industrial-07-skill-check"
+      ],
+      "explanation": {
+        "steps": [
+          "95,000にはすでに補修費7,000が含まれる。",
+          "補修指図書を別完成品として再加算しない。"
+        ],
+        "pitfalls": [
+          "95,000＋7,000＝102,000を完成品原価にしない。"
+        ],
+        "check": "88,000＋7,000＝95,000。振替後の補修指図書残額は0。"
+      },
+      "errorTags": [
+        "repair-not-double"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "completedCost",
+          "label": "完成品へ振り替える原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 95000,
+          "points": 1,
+          "explanation": "88,000＋7,000＝95,000。"
+        },
+        {
+          "id": "duplicateExcess",
+          "label": "誤集計による過大額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 7000,
+          "points": 1,
+          "explanation": "すでに95,000に含まれる7,000の再加算が過大額。"
+        },
+        {
+          "id": "repairRemaining",
+          "label": "振替後の補修指図書残額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "7,000を全額振り替えたため残額0。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-07-multi-month-order-01",
+      "familyId": "n2-industrial-07-family-multi-month-order",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-07",
+      "title": "前月からの原価を完成時に落とさない",
+      "prompt": "注文Uは前月末未完成で、前月までの原価は材料32,000円・労務18,000円・配賦間接費10,000円。当月に材料24,000円・労務16,000円・配賦間接費8,000円を追加し、全て完成。税金・直接経費・仕損・他費用・他振替なし。原価計算表は受注からの累計で管理する。",
+      "exhibits": [
+        {
+          "title": "注文Uの原価推移",
+          "headers": [
+            "原価要素",
+            "前月まで（円）",
+            "当月追加（円）"
+          ],
+          "rows": [
+            [
+              "直接材料",
+              32000,
+              24000
+            ],
+            [
+              "直接労務",
+              18000,
+              16000
+            ],
+            [
+              "配賦間接費",
+              10000,
+              8000
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-f1d12ed9ccbe",
+        "nissho-518843dbb4d4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-07-skill-wip",
+        "n2-industrial-07-skill-completion"
+      ],
+      "explanation": {
+        "steps": [
+          "前月までの60,000を期首仕掛品として引き継ぐ。",
+          "当月追加48,000を加えて完成原価108,000とする。"
+        ],
+        "pitfalls": [
+          "完成が当月だから当月追加48,000だけを製品へ移す、とはしない。"
+        ],
+        "check": "60,000＋48,000＝108,000。全て完成したためこの指図書の期末仕掛品は0。"
+      },
+      "errorTags": [
+        "multi-month-order"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "beginningWIP",
+          "label": "当該指図書の期首仕掛品",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 60000,
+          "points": 1,
+          "explanation": "32,000＋18,000＋10,000＝60,000。"
+        },
+        {
+          "id": "currentAddition",
+          "label": "当月の追加原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 48000,
+          "points": 1,
+          "explanation": "24,000＋16,000＋8,000＝48,000。"
+        },
+        {
+          "id": "completedCost",
+          "label": "完成品へ振り替える原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 108000,
+          "points": 1,
+          "explanation": "60,000＋48,000＝108,000。"
+        },
+        {
+          "id": "endingWIP",
+          "label": "期末仕掛品",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "この指図書は全て完成したため0。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-07-manufacturing-flow-01",
+      "familyId": "n2-industrial-07-family-manufacturing-flow",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-07",
+      "title": "仕掛品と製品の流れを一続きに照合する",
+      "prompt": "期首仕掛品34,000円。当月の直接材料50,000円・直接労務40,000円・直接経費6,000円・配賦製造間接費30,000円。月末未完成の指図書原価46,000円。期首製品18,000円、月末製品24,000円。売上180,000円。全て同月資料、税金・仕損・返品・他費用・他振替・配賦差額調整なし。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-f1d12ed9ccbe"
+      ],
+      "objectiveIds": [
+        "n2-industrial-07-skill-wip",
+        "n2-industrial-07-skill-completion",
+        "n2-industrial-07-skill-sale",
+        "n2-industrial-07-skill-check"
+      ],
+      "explanation": {
+        "steps": [
+          "当月費用126,000を期首仕掛品34,000へ加える。",
+          "期末仕掛品46,000を除き完成品114,000へ。",
+          "期首製品18,000を加えて期末製品24,000を除く。"
+        ],
+        "pitfalls": [
+          "期末仕掛品と期末製品を同じ段階で引かない。",
+          "売上高を製造原価へ加えない。"
+        ],
+        "check": "仕掛品は160,000＝114,000＋46,000、製品は132,000＝108,000＋24,000。"
+      },
+      "errorTags": [
+        "manufacturing-flow"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "currentManufacturing",
+          "label": "当月製造費用",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 126000,
+          "points": 1,
+          "explanation": "50,000＋40,000＋6,000＋30,000＝126,000。"
+        },
+        {
+          "id": "availableWIP",
+          "label": "期首仕掛品＋当月製造費用",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 160000,
+          "points": 1,
+          "explanation": "34,000＋126,000＝160,000。"
+        },
+        {
+          "id": "completed",
+          "label": "当月完成品原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 114000,
+          "points": 1,
+          "explanation": "160,000−46,000＝114,000。"
+        },
+        {
+          "id": "COGS",
+          "label": "売上原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 108000,
+          "points": 1,
+          "explanation": "18,000＋114,000−24,000＝108,000。"
+        },
+        {
+          "id": "grossProfit",
+          "label": "売上総利益",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 72000,
+          "points": 1,
+          "explanation": "180,000−108,000＝72,000。"
+        },
+        {
+          "id": "WIPcheck",
+          "label": "仕掛品の借貸照合差額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "34,000＋126,000−114,000−46,000＝0。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-07-completion-vs-sale-choice-01",
+      "familyId": "n2-industrial-07-family-completion-vs-sale-choice",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-07",
+      "title": "期末の状態から原価の行き先を選ぶ",
+      "prompt": "指図書は全て丸ごとの完成/未完成、完成品は全量販売/未販売とする。期末に未完成の注文、完成済み未販売の注文、完成済み販売した注文について、製造原価が残る/振り替わる場所を区別する。返品・仕損・他の振替なし。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-f1d12ed9ccbe"
+      ],
+      "objectiveIds": [
+        "n2-industrial-07-skill-completion",
+        "n2-industrial-07-skill-sale"
+      ],
+      "explanation": {
+        "steps": [
+          "未完成か完成かを判定する。",
+          "完成後に販売済みかを判定する。"
+        ],
+        "pitfalls": [
+          "受注したことや代金を受け取ったことだけで完成状態を決めない。"
+        ],
+        "check": "未完成→仕掛品、完成未販売→製品、販売済み→売上原価。"
+      },
+      "errorTags": [
+        "completion-vs-sale-choice"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "unfinished",
+          "label": "未完成の注文",
+          "type": "choice",
+          "answer": "仕掛品",
+          "options": [
+            "仕掛品",
+            "製品",
+            "売上原価"
+          ],
+          "optionLabels": {
+            "仕掛品": "仕掛品",
+            "製品": "製品",
+            "売上原価": "売上原価"
+          },
+          "points": 1,
+          "explanation": "未完成なので仕掛品に残る。"
+        },
+        {
+          "id": "completedUnsold",
+          "label": "完成済み・未販売の注文",
+          "type": "choice",
+          "answer": "製品",
+          "options": [
+            "仕掛品",
+            "製品",
+            "売上原価"
+          ],
+          "optionLabels": {
+            "仕掛品": "仕掛品",
+            "製品": "製品",
+            "売上原価": "売上原価"
+          },
+          "points": 1,
+          "explanation": "完成済みだが未販売なので製品に残る。"
+        },
+        {
+          "id": "sold",
+          "label": "完成済み・販売した注文",
+          "type": "choice",
+          "answer": "売上原価",
+          "options": [
+            "仕掛品",
+            "製品",
+            "売上原価"
+          ],
+          "optionLabels": {
+            "仕掛品": "仕掛品",
+            "製品": "製品",
+            "売上原価": "売上原価"
+          },
+          "points": 1,
+          "explanation": "販売済みの製品原価を売上原価へ振り替える。"
+        }
+      ]
     }
   ],
   "reviewRecords": [
@@ -8103,6 +9602,47 @@
         "n2-industrial-lesson-06": "8bcb701c1cc2f670bbb454d0d13d2019de0a543e4a52ebf2328be4eb636e6c58"
       },
       "evidence": "notes/editorial/industrial-departments-review-20261102.md"
+    },
+    {
+      "kind": "independent-computation",
+      "reviewedBy": "Independent reviewer /root/advance_remaining_site_backlogs/job_order_independent_review (not chapter07 author)",
+      "reviewedAt": "2026-11-02T09:44:25Z",
+      "questionIds": [
+        "n2-industrial-07-purpose-01",
+        "n2-industrial-07-documents-01",
+        "n2-industrial-07-cost-sheet-01",
+        "n2-industrial-07-two-jobs-01",
+        "n2-industrial-07-job-status-01",
+        "n2-industrial-07-missing-current-01",
+        "n2-industrial-07-completion-journal-01",
+        "n2-industrial-07-sale-cost-journal-01",
+        "n2-industrial-07-unsold-completed-01",
+        "n2-industrial-07-repair-specific-job-01",
+        "n2-industrial-07-repair-not-double-01",
+        "n2-industrial-07-multi-month-order-01",
+        "n2-industrial-07-manufacturing-flow-01",
+        "n2-industrial-07-completion-vs-sale-choice-01"
+      ],
+      "questionHashes": {
+        "n2-industrial-07-purpose-01": "1c2273cebaf70b66a92e1671cffb1eb5ac9af4de6a2ca922945e15e173c939a3",
+        "n2-industrial-07-documents-01": "1f1176541e45d8b0619ed458b90ff1b91ce9a2b812c6bd48dce46d292a2825d2",
+        "n2-industrial-07-cost-sheet-01": "fd480c0cad5fa2f9e744a7ef2043b4ef2294fa442637b79afdaa111bd694f89f",
+        "n2-industrial-07-two-jobs-01": "02986824d050a01b5fa00c9d4ae8942bef0ccdf7af158f890223487beaf02969",
+        "n2-industrial-07-job-status-01": "fa4e35c8eb707a42244e3be0070bbc13710af916a8ac554cc2a5047cdf4c4e46",
+        "n2-industrial-07-missing-current-01": "0fc7f65d438f292eb2bafcdff0733ea53b278ca3e1d009aed73fea8ee5ccf4a5",
+        "n2-industrial-07-completion-journal-01": "96b1e477a09a90ce1383d3a7c6755a046a148f5571e22a24e8531cf0b3c5619b",
+        "n2-industrial-07-sale-cost-journal-01": "10a57c5832533fc8760a6f9b614153d202750985a1b79df26838415abaebe8c9",
+        "n2-industrial-07-unsold-completed-01": "8af1e5c3e812754ba91bbc7fd9f267e2f5c8cb63d4322d9159cfca8f00f77c3b",
+        "n2-industrial-07-repair-specific-job-01": "abf0351e3082a7c1e00b8fcbb1f81617abc3e973b5b7b4f50b8291f0d84f107e",
+        "n2-industrial-07-repair-not-double-01": "2f78ca2dc1bd8ca1b9b13314329997e2e26cc3a7d42a8fdd2e8814f5ba81b0d8",
+        "n2-industrial-07-multi-month-order-01": "32490fb887666a79dabc8666537f4b44fd66e716995493ebb67721998ff31f2c",
+        "n2-industrial-07-manufacturing-flow-01": "27ad0b243e5e29af150f3281e38b7fd731ff907092c355eb496137a051d7ee0d",
+        "n2-industrial-07-completion-vs-sale-choice-01": "9fab5956c7cae7615167ed4863dd486996edf3edbd95236ea8fbc020da0294c4"
+      },
+      "lessonHashes": {
+        "n2-industrial-lesson-07": "833968a53a1fccd0a76db802bd8ed8366367c091bfbf1b7ee36e52bf8a30fa58"
+      },
+      "evidence": "notes/editorial/industrial-job-order-review-20261102.md"
     }
   ]
 }

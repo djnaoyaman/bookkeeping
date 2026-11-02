@@ -1,0 +1,97 @@
+{
+  "purpose": {
+    "unit": "job",
+    "trace": "record",
+    "cost": "separate"
+  },
+  "documents": {
+    "instruction": "order",
+    "accumulation": "sheet",
+    "hours": "time"
+  },
+  "cost-sheet": {
+    "overhead": 18000,
+    "manufacturingCost": 120000,
+    "costPerUnit": 1200
+  },
+  "two-jobs": {
+    "overheadA": 24000,
+    "overheadB": 36000,
+    "costA": 80000,
+    "costB": 120000,
+    "total": 200000
+  },
+  "job-status": {
+    "costA": 72000,
+    "costB": 56000,
+    "costC": 44000,
+    "completed": 116000,
+    "endingWIP": 56000,
+    "endingFG": 72000,
+    "COGS": 44000
+  },
+  "missing-current": {
+    "currentCost": 144000,
+    "available": 190000,
+    "check": 0
+  },
+  "completion-journal": [
+    {
+      "side": "debit",
+      "account": "製品",
+      "amount": 126000
+    },
+    {
+      "side": "credit",
+      "account": "仕掛品",
+      "amount": 126000
+    }
+  ],
+  "sale-cost-journal": [
+    {
+      "side": "debit",
+      "account": "売上原価",
+      "amount": 84000
+    },
+    {
+      "side": "credit",
+      "account": "製品",
+      "amount": 84000
+    }
+  ],
+  "unsold-completed": {
+    "availableFG": 132000,
+    "COGS": 108000,
+    "grossProfit": 72000
+  },
+  "repair-specific-job": {
+    "repairOH": 2400,
+    "repairCost": 8400,
+    "finalJobCost": 104400,
+    "unitCost": 1740
+  },
+  "repair-not-double": {
+    "completedCost": 95000,
+    "duplicateExcess": 7000,
+    "repairRemaining": 0
+  },
+  "multi-month-order": {
+    "beginningWIP": 60000,
+    "currentAddition": 48000,
+    "completedCost": 108000,
+    "endingWIP": 0
+  },
+  "manufacturing-flow": {
+    "currentManufacturing": 126000,
+    "availableWIP": 160000,
+    "completed": 114000,
+    "COGS": 108000,
+    "grossProfit": 72000,
+    "WIPcheck": 0
+  },
+  "completion-vs-sale-choice": {
+    "unfinished": "仕掛品",
+    "completedUnsold": "製品",
+    "sold": "売上原価"
+  }
+}

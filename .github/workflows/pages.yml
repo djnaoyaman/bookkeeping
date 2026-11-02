@@ -40,6 +40,8 @@ jobs:
           node tests/industrial-overhead-independent.cjs
           node tests/industrial-departments.cjs
           node tests/industrial-departments-independent.cjs
+          node tests/industrial-job-order.cjs
+          node tests/industrial-job-order-independent.cjs
           node tests/check.cjs
           node tests/discovery-client.cjs
   deploy:
