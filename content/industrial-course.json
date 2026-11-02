@@ -5,7 +5,7 @@
   "scopeVersion": "nissho-2026",
   "authoringStatus": "reviewed",
   "sourceVerificationPending": false,
-  "coverageNote": "工業簿記の導入4章・44問です。材料費・労務費・経費は実際原価の基礎までで、予定価格・予定賃率・予定配賦・原価差異・複合費などは未収録。経費は正常な製造活動の費目分類・期間対応・直接間接区分・基本仕訳に限定し、税法判断・法定償却率・異常損失の判定は扱いません。全経費・2級全範囲の完成・技能の修得・合格可能性を示しません。",
+  "coverageNote": "工業簿記の導入5章・58問です。材料費・労務費・経費は実際原価の基礎、製造間接費は実際配賦・実際操業度による予定配賦・公式法変動予算の2差異・全額売上原価加減法の指定条件までを扱います。材料の予定価格・予定賃率・複合費・部門別計算・標準原価計算などは未収録。経費は正常な製造活動の費目分類・期間対応・直接間接区分・基本仕訳に限定し、税法判断・法定償却率・異常損失の判定は扱いません。全経費・2級全範囲の完成・技能の修得・合格可能性を示しません。",
   "lessons": [
     {
       "id": "n2-industrial-lesson-01",
@@ -1054,6 +1054,273 @@
           ],
           "description": "指定された集計方式に応じて経費の発生・月末振替を仕訳し、支払を重複記帳しない。"
         }
+      ]
+    },
+    {
+      "id": "n2-industrial-lesson-05",
+      "title": "製造間接費 — 実際額・予定配賦・差異をつなぐ",
+      "requirementIds": [
+        "nissho-1e5be5d36b96",
+        "nissho-d470e1613758",
+        "nissho-d7d8b7df9ef4",
+        "nissho-d4fd45dcfab9",
+        "nissho-9922ab7b123a",
+        "nissho-833d7841e757"
+      ],
+      "prerequisiteIds": [
+        "n2-industrial-lesson-01",
+        "n2-industrial-lesson-02",
+        "n2-industrial-lesson-03",
+        "n2-industrial-lesson-04"
+      ],
+      "sections": [
+        {
+          "title": "間接材料・間接労務・間接経費を一つにつなぐ",
+          "paragraphs": [
+            "製造間接費は、製品別に直接把握しない製造原価を集め、配賦基準によって製品へ割り当てるためのまとまりです。間接材料費・間接労務費・間接経費が含まれます。「間接費」と「経費」は同じ分類語ではありません。",
+            "特定注文へ直接把握する材料費・賃金・外注加工賃は、その条件に応じて仕掛品へ直接集計します。販売活動の費用は製造原価から分けます。同じ額を直接費と間接費の両方へ計上しません。"
+          ]
+        },
+        {
+          "title": "資料と元帳は、実際額と配賦額を分けて残す",
+          "paragraphs": [
+            "材料払出記録、共通作業の時間記録、契約書・請求明細などから、当月に対応する実際の間接費を集計します。製造間接費元帳の借方へ実際額、貸方へ製品への配賦額を記帳する設問が基本です。",
+            "各費目から製造間接費へ集める仕訳と、製造間接費から仕掛品へ配賦する仕訳は別の段階です。既に費目勘定へ集計した金額の振替では、新しい現金支払をもう一度記帳しません。注文別の内訳は製造指図書や配賦表で追います。"
+          ]
+        },
+        {
+          "title": "実際配賦では、同じ期間の実際額と実際基準量を使う",
+          "paragraphs": [
+            "実際配賦率＝当月実際製造間接費÷当月実際配賦基準量です。各注文の配賦基準量へこの率を掛けます。直接作業時間を使うなら率の単位は円/時間であり、他の尺度を混ぜません。",
+            "本章の実際配賦は配賦基準量が正数で、全対象注文の時間が集計済み、端数が生じない条件です。全注文の配賦額を足すと実際額に一致します。操業度0や端数処理、複数部門の異なる配賦基準は扱いません。"
+          ]
+        },
+        {
+          "title": "予定配賦率は、先に設定した予算と基準操業度から",
+          "paragraphs": [
+            "予定配賦率＝一定期間の製造間接費予算÷同期間の基準操業度です。年間予算なら年間基準時間など、分子と分母の期間・尺度をそろえます。基準操業度は設問が与える値を使い、その妥当性の決定は本章では扱いません。",
+            "本章の予定配賦額＝予定配賦率×実際操業度です。毎月の実際額から予定配賦率を作り直すのではありません。標準原価計算の標準時間・能率差異は別の範囲です。「予定率を使う」だけで製品1単位の標準時間による計算と混同しないでください。"
+          ]
+        },
+        {
+          "title": "固定予算と、公式法の変動予算",
+          "paragraphs": [
+            "固定予算は基準操業度で定めた予算総額を据え置く方法です。固定予算という名称は、固定費だけを含むという意味ではありません。実際操業度が変わると、同じ予算総額との比較に活動量の違いが含まれる場合があります。",
+            "ここで扱う公式法変動予算は、固定費予算＋変動費率×操業度という単純な式です。固定費の総額と変動費率が一定とみなせる範囲内で使います。実際操業度に対応する予算を求めるとき、固定費総額まで実際時間に比例させません。実査法、段階的な固定費、複雑な予算改訂は扱いません。"
+          ]
+        },
+        {
+          "title": "変動予算額と予定配賦額は違う",
+          "paragraphs": [
+            "固定費率＝固定費予算÷基準操業度、予定配賦率＝変動費率＋固定費率です。実際操業度に対応する変動予算額は固定費総額を据え置く一方、予定配賦額は固定費率にも実際操業度を掛けます。",
+            "したがって、実際操業度が基準より低いと、固定費の一部が予定配賦されず残ります。基準より高い場合は逆になります。二つの金額を分けて計算しないと、予算差異と操業度差異を取り違えます。"
+          ]
+        },
+        {
+          "title": "差異の符号は、最初に約束しておく",
+          "paragraphs": [
+            "本章では配賦差額＝実際製造間接費－予定配賦額と定義します。正なら配賦不足・不利、負なら配賦超過・有利です。符号付き数値欄にはマイナスを付けますが、仕訳欄では正の金額と借貸で方向を示します。",
+            "他の教材で引く順序が逆なら符号も逆になります。プラス/マイナスだけで判断せず、「実際額が多いか」「製品へ配賦した額が多いか」を読み、設問に示した定義に従ってください。"
+          ]
+        },
+        {
+          "title": "二つの原因の和が、配賦差額になる",
+          "paragraphs": [
+            "公式法変動予算の本章の条件では、予算差異＝実際額－実際操業度に対応する予算額。操業度差異＝固定費率×（基準操業度－実際操業度）です。どちらも正を不利、負を有利とします。",
+            "二つを足すと実際額－予定配賦額に一致します。固定費が予定配賦される量の違いは固定費率で測り、変動費率まで掛けません。能率差異を求める標準時間は本章の資料にありません。",
+            "差異の分解は調査の手掛かりであり、それだけで原因や担当者の責任を確定できません。合計が有利でも一方が不利という場合があります。発生額、操業条件、予算設定の前提を分けて読みます。"
+          ]
+        },
+        {
+          "title": "売上原価加減法を、指定された条件で使う",
+          "paragraphs": [
+            "本章の差額処理問題は対象製品がすべて完成・販売済みで、差額を全額売上原価に加減し、別の差額勘定を使わず製造間接費から直接振り替える条件です。配賦不足は売上原価を増加、配賦超過は売上原価を減少させます。",
+            "借方に残った製造間接費は、借方 売上原価／貸方 製造間接費で振り替えます。貸方残高なら借方 製造間接費／貸方 売上原価です。これを未販売の仕掛品・製品がある実務のすべての場合へ一般化しません。仕損処理、営業外損益法、補充率法、繰延法は本章では扱いません。"
+          ]
+        },
+        {
+          "title": "最後は三つの金額と元帳残高を照合する",
+          "paragraphs": [
+            "実際額、実際操業度の予算額、予定配賦額を別々に置きます。予算差異＋操業度差異＝配賦差額、予定配賦額＋配賦差額＝実際額の両方向で確かめます。",
+            "実際額と配賦額を記帳したあとの製造間接費残高が、差額処理で0になるかを確認します。売上原価は不足なら加え、超過なら引く。直接材料・直接労務などを含む売上原価全体を、製造間接費だけの数字と取り違えないことも重要です。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "title": "実際額を時間に応じて配賦する",
+          "prompt": "当月間接材料15,000円、間接労務25,000円、間接経費20,000円。注文M100時間、N200時間、これ以外の費用・作業なし。直接作業時間で実際配賦し、税金・端数は考慮しない。",
+          "steps": [
+            "実際製造間接費は15,000＋25,000＋20,000＝60,000。",
+            "実際配賦率60,000÷300時間＝200円/時間。Mは20,000、Nは40,000。",
+            "注文別配賦の合計20,000＋40,000＝実際額60,000。"
+          ],
+          "answer": "実際配賦率200円/時間。Mへ20,000円、Nへ40,000円。",
+          "objectiveIds": [
+            "n2-industrial-05-skill-actual",
+            "n2-industrial-05-skill-collect"
+          ],
+          "familyId": "n2-industrial-05-family-example-1"
+        },
+        {
+          "title": "年間予定率を月の実際時間へ適用する",
+          "prompt": "年間予算1,440,000円、年間基準時間4,800時間で予定率を固定する。今月の実際時間360時間、実際製造間接費115,000円。予定率は実際時間に掛け、税金は考慮しない。",
+          "steps": [
+            "年間の予定配賦率1,440,000÷4,800＝300円/時間。",
+            "月の予定配賦額300×360＝108,000。",
+            "差額を実際－予定とすれば115,000－108,000＝7,000、不利・配賦不足。"
+          ],
+          "answer": "予定配賦108,000円、配賦不足7,000円。",
+          "objectiveIds": [
+            "n2-industrial-05-skill-planned",
+            "n2-industrial-05-skill-variance"
+          ],
+          "familyId": "n2-industrial-05-family-example-2"
+        },
+        {
+          "title": "低い操業度で二つの差異を分ける",
+          "prompt": "月の基準1,000時間、固定費予算90,000円、変動費率60円/時間、実際800時間、実際額142,000円。公式法変動予算の妥当な範囲内で、予定率は基準予算÷基準時間。実際時間で配賦し、差異は正を不利、負を有利、税金なし。",
+          "steps": [
+            "予定率90＋60＝150円/時間。予定配賦150×800＝120,000。",
+            "実際操業度の予算90,000＋60×800＝138,000。予算差異142,000－138,000＝4,000。",
+            "操業度差異90×(1,000－800)＝18,000。合計4,000＋18,000＝22,000。",
+            "実際142,000－予定120,000＝22,000とも一致する。"
+          ],
+          "answer": "予算差異4,000円不利、操業度差異18,000円不利、計22,000円不利。",
+          "objectiveIds": [
+            "n2-industrial-05-skill-budget",
+            "n2-industrial-05-skill-variance"
+          ],
+          "familyId": "n2-industrial-05-family-example-3"
+        },
+        {
+          "title": "高い操業度で負の差異を読む",
+          "prompt": "月の基準1,000時間、固定費予算80,000円、変動費率120円/時間。実際1,100時間、実際額210,000円。公式法変動予算の妥当な範囲内、実際時間で予定配賦。差異は正を不利、負を有利、税金なし。",
+          "steps": [
+            "予定率80＋120＝200、予定配賦220,000。実際操業度の予算80,000＋132,000＝212,000。",
+            "予算差異210,000－212,000＝－2,000。操業度差異80×(1,000－1,100)＝－8,000。",
+            "合計－10,000は実際210,000－予定220,000と一致。"
+          ],
+          "answer": "予算差異－2,000円、操業度差異－8,000円、配賦差額－10,000円。",
+          "objectiveIds": [
+            "n2-industrial-05-skill-planned",
+            "n2-industrial-05-skill-budget",
+            "n2-industrial-05-skill-variance"
+          ],
+          "familyId": "n2-industrial-05-family-example-4"
+        },
+        {
+          "title": "配賦不足を直接売上原価へ振り替える",
+          "prompt": "実際115,000円を製造間接費の借方、予定108,000円を貸方へ記帳済み。期首0。対象製品はすべて販売済みで、全差額を直接売上原価へ加減する指定。税金なし。",
+          "steps": [
+            "製造間接費の借方残高7,000が配賦不足。",
+            "借方 売上原価7,000／貸方 製造間接費7,000。",
+            "製造間接費は借方115,000と貸方108,000＋7,000で一致し、残高0。"
+          ],
+          "answer": "売上原価を7,000円増やす。",
+          "objectiveIds": [
+            "n2-industrial-05-skill-closing"
+          ],
+          "familyId": "n2-industrial-05-family-example-5"
+        },
+        {
+          "title": "配賦超過は売上原価を減らす",
+          "prompt": "実際210,000円を製造間接費の借方、予定220,000円を貸方へ記帳済み。期首0。対象製品はすべて販売済みで、全差額を直接売上原価へ加減する指定。税金なし。",
+          "steps": [
+            "製造間接費の貸方残高10,000が配賦超過。",
+            "借方 製造間接費10,000／貸方 売上原価10,000。仕訳に負の金額を使わない。",
+            "製造間接費の借方210,000＋10,000＝貸方220,000、残高0。"
+          ],
+          "answer": "売上原価を10,000円減らす。",
+          "objectiveIds": [
+            "n2-industrial-05-skill-closing",
+            "n2-industrial-05-skill-variance"
+          ],
+          "familyId": "n2-industrial-05-family-example-6"
+        }
+      ],
+      "pitfalls": [
+        "間接費と経費、固定予算と固定費を混同しない。",
+        "年間・月間、時間・金額の単位と期間をそろえる。",
+        "本章の予定配賦は実際操業度による。標準時間・能率差異とは分ける。",
+        "差異の符号定義と配賦不足/超過を照合し、仕訳では正数と借貸を使う。",
+        "差異だけで発生原因や担当者の責任を断定しない。"
+      ],
+      "objectives": [
+        {
+          "id": "n2-industrial-05-skill-boundary",
+          "requirementIds": [
+            "nissho-1e5be5d36b96"
+          ],
+          "description": "間接材料・間接労務・間接経費と直接費を区別し、重複集計を避ける。"
+        },
+        {
+          "id": "n2-industrial-05-skill-records",
+          "requirementIds": [
+            "nissho-d470e1613758"
+          ],
+          "description": "発生額と製品配賦額の資料・元帳を分けて照合する。"
+        },
+        {
+          "id": "n2-industrial-05-skill-collect",
+          "requirementIds": [
+            "nissho-1e5be5d36b96",
+            "nissho-d470e1613758"
+          ],
+          "description": "費目別勘定から実際製造間接費を集計する。"
+        },
+        {
+          "id": "n2-industrial-05-skill-actual",
+          "requirementIds": [
+            "nissho-d4fd45dcfab9"
+          ],
+          "description": "同じ期間と尺度の実際配賦率・注文別配賦額を計算し、合計照合する。"
+        },
+        {
+          "id": "n2-industrial-05-skill-planned",
+          "requirementIds": [
+            "nissho-d4fd45dcfab9"
+          ],
+          "description": "予算と基準操業度から予定率を定め、実際操業度で予定配賦する。"
+        },
+        {
+          "id": "n2-industrial-05-skill-budget",
+          "requirementIds": [
+            "nissho-d7d8b7df9ef4"
+          ],
+          "description": "固定予算と公式法変動予算を区別し、実際操業度に対応する予算を求める。"
+        },
+        {
+          "id": "n2-industrial-05-skill-variance",
+          "requirementIds": [
+            "nissho-9922ab7b123a",
+            "nissho-d7d8b7df9ef4"
+          ],
+          "description": "指定した符号で予算差異と操業度差異を求め、配賦差額と照合する。"
+        },
+        {
+          "id": "n2-industrial-05-skill-closing",
+          "requirementIds": [
+            "nissho-833d7841e757"
+          ],
+          "description": "全額売上原価加減法の指定条件で配賦不足・超過を処理し、製造間接費残高を0にする。"
+        }
+      ],
+      "questionIds": [
+        "n2-industrial-05-classify-overhead-01",
+        "n2-industrial-05-trace-documents-01",
+        "n2-industrial-05-collect-actual-01",
+        "n2-industrial-05-actual-allocation-01",
+        "n2-industrial-05-collect-journal-01",
+        "n2-industrial-05-apply-journal-01",
+        "n2-industrial-05-budget-types-01",
+        "n2-industrial-05-planned-rate-01",
+        "n2-industrial-05-overapplied-sign-01",
+        "n2-industrial-05-flexible-budget-01",
+        "n2-industrial-05-variance-components-01",
+        "n2-industrial-05-close-unfavorable-01",
+        "n2-industrial-05-close-favorable-01",
+        "n2-industrial-05-month-reconciliation-01"
       ]
     }
   ],
@@ -4974,6 +5241,1127 @@
           "explanation": "144,000－当月保険12,000＝132,000。"
         }
       ]
+    },
+    {
+      "id": "n2-industrial-05-classify-overhead-01",
+      "familyId": "n2-industrial-05-family-classify-overhead",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-05",
+      "title": "間接費は経費だけではない",
+      "prompt": "当工場では次の費用を示した条件で分類する。各項目が間接材料費・間接労務費・間接経費・製造間接費へ集めない直接経費のどれに当たるか選んでください。通常の製造活動であり、同じ額を二重に集計しない。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "basic",
+      "requirementIds": [
+        "nissho-1e5be5d36b96"
+      ],
+      "objectiveIds": [
+        "n2-industrial-05-skill-boundary"
+      ],
+      "explanation": {
+        "steps": [
+          "原価要素と直接・間接の二つの軸を分ける。",
+          "共通分を製造間接費へ集め、追跡できる直接経費は仕掛品へ直接集計する。"
+        ],
+        "pitfalls": [
+          "製造間接費を、経費だけを集める勘定と思わない。"
+        ],
+        "check": "間接材料費・間接労務費・間接経費の3種類が集計対象。"
+      },
+      "errorTags": [
+        "classify-overhead"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "oil",
+          "label": "複数製品の機械に共通して使った潤滑油。製品別に直接把握しない",
+          "type": "choice",
+          "answer": "im",
+          "options": [
+            "im",
+            "il",
+            "ie",
+            "direct"
+          ],
+          "optionLabels": {
+            "im": "間接材料費",
+            "il": "間接労務費",
+            "ie": "間接経費",
+            "direct": "製造間接費へ集めない直接経費"
+          },
+          "points": 1,
+          "explanation": "間接的に消費した材料なので間接材料費。"
+        },
+        {
+          "id": "maintenance",
+          "label": "工場従業員の共通保全作業に対応する賃金",
+          "type": "choice",
+          "answer": "il",
+          "options": [
+            "im",
+            "il",
+            "ie",
+            "direct"
+          ],
+          "optionLabels": {
+            "im": "間接材料費",
+            "il": "間接労務費",
+            "ie": "間接経費",
+            "direct": "製造間接費へ集めない直接経費"
+          },
+          "points": 1,
+          "explanation": "共通作業の労働消費なので間接労務費。"
+        },
+        {
+          "id": "rent",
+          "label": "工場共用建物の当月賃借料",
+          "type": "choice",
+          "answer": "ie",
+          "options": [
+            "im",
+            "il",
+            "ie",
+            "direct"
+          ],
+          "optionLabels": {
+            "im": "間接材料費",
+            "il": "間接労務費",
+            "ie": "間接経費",
+            "direct": "製造間接費へ集めない直接経費"
+          },
+          "points": 1,
+          "explanation": "材料・労働以外の共通製造原価なので間接経費。"
+        },
+        {
+          "id": "outsourcing",
+          "label": "注文V専用の外注加工賃。注文別に直接把握できる",
+          "type": "choice",
+          "answer": "direct",
+          "options": [
+            "im",
+            "il",
+            "ie",
+            "direct"
+          ],
+          "optionLabels": {
+            "im": "間接材料費",
+            "il": "間接労務費",
+            "ie": "間接経費",
+            "direct": "製造間接費へ集めない直接経費"
+          },
+          "points": 1,
+          "explanation": "外注加工は経費でも、この条件なら直接経費。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-05-trace-documents-01",
+      "familyId": "n2-industrial-05-family-trace-documents",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-05",
+      "title": "発生資料と製品への配賦表をつなぐ",
+      "prompt": "製造間接費の記帳を点検している。次の確認目的に最も直接対応する資料の組合せを選んでください。資料の金額は別途正しく期間対応・検収されているものとする。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "basic",
+      "requirementIds": [
+        "nissho-d470e1613758"
+      ],
+      "objectiveIds": [
+        "n2-industrial-05-skill-records"
+      ],
+      "explanation": {
+        "steps": [
+          "実際発生額の資料と、注文へ配賦した額の資料を区別する。",
+          "実際額と配賦額は予定配賦の場合に一致するとは限らない。"
+        ],
+        "pitfalls": [
+          "請求書だけで製品別配賦額まで確定したと考えない。"
+        ],
+        "check": "資料→費目集計→製造間接費元帳→注文別配賦表の対応を追う。"
+      },
+      "errorTags": [
+        "trace-documents"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "materials",
+          "label": "共通消耗材料の払出額を確認する",
+          "type": "choice",
+          "answer": "material",
+          "options": [
+            "material",
+            "time",
+            "invoice",
+            "allocation"
+          ],
+          "optionLabels": {
+            "material": "材料払出記録と材料元帳",
+            "time": "作業時間記録と賃金集計表",
+            "invoice": "契約書・請求明細と経費集計表",
+            "allocation": "注文別配賦表と製造指図書"
+          },
+          "points": 1,
+          "explanation": "払出記録の数量・単価と元帳を照合する。"
+        },
+        {
+          "id": "wages",
+          "label": "共通作業へ従事した時間に対応する賃金を確認する",
+          "type": "choice",
+          "answer": "time",
+          "options": [
+            "material",
+            "time",
+            "invoice",
+            "allocation"
+          ],
+          "optionLabels": {
+            "material": "材料払出記録と材料元帳",
+            "time": "作業時間記録と賃金集計表",
+            "invoice": "契約書・請求明細と経費集計表",
+            "allocation": "注文別配賦表と製造指図書"
+          },
+          "points": 1,
+          "explanation": "共通作業時間と賃金額の集計を照合する。"
+        },
+        {
+          "id": "expense",
+          "label": "工場共用設備の当月保守サービスの経費を確認する",
+          "type": "choice",
+          "answer": "invoice",
+          "options": [
+            "material",
+            "time",
+            "invoice",
+            "allocation"
+          ],
+          "optionLabels": {
+            "material": "材料払出記録と材料元帳",
+            "time": "作業時間記録と賃金集計表",
+            "invoice": "契約書・請求明細と経費集計表",
+            "allocation": "注文別配賦表と製造指図書"
+          },
+          "points": 1,
+          "explanation": "契約・サービス期間と経費集計を照合する。"
+        },
+        {
+          "id": "orders",
+          "label": "製造間接費をどの注文へいくら配賦したか確認する",
+          "type": "choice",
+          "answer": "allocation",
+          "options": [
+            "material",
+            "time",
+            "invoice",
+            "allocation"
+          ],
+          "optionLabels": {
+            "material": "材料払出記録と材料元帳",
+            "time": "作業時間記録と賃金集計表",
+            "invoice": "契約書・請求明細と経費集計表",
+            "allocation": "注文別配賦表と製造指図書"
+          },
+          "points": 1,
+          "explanation": "注文別配賦表と製造指図書の作業記録を照合する。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-05-collect-actual-01",
+      "familyId": "n2-industrial-05-family-collect-actual",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-05",
+      "title": "直接費を除いて実際間接費を集める",
+      "prompt": "当月の集計済み資料は、間接材料費18,000円、間接労務費42,000円、間接経費30,000円、直接材料費79,000円、販売費10,000円。すべて同じ月の正しい実際発生額で、重複・他の原価はない。指定した範囲の合計を求めてください。税金は考慮しない。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-1e5be5d36b96",
+        "nissho-d470e1613758"
+      ],
+      "objectiveIds": [
+        "n2-industrial-05-skill-boundary",
+        "n2-industrial-05-skill-collect"
+      ],
+      "explanation": {
+        "steps": [
+          "間接費は3要素を合計する。",
+          "提示された製造原価には直接材料費も含むが、販売費は含めない。"
+        ],
+        "pitfalls": [
+          "直接材料79,000を製造間接費へ混ぜない。"
+        ],
+        "check": "90,000＋79,000＋10,000＝提示額179,000。"
+      },
+      "errorTags": [
+        "collect-actual"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "overhead",
+          "label": "実際製造間接費",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 90000,
+          "points": 1,
+          "explanation": "18,000＋42,000＋30,000＝90,000。"
+        },
+        {
+          "id": "manufacturing",
+          "label": "提示した製造原価の合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 169000,
+          "points": 1,
+          "explanation": "間接費90,000＋直接材料79,000＝169,000。"
+        },
+        {
+          "id": "outside",
+          "label": "製造原価へ含めない提示額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 10000,
+          "points": 1,
+          "explanation": "販売費10,000を除外する。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-05-actual-allocation-01",
+      "familyId": "n2-industrial-05-family-actual-allocation",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-05",
+      "title": "実際配賦率で二つの注文に分ける",
+      "prompt": "当月実際製造間接費は90,000円。当工場は直接作業時間を配賦基準とし、注文A180時間、注文B120時間以外の作業はない。実際配賦を行い、配賦率は円/時間で計算する。税金は考慮しない。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "basic",
+      "requirementIds": [
+        "nissho-d4fd45dcfab9"
+      ],
+      "objectiveIds": [
+        "n2-industrial-05-skill-actual"
+      ],
+      "explanation": {
+        "steps": [
+          "同期間・同じ尺度の実際額と実際時間から率を求める。",
+          "各注文の実際時間に率を掛ける。"
+        ],
+        "pitfalls": [
+          "率の分母をどちらか一方の注文時間だけにしない。"
+        ],
+        "check": "実際配賦ではこの条件の配賦合計が実際額90,000と一致する。"
+      },
+      "errorTags": [
+        "actual-allocation"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "rate",
+          "label": "実際配賦率",
+          "type": "amount",
+          "unit": "円/時間",
+          "decimals": 0,
+          "answer": 300,
+          "points": 1,
+          "explanation": "90,000÷300時間＝300。"
+        },
+        {
+          "id": "a",
+          "label": "注文Aへの配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 54000,
+          "points": 1,
+          "explanation": "300×180＝54,000。"
+        },
+        {
+          "id": "b",
+          "label": "注文Bへの配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 36000,
+          "points": 1,
+          "explanation": "300×120＝36,000。"
+        },
+        {
+          "id": "total",
+          "label": "配賦額合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 90000,
+          "points": 1,
+          "explanation": "54,000＋36,000＝90,000。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-05-collect-journal-01",
+      "familyId": "n2-industrial-05-family-collect-journal",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-05",
+      "title": "費目別勘定から間接費を集計する",
+      "prompt": "間接材料費18,000円、間接労務費42,000円、間接経費30,000円が、それぞれ材料・賃金・経費の勘定に正しく集計済みである。これらはまだ製造間接費へ振り替えていない。3つを一つの製造間接費勘定へ集める仕訳だけをしてください。支払や製品配賦の仕訳はしない。税金は考慮しない。",
+      "exhibits": [],
+      "type": "journal",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-d470e1613758",
+        "nissho-1e5be5d36b96"
+      ],
+      "objectiveIds": [
+        "n2-industrial-05-skill-collect",
+        "n2-industrial-05-skill-records"
+      ],
+      "explanation": {
+        "steps": [
+          "製造間接費を借方に合計90,000計上する。",
+          "集計元の材料・賃金・経費を貸方に振り替える。"
+        ],
+        "pitfalls": [
+          "現金を再度減らしたり、同じ額を仕掛品へも二重計上したりしない。"
+        ],
+        "check": "借方90,000＝貸方18,000＋42,000＋30,000。"
+      },
+      "errorTags": [
+        "collect-journal"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "unit": "円",
+      "decimals": 0,
+      "accounts": [
+        "製造間接費",
+        "材料",
+        "賃金",
+        "経費",
+        "仕掛品",
+        "普通預金",
+        "売上原価"
+      ],
+      "lines": [
+        {
+          "side": "debit",
+          "account": "製造間接費",
+          "amount": 90000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "材料",
+          "amount": 18000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "賃金",
+          "amount": 42000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "経費",
+          "amount": 30000,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-05-apply-journal-01",
+      "familyId": "n2-industrial-05-family-apply-journal",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-05",
+      "title": "注文への配賦を記帳する",
+      "prompt": "当月実際製造間接費90,000円が製造間接費勘定に集計済みである。注文別の実際配賦額はA54,000円、B36,000円と確定した。両注文とも加工中で、仕掛品勘定は共通の一勘定を使い、注文別内訳は補助簿で管理する。配賦の合計仕訳だけをしてください。税金は考慮しない。",
+      "exhibits": [],
+      "type": "journal",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-d4fd45dcfab9",
+        "nissho-d470e1613758"
+      ],
+      "objectiveIds": [
+        "n2-industrial-05-skill-actual",
+        "n2-industrial-05-skill-records"
+      ],
+      "explanation": {
+        "steps": [
+          "注文別配賦額54,000＋36,000を共通仕掛品勘定へ集める。",
+          "製造間接費勘定から同額を振り替える。"
+        ],
+        "pitfalls": [
+          "まだ加工中なので製品・売上原価に振り替えない。"
+        ],
+        "check": "実際額と実際配賦額90,000が一致し、当月分の未配賦残高は0。"
+      },
+      "errorTags": [
+        "apply-journal"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "unit": "円",
+      "decimals": 0,
+      "accounts": [
+        "仕掛品",
+        "製造間接費",
+        "製品",
+        "売上原価",
+        "普通預金"
+      ],
+      "lines": [
+        {
+          "side": "debit",
+          "account": "仕掛品",
+          "amount": 90000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "製造間接費",
+          "amount": 90000,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-05-budget-types-01",
+      "familyId": "n2-industrial-05-family-budget-types",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-05",
+      "title": "固定予算と固定費を混同しない",
+      "prompt": "製造間接費予算の設定方法を選んでください。ここでの変動予算は、対象範囲内で「固定費予算＋変動費率×操業時間」という式を用いる公式法とする。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "basic",
+      "requirementIds": [
+        "nissho-d7d8b7df9ef4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-05-skill-budget"
+      ],
+      "explanation": {
+        "steps": [
+          "予算の作り方と、費用の固定・変動という性質を区別する。"
+        ],
+        "pitfalls": [
+          "固定予算という語を「固定費しか含まない予算」と読み替えない。"
+        ],
+        "check": "固定予算にも変動費を含むことがある。変動予算にも固定費を含む。"
+      },
+      "errorTags": [
+        "budget-types"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "fixed",
+          "label": "基準操業度で決めた予算総額を、実際操業度が変わっても据え置く",
+          "type": "choice",
+          "answer": "fixed",
+          "options": [
+            "fixed",
+            "flexible"
+          ],
+          "optionLabels": {
+            "fixed": "固定予算",
+            "flexible": "公式法変動予算"
+          },
+          "points": 1,
+          "explanation": "活動量に応じて予算総額を調整しない固定予算。"
+        },
+        {
+          "id": "flexible",
+          "label": "実際操業時間に対応する変動費を計算し、固定費予算を加える",
+          "type": "choice",
+          "answer": "flexible",
+          "options": [
+            "fixed",
+            "flexible"
+          ],
+          "optionLabels": {
+            "fixed": "固定予算",
+            "flexible": "公式法変動予算"
+          },
+          "points": 1,
+          "explanation": "活動量に応じて予算総額を調整する公式法変動予算。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-05-planned-rate-01",
+      "familyId": "n2-industrial-05-family-planned-rate",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-05",
+      "title": "予定額と基準時間で先に率を定める",
+      "prompt": "年度開始前に、年間製造間接費予算2,400,000円と年間基準直接作業時間8,000時間を設定した。この予定配賦率を年度内に変更せず、各月の実際直接作業時間に掛けて配賦する。今月の実際時間は700時間。今月の実際製造間接費220,000円は予定配賦率の算定に使わない。税金は考慮しない。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-d4fd45dcfab9"
+      ],
+      "objectiveIds": [
+        "n2-industrial-05-skill-planned"
+      ],
+      "explanation": {
+        "steps": [
+          "年間予算と年間基準時間の期間をそろえて率を求める。",
+          "今月はその率に今月の実際時間を掛ける。"
+        ],
+        "pitfalls": [
+          "月の実際額220,000を使って予定配賦率を毎月作り直さない。"
+        ],
+        "check": "予定配賦は標準原価計算の標準時間による配賦と同じとは限らない。本問は実際時間を用いる。"
+      },
+      "errorTags": [
+        "planned-rate"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "rate",
+          "label": "予定配賦率",
+          "type": "amount",
+          "unit": "円/時間",
+          "decimals": 0,
+          "answer": 300,
+          "points": 1,
+          "explanation": "2,400,000÷8,000＝300。"
+        },
+        {
+          "id": "applied",
+          "label": "今月の予定配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 210000,
+          "points": 1,
+          "explanation": "300×実際700時間＝210,000。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-05-overapplied-sign-01",
+      "familyId": "n2-industrial-05-family-overapplied-sign",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-05",
+      "title": "実際より多く配賦した場合の符号",
+      "prompt": "当月の実際製造間接費は173,000円、予定配賦額は180,000円である。この章では配賦差額を「実際額－予定配賦額」で表し、正数を不利・配賦不足、負数を有利・配賦超過とする。差額は符号付きで入力し、その区分を選んでください。税金は考慮しない。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "basic",
+      "requirementIds": [
+        "nissho-9922ab7b123a"
+      ],
+      "objectiveIds": [
+        "n2-industrial-05-skill-variance"
+      ],
+      "explanation": {
+        "steps": [
+          "引く順序を先に固定する。",
+          "負の差額はこの定義では配賦超過を表す。"
+        ],
+        "pitfalls": [
+          "教材によって符号の約束が逆の場合がある。符号だけを覚えず、本問の定義と不足/超過を照合する。"
+        ],
+        "check": "予定180,000＋差額－7,000＝実際173,000。"
+      },
+      "errorTags": [
+        "overapplied-sign"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "variance",
+          "label": "配賦差額（実際額－予定配賦額）",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": -7000,
+          "points": 1,
+          "explanation": "173,000－180,000＝－7,000。",
+          "allowNegative": true
+        },
+        {
+          "id": "kind",
+          "label": "差額の区分",
+          "type": "choice",
+          "answer": "favorable",
+          "options": [
+            "unfavorable",
+            "favorable",
+            "none"
+          ],
+          "optionLabels": {
+            "unfavorable": "不利・配賦不足",
+            "favorable": "有利・配賦超過",
+            "none": "差額なし"
+          },
+          "points": 1,
+          "explanation": "実際額より7,000多く製品へ配賦したため配賦超過。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-05-flexible-budget-01",
+      "familyId": "n2-industrial-05-family-flexible-budget",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-05",
+      "title": "実際操業度の予算と予定配賦額を分ける",
+      "prompt": "月の基準操業度1,000時間、固定費予算120,000円、変動費率80円/時間とする。公式法変動予算を用い、この固定費と変動費率が妥当な範囲で実際操業度は900時間だった。予定配賦率は基準操業度の予算総額÷基準操業度とし、実際時間に掛ける。税金は考慮しない。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-d7d8b7df9ef4",
+        "nissho-d4fd45dcfab9"
+      ],
+      "objectiveIds": [
+        "n2-industrial-05-skill-budget",
+        "n2-industrial-05-skill-planned"
+      ],
+      "explanation": {
+        "steps": [
+          "予算額では固定費120,000を据え置き、変動費だけを実際時間へ対応させる。",
+          "予定配賦額では固定費率120と変動費率80の合計を実際時間へ掛ける。"
+        ],
+        "pitfalls": [
+          "変動予算額192,000と予定配賦額180,000を同一視しない。"
+        ],
+        "check": "差12,000は、この条件で未配賦になる固定費120×(1,000－900)に一致。"
+      },
+      "errorTags": [
+        "flexible-budget"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "fixed-rate",
+          "label": "固定費の予定配賦率",
+          "type": "amount",
+          "unit": "円/時間",
+          "decimals": 0,
+          "answer": 120,
+          "points": 1,
+          "explanation": "120,000÷1,000＝120。"
+        },
+        {
+          "id": "flex-budget",
+          "label": "実際900時間に対応する予算額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 192000,
+          "points": 1,
+          "explanation": "120,000＋80×900＝192,000。"
+        },
+        {
+          "id": "applied",
+          "label": "実際900時間での予定配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 180000,
+          "points": 1,
+          "explanation": "予定率200×900＝180,000。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-05-variance-components-01",
+      "familyId": "n2-industrial-05-family-variance-components",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-05",
+      "title": "予算差異と操業度差異を検算する",
+      "prompt": "同一月の資料は、基準操業度1,000時間、実際操業度900時間、固定費予算120,000円、変動費率80円/時間、実際製造間接費198,000円である。公式法変動予算の範囲内で、予定配賦率は200円/時間、実際時間で予定配賦する。差異は正数を不利、負数を有利とする。「予算差異＝実際額－実際操業度の予算」「操業度差異＝固定費率×(基準－実際時間)」で答えてください。標準時間や能率差異は扱わない。税金は考慮しない。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-9922ab7b123a",
+        "nissho-d7d8b7df9ef4"
+      ],
+      "objectiveIds": [
+        "n2-industrial-05-skill-variance",
+        "n2-industrial-05-skill-budget"
+      ],
+      "explanation": {
+        "steps": [
+          "実際操業度に対応する予算192,000と実際額を比べる。",
+          "予定配賦で未配賦となる固定費12,000を別に計算する。"
+        ],
+        "pitfalls": [
+          "実際時間900と基準1,000の差を変動費率も含めた200で掛けない。"
+        ],
+        "check": "予算差異6,000＋操業度差異12,000＝配賦差額18,000。"
+      },
+      "errorTags": [
+        "variance-components"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "budget-variance",
+          "label": "予算差異",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 6000,
+          "points": 1,
+          "explanation": "198,000－192,000＝6,000。",
+          "allowNegative": true
+        },
+        {
+          "id": "capacity-variance",
+          "label": "操業度差異",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 12000,
+          "points": 1,
+          "explanation": "固定費率120×100＝12,000。",
+          "allowNegative": true
+        },
+        {
+          "id": "total-variance",
+          "label": "配賦差額合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 18000,
+          "points": 1,
+          "explanation": "198,000－180,000＝18,000。",
+          "allowNegative": true
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-05-close-unfavorable-01",
+      "familyId": "n2-industrial-05-family-close-unfavorable",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-05",
+      "title": "配賦不足を売上原価へ加える",
+      "prompt": "当月の製造間接費勘定には、実際額198,000円の借方計上と予定配賦180,000円の貸方計上だけがある。期首残高0、対象製品はすべて完成・販売済みで、差額は全額を売上原価へ加減する方法を指定する。差額勘定を別に使わず、製造間接費勘定から直接振り替えてください。税金は考慮しない。",
+      "exhibits": [],
+      "type": "journal",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-833d7841e757",
+        "nissho-d470e1613758"
+      ],
+      "objectiveIds": [
+        "n2-industrial-05-skill-closing"
+      ],
+      "explanation": {
+        "steps": [
+          "借方残高198,000－180,000＝18,000は配賦不足。",
+          "不足分だけ売上原価を増やし、製造間接費の借方残高をなくす。"
+        ],
+        "pitfalls": [
+          "不利だからという言葉だけで売上原価を貸方にしない。"
+        ],
+        "check": "製造間接費：借方198,000＝貸方180,000＋18,000。"
+      },
+      "errorTags": [
+        "close-unfavorable"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "unit": "円",
+      "decimals": 0,
+      "accounts": [
+        "売上原価",
+        "製造間接費",
+        "仕掛品",
+        "製品",
+        "普通預金"
+      ],
+      "lines": [
+        {
+          "side": "debit",
+          "account": "売上原価",
+          "amount": 18000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "製造間接費",
+          "amount": 18000,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-05-close-favorable-01",
+      "familyId": "n2-industrial-05-family-close-favorable",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-05",
+      "title": "配賦超過を売上原価から引く",
+      "prompt": "製造間接費勘定の期首残高は0。当月実際額173,000円を借方、予定配賦180,000円を貸方に記帳済みである。対象製品はすべて完成・販売済み。差額は全額を売上原価へ加減する指定で、別の差額勘定を使わず製造間接費から直接振り替える。差額処理だけを仕訳してください。税金は考慮しない。",
+      "exhibits": [],
+      "type": "journal",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-833d7841e757",
+        "nissho-d470e1613758"
+      ],
+      "objectiveIds": [
+        "n2-industrial-05-skill-closing",
+        "n2-industrial-05-skill-variance"
+      ],
+      "explanation": {
+        "steps": [
+          "貸方残高7,000は配賦超過であり、製品へ配賦しすぎた額。",
+          "売上原価を7,000減らし、製造間接費を借方へ戻す。"
+        ],
+        "pitfalls": [
+          "符号付き差額－7,000を仕訳金額に入力しない。仕訳の金額は正数で、借貸により方向を表す。"
+        ],
+        "check": "製造間接費：借方173,000＋7,000＝貸方180,000。"
+      },
+      "errorTags": [
+        "close-favorable"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "unit": "円",
+      "decimals": 0,
+      "accounts": [
+        "製造間接費",
+        "売上原価",
+        "仕掛品",
+        "製品",
+        "普通預金"
+      ],
+      "lines": [
+        {
+          "side": "debit",
+          "account": "製造間接費",
+          "amount": 7000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "売上原価",
+          "amount": 7000,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-05-month-reconciliation-01",
+      "familyId": "n2-industrial-05-family-month-reconciliation",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-05",
+      "title": "操業度が高い月を最後まで照合する",
+      "prompt": "月の基準操業度は1,000時間、固定費予算100,000円、変動費率100円/時間である。公式法変動予算の妥当な範囲で、実際操業度1,200時間、実際製造間接費225,000円だった。予定配賦率は基準操業度の予算総額÷基準時間とし、実際時間で配賦する。期首製造間接費残高0、他の増減はない。対象製品はすべて完成・販売済みで、差額処理前の売上原価600,000円には予定配賦額が含まれる。配賦差額は全額売上原価加減法で処理する。差異は正数を不利、負数を有利とし、標準時間・能率差異は扱わない。税金は考慮しない。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-d4fd45dcfab9",
+        "nissho-d7d8b7df9ef4",
+        "nissho-9922ab7b123a",
+        "nissho-833d7841e757"
+      ],
+      "objectiveIds": [
+        "n2-industrial-05-skill-planned",
+        "n2-industrial-05-skill-budget",
+        "n2-industrial-05-skill-variance",
+        "n2-industrial-05-skill-closing"
+      ],
+      "explanation": {
+        "steps": [
+          "基準時間で率を作り、実際時間に掛ける。",
+          "実際額・実際操業度の予算・予定配賦額の3値を並べる。",
+          "予算差異5,000と操業度差異－20,000の合計は－15,000。",
+          "売上原価から15,000を減らし、製造間接費の残高を0にする。"
+        ],
+        "pitfalls": [
+          "有利な合計差異でも予算差異は不利であり、すべての原因が改善したとは言えない。差異だけで担当者の責任を断定しない。"
+        ],
+        "check": "240,000＋(5,000－20,000)＝225,000。600,000－15,000＝585,000。"
+      },
+      "errorTags": [
+        "month-reconciliation"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "rate",
+          "label": "予定配賦率",
+          "type": "amount",
+          "unit": "円/時間",
+          "decimals": 0,
+          "answer": 200,
+          "points": 1,
+          "explanation": "基準予算200,000÷1,000＝200。"
+        },
+        {
+          "id": "applied",
+          "label": "予定配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 240000,
+          "points": 1,
+          "explanation": "200×1,200＝240,000。"
+        },
+        {
+          "id": "flex-budget",
+          "label": "実際操業度での予算額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 220000,
+          "points": 1,
+          "explanation": "100,000＋120,000＝220,000。"
+        },
+        {
+          "id": "budget-variance",
+          "label": "予算差異",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 5000,
+          "points": 1,
+          "explanation": "実際225,000－予算220,000＝5,000。",
+          "allowNegative": true
+        },
+        {
+          "id": "capacity-variance",
+          "label": "操業度差異",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": -20000,
+          "points": 1,
+          "explanation": "固定費率100×(1,000－1,200)＝－20,000。",
+          "allowNegative": true
+        },
+        {
+          "id": "total-variance",
+          "label": "配賦差額合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": -15000,
+          "points": 1,
+          "explanation": "225,000－240,000＝－15,000。",
+          "allowNegative": true
+        },
+        {
+          "id": "ending-overhead",
+          "label": "差額処理後の製造間接費残高",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "配賦超過15,000を借方へ振り替えて0にする。"
+        },
+        {
+          "id": "adjusted-cogs",
+          "label": "差額処理後の売上原価",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 585000,
+          "points": 1,
+          "explanation": "予定で多く含めた15,000を減らして585,000。"
+        }
+      ]
     }
   ],
   "reviewRecords": [
@@ -5114,6 +6502,47 @@
         "n2-industrial-lesson-04": "8cf5ece3feedc1954e8ec8894e4a103221be780593b8d6c377820c4882926513"
       },
       "evidence": "notes/editorial/industrial-expenses-review-20261102.md"
+    },
+    {
+      "kind": "independent-computation",
+      "reviewedBy": "Independent reviewer /root/advance_remaining_site_backlogs/industrial_labor_draft (not chapter 05 draft author)",
+      "reviewedAt": "2026-11-02T08:38:19Z",
+      "questionIds": [
+        "n2-industrial-05-classify-overhead-01",
+        "n2-industrial-05-trace-documents-01",
+        "n2-industrial-05-collect-actual-01",
+        "n2-industrial-05-actual-allocation-01",
+        "n2-industrial-05-collect-journal-01",
+        "n2-industrial-05-apply-journal-01",
+        "n2-industrial-05-budget-types-01",
+        "n2-industrial-05-planned-rate-01",
+        "n2-industrial-05-overapplied-sign-01",
+        "n2-industrial-05-flexible-budget-01",
+        "n2-industrial-05-variance-components-01",
+        "n2-industrial-05-close-unfavorable-01",
+        "n2-industrial-05-close-favorable-01",
+        "n2-industrial-05-month-reconciliation-01"
+      ],
+      "questionHashes": {
+        "n2-industrial-05-classify-overhead-01": "53cac4090af964ceab6a97abbe801028e99a45ff3ecb3eebd0a136d8c9fce239",
+        "n2-industrial-05-trace-documents-01": "12263c0502ee30d029f214b83417e2adbf59dd5c93baf75a66839e21959e4754",
+        "n2-industrial-05-collect-actual-01": "66494bc7a84e5a5a9552f04e81bbd731bf85dade7002271058d465249fabfa3b",
+        "n2-industrial-05-actual-allocation-01": "903fbce6b4b43276b21d35e89f15a5358196c000c7e175c0c7f1e653df265d7a",
+        "n2-industrial-05-collect-journal-01": "e17f48054b2e73c5b854d7aa16d12a626b7516158eacd210044a7156e85232bc",
+        "n2-industrial-05-apply-journal-01": "dec01054d58143a76f70e29365e38d474e39c38a3488af22cc1614906e1ef5d7",
+        "n2-industrial-05-budget-types-01": "2b9cba686cd23bec7d338855c34c17b8cebd11f7acb226081e130ae1343aba0d",
+        "n2-industrial-05-planned-rate-01": "110220feabd1082a98d0b0f6e9daa27f2ef26ab3e80bce746f517646627c5c45",
+        "n2-industrial-05-overapplied-sign-01": "31aa7e4c50077300c61698959b8600708a12f08575a5edc148249512ace49da7",
+        "n2-industrial-05-flexible-budget-01": "fc7b70a8991c682654d64b581d2ba36321161ca351ae3849f5d4590eeb76160d",
+        "n2-industrial-05-variance-components-01": "57fa26d85d32ac123360967baeb231f30e2efcfbcd2fcfb374fc83a75a6780ef",
+        "n2-industrial-05-close-unfavorable-01": "4efe1b5388bc1e652ddb956c68e8391f2efbf5117b9b7c391c4f8b830215400c",
+        "n2-industrial-05-close-favorable-01": "9720911cd99d603d8c94ebd831d810bd5adf80a8d8a581ab0a568787ac300d1e",
+        "n2-industrial-05-month-reconciliation-01": "7ac8e4b7ba58be352403d21f3a61447c348e1a1efeedbd4bc4ba33b6d3a4bd66"
+      },
+      "lessonHashes": {
+        "n2-industrial-lesson-05": "6d116dc18ec700612de78d34da227ca18407f2105fbe87b7fcd83c2c01d1a692"
+      },
+      "evidence": "notes/editorial/industrial-overhead-review-20261102.md"
     }
   ]
 }

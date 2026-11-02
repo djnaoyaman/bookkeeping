@@ -36,6 +36,8 @@ jobs:
           node tests/industrial-labor.cjs
           node tests/industrial-expenses.cjs
           node tests/industrial-expenses-independent.cjs
+          node tests/industrial-overhead.cjs
+          node tests/industrial-overhead-independent.cjs
           node tests/check.cjs
           node tests/discovery-client.cjs
   deploy:
