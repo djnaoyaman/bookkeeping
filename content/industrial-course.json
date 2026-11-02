@@ -5,7 +5,7 @@
   "scopeVersion": "nissho-2026",
   "authoringStatus": "reviewed",
   "sourceVerificationPending": false,
-  "coverageNote": "工業簿記の導入5章・58問です。材料費・労務費・経費は実際原価の基礎、製造間接費は実際配賦・実際操業度による予定配賦・公式法変動予算の2差異・全額売上原価加減法の指定条件までを扱います。材料の予定価格・予定賃率・複合費・部門別計算・標準原価計算などは未収録。経費は正常な製造活動の費目分類・期間対応・直接間接区分・基本仕訳に限定し、税法判断・法定償却率・異常損失の判定は扱いません。全経費・2級全範囲の完成・技能の修得・合格可能性を示しません。",
+  "coverageNote": "工業簿記の導入6章・70問です。材料費・労務費・経費は実際原価の基礎、製造間接費は実際・予定配賦と公式法変動予算の2差異、部門費は第一次集計・直接配賦・限定した補助部門の実際/予定配賦を扱います。材料の予定価格・予定賃率・複合費・相互配賦法・標準原価計算などは未収録。部門費の親項目への対応は全配賦法の完成を意味しません。経費は正常な製造活動の基礎に限定し、税法判断・法定償却率・異常損失の判定は扱いません。2級全範囲の完成・技能の修得・合格可能性を示しません。",
   "lessons": [
     {
       "id": "n2-industrial-lesson-01",
@@ -1321,6 +1321,284 @@
         "n2-industrial-05-close-unfavorable-01",
         "n2-industrial-05-close-favorable-01",
         "n2-industrial-05-month-reconciliation-01"
+      ]
+    },
+    {
+      "id": "n2-industrial-lesson-06",
+      "title": "部門費計算 — 共通費を集め、補助部門から製造部門へ",
+      "requirementIds": [
+        "nissho-db7cccf07d15",
+        "nissho-af4c37243395",
+        "nissho-c9a47b00e2af",
+        "nissho-94fcb00f89c2",
+        "nissho-9666e00964fb",
+        "nissho-0a7bf54167b3",
+        "nissho-432731a540b9",
+        "nissho-d4fd45dcfab9"
+      ],
+      "prerequisiteIds": [
+        "n2-industrial-lesson-05"
+      ],
+      "sections": [
+        {
+          "title": "工場全体の一つの率から、部門ごとの原価へ",
+          "paragraphs": [
+            "機械加工と手作業の組立では、費用の発生の仕方や適切な配賦基準が違うことがあります。部門費計算は原価を部門別に集め、補助部門の費用を製造部門へ配賦し、製品別計算へつなぐ手続です。単に部門名を増やすのではなく、どこで原価が発生し、どこへ負担させるかを追えるようにします。",
+            "本章の計算対象は製造間接費です。特定注文へ直接把握する直接材料費・直接労務費などは、別に仕掛品へ集計済みという条件にします。同じ額を部門費にも再計上しません。販売部門の費用を工場の部門費へ混ぜないことも前提です。"
+          ]
+        },
+        {
+          "title": "製造部門と補助部門は、ここでの役割で分ける",
+          "paragraphs": [
+            "切削・組立のように製品の加工を担当するものを製造部門、工場の保全や動力供給のように他部門を支えるものを補助部門として扱います。部門の設定は実際の機能・原価把握の目的によります。本章では設問が示す役割と部門区分を使い、名称だけで全ての会社を一律に分類しません。",
+            "補助部門も製造活動に必要な費用を発生させます。補助だから製造原価の外という意味ではありません。一方、販売店や営業拠点は、ここで設定する工場の製造・補助部門には含めない条件です。"
+          ]
+        },
+        {
+          "title": "部門個別費と、製品に直接かどうかは別の軸",
+          "paragraphs": [
+            "部門個別費は、どの部門で発生したかを直接把握できる費用です。部門共通費は複数部門に共通して発生し、適切な基準で分ける必要がある費用です。工場全体から部門へ集める時点で、この二つを区別します。",
+            "たとえば切削部門だけが使う機械の当月減価償却費は切削部門の個別費でも、その機械で複数製品を加工し製品別に直接把握しないなら製品に対しては間接費です。「部門に個別」と「製品に直接」を同じ意味にしないでください。減価償却の法定率などの計算は本章の対象外で、当月額は資料として与えます。"
+          ]
+        },
+        {
+          "title": "まず全原価部門へ集計し、共通費は指定基準で配る",
+          "paragraphs": [
+            "本章では、部門個別費を各部門へ賦課し、部門共通費を製造部門・補助部門へ配賦して、各部門の当初集計額を求める段階を「第一次集計」と呼びます。共用建物の賃借料なら使用面積、電力なら計測使用量など、設問が与える費用と基準の対応を確認します。",
+            "共通費の配賦額＝共通費総額×その部門の基準量÷対象全部門の基準量合計です。ここでは補助部門も共通費の受益部門に含めます。部門個別費を共通費としてもう一度割り振らず、費用ごとに異なる基準の分母を使います。配賦基準の妥当性をデータなしで断定しません。"
+          ]
+        },
+        {
+          "title": "第一次集計表の縦計・横計を確かめる",
+          "paragraphs": [
+            "各部門の個別費に、共通費の配賦額を足します。全部門の第一次集計額の合計は、部門個別費の総額と共通費の総額の合計に一致します。共通費を配っても工場全体に新しい費用が増えるわけではありません。",
+            "資料は全て同じ月の正しい発生額、基準量は全対象を含み正の合計、重複・端数なしという条件にします。記録が足りず分母が分からない場合に、適当な部門数で均等割りして答えを作らないことが重要です。"
+          ]
+        },
+        {
+          "title": "直接配賦法は、製造部門だけを受け手にする",
+          "paragraphs": [
+            "第一次集計後の補助部門費を製造部門へ移す段階で、直接配賦法を指定されたとします。この方法では補助部門間の用役提供を配賦計算に織り込まず、補助部門費を製造部門だけへ直接配賦します。補助部門間で用役が実際に発生しなかった、という意味ではありません。",
+            "配賦割合の分母も製造部門が受けた用役量だけです。保全部門が切削40時間・組立20時間・動力30時間に作業していても、直接配賦の分母は切削40＋組立20です。動力30を分母へ入れたまま製造部門だけに配れば、補助部門費を配り残します。本章の実際直接配賦では、補助部門費全額を製造部門へ移します。"
+          ]
+        },
+        {
+          "title": "補助部門が二つあっても、各々の費用を別に配る",
+          "paragraphs": [
+            "直接配賦法では、保全費は製造部門への保全時間比、動力費は製造部門への使用電力量比など、補助部門ごとに固有の基準を使います。他の補助部門から配賦を受けて費用をふくらませる計算はしません。第一の補助部門を先に処理したから次の補助部門費が増える、という手続でもありません。",
+            "各製造部門の最終部門費は、その部門の第一次集計額と、全補助部門から受けた配賦額の合計です。全額を実際直接配賦した後は補助部門の残額が0となり、製造部門の最終合計だけで、配賦前の全原価部門の費用合計に一致します。元の補助部門費を最後にもう一度足さないでください。"
+          ]
+        },
+        {
+          "title": "製造部門から注文へ：異なる尺度を混ぜない",
+          "paragraphs": [
+            "補助部門費配賦後の製造部門費を、各部門の基準で注文へ配賦します。これは第05章の製品への配賦を、部門別に行う接続です。機械中心の切削は機械運転時間、組立は直接作業時間という資料なら、それぞれに円/機械時間、円/作業時間の率を求めます。",
+            "一つの注文が両部門を通るなら、切削部門での配賦額と組立部門での配賦額を合計します。異なる意味の時間を合算して一つの率を作りません。部門別の配賦は、その注文の直接材料費などの計算を置き換えるものではなく、注文原価のうち製造間接費の部分を求めるものです。"
+          ]
+        },
+        {
+          "title": "補助部門の実際配賦と予定配賦は残差が違う",
+          "paragraphs": [
+            "本章で実際率と予定率を比較する問題は、補助部門が製造部門だけへ用役を提供し、補助部門間・自家消費の用役がない場合に限定します。実際率は補助部門の当月実際費用÷製造部門への当月実際用役量。予定率は事前に設定した同期間の費用予算÷同期間の基準用役量です。予定率にも各製造部門の実際受入用役量を掛けます。",
+            "実際配賦なら全額が製造部門へ移りますが、予定配賦額は実際費用と一致しないことがあります。補助部門の差額＝実際費用−予定配賦総額として、正は配賦不足、負は配賦超過とします。この比較では毎月の実際額で予定率を作り直しません。差額は別途示して整合確認し、本章ではその原因分解や決算処理を求めません。"
+          ]
+        },
+        {
+          "title": "総額を保存し、実装していない方法を残す",
+          "paragraphs": [
+            "実際直接配賦では「製造部門の最終費用合計＝全部門の第一次集計額合計」。予定配賦では「製造部門の配賦後合計＋補助部門の符号付き差額＝製造部門の配賦前費用＋補助部門の実際費用」です。差額が負なら左辺から差し引くことになり、差額を常に足し増すと誤ります。",
+            "本章は部門設定、部門個別・共通費、第一次集計、補助部門の直接配賦と限定した実際/予定配賦の基礎です。2級の相互配賦法は未実装です。1級側の純粋の相互配賦法・階梯式配賦法・複数基準配賦法も扱いません。親項目「補助部門費の製造部門への配賦」へ対応させても、その全方法を完成したとは扱いません。"
+          ]
+        }
+      ],
+      "workedExamples": [
+        {
+          "title": "部門個別費に共通賃借料を加える",
+          "prompt": "同じ月の部門個別費は切削60,000円、組立40,000円、保全20,000円。共通賃借料24,000円を使用面積300㎡・200㎡・100㎡で配る。対象はこの3部門のみ、重複・税金・端数なし。",
+          "steps": [
+            "面積合計600㎡。賃借料配賦は切削12,000、組立8,000、保全4,000。",
+            "第一次集計額は切削72,000、組立48,000、保全24,000。",
+            "72,000＋48,000＋24,000＝144,000＝部門個別費120,000＋共通費24,000。"
+          ],
+          "answer": "第一次集計は72,000円・48,000円・24,000円。",
+          "objectiveIds": [
+            "n2-industrial-06-skill-bases",
+            "n2-industrial-06-skill-first"
+          ],
+          "familyId": "n2-industrial-06-family-example-1"
+        },
+        {
+          "title": "保全費を製造部門へ移す",
+          "prompt": "第一次集計額は切削72,000円、組立48,000円、保全24,000円。保全の用役は切削30時間・組立10時間のみ。全額を直接配賦し、他の費用・税金なし。",
+          "steps": [
+            "保全費を30:10で配り、切削18,000、組立6,000。",
+            "切削の最終費用は90,000、組立は54,000、保全の配賦後残額は0。",
+            "最終製造部門費90,000＋54,000＝第一次集計全部門144,000。"
+          ],
+          "answer": "切削90,000円・組立54,000円。保全費を再度合計に加えない。",
+          "objectiveIds": [
+            "n2-industrial-06-skill-direct",
+            "n2-industrial-06-skill-reconcile"
+          ],
+          "familyId": "n2-industrial-06-family-example-2"
+        },
+        {
+          "title": "補助部門間の用役があっても直接配賦を指定する",
+          "prompt": "第一次集計額は製造P80,000円・Q40,000円、保全S30,000円・動力T18,000円。SはP40時間・Q20時間・T40時間へ提供。TはP300kWh・Q600kWh・S100kWhへ提供。直接配賦法で各補助部門費の全額を製造P/Qへ配り、税金なし。",
+          "steps": [
+            "Sの分母はP40＋Q20＝60時間。P20,000・Q10,000、Tへは配賦しない。",
+            "Tの分母はP300＋Q600＝900kWh。P6,000・Q12,000、Sへは配賦しない。",
+            "Pは80,000＋20,000＋6,000＝106,000。Qは40,000＋10,000＋12,000＝62,000。",
+            "106,000＋62,000＝168,000＝第一次集計全部門の合計。"
+          ],
+          "answer": "P106,000円・Q62,000円。補助部門間の提供量は、この方法の分母から除く。",
+          "objectiveIds": [
+            "n2-industrial-06-skill-two-support",
+            "n2-industrial-06-skill-direct",
+            "n2-industrial-06-skill-reconcile"
+          ],
+          "familyId": "n2-industrial-06-family-example-3"
+        },
+        {
+          "title": "注文が二つの異なる部門を通る",
+          "prompt": "補助部門費配賦後の切削費120,000円、組立費90,000円。全注文の当月実績は切削400機械時間・組立600作業時間。注文Jは切削12機械時間・組立20作業時間を使用。部門別に実際配賦し、税金・端数なし。",
+          "steps": [
+            "切削率は120,000÷400＝300円/機械時間。組立率は90,000÷600＝150円/作業時間。",
+            "Jへの配賦は切削3,600と組立3,000の合計6,600。",
+            "機械時間と作業時間をまとめて一つの分母にしない。6,600はJの製造間接費だけである。"
+          ],
+          "answer": "Jへ製造間接費6,600円。",
+          "objectiveIds": [
+            "n2-industrial-06-skill-product"
+          ],
+          "familyId": "n2-industrial-06-family-example-4"
+        },
+        {
+          "title": "補助部門の実際率と事前の予定率を比較する",
+          "prompt": "保全部門は製造P/Qのみを支え、他部門向け・自家用役なし。当月予算96,000円・基準用役800時間で予定率を事前設定。当月実際費用99,000円、実際用役P450時間・Q300時間。予定率は変更せず、税金なし。",
+          "steps": [
+            "予定率96,000÷800＝120円/時間。実際率99,000÷750＝132円/時間。",
+            "実際配賦ならP59,400・Q39,600、合計99,000で差額0。",
+            "予定配賦ならP54,000・Q36,000、合計90,000。差額99,000−90,000＝9,000の不足。"
+          ],
+          "answer": "予定配賦90,000円と未配賦差額9,000円を分ける。",
+          "objectiveIds": [
+            "n2-industrial-06-skill-planned",
+            "n2-industrial-06-skill-reconcile"
+          ],
+          "familyId": "n2-industrial-06-family-example-5"
+        },
+        {
+          "title": "予定配賦超過でも総額が合う",
+          "prompt": "製造P/Qの補助部門費配賦前費用は70,000円・50,000円、補助部門の実際費用は83,000円。他部門・自家用役なし。補助部門から実際受入用役によりP54,000円・Q36,000円を予定配賦済み。これ以外の費用・振替・税金なし。差額は実際−予定とする。",
+          "steps": [
+            "製造部門の配賦後費用はP124,000・Q86,000、合計210,000。",
+            "補助部門の差額83,000−90,000＝−7,000。予定で実際より多く配っている。",
+            "210,000＋(−7,000)＝203,000＝70,000＋50,000＋83,000。差額を消去する仕訳は本例では行わない。"
+          ],
+          "answer": "製造部門合計210,000円と差額−7,000円を合わせると実際費用203,000円。",
+          "objectiveIds": [
+            "n2-industrial-06-skill-planned",
+            "n2-industrial-06-skill-reconcile"
+          ],
+          "familyId": "n2-industrial-06-family-example-6"
+        }
+      ],
+      "pitfalls": [
+        "部門個別費と製品の直接費を同じ意味にしない。",
+        "第一次集計の共通費配賦では対象補助部門も含め、直接配賦法の補助費配賦では製造部門だけを受け手・分母にする。",
+        "補助部門間の用役が存在しないとは言わない。直接配賦法で計算対象から除くことと区別する。",
+        "補助部門費を製造部門に含めた後に元額を再加算しない。",
+        "円/機械時間と円/作業時間など異なる尺度を混ぜない。",
+        "予定配賦では符号付き差額を残す。相互配賦法や差額の決算処理はこの章では未実装。"
+      ],
+      "objectives": [
+        {
+          "id": "n2-industrial-06-skill-roles",
+          "requirementIds": [
+            "nissho-db7cccf07d15",
+            "nissho-af4c37243395"
+          ],
+          "description": "製造・補助部門の役割と、部門費計算の目的を与件から説明する。"
+        },
+        {
+          "id": "n2-industrial-06-skill-trace",
+          "requirementIds": [
+            "nissho-c9a47b00e2af"
+          ],
+          "description": "製品への直接/間接と、部門への個別/共通を区別し重複を防ぐ。"
+        },
+        {
+          "id": "n2-industrial-06-skill-bases",
+          "requirementIds": [
+            "nissho-94fcb00f89c2",
+            "nissho-9666e00964fb"
+          ],
+          "description": "費用ごとの指定配賦基準と証拠記録を対応させる。"
+        },
+        {
+          "id": "n2-industrial-06-skill-first",
+          "requirementIds": [
+            "nissho-94fcb00f89c2",
+            "nissho-c9a47b00e2af"
+          ],
+          "description": "全原価部門へ共通費を配り、第一次集計の総額を照合する。"
+        },
+        {
+          "id": "n2-industrial-06-skill-direct",
+          "requirementIds": [
+            "nissho-9666e00964fb",
+            "nissho-0a7bf54167b3"
+          ],
+          "description": "直接配賦法で製造部門だけを分母・受け手として補助費を配る。"
+        },
+        {
+          "id": "n2-industrial-06-skill-two-support",
+          "requirementIds": [
+            "nissho-9666e00964fb",
+            "nissho-0a7bf54167b3"
+          ],
+          "description": "二つの補助部門を異なる基準で個別に直接配賦し、製造部門費へ集める。"
+        },
+        {
+          "id": "n2-industrial-06-skill-product",
+          "requirementIds": [
+            "nissho-d4fd45dcfab9",
+            "nissho-db7cccf07d15"
+          ],
+          "description": "補助部門費配賦後の異なる製造部門率で注文の製造間接費を計算する。"
+        },
+        {
+          "id": "n2-industrial-06-skill-planned",
+          "requirementIds": [
+            "nissho-432731a540b9",
+            "nissho-9666e00964fb"
+          ],
+          "description": "製造部門のみを支える補助部門の実際率と予定率を区別し差額を残す。"
+        },
+        {
+          "id": "n2-industrial-06-skill-reconcile",
+          "requirementIds": [
+            "nissho-94fcb00f89c2",
+            "nissho-0a7bf54167b3",
+            "nissho-432731a540b9"
+          ],
+          "description": "実際配賦の総額保存と予定配賦の符号付き残差を照合する。"
+        }
+      ],
+      "questionIds": [
+        "n2-industrial-06-department-roles-01",
+        "n2-industrial-06-two-classification-axes-01",
+        "n2-industrial-06-allocation-records-01",
+        "n2-industrial-06-first-allocation-01",
+        "n2-industrial-06-two-common-costs-01",
+        "n2-industrial-06-direct-denominator-01",
+        "n2-industrial-06-two-support-allocation-01",
+        "n2-industrial-06-double-count-check-01",
+        "n2-industrial-06-department-to-order-01",
+        "n2-industrial-06-support-transfer-journal-01",
+        "n2-industrial-06-support-actual-planned-01",
+        "n2-industrial-06-planned-total-reconciliation-01"
       ]
     }
   ],
@@ -6362,6 +6640,1251 @@
           "explanation": "予定で多く含めた15,000を減らして585,000。"
         }
       ]
+    },
+    {
+      "id": "n2-industrial-06-department-roles-01",
+      "familyId": "n2-industrial-06-family-department-roles",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-06",
+      "title": "部門の名前より役割を読む",
+      "prompt": "この工場は切削・組立を製造部門、工場設備を保守する保全部門を補助部門として設定した。製品を販売する営業所は工場の原価部門に含めない。示した役割に従って分類してください。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "basic",
+      "requirementIds": [
+        "nissho-db7cccf07d15",
+        "nissho-af4c37243395"
+      ],
+      "objectiveIds": [
+        "n2-industrial-06-skill-roles"
+      ],
+      "explanation": {
+        "steps": [
+          "設問が定める機能と部門区分を確認する。",
+          "製品加工と、製造を支える用役を区別する。"
+        ],
+        "pitfalls": [
+          "補助という名前から非製造原価だと決めない。"
+        ],
+        "check": "製造2部門・補助1部門・対象外1拠点。"
+      },
+      "errorTags": [
+        "department-roles"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "cutting",
+          "label": "製品の切削加工を担当する部門",
+          "type": "choice",
+          "answer": "production",
+          "options": [
+            "production",
+            "support",
+            "outside"
+          ],
+          "optionLabels": {
+            "production": "製造部門",
+            "support": "補助部門",
+            "outside": "本問の工場部門費の対象外"
+          },
+          "points": 1,
+          "explanation": "製品の加工を担当する製造部門。"
+        },
+        {
+          "id": "assembly",
+          "label": "部品を組み立てる部門",
+          "type": "choice",
+          "answer": "production",
+          "options": [
+            "production",
+            "support",
+            "outside"
+          ],
+          "optionLabels": {
+            "production": "製造部門",
+            "support": "補助部門",
+            "outside": "本問の工場部門費の対象外"
+          },
+          "points": 1,
+          "explanation": "組立加工を担当する製造部門。"
+        },
+        {
+          "id": "maintenance",
+          "label": "工場内の各設備を保守する部門",
+          "type": "choice",
+          "answer": "support",
+          "options": [
+            "production",
+            "support",
+            "outside"
+          ],
+          "optionLabels": {
+            "production": "製造部門",
+            "support": "補助部門",
+            "outside": "本問の工場部門費の対象外"
+          },
+          "points": 1,
+          "explanation": "製造を支える補助部門であり、その費用を直ちに製造原価の外とはしない。"
+        },
+        {
+          "id": "sales",
+          "label": "製品の販売を担当する営業所",
+          "type": "choice",
+          "answer": "outside",
+          "options": [
+            "production",
+            "support",
+            "outside"
+          ],
+          "optionLabels": {
+            "production": "製造部門",
+            "support": "補助部門",
+            "outside": "本問の工場部門費の対象外"
+          },
+          "points": 1,
+          "explanation": "本問では販売活動を工場部門費の対象外としている。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-06-two-classification-axes-01",
+      "familyId": "n2-industrial-06-family-two-classification-axes",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-06",
+      "title": "部門個別費でも製品には間接費",
+      "prompt": "計算対象は製造間接費の部門費である。特定注文へ直接把握する直接費は別途集計し、ここには含めない。以下の資料を分類してください。減価償却費は正しい当月額が与えられ、率の計算は不要。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "basic",
+      "requirementIds": [
+        "nissho-c9a47b00e2af"
+      ],
+      "objectiveIds": [
+        "n2-industrial-06-skill-trace"
+      ],
+      "explanation": {
+        "steps": [
+          "製品への帰属と部門への帰属を別々に読む。"
+        ],
+        "pitfalls": [
+          "部門個別費を全て製品の直接費と読み替えない。"
+        ],
+        "check": "部門への直接帰属は、製品への直接帰属を保証しない。"
+      },
+      "errorTags": [
+        "two-classification-axes"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "machine",
+          "label": "切削部門専用機械の減価償却費。複数製品を加工し製品別に直接把握しない",
+          "type": "choice",
+          "answer": "individual",
+          "options": [
+            "individual",
+            "common",
+            "direct-product"
+          ],
+          "optionLabels": {
+            "individual": "製品には間接費、部門には個別費",
+            "common": "製品には間接費、部門には共通費",
+            "direct-product": "製品へ直接集計し、本問の製造間接費の部門費へ入れない"
+          },
+          "points": 1,
+          "explanation": "切削に直接帰属するが、特定製品の直接費とはしていない。"
+        },
+        {
+          "id": "rent",
+          "label": "切削・組立・保全が共用する建物の当月賃借料",
+          "type": "choice",
+          "answer": "common",
+          "options": [
+            "individual",
+            "common",
+            "direct-product"
+          ],
+          "optionLabels": {
+            "individual": "製品には間接費、部門には個別費",
+            "common": "製品には間接費、部門には共通費",
+            "direct-product": "製品へ直接集計し、本問の製造間接費の部門費へ入れない"
+          },
+          "points": 1,
+          "explanation": "複数部門へ配賦する部門共通費。"
+        },
+        {
+          "id": "order-material",
+          "label": "注文Rだけに使う材料費。注文へ直接把握済み",
+          "type": "choice",
+          "answer": "direct-product",
+          "options": [
+            "individual",
+            "common",
+            "direct-product"
+          ],
+          "optionLabels": {
+            "individual": "製品には間接費、部門には個別費",
+            "common": "製品には間接費、部門には共通費",
+            "direct-product": "製品へ直接集計し、本問の製造間接費の部門費へ入れない"
+          },
+          "points": 1,
+          "explanation": "注文に直接集計し、間接費の部門集計に重複させない。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-06-allocation-records-01",
+      "familyId": "n2-industrial-06-family-allocation-records",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-06",
+      "title": "配賦表と基準量の記録を対応させる",
+      "prompt": "当工場は、共用建物賃借料を使用面積、保全費を受入保全時間、動力費を計測使用電力量により配賦すると定めている。基準量は正しく同じ月に対応する。各費用の配賦割合を確かめる資料を選んでください。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "basic",
+      "requirementIds": [
+        "nissho-94fcb00f89c2",
+        "nissho-9666e00964fb"
+      ],
+      "objectiveIds": [
+        "n2-industrial-06-skill-bases"
+      ],
+      "explanation": {
+        "steps": [
+          "設問が指定した基準と記録の単位を一致させる。"
+        ],
+        "pitfalls": [
+          "時間と電力量を同じ分母へ足さない。"
+        ],
+        "check": "基準の選択自体の妥当性は、根拠データなしには断定しない。"
+      },
+      "errorTags": [
+        "allocation-records"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "rent",
+          "label": "共用建物賃借料の割合を確かめる",
+          "type": "choice",
+          "answer": "area",
+          "options": [
+            "area",
+            "hours",
+            "meter"
+          ],
+          "optionLabels": {
+            "area": "使用面積記録",
+            "hours": "保全作業時間記録",
+            "meter": "使用電力量の計測記録"
+          },
+          "points": 1,
+          "explanation": "面積基準と部門別面積を対応させる。"
+        },
+        {
+          "id": "maintenance",
+          "label": "保全費の割合を確かめる",
+          "type": "choice",
+          "answer": "hours",
+          "options": [
+            "area",
+            "hours",
+            "meter"
+          ],
+          "optionLabels": {
+            "area": "使用面積記録",
+            "hours": "保全作業時間記録",
+            "meter": "使用電力量の計測記録"
+          },
+          "points": 1,
+          "explanation": "保全時間の受益部門別記録を使う。"
+        },
+        {
+          "id": "power",
+          "label": "動力費の割合を確かめる",
+          "type": "choice",
+          "answer": "meter",
+          "options": [
+            "area",
+            "hours",
+            "meter"
+          ],
+          "optionLabels": {
+            "area": "使用面積記録",
+            "hours": "保全作業時間記録",
+            "meter": "使用電力量の計測記録"
+          },
+          "points": 1,
+          "explanation": "受益部門別の電力量を照合する。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-06-first-allocation-01",
+      "familyId": "n2-industrial-06-family-first-allocation",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-06",
+      "title": "補助部門も含めて共通費を集計する",
+      "prompt": "表の部門個別費に、別途発生した共用建物賃借料30,000円を使用面積で配賦する。対象は製造P/Q・補助Sのみ。全て同じ月、直接製品費・他の費用・重複・税金・端数はない。第一次集計額を求めてください。",
+      "exhibits": [
+        {
+          "title": "当月の部門別資料",
+          "headers": [
+            "部門",
+            "部門個別費（円）",
+            "使用面積（㎡）"
+          ],
+          "rows": [
+            [
+              "製造P",
+              72000,
+              300
+            ],
+            [
+              "製造Q",
+              48000,
+              200
+            ],
+            [
+              "補助S",
+              12000,
+              100
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-94fcb00f89c2",
+        "nissho-c9a47b00e2af"
+      ],
+      "objectiveIds": [
+        "n2-industrial-06-skill-first",
+        "n2-industrial-06-skill-bases"
+      ],
+      "explanation": {
+        "steps": [
+          "面積は補助Sを含む600㎡。",
+          "部門個別費に賃借料配賦額を加える。"
+        ],
+        "pitfalls": [
+          "共通費の第一次集計で補助部門を分母から外さない。"
+        ],
+        "check": "87,000＋58,000＋17,000＝162,000。"
+      },
+      "errorTags": [
+        "first-allocation"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "p",
+          "label": "Pの第一次集計額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 87000,
+          "points": 1,
+          "explanation": "72,000＋30,000×300/600＝87,000。"
+        },
+        {
+          "id": "q",
+          "label": "Qの第一次集計額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 58000,
+          "points": 1,
+          "explanation": "48,000＋30,000×200/600＝58,000。"
+        },
+        {
+          "id": "s",
+          "label": "Sの第一次集計額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 17000,
+          "points": 1,
+          "explanation": "12,000＋30,000×100/600＝17,000。"
+        },
+        {
+          "id": "total",
+          "label": "第一次集計の全部門合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 162000,
+          "points": 1,
+          "explanation": "部門個別費132,000＋共通費30,000＝162,000。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-06-two-common-costs-01",
+      "familyId": "n2-industrial-06-family-two-common-costs",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-06",
+      "title": "二種類の共通費は別の基準で配る",
+      "prompt": "表の部門個別費とは別に、共通賃借料24,000円と共通電力費18,000円が発生した。賃借料は面積、電力費は使用電力量で、製造P/Q・補助Sの全3部門へ配賦する。全て当月の正しい金額・数量で、他の費用・重複・税金・端数なし。",
+      "exhibits": [
+        {
+          "title": "部門個別費と二つの配賦基準",
+          "headers": [
+            "部門",
+            "部門個別費（円）",
+            "面積（㎡）",
+            "電力量（kWh）"
+          ],
+          "rows": [
+            [
+              "製造P",
+              60000,
+              300,
+              900
+            ],
+            [
+              "製造Q",
+              36000,
+              200,
+              300
+            ],
+            [
+              "補助S",
+              24000,
+              100,
+              600
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-94fcb00f89c2",
+        "nissho-c9a47b00e2af"
+      ],
+      "objectiveIds": [
+        "n2-industrial-06-skill-first",
+        "n2-industrial-06-skill-bases"
+      ],
+      "explanation": {
+        "steps": [
+          "面積合計600㎡で24,000を配る。",
+          "電力量合計1,800kWhで18,000を配り、それぞれ個別費へ加える。"
+        ],
+        "pitfalls": [
+          "賃借料の面積比を電力費にも流用しない。"
+        ],
+        "check": "81,000＋47,000＋34,000＝162,000。"
+      },
+      "errorTags": [
+        "two-common-costs"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "p",
+          "label": "Pの第一次集計額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 81000,
+          "points": 1,
+          "explanation": "60,000＋賃借料12,000＋電力9,000＝81,000。"
+        },
+        {
+          "id": "q",
+          "label": "Qの第一次集計額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 47000,
+          "points": 1,
+          "explanation": "36,000＋賃借料8,000＋電力3,000＝47,000。"
+        },
+        {
+          "id": "s",
+          "label": "Sの第一次集計額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 34000,
+          "points": 1,
+          "explanation": "24,000＋賃借料4,000＋電力6,000＝34,000。"
+        },
+        {
+          "id": "total",
+          "label": "全部門の第一次集計額合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 162000,
+          "points": 1,
+          "explanation": "個別費120,000＋24,000＋18,000＝162,000。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-06-direct-denominator-01",
+      "familyId": "n2-industrial-06-family-direct-denominator",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-06",
+      "title": "直接配賦の分母から他の補助部門を除く",
+      "prompt": "保全Sの第一次集計額36,000円を、直接配賦法で全額製造P/Qへ配賦する。Sの受益部門別用役は表のとおりで、補助Tへの提供も実際にある。ただし直接配賦法の計算では補助部門間の提供を考慮しない。税金・端数なし。Sの配賦だけを計算してください。",
+      "exhibits": [
+        {
+          "title": "Sの当月用役提供先",
+          "headers": [
+            "受益部門",
+            "保全時間"
+          ],
+          "rows": [
+            [
+              "製造P",
+              30
+            ],
+            [
+              "製造Q",
+              60
+            ],
+            [
+              "補助T",
+              30
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-9666e00964fb",
+        "nissho-0a7bf54167b3"
+      ],
+      "objectiveIds": [
+        "n2-industrial-06-skill-direct"
+      ],
+      "explanation": {
+        "steps": [
+          "受益部門の中から製造部門だけを選ぶ。",
+          "分母も製造部門への提供量だけにする。"
+        ],
+        "pitfalls": [
+          "120時間で割ってP/Qだけへ配ると9,000円が残り、本問の全額直接配賦にならない。"
+        ],
+        "check": "P12,000＋Q24,000＋T0＝S36,000。"
+      },
+      "errorTags": [
+        "direct-denominator"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "denominator",
+          "label": "配賦割合に使う分母",
+          "type": "amount",
+          "unit": "時間",
+          "decimals": 0,
+          "answer": 90,
+          "points": 1,
+          "explanation": "製造P30＋製造Q60＝90。補助T30は除く。"
+        },
+        {
+          "id": "p",
+          "label": "SからPへの配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 12000,
+          "points": 1,
+          "explanation": "36,000×30/90＝12,000。"
+        },
+        {
+          "id": "q",
+          "label": "SからQへの配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 24000,
+          "points": 1,
+          "explanation": "36,000×60/90＝24,000。"
+        },
+        {
+          "id": "t",
+          "label": "Sから補助Tへの配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "直接配賦法では補助Tへ配賦しない。0を明示する。"
+        },
+        {
+          "id": "total",
+          "label": "Sからの配賦額合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 36000,
+          "points": 1,
+          "explanation": "12,000＋24,000＝36,000で全額を移す。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-06-two-support-allocation-01",
+      "familyId": "n2-industrial-06-family-two-support-allocation",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-06",
+      "title": "保全と動力を別々に直接配賦する",
+      "prompt": "第一次集計後の費用と用役量を表に示す。製造P/Q、補助の保全S・動力Tのみ。各補助部門の実際費用全額を直接配賦法で製造P/Qへ移す。補助部門間の用役はあるが配賦計算には織り込まない。全て同月、他の費用・自家用役・税金・端数なし。",
+      "exhibits": [
+        {
+          "title": "第一次集計後の費用",
+          "headers": [
+            "部門",
+            "費用（円）"
+          ],
+          "rows": [
+            [
+              "製造P",
+              80000
+            ],
+            [
+              "製造Q",
+              50000
+            ],
+            [
+              "保全S",
+              36000
+            ],
+            [
+              "動力T",
+              24000
+            ]
+          ]
+        },
+        {
+          "title": "受益部門別の当月用役量",
+          "headers": [
+            "提供する補助部門",
+            "製造P向け",
+            "製造Q向け",
+            "他の補助部門向け"
+          ],
+          "rows": [
+            [
+              "保全S（時間）",
+              40,
+              20,
+              "Tへ30"
+            ],
+            [
+              "動力T（kWh）",
+              300,
+              100,
+              "Sへ200"
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-9666e00964fb",
+        "nissho-0a7bf54167b3",
+        "nissho-94fcb00f89c2"
+      ],
+      "objectiveIds": [
+        "n2-industrial-06-skill-two-support",
+        "n2-industrial-06-skill-direct",
+        "n2-industrial-06-skill-reconcile"
+      ],
+      "explanation": {
+        "steps": [
+          "Sの分母は製造向け60時間、Tの分母は製造向け400kWh。",
+          "各製造部門へS/T双方の配賦額を加える。"
+        ],
+        "pitfalls": [
+          "SからTへ費用を配ったあと増えたT費用を配る、という順番の計算をしない。"
+        ],
+        "check": "80,000＋50,000＋36,000＋24,000＝190,000。"
+      },
+      "errorTags": [
+        "two-support-allocation"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "s-to-p",
+          "label": "SからPへの配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 24000,
+          "points": 1,
+          "explanation": "36,000×40/(40＋20)＝24,000。"
+        },
+        {
+          "id": "s-to-q",
+          "label": "SからQへの配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 12000,
+          "points": 1,
+          "explanation": "36,000×20/60＝12,000。"
+        },
+        {
+          "id": "t-to-p",
+          "label": "TからPへの配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 18000,
+          "points": 1,
+          "explanation": "24,000×300/(300＋100)＝18,000。"
+        },
+        {
+          "id": "t-to-q",
+          "label": "TからQへの配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 6000,
+          "points": 1,
+          "explanation": "24,000×100/400＝6,000。"
+        },
+        {
+          "id": "final-p",
+          "label": "Pの最終部門費",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 122000,
+          "points": 1,
+          "explanation": "80,000＋24,000＋18,000＝122,000。"
+        },
+        {
+          "id": "final-q",
+          "label": "Qの最終部門費",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 68000,
+          "points": 1,
+          "explanation": "50,000＋12,000＋6,000＝68,000。"
+        },
+        {
+          "id": "total",
+          "label": "最終製造部門費の合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 190000,
+          "points": 1,
+          "explanation": "122,000＋68,000＝190,000。補助部門の費用を再加算しない。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-06-double-count-check-01",
+      "familyId": "n2-industrial-06-family-double-count-check",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-06",
+      "title": "補助部門費を二度足した表を直す",
+      "prompt": "第一次集計の全部門合計は190,000円。その内訳は製造P80,000円・Q50,000円、補助S36,000円・T24,000円。全額を実際直接配賦した後、製造P122,000円・Q68,000円、補助S/Tの残額0となった。担当者は最終費用を122,000＋68,000＋36,000＋24,000＝250,000円と報告した。追加発生や他の振替はない。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-db7cccf07d15",
+        "nissho-94fcb00f89c2",
+        "nissho-0a7bf54167b3"
+      ],
+      "objectiveIds": [
+        "n2-industrial-06-skill-reconcile"
+      ],
+      "explanation": {
+        "steps": [
+          "配賦前と後で工場全体の費用が保存されるか確認する。"
+        ],
+        "pitfalls": [
+          "補助部門費を製造部門へ加えた後にも元額を合計へ残さない。"
+        ],
+        "check": "報告額250,000−二重計上60,000＝190,000。"
+      },
+      "errorTags": [
+        "double-count-check"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "error",
+          "label": "報告額が増えた理由",
+          "type": "choice",
+          "answer": "duplicate",
+          "options": [
+            "duplicate",
+            "new-cost",
+            "missing"
+          ],
+          "optionLabels": {
+            "duplicate": "配賦済み補助部門費の二重計上",
+            "new-cost": "配賦した時点で新しい費用が発生",
+            "missing": "製造部門費の計上漏れ"
+          },
+          "points": 1,
+          "explanation": "補助部門費60,000は既にP/Qの最終費用へ含まれている。"
+        },
+        {
+          "id": "excess",
+          "label": "報告の過大額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 60000,
+          "points": 1,
+          "explanation": "250,000−190,000＝60,000。"
+        },
+        {
+          "id": "correct-total",
+          "label": "正しい最終製造部門費合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 190000,
+          "points": 1,
+          "explanation": "122,000＋68,000＝190,000。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-06-department-to-order-01",
+      "familyId": "n2-industrial-06-family-department-to-order",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-06",
+      "title": "異なる部門の率で一つの注文を計算する",
+      "prompt": "補助部門費配賦後の製造部門費と全注文の当月実績を表に示す。部門別に実際配賦する。注文Rは切削20機械時間・組立40作業時間を使用した。両部門とも分母は全注文分で、直接製品費・税金・端数は考慮しない。Rへ配賦する製造間接費だけを求めてください。",
+      "exhibits": [
+        {
+          "title": "配賦後の部門費と全注文実績",
+          "headers": [
+            "製造部門",
+            "部門費（円）",
+            "当月全注文の基準量"
+          ],
+          "rows": [
+            [
+              "切削",
+              150000,
+              "500機械時間"
+            ],
+            [
+              "組立",
+              120000,
+              "800作業時間"
+            ]
+          ]
+        }
+      ],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-d4fd45dcfab9",
+        "nissho-db7cccf07d15"
+      ],
+      "objectiveIds": [
+        "n2-industrial-06-skill-product"
+      ],
+      "explanation": {
+        "steps": [
+          "切削と組立の率を別々に求める。",
+          "Rが各部門で使った対応する時間を掛け、金額を合計する。"
+        ],
+        "pitfalls": [
+          "500機械時間と800作業時間を合計して、工場一律の率を作らない。"
+        ],
+        "check": "12,000はRの製造間接費。直接材料・直接労務等を含む注文原価全体ではない。"
+      },
+      "errorTags": [
+        "department-to-order"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "cutting-rate",
+          "label": "切削の実際配賦率",
+          "type": "amount",
+          "unit": "円/機械時間",
+          "decimals": 0,
+          "answer": 300,
+          "points": 1,
+          "explanation": "150,000÷500＝300。"
+        },
+        {
+          "id": "assembly-rate",
+          "label": "組立の実際配賦率",
+          "type": "amount",
+          "unit": "円/作業時間",
+          "decimals": 0,
+          "answer": 150,
+          "points": 1,
+          "explanation": "120,000÷800＝150。"
+        },
+        {
+          "id": "cutting-r",
+          "label": "切削からRへの配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 6000,
+          "points": 1,
+          "explanation": "300×20機械時間＝6,000。"
+        },
+        {
+          "id": "assembly-r",
+          "label": "組立からRへの配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 6000,
+          "points": 1,
+          "explanation": "150×40作業時間＝6,000。"
+        },
+        {
+          "id": "total-r",
+          "label": "Rへの製造間接費配賦合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 12000,
+          "points": 1,
+          "explanation": "切削6,000＋組立6,000＝12,000。"
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-06-support-transfer-journal-01",
+      "familyId": "n2-industrial-06-family-support-transfer-journal",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-06",
+      "title": "指定された部門費勘定で配賦を記帳する",
+      "prompt": "この教材では部門別元帳を、指定勘定「切削部門費」「組立部門費」「保全部門費」で表す。保全部門費36,000円は既に同勘定の借方に集計済み。直接配賦額は切削24,000円・組立12,000円と確定している。製造部門へ振り替える仕訳だけを、指定勘定名で示してください。新しい支払や注文への配賦はまだ行わず、税金なし。これらは本問の指定表示であり公式の必須勘定名を意味しない。",
+      "exhibits": [],
+      "type": "journal",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-9666e00964fb",
+        "nissho-0a7bf54167b3",
+        "nissho-94fcb00f89c2"
+      ],
+      "objectiveIds": [
+        "n2-industrial-06-skill-direct",
+        "n2-industrial-06-skill-reconcile"
+      ],
+      "explanation": {
+        "steps": [
+          "製造部門へ負担させる額を借方へ計上する。",
+          "保全部門費の集計額を貸方から振り替える。"
+        ],
+        "pitfalls": [
+          "補助部門から製造部門への振替段階で、仕掛品へさらに二重振替しない。"
+        ],
+        "check": "借方24,000＋12,000＝貸方36,000。保全部門の当該残額0。"
+      },
+      "errorTags": [
+        "support-transfer-journal"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "unit": "円",
+      "decimals": 0,
+      "accounts": [
+        "切削部門費",
+        "組立部門費",
+        "保全部門費",
+        "仕掛品",
+        "普通預金"
+      ],
+      "lines": [
+        {
+          "side": "debit",
+          "account": "切削部門費",
+          "amount": 24000,
+          "points": 1
+        },
+        {
+          "side": "debit",
+          "account": "組立部門費",
+          "amount": 12000,
+          "points": 1
+        },
+        {
+          "side": "credit",
+          "account": "保全部門費",
+          "amount": 36000,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-06-support-actual-planned-01",
+      "familyId": "n2-industrial-06-family-support-actual-planned",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-06",
+      "title": "補助部門の予定率で受益部門へ配る",
+      "prompt": "補助Sは製造P/Qのみへ用役を提供し、他の補助部門向け・自家用役はない。月初に当月予算120,000円と基準用役1,000時間から予定率を設定した。実際費用117,000円、実際提供はP500時間・Q400時間。予定率は月中変更せず、各部門の実際受入時間に掛ける。実際率との違いと配賦差額を求めてください。差額は実際−予定配賦、正が不足、負が超過。税金・端数なし。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "application",
+      "requirementIds": [
+        "nissho-432731a540b9",
+        "nissho-9666e00964fb"
+      ],
+      "objectiveIds": [
+        "n2-industrial-06-skill-planned",
+        "n2-industrial-06-skill-reconcile"
+      ],
+      "explanation": {
+        "steps": [
+          "予算と基準用役から予定率を先に作る。",
+          "実際率は実際額と実際用役で別計算する。",
+          "予定配賦額と実際額との差を残す。"
+        ],
+        "pitfalls": [
+          "実際率130で配った金額を予定配賦額として答えない。"
+        ],
+        "check": "予定配賦108,000＋差額9,000＝実際費用117,000。"
+      },
+      "errorTags": [
+        "support-actual-planned"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "actual-rate",
+          "label": "当月の実際配賦率",
+          "type": "amount",
+          "unit": "円/時間",
+          "decimals": 0,
+          "answer": 130,
+          "points": 1,
+          "explanation": "117,000÷(500＋400)＝130。"
+        },
+        {
+          "id": "planned-rate",
+          "label": "事前設定した予定配賦率",
+          "type": "amount",
+          "unit": "円/時間",
+          "decimals": 0,
+          "answer": 120,
+          "points": 1,
+          "explanation": "120,000÷1,000＝120。"
+        },
+        {
+          "id": "p",
+          "label": "Pへの予定配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 60000,
+          "points": 1,
+          "explanation": "予定率120×実際500時間＝60,000。"
+        },
+        {
+          "id": "q",
+          "label": "Qへの予定配賦額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 48000,
+          "points": 1,
+          "explanation": "予定率120×実際400時間＝48,000。"
+        },
+        {
+          "id": "difference",
+          "label": "Sの配賦差額（実際−予定）",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 9000,
+          "points": 1,
+          "explanation": "117,000−(60,000＋48,000)＝9,000の不足。",
+          "allowNegative": true
+        }
+      ]
+    },
+    {
+      "id": "n2-industrial-06-planned-total-reconciliation-01",
+      "familyId": "n2-industrial-06-family-planned-total-reconciliation",
+      "version": 1,
+      "lessonId": "n2-industrial-lesson-06",
+      "title": "補助部門の負の差額を残して全体照合する",
+      "prompt": "第一次集計後の当月実際費用は製造P84,000円・Q66,000円、補助S57,000円。SはP/Qだけへ用役を提供し、他の補助部門向け・自家用役なし。Sの予定率は事前に150円/時間と設定済みで変更しない。当月実際受入はP240時間・Q160時間。予定率を実際受入時間へ掛ける。差額はSの実際額−予定配賦総額。追加費用・他の振替・税金なし。差額処理や製品への配賦はまだ行わない。",
+      "exhibits": [],
+      "type": "fields",
+      "stage": "integrated",
+      "requirementIds": [
+        "nissho-94fcb00f89c2",
+        "nissho-9666e00964fb",
+        "nissho-432731a540b9"
+      ],
+      "objectiveIds": [
+        "n2-industrial-06-skill-planned",
+        "n2-industrial-06-skill-reconcile"
+      ],
+      "explanation": {
+        "steps": [
+          "製造部門の元額へ予定配賦額を加える。",
+          "補助部門で実際より多く配った3,000を負の差額で残す。",
+          "製造部門合計と差額を合わせ、実際費用の合計へ戻す。"
+        ],
+        "pitfalls": [
+          "予定配賦後の製造部門合計210,000だけを実際費用合計としない。",
+          "負の差額を絶対値3,000として加えると整合しない。"
+        ],
+        "check": "120,000＋90,000＋(−3,000)＝207,000。差額を決算処理する仕訳は未実施。"
+      },
+      "errorTags": [
+        "planned-total-reconciliation"
+      ],
+      "provenance": {
+        "kind": "original",
+        "referenceUrls": [
+          "https://www.kentei.ne.jp/wp/wp-content/uploads/2021/12/2022_kogen.pdf"
+        ],
+        "note": "IL MASTROのオリジナル教材。公式出題範囲を参照し、状況・数値・解答を独自に制作しました。公式や出版社の過去問の転載・改変ではありません。"
+      },
+      "fields": [
+        {
+          "id": "final-p",
+          "label": "予定配賦後のP部門費",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 120000,
+          "points": 1,
+          "explanation": "84,000＋150×240＝120,000。"
+        },
+        {
+          "id": "final-q",
+          "label": "予定配賦後のQ部門費",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 90000,
+          "points": 1,
+          "explanation": "66,000＋150×160＝90,000。"
+        },
+        {
+          "id": "applied-s",
+          "label": "Sの予定配賦総額",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 60000,
+          "points": 1,
+          "explanation": "150×(240＋160)＝60,000。"
+        },
+        {
+          "id": "difference-s",
+          "label": "Sの差額（実際−予定）",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": -3000,
+          "points": 1,
+          "explanation": "57,000−60,000＝−3,000の配賦超過。",
+          "allowNegative": true
+        },
+        {
+          "id": "actual-total",
+          "label": "配賦前の全部門実際費用合計",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 207000,
+          "points": 1,
+          "explanation": "84,000＋66,000＋57,000＝207,000。"
+        },
+        {
+          "id": "check-difference",
+          "label": "P/Q配賦後合計＋S差額−全部門実際費用",
+          "type": "amount",
+          "unit": "円",
+          "decimals": 0,
+          "answer": 0,
+          "points": 1,
+          "explanation": "120,000＋90,000−3,000−207,000＝0。0を明示する。"
+        }
+      ]
     }
   ],
   "reviewRecords": [
@@ -6543,6 +8066,43 @@
         "n2-industrial-lesson-05": "6d116dc18ec700612de78d34da227ca18407f2105fbe87b7fcd83c2c01d1a692"
       },
       "evidence": "notes/editorial/industrial-overhead-review-20261102.md"
+    },
+    {
+      "kind": "independent-computation",
+      "reviewedBy": "Independent reviewer /root/advance_remaining_site_backlogs (not chapter06 author)",
+      "reviewedAt": "2026-11-02T09:05:54.577514+00:00",
+      "questionIds": [
+        "n2-industrial-06-department-roles-01",
+        "n2-industrial-06-two-classification-axes-01",
+        "n2-industrial-06-allocation-records-01",
+        "n2-industrial-06-first-allocation-01",
+        "n2-industrial-06-two-common-costs-01",
+        "n2-industrial-06-direct-denominator-01",
+        "n2-industrial-06-two-support-allocation-01",
+        "n2-industrial-06-double-count-check-01",
+        "n2-industrial-06-department-to-order-01",
+        "n2-industrial-06-support-transfer-journal-01",
+        "n2-industrial-06-support-actual-planned-01",
+        "n2-industrial-06-planned-total-reconciliation-01"
+      ],
+      "questionHashes": {
+        "n2-industrial-06-department-roles-01": "ca1ade270693f82acb9750bc75f49801083bc035402dbd1955bbfb4ddd10df47",
+        "n2-industrial-06-two-classification-axes-01": "cdbf028d78267f363d17c921b3cae00e44bd4bd2eba8c9da002d288836af4cb8",
+        "n2-industrial-06-allocation-records-01": "d3c84b9c65caf1e1d2b41a2f06972c03316c0afc2d3db3abc15c9c82c8ffe763",
+        "n2-industrial-06-first-allocation-01": "1e83db8e7fc0a49fa529753414a26c3ea3b8ba3b36df9379f69812928f690424",
+        "n2-industrial-06-two-common-costs-01": "7ad2029ac37e0c15e7bd6e384e60a243b398c1d876f31fb5e2b2076975d28f90",
+        "n2-industrial-06-direct-denominator-01": "79ae69ca1dbcbab2e439f4673a9309112594878b5ad43acc3e4640e8c2ede933",
+        "n2-industrial-06-two-support-allocation-01": "5795b5cb90cacc7f8e70c60baaaa68f1d08dc2186f9d6cd42e16208473405c03",
+        "n2-industrial-06-double-count-check-01": "c1ecb8b44535ec94da5311122c548e15852f7c80e2ca1fe15dedde4312d3d891",
+        "n2-industrial-06-department-to-order-01": "320e30711fcf43abc63f00eb98eb0bac70b9c5504767ff3977d1ba4614828a46",
+        "n2-industrial-06-support-transfer-journal-01": "2ebe7d0de92f542a05a5f4a662907da9b27d297c60d36378ec397c4f46a43d97",
+        "n2-industrial-06-support-actual-planned-01": "5170e94e3452f24add08b380c71e30b021e50a469bca0cf7551d4e54e4f5e901",
+        "n2-industrial-06-planned-total-reconciliation-01": "c723b45508dacc83ca81cf3eb88515b8d1e769a1d62a007522af33c7b36a76d5"
+      },
+      "lessonHashes": {
+        "n2-industrial-lesson-06": "8bcb701c1cc2f670bbb454d0d13d2019de0a543e4a52ebf2328be4eb636e6c58"
+      },
+      "evidence": "notes/editorial/industrial-departments-review-20261102.md"
     }
   ]
 }
