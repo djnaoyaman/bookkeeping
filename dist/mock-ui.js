@@ -8,9 +8,9 @@ function announce(text){const n=document.getElementById('mock-save');if(n)n.text
 function errorMessage(e){return /both-storage-unavailable/.test(e.message)?'両方の保存領域が利用できず、この画面を停止しました。未保存の入力も障害状態も他のタブへ引き継げません。すべてのタブでこの回を採点せず中断し、画面の入力を控えてください。':/other editor|stale revision/.test(e.message)?'別のタブがこの回を更新しました。回答を上書きせず停止しました。一覧へ戻り、再開するタブを選んでください。':/clock-regression/.test(e.message)?'端末の時計が戻ったため、この回を停止しました。期限を延ばして再開することはできません。':'保存を完了できませんでした。未保存の回答を成績へ含めず、この画面を停止しました。ページを閉じずに入力内容を控えてください。';}
 function showError(message){blocked=true;host.querySelectorAll('input,select,button[data-edit]').forEach(x=>x.disabled=true);const n=document.getElementById('mock-error');if(n){n.hidden=false;n.textContent=message;n.focus();}announce('保存未完了・入力停止');}
 function enqueue(operation,payload={},renderAfter=false){
- if(blocked||!owns)return Promise.resolve();pending++;announce('保存中…');
- const job=queue.then(async()=>{if(blocked||state.status!=='running')return;const next=await db.change(state.attemptId,owner,state.revision,operation,payload);state=next;channel?.postMessage({attemptId:state.attemptId,ownerId:state.ownerId,revision:state.revision});});
- queue=job.catch(e=>showError(errorMessage(e))).finally(()=>{pending--;if(!blocked&&pending===0){announce('保存済み');}if(!blocked&&(renderAfter||state?.status!=='running'))render();});return queue;
+ if(blocked||!owns)return Promise.resolve();let completed=false;pending++;announce('保存中…');
+ const job=queue.then(async()=>{if(blocked||state.status!=='running')return;const next=await db.change(state.attemptId,owner,state.revision,operation,payload);completed=!!next.result;state=next;channel?.postMessage({attemptId:state.attemptId,ownerId:state.ownerId,revision:state.revision});});
+ queue=job.catch(e=>showError(errorMessage(e))).finally(()=>{pending--;if(!blocked&&pending===0){announce('保存済み');}if(!blocked&&(renderAfter||state?.status!=='running')){render();if(completed)globalThis.ILMastroLearningEvents?.track('learning_complete','mock_exam','nissho3_mock_01');}});return queue;
 }
 function layout(content){host.innerHTML='<div id="mock-error" class="mock-error" role="alert" tabindex="-1" hidden></div>'+content;}
 function table(t){if(t.rows)return '<div class="mock-table" tabindex="0" role="region" aria-label="'+esc(t.title)+'"><table><caption>'+esc(t.title)+'</caption><thead><tr>'+t.headers.map(x=>'<th scope="col">'+esc(x)+'</th>').join('')+'</tr></thead><tbody>'+t.rows.map(row=>'<tr>'+row.map((x,i)=>'<'+(i?'td':'th scope="row"')+'>'+esc(x)+'</'+(i?'td':'th')+'>').join('')+'</tr>').join('')+'</tbody></table></div>';return '<section><h3>'+esc(t.title)+'</h3>'+((t.paragraphs||[]).map(p=>'<p>'+esc(p)+'</p>').join(''))+'</section>';}
@@ -33,7 +33,7 @@ host.addEventListener('change',e=>{if(e.target.id==='mock-flag'){const id=state.
 host.addEventListener('click',async e=>{const b=e.target.closest('button');if(!b||b.disabled)return;const action=b.dataset.action;
  try{
   if(b.dataset.go!==undefined){await capture();if(blocked)return;const next=Number(b.dataset.go);await enqueue('navigate',{cursor:next,flagged:state.navigation?.flagged||[]});if(blocked)return;cursor=next;confirming=false;render();focusTitle();}
-  else if(action==='start'){b.disabled=true;state=await db.start(data.form,owner);owns=true;blocked=false;cursor=0;render();focusTitle();}
+  else if(action==='start'){b.disabled=true;state=await db.start(data.form,owner);owns=true;blocked=false;cursor=0;render();focusTitle();globalThis.ILMastroLearningEvents?.track('learning_start','mock_exam','nissho3_mock_01');}
   else if(action==='resume'){b.disabled=true;const old=state;state=await db.change(old.attemptId,owner,old.revision,'takeover');owns=true;cursor=state.navigation?.cursor||0;render();focusTitle();channel?.postMessage({attemptId:state.attemptId,ownerId:owner,revision:state.revision});}
   else if(action==='abandon'){b.disabled=true;state=await db.change(state.attemptId,owner,state.revision,'abandon');owns=false;blocked=false;render();focusTitle();}
   else if(action==='results'){owns=true;render();focusTitle();}

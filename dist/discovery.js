@@ -5,6 +5,17 @@ const allowedAttribution=['utm_source','utm_medium','utm_campaign','utm_content'
 const initial=new URL(window.location.href),attribution=new URLSearchParams();for(const k of allowedAttribution){const v=initial.searchParams.get(k);if(v&&v.length<=250)attribution.set(k,v)}
 const root=new URL(cfg.base+'/');let booting=true,startedAt=-1,completedAt=-1;
 function track(name,values={}){window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:name,...values});if(cfg.analytics?.provider==='ga4'&&typeof window.gtag==='function')window.gtag('event',name,{...values,send_to:cfg.analytics.measurementId})}
+
+/* Course and timed-exam outcomes contain curriculum IDs only, never learner input. */
+if(!window.ILMastroLearningEvents)window.ILMastroLearningEvents={track(name,learningType,itemId){
+ try{
+  const mid=cfg.analytics?.measurementId;
+  if(location.hostname!=='djnaoyaman.github.io'||!location.pathname.startsWith('/bookkeeping/')||cfg.analytics?.provider!=='ga4'||mid!=='G-837HXKXW8Q'||typeof window.gtag!=='function'||window['ga-disable-'+mid])return;
+  if(!['learning_start','learning_complete'].includes(name)||!['course_exercise','mock_exam'].includes(learningType)||typeof itemId!=='string'||!/^[a-zA-Z0-9_-]{1,80}$/.test(itemId))return;
+  window.gtag('event',name,{send_to:mid,learning_type:learningType,item_id:itemId,page_location:location.origin+location.pathname,page_referrer:(document.referrer||'').split(/[?#]/)[0]});
+ }catch(_){/* Analytics must not affect grading or saving. */}
+}};
+
 function meta(key,value,property=false){let node=document.head.querySelector('meta['+(property?'property':'name')+'="'+key+'"]');if(!node){node=document.createElement('meta');node.setAttribute(property?'property':'name',key);document.head.appendChild(node)}node.setAttribute('content',value)}
 function update(path,replaceUrl=true){const m=cfg.pages[path||'index.html'];if(!m)return;document.title=m.title;let canonical=document.head.querySelector('link[rel="canonical"]');if(canonical)canonical.href=m.url;for(const [key,val] of Object.entries({'og:title':m.title,'og:description':m.description,'og:url':m.url,'og:image':m.image,'og:image:secure_url':m.image,'og:image:alt':m.imageAlt}))meta(key,val,true);for(const [key,val] of Object.entries({'description':m.description,'twitter:title':m.title,'twitter:description':m.description,'twitter:image':m.card,'twitter:image:alt':m.imageAlt}))meta(key,val);if(replaceUrl&&window.location.origin===root.origin){const url=new URL(m.url);for(const [k,v] of attribution)url.searchParams.set(k,v);history.replaceState(null,'',url.pathname+url.search)}
  // Static JSON-LD remains authoritative for the loaded URL. Replace page-specific graph on client navigation.
